@@ -13,7 +13,7 @@ steps:
 
   - id: "Building the Client"
     name: "gcr.io/cloud-builders/npm"
-    args: ["run", "build:client"]
+    args: ["run", "build"]
 
   - id: "Removing old build artifacts"
     name: "gcr.io/cloud-builders/gsutil"
