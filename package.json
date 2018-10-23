@@ -2,20 +2,53 @@
   "name": "cornerstone",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "build": "parcel build ./src/client/index.html",
+    "client": "parcel ./src/index.html -p 4000 --out-dir www --no-cache",
+    "eject": "react-scripts eject",
+    "lynt": "lynt src",
+    "precommit": "npm run lynt && npm run pretty-quick && npm run test",
+    "pretty-quick": "pretty-quick --staged",
+    "start": "npm run client",
+    "test": "jest"
+  },
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "jest": "^23.6.0",
+    "lynt": "^0.5.3",
+    "parcel-bundler": "^1.10.3",
+    "pre-commit": "^1.2.2",
+    "pretty-quick": "^1.8.0",
+    "react-test-renderer": "^16.5.2"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "coveragePathIgnorePatterns": []
+  },
+  "precommit": [
+    "lynt",
+    "pretty-quick",
+    "test"
+  ],
   "browserslist": [
     ">0.2%",
     "not dead",

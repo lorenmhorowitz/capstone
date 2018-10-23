@@ -1,0 +1,25 @@
+{
+    "presets": [
+        "env"
+    ],
+    "env": {
+      "client": {
+        "presets": [
+          "env",
+          "react"
+        ]
+      },
+      "test": {
+        "presets": [
+          "env",
+          "react",
+          "stage-0"
+        ]
+      }
+    },
+    "plugins": [
+      ["transform-class-properties", { "spec": true }],
+      "transform-es2015-modules-commonjs",
+      "babel-plugin-dynamic-import-node"
+    ]
+  }
