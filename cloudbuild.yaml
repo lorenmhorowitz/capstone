@@ -17,12 +17,12 @@ steps:
 
   - id: "Removing old build artifacts"
     name: "gcr.io/cloud-builders/gsutil"
-    args: ["rm", "-r", "gs://capstone-trial/dist/"]
+    args: ["rm", "-r", "gs://cornerstone/dist/"]
 
   - id: "Syncing new build artifacts"
     name: "gcr.io/cloud-builders/gsutil"
-    args: ["cp", "-r", "./dist", "gs://capstone-trial"]
+    args: ["cp", "-r", "./dist", "gs://cornerstone"]
 
   - id: "Deploying"
     name: gcr.io/cloud-builders/gcloud
-    args: ["app", "deploy", "--project=hdqc-capstonetrial"]
+    args: ["app", "deploy", "--project=hdqc-capstone"]
