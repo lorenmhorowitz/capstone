@@ -41,6 +41,7 @@ const styles = {
 let Buttons = [];
 class HeaderBar extends Component {
   state = {
+    auth: true,
     anchorEl: null
   };
 
@@ -71,12 +72,24 @@ class HeaderBar extends Component {
         );
       });
     }
+    if (this.state.redirectHome) {
+      this.setState({ redirectHome: false });
+      alert("Wanna go home but no home page ;.(");
+    }
+
     handleClick = () => {
       this.handleClose();
     };
-
+    const clickHandler = () => {
+      this.setState({
+        redirectHome: true
+      });
+    };
     const Logo = (
-      <div style={{ position: "absolute", left: "20px" }}>
+      <div
+        style={{ position: "absolute", left: "20px" }}
+        onClick={this.props.auth ? clickHandler : null}
+      >
         <span id="HomeTitle">
           Corner
           <span id="StoneTitle">Stone</span>
