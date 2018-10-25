@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "parcel build ./src/index.html",
-    "client": "parcel ./src/index.html -p 4000 --out-dir www --no-cache",
+    "build": "parcel build ./src/client/index.html",
+    "client": "parcel ./src/client/index.html -p 4000 --out-dir www --no-cache",
     "eject": "react-scripts eject",
     "lynt": "lynt src",
     "precommit": "npm run lynt && npm run pretty-quick && npm run test",
@@ -13,6 +13,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@material-ui/core": "^3.3.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5"
