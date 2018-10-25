@@ -5,6 +5,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import { createMuiTheme } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
 
 const muiTheme = createMuiTheme({
   palette: {
@@ -35,11 +37,27 @@ const styles = {
 
 class HeaderBar extends Component {
   render() {
+    const Logo = (
+      <div style={{ position: "absolute", left: "20px" }}>
+        <span id="HomeTitle">
+          Corner
+          <span id="StoneTitle">Stone</span>
+        </span>
+      </div>
+    );
+    const Menus = (
+      <IconButton>
+        <MenuIcon />
+      </IconButton>
+    );
     return (
       <div>
         <MuiThemeProvider theme={muiTheme}>
           <AppBar position="relative" color="primary">
-            <Toolbar />
+            <Toolbar>
+              {Logo}
+              {Menus}
+            </Toolbar>
           </AppBar>
         </MuiThemeProvider>
       </div>
