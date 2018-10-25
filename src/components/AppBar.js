@@ -41,7 +41,6 @@ const styles = {
 let Buttons = [];
 class HeaderBar extends Component {
   state = {
-    auth: true,
     anchorEl: null
   };
 
@@ -56,13 +55,13 @@ class HeaderBar extends Component {
   render() {
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
-    const { buttons, auth, handler } = this.props;
+    const { buttons, handler } = this.props;
     let handleClick = () => {
       this.handleClose();
       handler();
     };
 
-    if (auth === true) {
+    if (buttons !== []) {
       Buttons = [];
       buttons.forEach(name => {
         Buttons.push(
@@ -72,6 +71,7 @@ class HeaderBar extends Component {
         );
       });
     }
+
     if (this.state.redirectHome) {
       this.setState({ redirectHome: false });
       alert("Wanna go home but no home page ;.(");
@@ -88,7 +88,7 @@ class HeaderBar extends Component {
     const Logo = (
       <div
         style={{ position: "absolute", left: "20px" }}
-        onClick={this.props.auth ? clickHandler : null}
+        onClick={clickHandler}
       >
         <span id="HomeTitle">
           Corner
@@ -114,7 +114,7 @@ class HeaderBar extends Component {
             <Toolbar>
               {Logo}
               <div style={{ position: "absolute", right: "20px" }}>
-                {this.props.auth ? BarMenu : null}
+                {BarMenu}
                 <Menu
                   id="Menu"
                   anchorEl={anchorEl}
