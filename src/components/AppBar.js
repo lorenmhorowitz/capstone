@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
-import { createMuiTheme } from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
+import Toolbar from "@material-ui/core/Toolbar";
+import { withStyles } from "@material-ui/core/styles";
+import { createMuiTheme, MenuItem } from "@material-ui/core";
+import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
 
 const muiTheme = createMuiTheme({
@@ -15,6 +16,9 @@ const muiTheme = createMuiTheme({
       main: "#4D4847",
       dark: "#f78a4d",
       contrastText: "#000000"
+    },
+    secondary: {
+      main: "#FFFFFF"
     }
   }
 });
@@ -36,7 +40,21 @@ const styles = {
 };
 
 class HeaderBar extends Component {
+  state = {
+    anchorEl: null
+  };
+
+  handleMenu = event => {
+    this.setState({ anchorEl: event.currentTarget });
+  };
+
+  handleClose = () => {
+    this.setState({ anchorEl: null });
+  };
+
   render() {
+    const { anchorEl } = this.state;
+    const open = Boolean(anchorEl);
     const Logo = (
       <div style={{ position: "absolute", left: "20px" }}>
         <span id="HomeTitle">
@@ -45,8 +63,14 @@ class HeaderBar extends Component {
         </span>
       </div>
     );
-    const Menus = (
-      <IconButton>
+    const BarMenu = (
+      <IconButton
+        aria-owns={open ? "Menu" : null}
+        aria-haspopup="true"
+        onClick={this.handleMenu}
+        aria-label="Menu"
+        color="Secondary"
+      >
         <MenuIcon />
       </IconButton>
     );
@@ -56,7 +80,25 @@ class HeaderBar extends Component {
           <AppBar position="relative" color="primary">
             <Toolbar>
               {Logo}
-              {Menus}
+              <div style={{ position: "absolute", right: "20px" }}>
+                {BarMenu}
+                <Menu
+                  id="Menu"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: "top",
+                    horizontal: "right"
+                  }}
+                  transformOrigin={{
+                    vertical: "top",
+                    horizontal: "right"
+                  }}
+                  open={open}
+                  onClose={this.handleClose}
+                >
+                  <MenuItem>Logout</MenuItem>
+                </Menu>
+              </div>
             </Toolbar>
           </AppBar>
         </MuiThemeProvider>
