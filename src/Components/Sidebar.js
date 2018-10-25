@@ -7,7 +7,7 @@ import { AppBar, Toolbar, Typography } from "@material-ui/core";
 import { List, ListItem, ListItemText } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
-const SidebarList = ["Button 1", "Button 2"];
+const SidebarList = ["Button 1", "Button 2", "Button 3", "Button 4"];
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -44,8 +44,8 @@ class Sidebar extends Component {
             <IconButton onClick={this.handleSidebarToggle}>
               <MenuIcon />
             </IconButton>
-            <Typography variant="title" align="center">
-              Awesome AppBar
+            <Typography variant="h6" align="center">
+              [Placeholder Appbar]
             </Typography>
           </Toolbar>
         </AppBar>
@@ -76,4 +76,4 @@ Sidebar.propTypes = {
   theme: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Sidebar);
+export default withStyles(styles, { withTheme: true })(Sidebar); // {withTheme} prevents Warning
