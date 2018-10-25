@@ -38,7 +38,7 @@ const styles = {
     marginRight: 20
   }
 };
-
+let Buttons = [];
 class HeaderBar extends Component {
   state = {
     anchorEl: null
@@ -55,6 +55,26 @@ class HeaderBar extends Component {
   render() {
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
+    const { buttons, auth, handler } = this.props;
+    let handleClick = () => {
+      this.handleClose();
+      handler();
+    };
+
+    if (auth === true) {
+      Buttons = [];
+      buttons.forEach(name => {
+        Buttons.push(
+          <MenuItem onClick={handleClick} key={name} color="primary">
+            {name}
+          </MenuItem>
+        );
+      });
+    }
+    handleClick = () => {
+      this.handleClose();
+    };
+
     const Logo = (
       <div style={{ position: "absolute", left: "20px" }}>
         <span id="HomeTitle">
@@ -81,7 +101,7 @@ class HeaderBar extends Component {
             <Toolbar>
               {Logo}
               <div style={{ position: "absolute", right: "20px" }}>
-                {BarMenu}
+                {this.props.auth ? BarMenu : null}
                 <Menu
                   id="Menu"
                   anchorEl={anchorEl}
@@ -96,7 +116,7 @@ class HeaderBar extends Component {
                   open={open}
                   onClose={this.handleClose}
                 >
-                  <MenuItem>Logout</MenuItem>
+                  {Buttons}
                 </Menu>
               </div>
             </Toolbar>
