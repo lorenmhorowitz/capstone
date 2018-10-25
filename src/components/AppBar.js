@@ -2,8 +2,20 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
+import { createMuiTheme } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
+
+const muiTheme = createMuiTheme({
+  palette: {
+    primary: {
+      light: "#757ce8",
+      main: "#4D4847",
+      dark: "#f78a4d",
+      contrastText: "#000000"
+    }
+  }
+});
 
 const styles = {
   root: {
@@ -25,9 +37,11 @@ class HeaderBar extends Component {
   render() {
     return (
       <div>
-        <AppBar>
-          <Toolbar />
-        </AppBar>
+        <MuiThemeProvider theme={muiTheme}>
+          <AppBar position="relative" color="primary">
+            <Toolbar />
+          </AppBar>
+        </MuiThemeProvider>
       </div>
     );
   }
