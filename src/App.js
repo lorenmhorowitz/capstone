@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./css/App.css";
+import AppBar from "./components/AppBar";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <AppBar />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>We&apos;re testing CI/CD pipeline via pull requests.</p>
