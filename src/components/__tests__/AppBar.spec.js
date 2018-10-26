@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import AppBar from "../AppBar";
-import renderer from 'react-test-renderer';
-import { mount, shallow } from 'enzyme';
-
+import renderer from "react-test-renderer";
+import { mount, shallow } from "enzyme";
 
 describe("AppBar ", () => {
   const div = document.createElement("div");
@@ -16,9 +15,4 @@ describe("AppBar ", () => {
   //   const tree = renderer.create(<AppBar buttons={buttons} />).toJSON();
   //   expect(tree).toMatchSnapshot();
   // });
-
-
-
-
-
 });
