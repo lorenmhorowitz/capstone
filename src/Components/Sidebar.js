@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 import Drawer from "@material-ui/core/Drawer";
 import { withStyles } from "@material-ui/core/styles";
 import { IconButton, Divider } from "@material-ui/core";
@@ -15,12 +16,28 @@ const styles = theme => ({
     display: "flex"
   },
   appBar: {
-    zIndex: theme.zIndex.drawer + 1
+    zIndex: theme.zIndex.drawer + 1 //moves AppBar in front of Sidebar
   },
   drawerPaper: {
-    top: "60px",
+    top: "60px", //moves Sidebar below AppBar
     position: "fixed",
-    width: drawerWidth
+    width: drawerWidth,
+    transition: theme.transitions.create("width", {
+      //makes transitions smooth
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen
+    })
+  },
+  drawerPaperClose: {
+    overflowX: "hidden", //display mini sidebar
+    width: theme.spacing.unit * 7,
+    [theme.breakpoints.up("sm")]: {
+      width: theme.spacing.unit * 9
+    },
+    transition: theme.transitions.create("width", {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen
+    })
   }
 });
 
@@ -50,11 +67,14 @@ class Sidebar extends Component {
           </Toolbar>
         </AppBar>
         <Drawer
-          variant="persistent"
+          variant="permanent"
           anchor="left"
           open={open}
           classes={{
-            paper: classes.drawerPaper
+            paper: classNames(
+              classes.drawerPaper,
+              !open && classes.drawerPaperClose
+            )
           }}
         >
           <List>
