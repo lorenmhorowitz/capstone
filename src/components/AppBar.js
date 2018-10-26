@@ -40,9 +40,13 @@ const styles = {
 };
 let Buttons = [];
 class HeaderBar extends Component {
-  state = {
-    anchorEl: null
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      anchorE1: null,
+      redirectHome: false
+    };
+  }
 
   handleMenu = event => {
     this.setState({ anchorEl: event.currentTarget });
@@ -102,7 +106,7 @@ class HeaderBar extends Component {
         aria-haspopup="true"
         onClick={this.handleMenu}
         aria-label="Menu"
-        color="Secondary"
+        color="secondary"
       >
         <MenuIcon />
       </IconButton>
