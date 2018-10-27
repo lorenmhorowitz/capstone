@@ -114,7 +114,11 @@ class HeaderBar extends Component {
     return (
       <div>
         <MuiThemeProvider theme={muiTheme}>
-          <AppBar position="relative" color="primary">
+          <AppBar
+            position="relative"
+            color="primary"
+            style={{ position: "absolute" }}
+          >
             <Toolbar>
               {Logo}
               <div style={{ position: "absolute", right: "20px" }}>
