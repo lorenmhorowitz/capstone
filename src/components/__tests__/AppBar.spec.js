@@ -30,5 +30,5 @@ describe("AppBar Component", () => {
   //   Button.simulate("click");
 
   //   // expect(redirect).toBe(true);
-  });
+  // });
 });
