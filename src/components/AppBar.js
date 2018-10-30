@@ -120,7 +120,7 @@ class HeaderBar extends Component {
             style={{ position: "absolute" }}
           >
             <Toolbar>
-              {Logo}
+              <logo>{Logo}</logo>
               <div style={{ position: "absolute", right: "20px" }}>
                 {BarMenu}
                 <Menu
