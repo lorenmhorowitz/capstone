@@ -3,24 +3,23 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import Drawer from "@material-ui/core/Drawer";
 import { withStyles } from "@material-ui/core/styles";
-import { IconButton, Divider } from "@material-ui/core";
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { IconButton, Divider, ListItemIcon } from "@material-ui/core";
 import { List, ListItem, ListItemText } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
+import InboxIcon from "@material-ui/icons/MoveToInbox";
+import MailIcon from "@material-ui/icons/Mail";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
-const SidebarList = ["Button 1", "Button 2", "Button 3", "Button 4"];
 const drawerWidth = 240;
 
 const styles = theme => ({
   root: {
     display: "flex"
   },
-  appBar: {
-    zIndex: theme.zIndex.drawer + 1 //moves AppBar in front of Sidebar
-  },
   drawerPaper: {
-    top: "60px", //moves Sidebar below AppBar
+    top: "70px", //moves Sidebar below AppBar
     position: "fixed",
+    whiteSpace: "nowrap", //text doesn't shrink into side
     width: drawerWidth,
     transition: theme.transitions.create("width", {
       //makes transitions smooth
@@ -55,17 +54,7 @@ class Sidebar extends Component {
     const { open } = this.state;
 
     return (
-      <div>
-        <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar>
-            <IconButton onClick={this.handleSidebarToggle}>
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" align="center">
-              [Placeholder Appbar]
-            </Typography>
-          </Toolbar>
-        </AppBar>
+      <div className={classes.root}>
         <Drawer
           variant="permanent"
           anchor="left"
@@ -77,13 +66,29 @@ class Sidebar extends Component {
             )
           }}
         >
+          <div>
+            <IconButton
+              style={{ style: classes.iconButton }}
+              onClick={this.handleSidebarToggle}
+            >
+              {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+            </IconButton>
+          </div>
           <List>
-            {SidebarList.map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemText primary={text} />
-                <Divider />
-              </ListItem>
-            ))}
+            <ListItem button>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <ListItemText primary="Project 1" />
+              <Divider />
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <MailIcon />
+              </ListItemIcon>
+              <ListItemText primary="Project 2" />
+              <Divider />
+            </ListItem>
           </List>
         </Drawer>
       </div>
