@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AppBar from "./Components/AppBar";
+import HeaderBar from "./Components/AppBar";
 
 class Home extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class Home extends Component {
     }
     return (
       <div>
-        <AppBar buttons={buttons} auth={true} handler={this.clickHandler} />
+        <HeaderBar buttons={buttons} handler={this.clickHandler} />
       </div>
     );
   }

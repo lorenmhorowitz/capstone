@@ -55,21 +55,25 @@ class HeaderBar extends Component {
   handleClose = () => {
     this.setState({ anchorEl: null });
   };
-
+  handleClick = () => {
+    this.handleClose();
+    this.props.handler();
+  };
+  clickHandler = () => {
+    this.setState({
+      redirectHome: true
+    });
+  };
   render() {
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
-    const { buttons, handler } = this.props;
-    let handleClick = () => {
-      this.handleClose();
-      handler();
-    };
+    const { buttons } = this.props;
 
     if (buttons !== []) {
       Buttons = [];
       buttons.forEach(name => {
         Buttons.push(
-          <MenuItem onClick={handleClick} key={name} color="primary">
+          <MenuItem onClick={this.handleClick} key={name} color="primary">
             {name}
           </MenuItem>
         );
@@ -81,18 +85,10 @@ class HeaderBar extends Component {
       alert("Wanna go home but no home page ;.(");
     }
 
-    handleClick = () => {
-      this.handleClose();
-    };
-    const clickHandler = () => {
-      this.setState({
-        redirectHome: true
-      });
-    };
     const Logo = (
       <div
         style={{ position: "absolute", left: "20px" }}
-        onClick={clickHandler}
+        onClick={this.clickHandler}
       >
         <span id="HomeTitle">
           Corner
@@ -101,15 +97,18 @@ class HeaderBar extends Component {
       </div>
     );
     const BarMenu = (
-      <IconButton
-        aria-owns={open ? "Menu" : null}
-        aria-haspopup="true"
-        onClick={this.handleMenu}
-        aria-label="Menu"
-        color="secondary"
-      >
-        <MenuIcon />
-      </IconButton>
+      <div>
+        <IconButton
+          className="button"
+          aria-owns={open ? "Menu" : null}
+          aria-haspopup="true"
+          onClick={this.handleMenu}
+          aria-label="Menu"
+          color="secondary"
+        >
+          <MenuIcon />
+        </IconButton>
+      </div>
     );
     return (
       <div>
@@ -120,7 +119,7 @@ class HeaderBar extends Component {
             style={{ position: "absolute" }}
           >
             <Toolbar>
-              <logo>{Logo}</logo>
+              {Logo}
               <div style={{ position: "absolute", right: "20px" }}>
                 {BarMenu}
                 <Menu
