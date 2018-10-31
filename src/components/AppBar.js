@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
-import IconButton from "@material-ui/core/IconButton";
+// import IconButton from "@material-ui/core/IconButton";
 import Toolbar from "@material-ui/core/Toolbar";
 import { withStyles } from "@material-ui/core/styles";
 import { createMuiTheme, MenuItem } from "@material-ui/core";
@@ -63,7 +63,9 @@ class HeaderBar extends Component {
     this.setState({
       redirectHome: true
     });
+    alert("Wanna go home but no home page ;.(");
   };
+
   render() {
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
@@ -79,12 +81,6 @@ class HeaderBar extends Component {
         );
       });
     }
-
-    if (this.state.redirectHome) {
-      this.setState({ redirectHome: false });
-      alert("Wanna go home but no home page ;.(");
-    }
-
     const Logo = (
       <div
         style={{ position: "absolute", left: "20px" }}
@@ -97,18 +93,14 @@ class HeaderBar extends Component {
       </div>
     );
     const BarMenu = (
-      <div>
-        <IconButton
-          className="button"
-          aria-owns={open ? "Menu" : null}
-          aria-haspopup="true"
-          onClick={this.handleMenu}
-          aria-label="Menu"
-          color="secondary"
-        >
-          <MenuIcon />
-        </IconButton>
-      </div>
+      <MenuIcon
+        className="button"
+        aria-owns={open ? "Menu" : null}
+        aria-haspopup="true"
+        onClick={this.handleMenu}
+        aria-label="Menu"
+        color="secondary"
+      />
     );
     return (
       <div>

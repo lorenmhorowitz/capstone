@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppBar Component renders correctly when a button and handler are passed 1`] = `
+<div>
+  <header
+    className="MuiPaper-root-69 MuiPaper-elevation4-75 MuiAppBar-root-60 MuiAppBar-positionRelative-65 MuiAppBar-colorPrimary-67"
+    style={
+      Object {
+        "position": "absolute",
+      }
+    }
+  >
+    <div
+      className="MuiToolbar-root-96 MuiToolbar-regular-98 MuiToolbar-gutters-97"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "left": "20px",
+            "position": "absolute",
+          }
+        }
+      >
+        <span
+          id="HomeTitle"
+        >
+          Corner
+          <span
+            id="StoneTitle"
+          >
+            Stone
+          </span>
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "position": "absolute",
+            "right": "20px",
+          }
+        }
+      >
+        <svg
+          aria-haspopup="true"
+          aria-hidden="true"
+          aria-label="Menu"
+          aria-owns={null}
+          className="MuiSvgIcon-root-100 MuiSvgIcon-colorSecondary-102 button"
+          focusable="false"
+          onClick={[Function]}
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+          />
+        </svg>
+      </div>
+    </div>
+  </header>
+</div>
+`;

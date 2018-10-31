@@ -20,20 +20,22 @@ describe("AppBar Component", () => {
     const wrapper = shallow(<HeaderBar buttons={buttons} />);
     expect(wrapper.find(name)).toBeDefined();
   });
+
+  it("renders correctly when a button and handler are passed", () => {
+    const buttons = ["Logout"];
+    const handler = () => {
+      console.log("hello");
+    };
+    const rendered = renderer.create(
+      <HeaderBar buttons={buttons} handler={handler} />
+    );
+    expect(rendered.toJSON()).toMatchSnapshot();
+  });
+
   // it("renders the right button", () => {
   //   const buttons = ["Logout"];
-  //   const wrapper = shallow(<AppBar buttons={buttons}/>);
+  //   const wrapper = shallow(<HeaderBar buttons={buttons}/>);
   //   expect(wrapper.contains(key="Logout")).toBeTruthy();
-  // });
-  // it("snapshots correctly", () => {
-  //   const buttons = ["Logout"];
-  //   const handler = () => {
-  //     console.log("hello");
-  //   };
-  //   const rendered = renderer.create(
-  //     <HeaderBar buttons={buttons} handler={handler} />
-  //   );
-  //   expect(rendered.toJSON()).toMatchSnapshot();
   // });
 
   // it("accepts and handles a click on the logo", () => {
