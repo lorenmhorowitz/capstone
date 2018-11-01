@@ -8,18 +8,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#StoneTitle {
-  color: #f96302;
-  font-weight: bold;
-  font-size: 33px;
-}
-
-#HomeTitle {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 33px;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

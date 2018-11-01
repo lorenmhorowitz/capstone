@@ -1,13 +1,12 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
+import AppBars from "@material-ui/core/AppBar";
+import { createMuiTheme, IconButton } from "@material-ui/core";
+import "../css/Components.css";
+import MenuIcon from "@material-ui/icons/Menu";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
-// import IconButton from "@material-ui/core/IconButton";
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 import Toolbar from "@material-ui/core/Toolbar";
 import { withStyles } from "@material-ui/core/styles";
-import { createMuiTheme, MenuItem, IconButton } from "@material-ui/core";
-import Menu from "@material-ui/core/Menu";
-import MenuIcon from "@material-ui/icons/Menu";
 
 const muiTheme = createMuiTheme({
   typography: {
@@ -41,68 +40,37 @@ const styles = {
     marginRight: 20
   }
 };
-let Buttons = [];
-class HeaderBar extends Component {
+class AppBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      anchorE1: null,
+      anchorEl: null,
       redirectHome: false
     };
   }
 
-  handleMenu = event => {
-    this.setState({ anchorEl: event.currentTarget });
-  };
-
-  handleClick = () => {
-    this.setState({ anchorEl: null });
-    this.props.handler();
-  };
-  clickHandler = () => {
-    this.setState({
-      redirectHome: true
-    });
-    alert("Wanna go home but no home page ;.(");
-  };
-
   render() {
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
-    const { classes, buttons } = this.props;
-
-    if (buttons !== []) {
-      Buttons = [];
-      buttons.forEach(name => {
-        Buttons.push(
-          <MenuItem onClick={this.handleClick} key={name} color="primary">
-            {name}
-          </MenuItem>
-        );
-      });
-    }
-    const Logo = (
-      <div
-        style={{ position: "absolute", left: "20px" }}
-        onClick={this.clickHandler}
-      >
-        <span id="HomeTitle">
-          Corner
-          <span id="StoneTitle">Stone</span>
-        </span>
-      </div>
-    );
-
+    const { classes } = this.props;
     return (
       <div>
         <MuiThemeProvider theme={muiTheme}>
-          <AppBar
+          <AppBars
             position="relative"
             color="primary"
             style={{ position: "absolute" }}
           >
             <Toolbar>
-              {Logo}
+              <div
+                style={{ position: "absolute", left: "20px" }}
+                onClick={this.clickHandler}
+              >
+                <span id="HomeTitle">
+                  Corner
+                  <span id="StoneTitle">Stone</span>
+                </span>
+              </div>
               <div style={{ position: "absolute", right: "20px" }}>
                 <IconButton
                   className={classes.menuButton}
@@ -114,32 +82,16 @@ class HeaderBar extends Component {
                 >
                   <MenuIcon />
                 </IconButton>
-                <Menu
-                  id="Menu"
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right"
-                  }}
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right"
-                  }}
-                  open={open}
-                  onClose={this.handleMenu}
-                >
-                  {Buttons}
-                </Menu>
               </div>
             </Toolbar>
-          </AppBar>
+          </AppBars>
         </MuiThemeProvider>
       </div>
     );
   }
 }
-HeaderBar.propTypes = {
+AppBar.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(HeaderBar);
+export default withStyles(styles)(AppBar);

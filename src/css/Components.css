@@ -1,0 +1,25 @@
+#root {
+  position: "absolute";
+  left: 0;
+  right: 0;
+  top: 0;
+}
+#grow {
+  flex-grow: 1;
+}
+#menuButton {
+  margin-left: -12;
+  margin-right: 20;
+}
+
+#StoneTitle {
+  color: #f96302;
+  font-weight: bold;
+  font-size: 33px;
+}
+
+#HomeTitle {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 33px;
+}

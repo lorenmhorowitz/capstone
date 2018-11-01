@@ -3,7 +3,7 @@
 exports[`AppBar Component renders correctly when a button and handler are passed 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <WithStyles(HeaderBar)
+  Symbol(enzyme.__unrendered__): <WithStyles(AppBar)
     buttons={
       Array [
         "Logout",
@@ -28,9 +28,9 @@ ShallowWrapper {
         "Logout",
       ],
       "classes": Object {
-        "grow": "HeaderBar-grow-2",
-        "menuButton": "HeaderBar-menuButton-3",
-        "root": "HeaderBar-root-1",
+        "grow": "AppBar-grow-2",
+        "menuButton": "AppBar-menuButton-3",
+        "root": "AppBar-root-1",
       },
       "handler": [Function],
     },
@@ -48,9 +48,9 @@ ShallowWrapper {
           "Logout",
         ],
         "classes": Object {
-          "grow": "HeaderBar-grow-2",
-          "menuButton": "HeaderBar-menuButton-3",
-          "root": "HeaderBar-root-1",
+          "grow": "AppBar-grow-2",
+          "menuButton": "AppBar-menuButton-3",
+          "root": "AppBar-root-1",
         },
         "handler": [Function],
       },
@@ -82,7 +82,7 @@ ShallowWrapper {
 exports[`AppBar Component renders without crashing when a button is passed 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <WithStyles(HeaderBar)
+  Symbol(enzyme.__unrendered__): <WithStyles(AppBar)
     buttons={
       Array [
         "Logout",
@@ -106,9 +106,9 @@ ShallowWrapper {
         "Logout",
       ],
       "classes": Object {
-        "grow": "HeaderBar-grow-2",
-        "menuButton": "HeaderBar-menuButton-3",
-        "root": "HeaderBar-root-1",
+        "grow": "AppBar-grow-2",
+        "menuButton": "AppBar-menuButton-3",
+        "root": "AppBar-root-1",
       },
     },
     "ref": null,
@@ -125,9 +125,9 @@ ShallowWrapper {
           "Logout",
         ],
         "classes": Object {
-          "grow": "HeaderBar-grow-2",
-          "menuButton": "HeaderBar-menuButton-3",
-          "root": "HeaderBar-root-1",
+          "grow": "AppBar-grow-2",
+          "menuButton": "AppBar-menuButton-3",
+          "root": "AppBar-root-1",
         },
       },
       "ref": null,

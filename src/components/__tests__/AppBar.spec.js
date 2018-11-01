@@ -1,11 +1,11 @@
 import React from "react";
-import HeaderBar from "../AppBar";
+import AppBar from "../AppBar";
 import { shallow } from "enzyme";
 
 describe("AppBar Component", () => {
   it("renders without crashing when a button is passed", () => {
     const buttons = ["Logout"];
-    let wrapper = shallow(<HeaderBar buttons={buttons} />);
+    let wrapper = shallow(<AppBar buttons={buttons} />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -14,7 +14,7 @@ describe("AppBar Component", () => {
     const handler = () => {
       console.log("hello");
     };
-    const wrapper = shallow(<HeaderBar buttons={buttons} handler={handler} />);
+    const wrapper = shallow(<AppBar buttons={buttons} handler={handler} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
