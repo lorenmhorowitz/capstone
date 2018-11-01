@@ -1,0 +1,353 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hover login component renders the hover login page correctly renders correctly 1`] = `
+<div
+  className="Hover"
+>
+  <div>
+    <header
+      className="MuiPaper-root-10 MuiPaper-elevation4-16 MuiAppBar-root-1 MuiAppBar-positionFixed-2 MuiAppBar-colorPrimary-8 mui-fixed"
+    >
+      <div
+        className="MuiToolbar-root-37 MuiToolbar-regular-39 MuiToolbar-gutters-38"
+      >
+        <img
+          src="test-file-stub"
+          style={
+            Object {
+              "width": 130,
+            }
+          }
+        />
+        <div
+          style={
+            Object {
+              "display": "inline",
+              "marginLeft": "auto",
+            }
+          }
+        >
+          <button
+            className="MuiButtonBase-root-67 MuiButton-root-41 MuiButton-text-43 MuiButton-textPrimary-44 MuiButton-flat-46 MuiButton-flatPrimary-47"
+            disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+            tabIndex="0"
+            type="button"
+          >
+            <span
+              className="MuiButton-label-42"
+            >
+              PRODUCT
+            </span>
+            <span
+              className="MuiTouchRipple-root-187"
+            />
+          </button>
+          <button
+            className="MuiButtonBase-root-67 MuiButton-root-41 MuiButton-text-43 MuiButton-textPrimary-44 MuiButton-flat-46 MuiButton-flatPrimary-47"
+            disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+            tabIndex="0"
+            type="button"
+          >
+            <span
+              className="MuiButton-label-42"
+            >
+              DEMO
+            </span>
+            <span
+              className="MuiTouchRipple-root-187"
+            />
+          </button>
+          <button
+            className="MuiButtonBase-root-67 MuiButton-root-41 MuiButton-text-43 MuiButton-textPrimary-44 MuiButton-flat-46 MuiButton-flatPrimary-47"
+            disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+            tabIndex="0"
+            type="button"
+          >
+            <span
+              className="MuiButton-label-42"
+            >
+              PRICING
+            </span>
+            <span
+              className="MuiTouchRipple-root-187"
+            />
+          </button>
+          <button
+            className="MuiButtonBase-root-67 MuiButton-root-41 MuiButton-text-43 MuiButton-textPrimary-44 MuiButton-flat-46 MuiButton-flatPrimary-47"
+            disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+            tabIndex="0"
+            type="button"
+          >
+            <span
+              className="MuiButton-label-42"
+            >
+              LOG IN
+            </span>
+            <span
+              className="MuiTouchRipple-root-187"
+            />
+          </button>
+          <button
+            className="MuiButtonBase-root-67 MuiButton-root-41 MuiButton-outlined-49 MuiButton-outlinedSecondary-51"
+            disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "borderColor": "lightgreen",
+                "color": "lightgreen",
+              }
+            }
+            tabIndex="0"
+            type="button"
+          >
+            <span
+              className="MuiButton-label-42"
+            >
+              SIGN UP
+            </span>
+            <span
+              className="MuiTouchRipple-root-187"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div>
+    <p
+      className="MuiTypography-root-70 MuiTypography-body1-79"
+      style={
+        Object {
+          "display": "inline-block",
+          "fontSize": 40,
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": 150,
+        }
+      }
+    >
+      Log In
+    </p>
+    <form
+      autoComplete="off"
+      noValidate={true}
+    >
+      <div
+        className="MuiFormControl-root-105 MuiFormControl-marginNormal-106"
+        style={
+          Object {
+            "marginTop": 60,
+            "width": 400,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-116 MuiInputLabel-root-109 MuiInputLabel-formControl-110 MuiInputLabel-animated-113 MuiInputLabel-outlined-115"
+          data-shrink={false}
+          htmlFor="email-field"
+        >
+          email
+        </label>
+        <div
+          className="MuiInputBase-root-136 MuiOutlinedInput-root-123 MuiInputBase-formControl-137"
+          onClick={[Function]}
+        >
+          <fieldset
+            aria-hidden={true}
+            className="MuiNotchedOutline-root-153 MuiOutlinedInput-notchedOutline-130"
+            style={
+              Object {
+                "paddingLeft": 8,
+              }
+            }
+          >
+            <legend
+              className="MuiNotchedOutline-legend-154"
+              style={
+                Object {
+                  "width": 0.01,
+                }
+              }
+            />
+          </fieldset>
+          <input
+            aria-invalid={false}
+            className="MuiInputBase-input-146 MuiOutlinedInput-input-131"
+            disabled={false}
+            id="email-field"
+            name="email"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            type="text"
+          />
+        </div>
+      </div>
+    </form>
+    <form
+      autoComplete="off"
+      noValidate={true}
+    >
+      <div
+        className="MuiFormControl-root-105 MuiFormControl-marginNormal-106"
+        style={
+          Object {
+            "marginTop": 10,
+            "width": 400,
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-116 MuiInputLabel-root-109 MuiInputLabel-formControl-110 MuiInputLabel-animated-113 MuiInputLabel-outlined-115"
+          data-shrink={false}
+          htmlFor="password-field"
+        >
+          password
+        </label>
+        <div
+          className="MuiInputBase-root-136 MuiOutlinedInput-root-123 MuiInputBase-formControl-137"
+          onClick={[Function]}
+        >
+          <fieldset
+            aria-hidden={true}
+            className="MuiNotchedOutline-root-153 MuiOutlinedInput-notchedOutline-130"
+            style={
+              Object {
+                "paddingLeft": 8,
+              }
+            }
+          >
+            <legend
+              className="MuiNotchedOutline-legend-154"
+              style={
+                Object {
+                  "width": 0.01,
+                }
+              }
+            />
+          </fieldset>
+          <input
+            aria-invalid={false}
+            className="MuiInputBase-input-146 MuiOutlinedInput-input-131 MuiInputBase-inputType-149"
+            disabled={false}
+            id="password-field"
+            name="password"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            type="password"
+          />
+        </div>
+      </div>
+    </form>
+    <form>
+      <button
+        className="MuiButtonBase-root-184 MuiButton-root-158 MuiButton-text-160 MuiButton-textSecondary-162 MuiButton-flat-163 MuiButton-flatSecondary-165"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#489e5c",
+            "color": "white",
+            "height": 50,
+            "marginTop": 50,
+            "width": 400,
+          }
+        }
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiButton-label-159"
+        >
+          Log in
+        </span>
+        <span
+          className="MuiTouchRipple-root-194"
+        />
+      </button>
+    </form>
+  </div>
+</div>
+`;
