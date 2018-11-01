@@ -5,11 +5,14 @@ import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 // import IconButton from "@material-ui/core/IconButton";
 import Toolbar from "@material-ui/core/Toolbar";
 import { withStyles } from "@material-ui/core/styles";
-import { createMuiTheme, MenuItem } from "@material-ui/core";
+import { createMuiTheme, MenuItem, IconButton } from "@material-ui/core";
 import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
 
 const muiTheme = createMuiTheme({
+  typography: {
+    useNextVariants: true
+  },
   palette: {
     primary: {
       light: "#757ce8",
@@ -52,11 +55,8 @@ class HeaderBar extends Component {
     this.setState({ anchorEl: event.currentTarget });
   };
 
-  handleClose = () => {
-    this.setState({ anchorEl: null });
-  };
   handleClick = () => {
-    this.handleClose();
+    this.setState({ anchorEl: null });
     this.props.handler();
   };
   clickHandler = () => {
@@ -69,7 +69,7 @@ class HeaderBar extends Component {
   render() {
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
-    const { buttons } = this.props;
+    const { classes, buttons } = this.props;
 
     if (buttons !== []) {
       Buttons = [];
@@ -92,16 +92,7 @@ class HeaderBar extends Component {
         </span>
       </div>
     );
-    const BarMenu = (
-      <MenuIcon
-        className="button"
-        aria-owns={open ? "Menu" : null}
-        aria-haspopup="true"
-        onClick={this.handleMenu}
-        aria-label="Menu"
-        color="secondary"
-      />
-    );
+
     return (
       <div>
         <MuiThemeProvider theme={muiTheme}>
@@ -113,7 +104,16 @@ class HeaderBar extends Component {
             <Toolbar>
               {Logo}
               <div style={{ position: "absolute", right: "20px" }}>
-                {BarMenu}
+                <IconButton
+                  className={classes.menuButton}
+                  aria-owns={open ? "Menu" : null}
+                  aria-haspopup="true"
+                  onClick={this.handleMenu}
+                  aria-label="Menu"
+                  color="secondary"
+                >
+                  <MenuIcon />
+                </IconButton>
                 <Menu
                   id="Menu"
                   anchorEl={anchorEl}
@@ -126,7 +126,7 @@ class HeaderBar extends Component {
                     horizontal: "right"
                   }}
                   open={open}
-                  onClose={this.handleClose}
+                  onClose={this.handleMenu}
                 >
                   {Buttons}
                 </Menu>

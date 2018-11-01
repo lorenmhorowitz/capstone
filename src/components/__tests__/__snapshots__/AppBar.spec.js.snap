@@ -1,67 +1,156 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppBar Component renders correctly when a button and handler are passed 1`] = `
-<div>
-  <header
-    className="MuiPaper-root-69 MuiPaper-elevation4-75 MuiAppBar-root-60 MuiAppBar-positionRelative-65 MuiAppBar-colorPrimary-67"
-    style={
-      Object {
-        "position": "absolute",
-      }
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WithStyles(HeaderBar)
+    buttons={
+      Array [
+        "Logout",
+      ]
     }
-  >
-    <div
-      className="MuiToolbar-root-96 MuiToolbar-regular-98 MuiToolbar-gutters-97"
-    >
-      <div
-        onClick={[Function]}
-        style={
-          Object {
-            "left": "20px",
-            "position": "absolute",
-          }
-        }
-      >
-        <span
-          id="HomeTitle"
-        >
-          Corner
-          <span
-            id="StoneTitle"
-          >
-            Stone
-          </span>
-        </span>
-      </div>
-      <div
-        style={
-          Object {
-            "position": "absolute",
-            "right": "20px",
-          }
-        }
-      >
-        <svg
-          aria-haspopup="true"
-          aria-hidden="true"
-          aria-label="Menu"
-          aria-owns={null}
-          className="MuiSvgIcon-root-100 MuiSvgIcon-colorSecondary-102 button"
-          focusable="false"
-          onClick={[Function]}
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-          />
-          <path
-            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-          />
-        </svg>
-      </div>
-    </div>
-  </header>
-</div>
+    handler={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "buttons": Array [
+        "Logout",
+      ],
+      "classes": Object {
+        "grow": "HeaderBar-grow-2",
+        "menuButton": "HeaderBar-menuButton-3",
+        "root": "HeaderBar-root-1",
+      },
+      "handler": [Function],
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "buttons": Array [
+          "Logout",
+        ],
+        "classes": Object {
+          "grow": "HeaderBar-grow-2",
+          "menuButton": "HeaderBar-menuButton-3",
+          "root": "HeaderBar-root-1",
+        },
+        "handler": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`AppBar Component renders without crashing when a button is passed 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WithStyles(HeaderBar)
+    buttons={
+      Array [
+        "Logout",
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "buttons": Array [
+        "Logout",
+      ],
+      "classes": Object {
+        "grow": "HeaderBar-grow-2",
+        "menuButton": "HeaderBar-menuButton-3",
+        "root": "HeaderBar-root-1",
+      },
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "buttons": Array [
+          "Logout",
+        ],
+        "classes": Object {
+          "grow": "HeaderBar-grow-2",
+          "menuButton": "HeaderBar-menuButton-3",
+          "root": "HeaderBar-root-1",
+        },
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
 `;
