@@ -65,6 +65,7 @@ class Sidebar extends Component {
               !open && classes.drawerPaperClose
             )
           }}
+          className="drawer"
         >
           <div>
             <IconButton

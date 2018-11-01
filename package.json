@@ -10,7 +10,7 @@
     "precommit": "npm run lynt && npm run pretty-quick && npm run test",
     "pretty-quick": "pretty-quick --staged",
     "start": "npm run client",
-    "test": "jest"
+    "test": "jest --setupFiles ./testUtils/setup.js"
   },
   "dependencies": {
     "react": "^16.5.2",
