@@ -1,11 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import PropTypes from "prop-types";
 import SideBar from "../SideBar";
-import { withStyles } from "@material-ui/core/styles";
-import renderer from "react-test-renderer";
 import { shallow } from "enzyme";
-import { IconButton } from "@material-ui/core";
 import { styles } from "../Sidebar";
 
 describe("SideBar ", () => {
