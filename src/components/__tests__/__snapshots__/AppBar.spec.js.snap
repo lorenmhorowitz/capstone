@@ -27,11 +27,7 @@ ShallowWrapper {
       "buttons": Array [
         "Logout",
       ],
-      "classes": Object {
-        "grow": "AppBar-grow-2",
-        "menuButton": "AppBar-menuButton-3",
-        "root": "AppBar-root-1",
-      },
+      "classes": Object {},
       "handler": [Function],
     },
     "ref": null,
@@ -47,11 +43,7 @@ ShallowWrapper {
         "buttons": Array [
           "Logout",
         ],
-        "classes": Object {
-          "grow": "AppBar-grow-2",
-          "menuButton": "AppBar-menuButton-3",
-          "root": "AppBar-root-1",
-        },
+        "classes": Object {},
         "handler": [Function],
       },
       "ref": null,
@@ -105,11 +97,7 @@ ShallowWrapper {
       "buttons": Array [
         "Logout",
       ],
-      "classes": Object {
-        "grow": "AppBar-grow-2",
-        "menuButton": "AppBar-menuButton-3",
-        "root": "AppBar-root-1",
-      },
+      "classes": Object {},
     },
     "ref": null,
     "rendered": null,
@@ -124,11 +112,7 @@ ShallowWrapper {
         "buttons": Array [
           "Logout",
         ],
-        "classes": Object {
-          "grow": "AppBar-grow-2",
-          "menuButton": "AppBar-menuButton-3",
-          "root": "AppBar-root-1",
-        },
+        "classes": Object {},
       },
       "ref": null,
       "rendered": null,

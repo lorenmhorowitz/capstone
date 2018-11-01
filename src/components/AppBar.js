@@ -1,6 +1,6 @@
 import AppBars from "@material-ui/core/AppBar";
 import { createMuiTheme, IconButton } from "@material-ui/core";
-import "../css/Components.css";
+import styles from "../css/AppBar.css";
 import MenuIcon from "@material-ui/icons/Menu";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import PropTypes from "prop-types";
@@ -25,21 +25,6 @@ const muiTheme = createMuiTheme({
   }
 });
 
-const styles = {
-  root: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: 0
-  },
-  grow: {
-    flexGrow: 1
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20
-  }
-};
 class AppBar extends Component {
   constructor(props) {
     super(props);
@@ -52,28 +37,19 @@ class AppBar extends Component {
   render() {
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
-    const { classes } = this.props;
     return (
       <div>
         <MuiThemeProvider theme={muiTheme}>
-          <AppBars
-            position="relative"
-            color="primary"
-            style={{ position: "absolute" }}
-          >
+          <AppBars id="root" color="primary">
             <Toolbar>
-              <div
-                style={{ position: "absolute", left: "20px" }}
-                onClick={this.clickHandler}
-              >
+              <div id="logo" onClick={this.clickHandler}>
                 <span id="HomeTitle">
                   Corner
                   <span id="StoneTitle">Stone</span>
                 </span>
               </div>
-              <div style={{ position: "absolute", right: "20px" }}>
+              <div id="menuButton">
                 <IconButton
-                  className={classes.menuButton}
                   aria-owns={open ? "Menu" : null}
                   aria-haspopup="true"
                   onClick={this.handleMenu}
