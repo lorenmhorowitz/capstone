@@ -14,10 +14,11 @@ const drawerWidth = 240;
 
 const styles = theme => ({
   root: {
-    display: "flex"
+    display: "flex",
   },
   drawerPaper: {
     top: "70px", //moves Sidebar below AppBar
+    bottom: "70px",
     position: "fixed",
     whiteSpace: "nowrap", //text doesn't shrink into side
     width: drawerWidth,
@@ -37,6 +38,13 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
     })
+  },
+  iconButton: { //fixes spacing 
+    marginTop: "15px",
+    marginBottom: "7px"
+  },
+  listItem: { 
+    height: "75px"
   }
 });
 
@@ -68,28 +76,51 @@ class Sidebar extends Component {
           className="drawer"
         >
           <div>
+            <Divider />
             <IconButton
-              style={{ style: classes.iconButton }}
+              className={classes.iconButton}
               onClick={this.handleSidebarToggle}
             >
               {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
             </IconButton>
           </div>
           <List>
-            <ListItem button>
+            <Divider />
+            <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <InboxIcon />
               </ListItemIcon>
-              <ListItemText primary="Project 1" />
-              <Divider />
+              <ListItemText primary="Info" />
             </ListItem>
-            <ListItem button>
+            <Divider />
+            <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="Project 2" />
-              <Divider />
+              <ListItemText primary="Roofing" />
             </ListItem>
+            <Divider />
+            <ListItem className={classes.listItem} button>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <ListItemText primary="Siding" />
+            </ListItem>
+            <Divider />
+            <ListItem className={classes.listItem} button>
+              <ListItemIcon>
+                <MailIcon />
+              </ListItemIcon>
+              <ListItemText primary="Windows" />
+            </ListItem>
+            <Divider />
+            <ListItem className={classes.listItem} button>
+              <ListItemIcon>
+                <MailIcon />
+              </ListItemIcon>
+              <ListItemText primary="Shop" />
+            </ListItem>
+            <Divider />
           </List>
         </Drawer>
       </div>
