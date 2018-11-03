@@ -1,0 +1,12 @@
+.Hover {
+  text-align: center;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.Button {
+  color: white;
+  margin-left: "auto";
+  display: "block";
+}
