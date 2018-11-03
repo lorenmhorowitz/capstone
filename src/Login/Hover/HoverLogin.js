@@ -10,6 +10,11 @@ import hoverLogo from "../../hoverLogo.png";
 import Button from "@material-ui/core/Button";
 import "../../css/hover.css";
 
+import request from "request";
+
+const CREATE_ACCOUNT_API =
+  "https://us-central1-hdqc-capstone.cloudfunctions.net/login";
+
 const muiTheme = createMuiTheme({
   typography: {
     useNextVariants: true
@@ -30,8 +35,37 @@ class HoverLogin extends Component {
     };
   }
 
+  handleEmailChange = data => {
+    this.setState({ username: data.target.value });
+  };
+
+  handlePasswordChange = data => {
+    this.setState({ password: data.target.value });
+  };
+
   handleHoverLogin = () => {
-    this.props.history.replace("/home");
+    request.post(
+      {
+        url: CREATE_ACCOUNT_API,
+        body: {
+          kind: "HoverAuthentication",
+          key: this.state.username,
+          value: { password: this.state.password }
+        }
+      },
+      function(error, response, body) {
+        if (error) {
+          console.log("Error logging in ");
+          return;
+        }
+
+        if (response.statusCode === 200) {
+          this.props.history.replace("/home");
+        } else {
+          console.log("Invalid response");
+        }
+      }
+    );
   };
 
   render() {
@@ -91,6 +125,7 @@ class HoverLogin extends Component {
               name="email"
               label="email"
               className={this.props.textField}
+              onChange={this.handleEmailChange}
             />
           </form>
           <form className={this.props.container} noValidate autoComplete="off">
@@ -103,6 +138,7 @@ class HoverLogin extends Component {
               label="password"
               type="password"
               className={this.props.textField}
+              onChange={this.handlePasswordChange}
             />
           </form>
           <form>
