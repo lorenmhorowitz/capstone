@@ -1,0 +1,27 @@
+/*#26AB7A  -green hover color*/
+
+.Img {
+  text-align: center;
+  background-image: url("https://cdn.discordapp.com/attachments/489154865344282625/508368921666256936/Office.png");
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#loginSquare {
+  background-color: rgba(38, 38, 38, 0.8);
+  position: relative;
+  float: right;
+  border: 2px solid #f96302;
+  height: 600px;
+  width: 600px;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  margin-right: 5%;
+}
