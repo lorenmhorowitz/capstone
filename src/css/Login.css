@@ -1,0 +1,9 @@
+/*#26AB7A  -green hover color*/
+
+#loginSquare {
+  background-color: rgba(38, 38, 38, 0.8);
+  width: 500px;
+  height: 600px;
+  position: relative;
+  border: 2px solid #f96302;
+}
