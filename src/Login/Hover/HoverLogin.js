@@ -1,18 +1,17 @@
-import React, { Component } from "react";
-import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import AppBar from "@material-ui/core/AppBar";
-import ToolBar from "@material-ui/core/Toolbar/Toolbar";
-import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import createPalette from "@material-ui/core/styles/createPalette";
-import Typography from "@material-ui/core/Typography/Typography";
 import hoverLogo from "../../hoverLogo.png";
-import Button from "@material-ui/core/Button";
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
+import React, { Component } from "react";
+import request from "request";
+import ToolBar from "@material-ui/core/Toolbar/Toolbar";
+import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography/Typography";
 import "../../css/hover.css";
 
-import request from "request";
-
-const CREATE_ACCOUNT_API =
+const LOGIN_ACCOUNT_API =
   "https://us-central1-hdqc-capstone.cloudfunctions.net/login";
 
 const muiTheme = createMuiTheme({
@@ -46,7 +45,7 @@ class HoverLogin extends Component {
   handleHoverLogin = () => {
     request.post(
       {
-        url: CREATE_ACCOUNT_API,
+        url: LOGIN_ACCOUNT_API,
         body: {
           kind: "HoverAuthentication",
           key: this.state.username,
@@ -55,14 +54,11 @@ class HoverLogin extends Component {
       },
       function(error, response, body) {
         if (error) {
-          console.log("Error logging in ");
           return;
         }
 
         if (response.statusCode === 200) {
           this.props.history.replace("/home");
-        } else {
-          console.log("Invalid response");
         }
       }
     );

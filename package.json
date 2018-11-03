@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "parcel build ./src/client/index.html",
+    "build": "parcel build ./src/index.html",
     "client": "parcel ./src/client/index.html -p 4000 --out-dir www --no-cache",
     "eject": "react-scripts eject",
     "lynt": "lynt src",
