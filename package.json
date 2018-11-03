@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "parcel build ./src/index.html",
-    "client": "parcel ./src/client/index.html -p 4000 --out-dir www --no-cache",
+    "client": "parcel ./src/index.html -p 4000 --out-dir www --no-cache",
     "eject": "react-scripts eject",
     "lynt": "lynt src",
     "precommit": "npm run lynt && npm run pretty-quick && npm run test",
