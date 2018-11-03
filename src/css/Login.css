@@ -1,14 +1,15 @@
 /*#26AB7A  -green hover color*/
 
-body {
+.Img {
+  text-align: center;
   background-image: url("https://cdn.discordapp.com/attachments/489154865344282625/508368921666256936/Office.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
+  position: fixed;
+  left: 0px;
+  right: 0px;
   top: 0px;
   bottom: 0px;
-  right: 0px;
-  left: 0px;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -23,4 +24,52 @@ body {
   margin-top: 8%;
   margin-bottom: 8%;
   margin-right: 5%;
+  text-align: center;
+}
+
+#title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 6em;
+}
+
+#Corner {
+  color: #ffffff;
+  font-family: "Cutive", serif;
+  font-weight: bolder;
+}
+
+#Stone {
+  color: #f96302;
+  font-family: "Cutive", serif;
+  font-weight: bolder;
+}
+
+#Info {
+  color: #ffffff;
+  font-size: 1.1em;
+}
+
+#Login {
+  background-color: #898989;
+  color: #ffffff;
+  width: 70%;
+  height: 10%;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+#HoverLogin {
+  background-color: #26ab7a;
+  color: #ffffff;
+  width: 70%;
+  height: 10%;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+#field {
+  background-color: #ffffff;
+  color: #898989;
+  width: 100%;
 }

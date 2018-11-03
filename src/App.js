@@ -8,10 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Login />
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" />
+            <Route exact path="/" component={Login} />
             <Route exact path="/hover" component={HoverLogin} />
           </Switch>
         </BrowserRouter>
