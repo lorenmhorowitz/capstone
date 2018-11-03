@@ -3,7 +3,11 @@ import "../css/Login.css";
 
 class Login extends Component {
   render() {
-    return <div id="loginSquare" />;
+    return (
+      <div>
+        <div id="loginSquare" />
+      </div>
+    );
   }
 }
 
