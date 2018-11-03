@@ -1,11 +1,11 @@
 import React from "react";
 import HoverLogin from "../HoverLogin";
-import renderer from "react-test-renderer";
+import { shallow } from "enzyme";
 
 describe("Hover login component renders the hover login page correctly", () => {
   it("renders correctly", () => {
-    const rendered = renderer.create(<HoverLogin />);
+    const rendered = shallow(<HoverLogin />);
 
-    expect(rendered.toJSON()).toMatchSnapshot();
+    expect(rendered).toMatchSnapshot();
   });
 });
