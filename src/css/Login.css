@@ -15,10 +15,12 @@ body {
 
 #loginSquare {
   background-color: rgba(38, 38, 38, 0.8);
-  align-items: right;
   position: relative;
-  align-items: center;
+  float: right;
   border: 2px solid #f96302;
   height: 600px;
-  width: 500px;
+  width: 600px;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  margin-right: 5%;
 }
