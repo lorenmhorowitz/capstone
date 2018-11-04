@@ -49,6 +49,7 @@ class HoverLogin extends Component {
         headers: {
           "Content-Type": "application/json"
         },
+        json: true,
         body: {
           kind: "HoverAuthentication",
           key: this.state.username,
