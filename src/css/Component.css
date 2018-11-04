@@ -1,0 +1,51 @@
+#root {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+#grow {
+  flex-grow: 1;
+}
+
+#logo {
+  position: absolute;
+  left: 20px;
+}
+
+#StoneTitle {
+  color: #f96302;
+  font-weight: bold;
+  font-size: 33px;
+}
+
+#HomeTitle {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 33px;
+}
+#menuButton {
+  position: absolute;
+  right: 20px;
+  color: #ffffff;
+}
+
+#textField {
+  background-color: #ffffff;
+  background-position: center;
+  margin-top: 30px;
+  border-radius: 8px;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: left;
+}
+
+#fieldStyle {
+  position: relative;
+  background-position: center;
+  color: #000000;
+  border-radius: 8px;
+  width: 420px;
+  margin-right: -4255px;
+}
