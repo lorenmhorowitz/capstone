@@ -1,15 +1,17 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Dots from "material-ui-dots";
-import ArrowBackIcon from '@material-ui/icons/ArrowBack'
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward'
-import { grey } from '@material-ui/core/colors'
-import withStyles from '@material-ui/core/styles/withStyles'
-import Modal from '@material-ui/core/Modal'
-import Fade from '@material-ui/core/Fade'
-
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import { grey } from "@material-ui/core/colors";
+import { duration } from "@material-ui/core/styles/transitions";
+import withStyles from "@material-ui/core/styles/withStyles";
+import Modal from "@material-ui/core/Modal";
+import Fade from "@material-ui/core/Fade";
+import classNames from "classnames";
+import Carousel from "./SwipeableCardView";
 
 const styles = {
   root: {
@@ -45,7 +47,7 @@ const styles = {
   CardWrapper: {
     overflow: "hidden",
     borderRadius: 14,
-    transform: scale(1.0),
+    transform: "scale(1.0)",
     background: "transparent",
     height: "100%"
   },
@@ -70,41 +72,47 @@ const styles = {
     height: "100%"
   },
   closed: {}
-}
+};
 
 class CardSlide extends Component {
   state = {
     index: 0
-  }
+  };
 
-  handleContentClick = (e) => {
-    e.stopPropogation() || e.preventDefault()
-  }
+  handleContentClick = e => {
+    e.stopPropogation() || e.preventDefault();
+  };
 
-  handleChange = (index) => {
-    this.setState({
-      index},
-    this.onChange(index))
-  }
+  handleChange = index => {
+    this.setState(
+      {
+        index
+      },
+      this.onChange(index)
+    );
+  };
 
   decreaseIndex() {
     const newIndex = this.state.index - 1;
-    this.setState({
-      index},
-    this.onChange(newIndex))
-  }
-
-  onChange(index) {
-    if (this.props.onChange) {
-      this.props.onChange(modulo(index, this.props.children.length))
-    }
+    this.setState(
+      {
+        newIndex
+      },
+      this.onChange(newIndex)
+    );
   }
 
   modulo = (x, y) => {
     return ((x % y) + y) % y;
+  };
+
+  onChange(index) {
+    if (this.props.onChange) {
+      this.props.onChange(this.modulo(index, this.props.children.length));
+    }
   }
 
-  render () {
+  render() {
     const {
       autoplay,
       ButtonProps,
@@ -120,29 +128,32 @@ class CardSlide extends Component {
       open,
       onClose,
       onStart
-    } = this.props
-    const landscape = mobile && landscapeProp
-    const transitionDuration = { enter: duration.enteringScreen, exit: duration.leavingScreen }
-    const hasMultipleChildren = children.length != null
+    } = this.props;
+    const landscape = mobile && landscapeProp;
+    const transitionDuration = {
+      enter: duration.enteringScreen,
+      exit: duration.leavingScreen
+    };
+    const hasMultipleChildren = children.length != null;
 
     const carousel = (
       <Carousel
         autoplay={open && autoplay && hasMultipleChildren}
         className={classes.carousel}
-        containerStyle={{ height: '100%', ...containerStyle }}
+        containerStyle={{ height: "100%", ...containerStyle }}
         index={this.state.slideIndex}
         interval={interval}
         onChangeIndex={this.handleChange}
         slideClassName={classes.slide}
       >
-        {
-          React.Children.map(children, c => React.cloneElement(c, {
+        {React.Children.map(children, c =>
+          React.cloneElement(c, {
             mobile,
             landscape
-          }))
-        }
+          })
+        )}
       </Carousel>
-    )
+    );
 
     return (
       <Modal
@@ -151,14 +162,14 @@ class CardSlide extends Component {
         })}
         open={open}
         onClose={onClose}
-        BackdropProps={ModalProps ? { transitionDuration, ...ModalProps.BackdropProps } : { transitionDuration }}
+        BackdropProps={
+          ModalProps
+            ? { transitionDuration, ...ModalProps.BackdropProps }
+            : { transitionDuration }
+        }
         {...ModalProps}
       >
-        <Fade
-          appear
-          in={open}
-          timeout={transitionDuration}
-        >
+        <Fade appear in={open} timeout={transitionDuration}>
           <div
             className={classNames(classes.content, {
               [classes.contentMobile]: mobile
@@ -167,71 +178,82 @@ class CardSlide extends Component {
           >
             <Paper
               elevation={mobile ? 0 : 1}
-              className={classes.carouselWrapper}>
+              className={classes.carouselWrapper}
+            >
               {carousel}
             </Paper>
-            <div style={landscape ? { minWidth: 300, maxWidth: 'calc(50% - 48px)', padding: 24, float: 'right' } : null}>
+            <div
+              style={
+                landscape
+                  ? {
+                      minWidth: 300,
+                      maxWidth: "calc(50% - 48px)",
+                      padding: 24,
+                      float: "right"
+                    }
+                  : null
+              }
+            >
               <div
                 className={classNames(classes.footer, {
                   [classes.footerMobile]: mobile,
                   [classes.footerMobileLandscape]: landscape
                 })}
               >
-                {label && <Button
-                  variant='raised'
-                  onClick={onStart}
-                  {...ButtonProps}
-                >
-                  {label}
-                </Button>}
-                {
-                  hasMultipleChildren &&
+                {label && (
+                  <Button variant="raised" onClick={onStart} {...ButtonProps}>
+                    {label}
+                  </Button>
+                )}
+                {hasMultipleChildren && (
                   <Dots
                     count={children.length}
-                    index={modulo(this.state.slideIndex, children.length)}
+                    index={this.modulo(this.state.slideIndex, children.length)}
                     className={classNames(classes.dots, {
                       [classes.dotsMobile]: mobile,
                       [classes.dotsMobileLandscape]: landscape
                     })}
                     onDotClick={this.handleChange}
                   />
-                }
+                )}
               </div>
             </div>
-            {!mobile && !hideArrows && hasMultipleChildren && (
-              <div>
-                <Button
-                  variant='fab'
-                  className={classNames(classes.arrow, classes.arrowLeft)}
-                  onClick={() => this.decreaseIndex()}
-                >
-                  <ArrowBackIcon className={classes.arrowIcon} />
-                </Button>
-                <Button
-                  variant='fab'
-                  className={classNames(classes.arrow, classes.arrowRight)}
-                  onClick={() => this.increaseIndex()}
-                >
-                  <ArrowForwardIcon className={classes.arrowIcon} />
-                </Button>
-              </div>
-            )}
+            {!mobile &&
+              !hideArrows &&
+              hasMultipleChildren && (
+                <div>
+                  <Button
+                    variant="fab"
+                    className={classNames(classes.arrow, classes.arrowLeft)}
+                    onClick={() => this.decreaseIndex()}
+                  >
+                    <ArrowBackIcon className={classes.arrowIcon} />
+                  </Button>
+                  <Button
+                    variant="fab"
+                    className={classNames(classes.arrow, classes.arrowRight)}
+                    onClick={() => this.increaseIndex()}
+                  >
+                    <ArrowForwardIcon className={classes.arrowIcon} />
+                  </Button>
+                </div>
+              )}
           </div>
         </Fade>
       </Modal>
-    )
+    );
   }
 }
 
-AutoRotatingCarousel.defaultProps = {
+CardSlide.defaultProps = {
   autoplay: true,
   interval: 3000,
   mobile: false,
   open: false,
   hideArrows: false
-}
+};
 
-AutoRotatingCarousel.propTypes = {
+CardSlide.propTypes = {
   autoplay: PropTypes.bool,
   ButtonProps: PropTypes.object,
   classes: PropTypes.object.isRequired,
@@ -245,6 +267,6 @@ AutoRotatingCarousel.propTypes = {
   onStart: PropTypes.func,
   open: PropTypes.bool,
   hideArrows: PropTypes.bool
-}
+};
 
-export default withStyles(styles)(AutoRotatingCarousel)
+export default withStyles(styles)(CardSlide);
