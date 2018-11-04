@@ -44,8 +44,8 @@
 #fieldStyle {
   position: relative;
   background-position: center;
-  color: #000000;
   border-radius: 8px;
   width: 420px;
   margin-right: -4255px;
+  margin-bottom: 15px;
 }
