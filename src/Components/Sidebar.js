@@ -9,18 +9,26 @@ import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import "../css/SideBar.css";
+
+const drawerWidth = 240;
 
 const styles = theme => ({
-  drawerPaperTransitions: {
+  root: {
+    display: "flex",
+  },
+  drawerPaper: {
+    top: "70px", //moves Sidebar below AppBar
+    bottom: "70px",
+    position: "fixed",
     whiteSpace: "nowrap", //text doesn't shrink into side
+    width: drawerWidth,
     transition: theme.transitions.create("width", {
       //makes transitions smooth
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen
     })
   },
-  drawerPaperCloseTransitions: {
+  drawerPaperClose: {
     overflowX: "hidden", //display mini sidebar
     width: theme.spacing.unit * 7,
     [theme.breakpoints.up("sm")]: {
@@ -30,6 +38,13 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
     })
+  },
+  iconButton: { //fixes spacing 
+    marginTop: "15px",
+    marginBottom: "7px"
+  },
+  listItem: { 
+    height: "75px"
   }
 });
 
@@ -47,22 +62,23 @@ class Sidebar extends Component {
     const { open } = this.state;
 
     return (
-      <div className="root">
+      <div className={classes.root}>
         <Drawer
           variant="permanent"
           anchor="left"
           open={open}
           classes={{
-            paper: classNames( 
-              classes.drawerPaperTransitions,
-              !open && classes.drawerPaperCloseTransitions
-            ) 
+            paper: classNames(
+              classes.drawerPaper,
+              !open && classes.drawerPaperClose
+            )
           }}
+          className="drawer"
         >
           <div>
             <Divider />
             <IconButton
-              className="iconButton"
+              className={classes.iconButton}
               onClick={this.handleSidebarToggle}
             >
               {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -70,35 +86,35 @@ class Sidebar extends Component {
           </div>
           <List>
             <Divider />
-            <ListItem className="listItem" button>
+            <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <InboxIcon />
               </ListItemIcon>
               <ListItemText primary="Info" />
             </ListItem>
             <Divider />
-            <ListItem className="listItem" button>
+            <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
               <ListItemText primary="Roofing" />
             </ListItem>
             <Divider />
-            <ListItem className="listItem" button>
+            <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <InboxIcon />
               </ListItemIcon>
               <ListItemText primary="Siding" />
             </ListItem>
             <Divider />
-            <ListItem className="listItem" button>
+            <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
               <ListItemText primary="Windows" />
             </ListItem>
             <Divider />
-            <ListItem className="listItem" button>
+            <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
