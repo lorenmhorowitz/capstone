@@ -1,0 +1,19 @@
+.root {
+    display: flex;
+}
+
+.drawerPaper {
+    top: 70px;
+    bottom: 70px;
+    position: fixed;
+    width: 240;
+}
+
+.iconButton { 
+    margin-top: 15px;
+    margin-bottom: 7px; 
+}
+
+.listItem { 
+    height: 75px;
+}
