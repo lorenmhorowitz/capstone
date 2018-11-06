@@ -19,7 +19,7 @@
   position: relative;
   float: right;
   border: 2px solid #f96302;
-  height: 600px;
+  height: 560px;
   width: 600px;
   margin-top: 8%;
   margin-bottom: 8%;
@@ -45,18 +45,14 @@
   font-weight: bolder;
 }
 
-#Info {
-  color: #ffffff;
-  font-size: 1.1em;
-}
-
 #Login {
   background-color: #898989;
   color: #ffffff;
   width: 70%;
   height: 10%;
   font-size: 1.2em;
-  margin-top: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
 }
 
 #HoverLogin {
@@ -65,7 +61,8 @@
   width: 70%;
   height: 10%;
   font-size: 1.2em;
-  margin-top: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
 }
 
 #field {
