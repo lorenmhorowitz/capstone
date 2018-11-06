@@ -477,10 +477,7 @@ ShallowWrapper {
           >
             Log In
           </WithStyles(Typography)>
-          <form
-            autoComplete="off"
-            noValidate={true}
-          >
+          <div>
             <TextField
               id="email-field"
               label="email"
@@ -497,11 +494,8 @@ ShallowWrapper {
               }
               variant="outlined"
             />
-          </form>
-          <form
-            autoComplete="off"
-            noValidate={true}
-          >
+          </div>
+          <div>
             <TextField
               id="password-field"
               label="password"
@@ -519,7 +513,7 @@ ShallowWrapper {
               type="password"
               variant="outlined"
             />
-          </form>
+          </div>
           <form>
             <WithStyles(Button)
               color="secondary"
@@ -1415,10 +1409,7 @@ ShallowWrapper {
             >
               Log In
             </WithStyles(Typography)>,
-            <form
-              autoComplete="off"
-              noValidate={true}
-            >
+            <div>
               <TextField
                 id="email-field"
                 label="email"
@@ -1435,11 +1426,8 @@ ShallowWrapper {
                 }
                 variant="outlined"
               />
-            </form>,
-            <form
-              autoComplete="off"
-              noValidate={true}
-            >
+            </div>,
+            <div>
               <TextField
                 id="password-field"
                 label="password"
@@ -1457,7 +1445,8 @@ ShallowWrapper {
                 type="password"
                 variant="outlined"
               />
-            </form>,
+            </div>,
+            null,
             <form>
               <WithStyles(Button)
                 color="secondary"
@@ -1502,7 +1491,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "autoComplete": "off",
               "children": <TextField
                 id="email-field"
                 label="email"
@@ -1520,7 +1508,6 @@ ShallowWrapper {
                 variant="outlined"
               />,
               "className": undefined,
-              "noValidate": true,
             },
             "ref": null,
             "rendered": Object {
@@ -1546,14 +1533,13 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            "type": "form",
+            "type": "div",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "autoComplete": "off",
               "children": <TextField
                 id="password-field"
                 label="password"
@@ -1572,7 +1558,6 @@ ShallowWrapper {
                 variant="outlined"
               />,
               "className": undefined,
-              "noValidate": true,
             },
             "ref": null,
             "rendered": Object {
@@ -1599,8 +1584,9 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            "type": "form",
+            "type": "div",
           },
+          null,
           Object {
             "instance": null,
             "key": undefined,
@@ -2117,10 +2103,7 @@ ShallowWrapper {
             >
               Log In
             </WithStyles(Typography)>
-            <form
-              autoComplete="off"
-              noValidate={true}
-            >
+            <div>
               <TextField
                 id="email-field"
                 label="email"
@@ -2137,11 +2120,8 @@ ShallowWrapper {
                 }
                 variant="outlined"
               />
-            </form>
-            <form
-              autoComplete="off"
-              noValidate={true}
-            >
+            </div>
+            <div>
               <TextField
                 id="password-field"
                 label="password"
@@ -2159,7 +2139,7 @@ ShallowWrapper {
                 type="password"
                 variant="outlined"
               />
-            </form>
+            </div>
             <form>
               <WithStyles(Button)
                 color="secondary"
@@ -3055,10 +3035,7 @@ ShallowWrapper {
               >
                 Log In
               </WithStyles(Typography)>,
-              <form
-                autoComplete="off"
-                noValidate={true}
-              >
+              <div>
                 <TextField
                   id="email-field"
                   label="email"
@@ -3075,11 +3052,8 @@ ShallowWrapper {
                   }
                   variant="outlined"
                 />
-              </form>,
-              <form
-                autoComplete="off"
-                noValidate={true}
-              >
+              </div>,
+              <div>
                 <TextField
                   id="password-field"
                   label="password"
@@ -3097,7 +3071,8 @@ ShallowWrapper {
                   type="password"
                   variant="outlined"
                 />
-              </form>,
+              </div>,
+              null,
               <form>
                 <WithStyles(Button)
                   color="secondary"
@@ -3142,7 +3117,6 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "autoComplete": "off",
                 "children": <TextField
                   id="email-field"
                   label="email"
@@ -3160,7 +3134,6 @@ ShallowWrapper {
                   variant="outlined"
                 />,
                 "className": undefined,
-                "noValidate": true,
               },
               "ref": null,
               "rendered": Object {
@@ -3186,14 +3159,13 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              "type": "form",
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "autoComplete": "off",
                 "children": <TextField
                   id="password-field"
                   label="password"
@@ -3212,7 +3184,6 @@ ShallowWrapper {
                   variant="outlined"
                 />,
                 "className": undefined,
-                "noValidate": true,
               },
               "ref": null,
               "rendered": Object {
@@ -3239,8 +3210,9 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              "type": "form",
+              "type": "div",
             },
+            null,
             Object {
               "instance": null,
               "key": undefined,
