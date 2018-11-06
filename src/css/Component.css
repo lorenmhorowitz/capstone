@@ -39,13 +39,16 @@
   margin-left: 15%;
   margin-right: 15%;
   text-align: left;
+  text-indent: 5%;
 }
 
 #fieldStyle {
   position: relative;
   background-position: center;
   border-radius: 8px;
-  width: 420px;
+  width: 410px;
+  right: 29px;
   margin-right: -4255px;
   margin-bottom: 15px;
+  text-indent: 5%;
 }
