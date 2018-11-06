@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
 import HoverLogin from "./Login/Hover/HoverLogin";
+import Login from "./Login/Login";
 import "./css/App.css";
-import Login from "./login/Login";
 
 class App extends Component {
   render() {
@@ -10,8 +10,9 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={Login} />
-            <Route exact path="/hover" component={HoverLogin} />
+            <Route path="/hover" component={HoverLogin} />
+            <Route path="/login" component={Login} />
+            <Redirect exact from="/" to="/login" />
           </Switch>
         </BrowserRouter>
       </div>

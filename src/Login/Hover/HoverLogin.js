@@ -46,6 +46,10 @@ class HoverLogin extends Component {
     request.post(
       {
         url: LOGIN_ACCOUNT_API,
+        headers: {
+          "Content-Type": "application/json"
+        },
+        json: true,
         body: {
           kind: "HoverAuthentication",
           key: this.state.username,
