@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import classNames from "classNames";
 import Drawer from "@material-ui/core/Drawer";
 import { withStyles } from "@material-ui/core/styles";
 import { IconButton, Divider, ListItemIcon } from "@material-ui/core";
@@ -8,7 +9,7 @@ import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import "../css/SideBar.css";
+import styles from "../css/SideBarcss.js";
 
 class Sidebar extends Component {
   state = {
@@ -24,19 +25,22 @@ class Sidebar extends Component {
     const { open } = this.state;
 
     return (
-      <div className="root">
+      <div className={classes.root}>
         <Drawer
           variant="permanent"
           anchor="left"
           open={open}
           classes={{
-            paper: (open === true) ? "drawer" : "drawerClose"
+            paper: classNames(
+              classes.drawerPaper,
+              !open && classes.drawerPaperClose
+            )
           }}
         >
           <div>
             <Divider />
             <IconButton
-              classes="iconButton"
+              className={classes.iconButton}
               onClick={this.handleSidebarToggle}
             >
               {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -44,35 +48,35 @@ class Sidebar extends Component {
           </div>
           <List>
             <Divider />
-            <ListItem className="listItem" button>
+            <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <InboxIcon />
               </ListItemIcon>
               <ListItemText primary="Info" />
             </ListItem>
             <Divider />
-            <ListItem className="listItem" button>
+            <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
               <ListItemText primary="Roofing" />
             </ListItem>
             <Divider />
-            <ListItem className="listItem" button>
+            <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <InboxIcon />
               </ListItemIcon>
               <ListItemText primary="Siding" />
             </ListItem>
             <Divider />
-            <ListItem className="listItem" button>
+            <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
               <ListItemText primary="Windows" />
             </ListItem>
             <Divider />
-            <ListItem className="listItem" button>
+            <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
@@ -86,4 +90,9 @@ class Sidebar extends Component {
   }
 }
 
-export default Sidebar; // {withTheme} prevents Warning
+Sidebar.propTypes = {
+  classes: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired
+};
+
+export default withStyles(styles, { withTheme: true })(Sidebar); // {withTheme} prevents Warning

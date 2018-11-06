@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import SideBar from "../SideBar";
 import { shallow } from "enzyme";
-import { styles } from "../Sidebar";
+import { styles } from "../../css/SideBarcss";
 
 describe("SideBar ", () => {
   const div = document.createElement("div");
