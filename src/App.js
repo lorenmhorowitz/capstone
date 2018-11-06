@@ -4,7 +4,6 @@ import Home from "./home/Home";
 import HoverLogin from "./Login/Hover/HoverLogin";
 import Login from "./Login/Login";
 import "./css/App.css";
-import SideBar from "./Components/SideBar";
 
 class App extends Component {
   render() {
