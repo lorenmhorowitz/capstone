@@ -24,11 +24,12 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "classes": Object {
-        "drawerPaper": "Sidebar-drawerPaper-132",
-        "drawerPaperClose": "Sidebar-drawerPaperClose-133",
-        "iconButton": "Sidebar-iconButton-134",
-        "listItem": "Sidebar-listItem-135",
-        "root": "Sidebar-root-131",
+        "divider": "Sidebar-divider-137",
+        "drawerPaper": "Sidebar-drawerPaper-133",
+        "drawerPaperClose": "Sidebar-drawerPaperClose-134",
+        "iconButton": "Sidebar-iconButton-135",
+        "listItem": "Sidebar-listItem-136",
+        "root": "Sidebar-root-132",
       },
       "theme": Object {
         "breakpoints": Object {
@@ -402,11 +403,12 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "classes": Object {
-          "drawerPaper": "Sidebar-drawerPaper-132",
-          "drawerPaperClose": "Sidebar-drawerPaperClose-133",
-          "iconButton": "Sidebar-iconButton-134",
-          "listItem": "Sidebar-listItem-135",
-          "root": "Sidebar-root-131",
+          "divider": "Sidebar-divider-137",
+          "drawerPaper": "Sidebar-drawerPaper-133",
+          "drawerPaperClose": "Sidebar-drawerPaperClose-134",
+          "iconButton": "Sidebar-iconButton-135",
+          "listItem": "Sidebar-listItem-136",
+          "root": "Sidebar-root-132",
         },
         "theme": Object {
           "breakpoints": Object {

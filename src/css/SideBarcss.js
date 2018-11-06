@@ -8,6 +8,7 @@ const styles = theme => ({
     position: "fixed",
     whiteSpace: "nowrap", //text doesn't shrink into side
     width: 240,
+    backgroundColor: "#bdbdbd", // light grey
     transition: theme.transitions.create("width", {
       //makes transitions smooth
       easing: theme.transitions.easing.sharp,
@@ -32,6 +33,9 @@ const styles = theme => ({
   },
   listItem: {
     height: "75px"
+  },
+  divider: {
+    background: "#ff7043" //magenta for now
   }
 });
 

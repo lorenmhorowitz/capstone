@@ -47,35 +47,35 @@ class Sidebar extends Component {
             </IconButton>
           </div>
           <List>
-            <Divider />
+            <Divider className={classes.divider} />
             <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <InboxIcon />
               </ListItemIcon>
               <ListItemText primary="Info" />
             </ListItem>
-            <Divider />
+            <Divider className={classes.divider} />
             <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
               <ListItemText primary="Roofing" />
             </ListItem>
-            <Divider />
+            <Divider className={classes.divider} />
             <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <InboxIcon />
               </ListItemIcon>
               <ListItemText primary="Siding" />
             </ListItem>
-            <Divider />
+            <Divider className={classes.divider} />
             <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
               <ListItemText primary="Windows" />
             </ListItem>
-            <Divider />
+            <Divider className={classes.divider} />
             <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <MailIcon />
