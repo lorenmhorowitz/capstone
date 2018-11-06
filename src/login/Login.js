@@ -12,11 +12,8 @@ class Login extends Component {
             <span id="Corner">Corner</span>
             <span id="Stone">Stone</span>
           </div>
-
           <TextField label="email" />
-
           <TextField label="password" />
-
           <Button id="Login">Log In</Button>
           <Button id="HoverLogin">Login With Hover</Button>
         </div>
