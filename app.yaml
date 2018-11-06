@@ -1,7 +1,5 @@
 runtime: nodejs8
 
-api_version: 1
-
 handlers:
   - url: /
     static_files: dist/index.html

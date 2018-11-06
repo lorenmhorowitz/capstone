@@ -13,13 +13,15 @@
     "test": "jest --setupFiles ./testUtils/setup.js"
   },
   "dependencies": {
-    "@material-ui/core": "^3.3.2",
-    "@material-ui/icons": "^3.0.1",
     "parcel": "^1.10.3",
+    "ajv": "^6.0.0"
+    "@material-ui/icons": "^3.0.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.5",
+    "request": "^2.88.0"
+    "@material-ui/core": "^3.3.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.0.5",
-    "ajv": "^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
