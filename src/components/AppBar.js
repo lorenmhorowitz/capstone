@@ -1,6 +1,6 @@
 import AppBars from "@material-ui/core/AppBar";
 import { createMuiTheme, IconButton } from "@material-ui/core";
-import styles from "../css/AppBar.css";
+import styles from "../css/Component.css";
 import MenuIcon from "@material-ui/icons/Menu";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import PropTypes from "prop-types";
