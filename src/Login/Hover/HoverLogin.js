@@ -53,7 +53,7 @@ class HoverLogin extends Component {
         body: {
           kind: "HoverAuthentication",
           key: this.state.username,
-          value: { password: this.state.password }
+          password: this.state.password
         }
       },
       function(error, response, body) {
