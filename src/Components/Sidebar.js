@@ -82,7 +82,6 @@ class Sidebar extends Component {
               </ListItemIcon>
               <ListItemText primary="Shop" />
             </ListItem>
-            <Divider />
           </List>
         </Drawer>
       </div>

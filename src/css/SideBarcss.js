@@ -4,27 +4,21 @@ const styles = theme => ({
   },
   drawerPaper: {
     top: "70px", //moves Sidebar below AppBar
-    bottom: "70px",
+    height: "auto", //removes unneeded space from bottom
+    width: "220px",
     position: "fixed",
     whiteSpace: "nowrap", //text doesn't shrink into side
-    width: 240,
     backgroundColor: "#bdbdbd", // light grey
-    transition: theme.transitions.create("width", {
-      //makes transitions smooth
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen
-    })
+    transition: "all 0.2s linear",
+    overflowX: "hidden" //removes scrollbar during transition
   },
   drawerPaperClose: {
-    overflowX: "hidden", //display mini sidebar
     width: theme.spacing.unit * 7,
     [theme.breakpoints.up("sm")]: {
       width: theme.spacing.unit * 9
     },
-    transition: theme.transitions.create("width", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
-    })
+    transition: "all 0.2s linear",
+    overflowX: "hidden" //display mini sidebar
   },
   iconButton: {
     //fixes spacing
@@ -35,7 +29,7 @@ const styles = theme => ({
     height: "75px"
   },
   divider: {
-    background: "#ff7043" //magenta for now
+    background: "#ff7043" //orange
   }
 });
 
