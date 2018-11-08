@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
+import Home from "./home/Home";
 import HoverLogin from "./Login/Hover/HoverLogin";
 import Login from "./Login/Login";
 import "./css/App.css";
@@ -8,13 +9,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
-          <Switch>
-            <Route path="/hover" component={HoverLogin} />
-            <Route path="/login" component={Login} />
-            <Redirect exact from="/" to="/login" />
-          </Switch>
-        </BrowserRouter>
+        <Switch>
+          <Route path="/hover" component={HoverLogin} />
+          <Route path="/login" component={Login} />
+          <Route path="/home" component={Home} />
+          <Redirect exact from="/" to="/login" />
+        </Switch>
       </div>
     );
   }
