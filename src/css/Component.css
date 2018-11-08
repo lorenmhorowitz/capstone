@@ -52,3 +52,8 @@
   margin-bottom: 15px;
   text-indent: 5%;
 }
+
+label,
+#textField:focus ~ .form_label {
+  color: #9b9b9b !important;
+}
