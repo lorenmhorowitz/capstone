@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import Home from "./Home/Home";
+import Home from "./home/Home";
 import HoverLogin from "./Login/Hover/HoverLogin";
 import Login from "./Login/Login";
 import PageNotFound from "./PageNotFound/PageNotFound";
