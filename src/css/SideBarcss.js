@@ -4,7 +4,7 @@ const styles = theme => ({
   },
   drawerPaper: {
     top: "70px", //moves Sidebar below AppBar
-    height: "460px", //removes unneeded space from bottom
+    height: "450px", //removes unneeded space from bottom
     width: "220px",
     position: "fixed",
     whiteSpace: "nowrap", //text doesn't shrink into side
@@ -22,8 +22,8 @@ const styles = theme => ({
   },
   iconButton: {
     //fixes spacing
-    marginTop: "15px",
-    marginBottom: "7px",
+    marginTop: "-8px",
+    height: "75px",
     color: "white"
   },
   listItem: {

@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classNames";
 import Drawer from "@material-ui/core/Drawer";
 import { withStyles } from "@material-ui/core/styles";
-import { IconButton, Divider, ListItemIcon } from "@material-ui/core";
-import { List, ListItem, ListItemText } from "@material-ui/core";
+import { List, ListItem, ListItemText, ListItemIcon } from "@material-ui/core";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import styles from "../css/SideBarcss.js";
@@ -35,16 +34,14 @@ class Sidebar extends Component {
             )
           }}
         >
-          <div>
-            <Divider />
-            <IconButton
+          <List>
+            <ListItem
               className={classes.iconButton}
               onClick={this.handleSidebarToggle}
+              button
             >
               {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-            </IconButton>
-          </div>
-          <List>
+            </ListItem>
             <ListItem className={classes.listItem} button>
               <ListItemIcon>
                 <i
