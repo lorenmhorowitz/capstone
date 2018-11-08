@@ -4,13 +4,13 @@ const styles = theme => ({
   },
   drawerPaper: {
     top: "70px", //moves Sidebar below AppBar
-    height: "auto", //removes unneeded space from bottom
+    height: "460px", //removes unneeded space from bottom
     width: "220px",
     position: "fixed",
     whiteSpace: "nowrap", //text doesn't shrink into side
     backgroundColor: "#bdbdbd", // light grey
     transition: "all 0.2s linear",
-    overflowX: "hidden" //removes scrollbar during transition
+    overflow: "hidden" //removes scrollbar during transition
   },
   drawerPaperClose: {
     width: theme.spacing.unit * 7,
@@ -18,7 +18,7 @@ const styles = theme => ({
       width: theme.spacing.unit * 9
     },
     transition: "all 0.2s linear",
-    overflowX: "hidden" //display mini sidebar
+    overflow: "hidden" //display mini sidebar
   },
   iconButton: {
     //fixes spacing
