@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../css/CardSlide";
+import "../css/CardSlide.css";
 import { Carousel } from "react-responsive-carousel";
 
 class CardSlide extends Component {
@@ -9,9 +9,11 @@ class CardSlide extends Component {
     this.state = {
       slides: []
     };
+
+    this.initializePictures();
   }
 
-  componentDidMount() {
+  initializePictures = () => {
     const pictures = [];
 
     let x = 1;
@@ -27,8 +29,10 @@ class CardSlide extends Component {
       pictures.push(picture);
       x += 1;
     });
-    this.setState({ slides: pictures });
-  }
+    this.setState({
+      slides: pictures
+    });
+  };
 
   render() {
     return (
