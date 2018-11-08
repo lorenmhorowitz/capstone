@@ -477,15 +477,13 @@ ShallowWrapper {
           >
             Log In
           </WithStyles(Typography)>
-          <form
-            autoComplete="off"
-            noValidate={true}
-          >
+          <div>
             <TextField
               id="email-field"
               label="email"
               margin="normal"
               name="email"
+              onChange={[Function]}
               required={false}
               select={false}
               style={
@@ -496,16 +494,14 @@ ShallowWrapper {
               }
               variant="outlined"
             />
-          </form>
-          <form
-            autoComplete="off"
-            noValidate={true}
-          >
+          </div>
+          <div>
             <TextField
               id="password-field"
               label="password"
               margin="normal"
               name="password"
+              onChange={[Function]}
               required={false}
               select={false}
               style={
@@ -517,7 +513,7 @@ ShallowWrapper {
               type="password"
               variant="outlined"
             />
-          </form>
+          </div>
           <form>
             <WithStyles(Button)
               color="secondary"
@@ -1413,15 +1409,13 @@ ShallowWrapper {
             >
               Log In
             </WithStyles(Typography)>,
-            <form
-              autoComplete="off"
-              noValidate={true}
-            >
+            <div>
               <TextField
                 id="email-field"
                 label="email"
                 margin="normal"
                 name="email"
+                onChange={[Function]}
                 required={false}
                 select={false}
                 style={
@@ -1432,16 +1426,14 @@ ShallowWrapper {
                 }
                 variant="outlined"
               />
-            </form>,
-            <form
-              autoComplete="off"
-              noValidate={true}
-            >
+            </div>,
+            <div>
               <TextField
                 id="password-field"
                 label="password"
                 margin="normal"
                 name="password"
+                onChange={[Function]}
                 required={false}
                 select={false}
                 style={
@@ -1453,7 +1445,8 @@ ShallowWrapper {
                 type="password"
                 variant="outlined"
               />
-            </form>,
+            </div>,
+            null,
             <form>
               <WithStyles(Button)
                 color="secondary"
@@ -1498,12 +1491,12 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "autoComplete": "off",
               "children": <TextField
                 id="email-field"
                 label="email"
                 margin="normal"
                 name="email"
+                onChange={[Function]}
                 required={false}
                 select={false}
                 style={
@@ -1515,7 +1508,6 @@ ShallowWrapper {
                 variant="outlined"
               />,
               "className": undefined,
-              "noValidate": true,
             },
             "ref": null,
             "rendered": Object {
@@ -1528,6 +1520,7 @@ ShallowWrapper {
                 "label": "email",
                 "margin": "normal",
                 "name": "email",
+                "onChange": [Function],
                 "required": false,
                 "select": false,
                 "style": Object {
@@ -1540,19 +1533,19 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            "type": "form",
+            "type": "div",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "autoComplete": "off",
               "children": <TextField
                 id="password-field"
                 label="password"
                 margin="normal"
                 name="password"
+                onChange={[Function]}
                 required={false}
                 select={false}
                 style={
@@ -1565,7 +1558,6 @@ ShallowWrapper {
                 variant="outlined"
               />,
               "className": undefined,
-              "noValidate": true,
             },
             "ref": null,
             "rendered": Object {
@@ -1578,6 +1570,7 @@ ShallowWrapper {
                 "label": "password",
                 "margin": "normal",
                 "name": "password",
+                "onChange": [Function],
                 "required": false,
                 "select": false,
                 "style": Object {
@@ -1591,8 +1584,9 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            "type": "form",
+            "type": "div",
           },
+          null,
           Object {
             "instance": null,
             "key": undefined,
@@ -2109,15 +2103,13 @@ ShallowWrapper {
             >
               Log In
             </WithStyles(Typography)>
-            <form
-              autoComplete="off"
-              noValidate={true}
-            >
+            <div>
               <TextField
                 id="email-field"
                 label="email"
                 margin="normal"
                 name="email"
+                onChange={[Function]}
                 required={false}
                 select={false}
                 style={
@@ -2128,16 +2120,14 @@ ShallowWrapper {
                 }
                 variant="outlined"
               />
-            </form>
-            <form
-              autoComplete="off"
-              noValidate={true}
-            >
+            </div>
+            <div>
               <TextField
                 id="password-field"
                 label="password"
                 margin="normal"
                 name="password"
+                onChange={[Function]}
                 required={false}
                 select={false}
                 style={
@@ -2149,7 +2139,7 @@ ShallowWrapper {
                 type="password"
                 variant="outlined"
               />
-            </form>
+            </div>
             <form>
               <WithStyles(Button)
                 color="secondary"
@@ -3045,15 +3035,13 @@ ShallowWrapper {
               >
                 Log In
               </WithStyles(Typography)>,
-              <form
-                autoComplete="off"
-                noValidate={true}
-              >
+              <div>
                 <TextField
                   id="email-field"
                   label="email"
                   margin="normal"
                   name="email"
+                  onChange={[Function]}
                   required={false}
                   select={false}
                   style={
@@ -3064,16 +3052,14 @@ ShallowWrapper {
                   }
                   variant="outlined"
                 />
-              </form>,
-              <form
-                autoComplete="off"
-                noValidate={true}
-              >
+              </div>,
+              <div>
                 <TextField
                   id="password-field"
                   label="password"
                   margin="normal"
                   name="password"
+                  onChange={[Function]}
                   required={false}
                   select={false}
                   style={
@@ -3085,7 +3071,8 @@ ShallowWrapper {
                   type="password"
                   variant="outlined"
                 />
-              </form>,
+              </div>,
+              null,
               <form>
                 <WithStyles(Button)
                   color="secondary"
@@ -3130,12 +3117,12 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "autoComplete": "off",
                 "children": <TextField
                   id="email-field"
                   label="email"
                   margin="normal"
                   name="email"
+                  onChange={[Function]}
                   required={false}
                   select={false}
                   style={
@@ -3147,7 +3134,6 @@ ShallowWrapper {
                   variant="outlined"
                 />,
                 "className": undefined,
-                "noValidate": true,
               },
               "ref": null,
               "rendered": Object {
@@ -3160,6 +3146,7 @@ ShallowWrapper {
                   "label": "email",
                   "margin": "normal",
                   "name": "email",
+                  "onChange": [Function],
                   "required": false,
                   "select": false,
                   "style": Object {
@@ -3172,19 +3159,19 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              "type": "form",
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "autoComplete": "off",
                 "children": <TextField
                   id="password-field"
                   label="password"
                   margin="normal"
                   name="password"
+                  onChange={[Function]}
                   required={false}
                   select={false}
                   style={
@@ -3197,7 +3184,6 @@ ShallowWrapper {
                   variant="outlined"
                 />,
                 "className": undefined,
-                "noValidate": true,
               },
               "ref": null,
               "rendered": Object {
@@ -3210,6 +3196,7 @@ ShallowWrapper {
                   "label": "password",
                   "margin": "normal",
                   "name": "password",
+                  "onChange": [Function],
                   "required": false,
                   "select": false,
                   "style": Object {
@@ -3223,8 +3210,9 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              "type": "form",
+              "type": "div",
             },
+            null,
             Object {
               "instance": null,
               "key": undefined,

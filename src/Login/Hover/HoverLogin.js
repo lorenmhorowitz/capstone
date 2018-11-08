@@ -1,14 +1,19 @@
-import React, { Component } from "react";
-import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import AppBar from "@material-ui/core/AppBar";
-import ToolBar from "@material-ui/core/Toolbar/Toolbar";
-import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import createPalette from "@material-ui/core/styles/createPalette";
-import Typography from "@material-ui/core/Typography/Typography";
 import hoverLogo from "../../hoverLogo.png";
-import Button from "@material-ui/core/Button";
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
+import React, { Component } from "react";
+import request from "request";
+import { Redirect } from "react-router-dom";
+import ToolBar from "@material-ui/core/Toolbar/Toolbar";
+import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography/Typography";
 import "../../css/hover.css";
+
+const LOGIN_ACCOUNT_API =
+  "https://us-central1-hdqc-capstone.cloudfunctions.net/login";
 
 const muiTheme = createMuiTheme({
   typography: {
@@ -25,16 +30,75 @@ class HoverLogin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
-      password: ""
+      loginError: false,
+      password: "",
+      redirect: false,
+      username: ""
     };
   }
 
+  handleEmailChange = data => {
+    this.setState({ username: data.target.value });
+  };
+
+  handlePasswordChange = data => {
+    this.setState({ password: data.target.value });
+  };
+
   handleHoverLogin = () => {
-    this.props.history.replace("/home");
+    request.post(
+      {
+        url: LOGIN_ACCOUNT_API,
+        headers: {
+          "Content-Type": "application/json"
+        },
+        json: true,
+        body: {
+          kind: "HoverAuthentication",
+          key: this.state.username,
+          value: {
+            password: this.state.password
+          }
+        }
+      },
+      function(error, response) {
+        if (error) {
+          return;
+        }
+
+        if (response.statusCode === 200) {
+          this.setState({
+            loginError: false,
+            redirect: true
+          });
+        } else {
+          this.setState({ loginError: true });
+        }
+      }.bind(this)
+    );
   };
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect push to="/home" />;
+    }
+
+    const errorMessage = (
+      <Typography
+        style={{
+          marginTop: 15,
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginBottom: 5,
+          display: "inline-block",
+          color: "red",
+          fontSize: 18
+        }}
+      >
+        Unable to log in. Please try again.
+      </Typography>
+    );
+
     return (
       <div className="Hover">
         <MuiThemeProvider theme={muiTheme}>
@@ -82,7 +146,7 @@ class HoverLogin extends Component {
           >
             Log In
           </Typography>
-          <form className={this.props.container} noValidate autoComplete="off">
+          <div className={this.props.container}>
             <TextField
               id="email-field"
               style={{ marginTop: 60, width: 400 }}
@@ -91,9 +155,10 @@ class HoverLogin extends Component {
               name="email"
               label="email"
               className={this.props.textField}
+              onChange={this.handleEmailChange}
             />
-          </form>
-          <form className={this.props.container} noValidate autoComplete="off">
+          </div>
+          <div className={this.props.container}>
             <TextField
               id="password-field"
               style={{ marginTop: 10, width: 400 }}
@@ -103,8 +168,10 @@ class HoverLogin extends Component {
               label="password"
               type="password"
               className={this.props.textField}
+              onChange={this.handlePasswordChange}
             />
-          </form>
+          </div>
+          {this.state.loginError ? errorMessage : null}
           <form>
             <Button
               color="secondary"
