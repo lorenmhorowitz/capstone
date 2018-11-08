@@ -6,6 +6,7 @@ import hoverLogo from "../../hoverLogo.png";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import React, { Component } from "react";
 import request from "request";
+import { Redirect } from "react-router-dom";
 import ToolBar from "@material-ui/core/Toolbar/Toolbar";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography/Typography";
@@ -29,8 +30,10 @@ class HoverLogin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
-      password: ""
+      loginError: false,
+      password: "",
+      redirect: false,
+      username: ""
     };
   }
 
@@ -53,22 +56,49 @@ class HoverLogin extends Component {
         body: {
           kind: "HoverAuthentication",
           key: this.state.username,
-          value: { password: this.state.password }
+          value: {
+            password: this.state.password
+          }
         }
       },
-      function(error, response, body) {
+      function(error, response) {
         if (error) {
           return;
         }
 
         if (response.statusCode === 200) {
-          this.props.history.replace("/home");
+          this.setState({
+            loginError: false,
+            redirect: true
+          });
+        } else {
+          this.setState({ loginError: true });
         }
-      }
+      }.bind(this)
     );
   };
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect push to="/home" />;
+    }
+
+    const errorMessage = (
+      <Typography
+        style={{
+          marginTop: 15,
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginBottom: 5,
+          display: "inline-block",
+          color: "red",
+          fontSize: 18
+        }}
+      >
+        Unable to log in. Please try again.
+      </Typography>
+    );
+
     return (
       <div className="Hover">
         <MuiThemeProvider theme={muiTheme}>
@@ -116,7 +146,7 @@ class HoverLogin extends Component {
           >
             Log In
           </Typography>
-          <form className={this.props.container} noValidate autoComplete="off">
+          <div className={this.props.container}>
             <TextField
               id="email-field"
               style={{ marginTop: 60, width: 400 }}
@@ -127,8 +157,8 @@ class HoverLogin extends Component {
               className={this.props.textField}
               onChange={this.handleEmailChange}
             />
-          </form>
-          <form className={this.props.container} noValidate autoComplete="off">
+          </div>
+          <div className={this.props.container}>
             <TextField
               id="password-field"
               style={{ marginTop: 10, width: 400 }}
@@ -140,7 +170,8 @@ class HoverLogin extends Component {
               className={this.props.textField}
               onChange={this.handlePasswordChange}
             />
-          </form>
+          </div>
+          {this.state.loginError ? errorMessage : null}
           <form>
             <Button
               color="secondary"

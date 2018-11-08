@@ -1,12 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./css/index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
+import { AppContainer } from "react-hot-loader";
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const renderApp = () => {
+  const App = require("./App").default;
+  const appRoot = document.getElementById("root");
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  if (!(appRoot instanceof Element)) {
+    throw new Error("invalid app root!");
+  }
+
+  ReactDOM.render(
+    <AppContainer>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AppContainer>,
+    appRoot
+  );
+};
+
+renderApp();
+
+if (module.hot) {
+  module.hot.accept("./App", renderApp);
+}
