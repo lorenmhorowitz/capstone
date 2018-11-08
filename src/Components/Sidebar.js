@@ -5,8 +5,6 @@ import Drawer from "@material-ui/core/Drawer";
 import { withStyles } from "@material-ui/core/styles";
 import { IconButton, Divider, ListItemIcon } from "@material-ui/core";
 import { List, ListItem, ListItemText } from "@material-ui/core";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import styles from "../css/SideBarcss.js";
@@ -47,40 +45,63 @@ class Sidebar extends Component {
             </IconButton>
           </div>
           <List>
-            <Divider className={classes.divider} />
             <ListItem className={classes.listItem} button>
               <ListItemIcon>
-                <InboxIcon />
+                <i
+                  className="material-icons outline"
+                  style={{ color: "white" }}
+                >
+                  info
+                </i>
               </ListItemIcon>
-              <ListItemText primary="Info" />
+              <ListItemText
+                primary="Information"
+                primaryTypographyProps={{ color: "inherit" }}
+              />
             </ListItem>
-            <Divider className={classes.divider} />
             <ListItem className={classes.listItem} button>
               <ListItemIcon>
-                <MailIcon />
+                <i className="material-icons" style={{ color: "white" }}>
+                  home
+                </i>
               </ListItemIcon>
-              <ListItemText primary="Roofing" />
+              <ListItemText
+                primary="Roofing"
+                primaryTypographyProps={{ color: "inherit" }}
+              />
             </ListItem>
-            <Divider className={classes.divider} />
             <ListItem className={classes.listItem} button>
               <ListItemIcon>
-                <InboxIcon />
+                <i className="material-icons" style={{ color: "white" }}>
+                  view_headline
+                </i>
               </ListItemIcon>
-              <ListItemText primary="Siding" />
+              <ListItemText
+                primary="Siding"
+                primaryTypographyProps={{ color: "inherit" }}
+              />
             </ListItem>
-            <Divider className={classes.divider} />
             <ListItem className={classes.listItem} button>
               <ListItemIcon>
-                <MailIcon />
+                <i className="material-icons" style={{ color: "white" }}>
+                  web_asset
+                </i>
               </ListItemIcon>
-              <ListItemText primary="Windows" />
+              <ListItemText
+                primary="Windows"
+                primaryTypographyProps={{ color: "inherit" }}
+              />
             </ListItem>
-            <Divider className={classes.divider} />
             <ListItem className={classes.listItem} button>
               <ListItemIcon>
-                <MailIcon />
+                <i className="material-icons" style={{ color: "white" }}>
+                  shopping_cart
+                </i>
               </ListItemIcon>
-              <ListItemText primary="Shop" />
+              <ListItemText
+                primary="Shop"
+                primaryTypographyProps={{ color: "inherit" }}
+              />
             </ListItem>
           </List>
         </Drawer>

@@ -8,7 +8,7 @@ const styles = theme => ({
     width: "220px",
     position: "fixed",
     whiteSpace: "nowrap", //text doesn't shrink into side
-    backgroundColor: "#bdbdbd", // light grey
+    backgroundColor: "#9b9b9b", // light grey
     transition: "all 0.2s linear",
     overflow: "hidden" //removes scrollbar during transition
   },
@@ -23,10 +23,12 @@ const styles = theme => ({
   iconButton: {
     //fixes spacing
     marginTop: "15px",
-    marginBottom: "7px"
+    marginBottom: "7px",
+    color: "white"
   },
   listItem: {
-    height: "75px"
+    height: "75px",
+    color: "white"
   },
   divider: {
     background: "#ff7043" //orange
