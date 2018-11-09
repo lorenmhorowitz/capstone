@@ -23,11 +23,12 @@ ShallowWrapper {
         id="textField"
       >
         <TextField
-          className="form_label"
           id="fieldStyle"
           label="email"
+          name="email"
           required={false}
           select={false}
+          type="email"
           variant="standard"
         />
       </form>,
@@ -39,11 +40,12 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <TextField
-          className="form_label"
           id="fieldStyle"
           label="email"
+          name="email"
           required={false}
           select={false}
+          type="email"
           variant="standard"
         />,
         "id": "textField",
@@ -54,11 +56,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "className": "form_label",
           "id": "fieldStyle",
           "label": "email",
+          "name": "email",
           "required": false,
           "select": false,
+          "type": "email",
           "variant": "standard",
         },
         "ref": null,
@@ -79,11 +82,12 @@ ShallowWrapper {
           id="textField"
         >
           <TextField
-            className="form_label"
             id="fieldStyle"
             label="email"
+            name="email"
             required={false}
             select={false}
+            type="email"
             variant="standard"
           />
         </form>,
@@ -95,11 +99,12 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <TextField
-            className="form_label"
             id="fieldStyle"
             label="email"
+            name="email"
             required={false}
             select={false}
+            type="email"
             variant="standard"
           />,
           "id": "textField",
@@ -110,11 +115,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "className": "form_label",
             "id": "fieldStyle",
             "label": "email",
+            "name": "email",
             "required": false,
             "select": false,
+            "type": "email",
             "variant": "standard",
           },
           "ref": null,

@@ -42,11 +42,13 @@ ShallowWrapper {
         />
         <WithStyles(Button)
           id="Login"
+          onClick={[Function]}
         >
           Log In
         </WithStyles(Button)>
         <WithStyles(Button)
           id="HoverLogin"
+          onClick={[Function]}
         >
           Login With Hover
         </WithStyles(Button)>
@@ -82,11 +84,13 @@ ShallowWrapper {
           />,
           <WithStyles(Button)
             id="Login"
+            onClick={[Function]}
           >
             Log In
           </WithStyles(Button)>,
           <WithStyles(Button)
             id="HoverLogin"
+            onClick={[Function]}
           >
             Login With Hover
           </WithStyles(Button)>,
@@ -172,6 +176,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Log In",
             "id": "Login",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": "Log In",
@@ -184,6 +189,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Login With Hover",
             "id": "HoverLogin",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": "Login With Hover",
@@ -225,11 +231,13 @@ ShallowWrapper {
           />
           <WithStyles(Button)
             id="Login"
+            onClick={[Function]}
           >
             Log In
           </WithStyles(Button)>
           <WithStyles(Button)
             id="HoverLogin"
+            onClick={[Function]}
           >
             Login With Hover
           </WithStyles(Button)>
@@ -265,11 +273,13 @@ ShallowWrapper {
             />,
             <WithStyles(Button)
               id="Login"
+              onClick={[Function]}
             >
               Log In
             </WithStyles(Button)>,
             <WithStyles(Button)
               id="HoverLogin"
+              onClick={[Function]}
             >
               Login With Hover
             </WithStyles(Button)>,
@@ -355,6 +365,7 @@ ShallowWrapper {
             "props": Object {
               "children": "Log In",
               "id": "Login",
+              "onClick": [Function],
             },
             "ref": null,
             "rendered": "Log In",
@@ -367,6 +378,7 @@ ShallowWrapper {
             "props": Object {
               "children": "Login With Hover",
               "id": "HoverLogin",
+              "onClick": [Function],
             },
             "ref": null,
             "rendered": "Login With Hover",
