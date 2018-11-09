@@ -1,8 +1,6 @@
 runtime: nodejs8
 
 handlers:
-  - url: /
+  - url: /.*
     static_files: dist/index.html
-    upload: dist/index.html
-  - url: /
-    static_dir: dist
+    upload: dist
