@@ -33,9 +33,10 @@
 #textField {
   background-color: #ffffff;
   background-position: center;
-  margin-top: 30px;
+  margin-top: 5%;
   border-radius: 8px;
   width: 70%;
+
   margin-left: 15%;
   margin-right: 15%;
   text-align: left;
@@ -56,4 +57,10 @@
 label,
 #textField:focus ~ .form_label {
   color: #9b9b9b !important;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 550px) {
+  #textfiled {
+    height: 12vw;
+  }
 }
