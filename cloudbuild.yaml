@@ -17,11 +17,11 @@ steps:
 
   - id: "Removing old build artifacts"
     name: "gcr.io/cloud-builders/gsutil"
-    args: ["rm", "-r", "gs://cornerstone/dist/"]
+    args: ["-m", "rm", "-r", "gs://cornerstone/dist/"]
 
   - id: "Syncing new build artifacts"
     name: "gcr.io/cloud-builders/gsutil"
-    args: ["cp", "-r", "./dist", "gs://cornerstone"]
+    args: ["-m", "cp", "-r", "./dist", "gs://cornerstone"]
 
   - id: "Deploying"
     name: gcr.io/cloud-builders/gcloud
