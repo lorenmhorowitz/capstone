@@ -2,6 +2,6 @@ runtime: nodejs8
 
 handlers:
   - url: /(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg|css|js|html))$
-    static_files: build/\1
-    upload: build/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg|css|js|html)$
+    static_files: dist/\1
+    upload: dist/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg|css|js|html)$
     secure: always
