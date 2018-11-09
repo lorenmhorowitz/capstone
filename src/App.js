@@ -11,8 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route exact path="/hover" render={() => <HoverLogin />} />
-          {/* <Route exact path="/hover" component={HoverLogin} /> */}
+          <Route exact path="/hover" component={HoverLogin} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/home" component={Home} />
           <Redirect exact from="/" to="/login" />
