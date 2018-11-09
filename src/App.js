@@ -11,9 +11,10 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route path="/hover" component={HoverLogin} />
-          <Route path="/login" component={Login} />
-          <Route path="/home" component={Home} />
+          <Route exact path="/hover" render={() => <HoverLogin />} />
+          {/* <Route exact path="/hover" component={HoverLogin} /> */}
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/home" component={Home} />
           <Redirect exact from="/" to="/login" />
           <Route component={PageNotFound} />
         </Switch>

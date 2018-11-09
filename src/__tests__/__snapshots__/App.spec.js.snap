@@ -19,15 +19,18 @@ ShallowWrapper {
     "props": Object {
       "children": <Switch>
         <Route
-          component={[Function]}
+          exact={true}
           path="/hover"
+          render={[Function]}
         />
         <Route
           component={[Function]}
+          exact={true}
           path="/login"
         />
         <Route
           component={[Function]}
+          exact={true}
           path="/home"
         />
         <Redirect
@@ -50,15 +53,18 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Route
-            component={[Function]}
+            exact={true}
             path="/hover"
+            render={[Function]}
           />,
           <Route
             component={[Function]}
+            exact={true}
             path="/login"
           />,
           <Route
             component={[Function]}
+            exact={true}
             path="/home"
           />,
           <Redirect
@@ -79,8 +85,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "component": [Function],
+            "exact": true,
             "path": "/hover",
+            "render": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -92,6 +99,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
+            "exact": true,
             "path": "/login",
           },
           "ref": null,
@@ -104,6 +112,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
+            "exact": true,
             "path": "/home",
           },
           "ref": null,
@@ -148,15 +157,18 @@ ShallowWrapper {
       "props": Object {
         "children": <Switch>
           <Route
-            component={[Function]}
+            exact={true}
             path="/hover"
+            render={[Function]}
           />
           <Route
             component={[Function]}
+            exact={true}
             path="/login"
           />
           <Route
             component={[Function]}
+            exact={true}
             path="/home"
           />
           <Redirect
@@ -179,15 +191,18 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Route
-              component={[Function]}
+              exact={true}
               path="/hover"
+              render={[Function]}
             />,
             <Route
               component={[Function]}
+              exact={true}
               path="/login"
             />,
             <Route
               component={[Function]}
+              exact={true}
               path="/home"
             />,
             <Redirect
@@ -208,8 +223,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "component": [Function],
+              "exact": true,
               "path": "/hover",
+              "render": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -221,6 +237,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "component": [Function],
+              "exact": true,
               "path": "/login",
             },
             "ref": null,
@@ -233,6 +250,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "component": [Function],
+              "exact": true,
               "path": "/home",
             },
             "ref": null,
