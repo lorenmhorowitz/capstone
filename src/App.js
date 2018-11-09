@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./home/Home";
 import HoverLogin from "./Login/Hover/HoverLogin";
-import Login from "./Login/Login";
+import Login from "./login/Login";
 import PageNotFound from "./PageNotFound/PageNotFound";
 import "./css/App.css";
 
