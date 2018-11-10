@@ -1,11 +1,10 @@
 runtime: nodejs8
 
 handlers:
-  - url: /.*
+  - url: /(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg|css|js))$
+    static_files: dist/\1
+    upload: dist/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg|css|js)$
+    secure: always
+  - url: /(.*)
     static_files: dist/index.html
     upload: dist/index.html
-  - url: /
-    static_files: dist/index.html
-    upload: dist/index.html
-  - url: /.*
-    static_dir: dist
