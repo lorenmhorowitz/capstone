@@ -25,7 +25,6 @@ ShallowWrapper {
         <TextField
           id="fieldStyle"
           label="email"
-          name="email"
           required={false}
           select={false}
           type="email"
@@ -42,7 +41,6 @@ ShallowWrapper {
         "children": <TextField
           id="fieldStyle"
           label="email"
-          name="email"
           required={false}
           select={false}
           type="email"
@@ -56,9 +54,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "className": undefined,
           "id": "fieldStyle",
           "label": "email",
-          "name": "email",
+          "onChange": undefined,
           "required": false,
           "select": false,
           "type": "email",
@@ -84,7 +83,6 @@ ShallowWrapper {
           <TextField
             id="fieldStyle"
             label="email"
-            name="email"
             required={false}
             select={false}
             type="email"
@@ -101,7 +99,6 @@ ShallowWrapper {
           "children": <TextField
             id="fieldStyle"
             label="email"
-            name="email"
             required={false}
             select={false}
             type="email"
@@ -115,9 +112,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "className": undefined,
             "id": "fieldStyle",
             "label": "email",
-            "name": "email",
+            "onChange": undefined,
             "required": false,
             "select": false,
             "type": "email",

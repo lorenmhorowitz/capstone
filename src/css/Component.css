@@ -55,7 +55,7 @@
 }
 
 label,
-#textField:focus ~ .form_label {
+#fieldStyle:focus ~ .form_label {
   color: #9b9b9b !important;
 }
 

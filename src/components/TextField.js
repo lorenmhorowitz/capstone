@@ -4,15 +4,16 @@ import React, { Component } from "react";
 
 class TextField extends Component {
   render() {
-    const { label } = this.props;
+    const { label, handler } = this.props;
     return (
       <div>
         <form id="textField">
           <MuiTextField
             id="fieldStyle"
             label={label}
-            name={label}
             type={label}
+            className={this.props.textField}
+            onChange={handler}
           />
         </form>
       </div>

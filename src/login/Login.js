@@ -15,7 +15,8 @@ class Login extends Component {
       loginError: false,
       password: "",
       redirect: false,
-      username: ""
+      username: "",
+      home: false
     };
   }
 
@@ -55,7 +56,8 @@ class Login extends Component {
         if (response.statusCode === 200) {
           this.setState({
             loginError: false,
-            redirect: true
+            redirect: true,
+            home: true
           });
         } else {
           this.setState({ loginError: true });
@@ -65,8 +67,10 @@ class Login extends Component {
   };
 
   render() {
-    if (this.state.redirect) {
+    if (this.state.redirect && this.state.home === false) {
       return <Redirect push to="/hover" />;
+    } else if (this.state.redirect && this.state.home) {
+      return <Redirect push to="/home" />;
     }
     return (
       <div className="Img">
@@ -75,11 +79,12 @@ class Login extends Component {
             <span id="Corner">Corner</span>
             <span id="Stone">Stone</span>
           </div>
-          <TextField label="email" />
-          <TextField label="password" />
+          <TextField label="email" handler={this.handleEmailChange} />
+          <TextField label="password" handler={this.handlePasswordChange} />
           <Button id="Login" onClick={this.handleLogin}>
             Log In
           </Button>
+
           <Button id="HoverLogin" onClick={this.handleHoverLogin}>
             Login With Hover
           </Button>
