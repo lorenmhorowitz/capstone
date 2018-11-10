@@ -72,6 +72,9 @@ class Login extends Component {
     } else if (this.state.redirect && this.state.home) {
       return <Redirect push to="/home" />;
     }
+
+    const errorMessage = <p id="error">Unable to log in. Please try again.</p>;
+
     return (
       <div className="Img">
         <div id="loginSquare">
@@ -88,6 +91,7 @@ class Login extends Component {
           <Button id="HoverLogin" onClick={this.handleHoverLogin}>
             Login With Hover
           </Button>
+          {this.state.loginError ? errorMessage : null}
         </div>
       </div>
     );
