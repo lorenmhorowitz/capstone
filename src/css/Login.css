@@ -10,8 +10,9 @@
   bottom: 0px;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: scroll;
   background-size: cover;
-  background-attachment: fixed;
+  min-width: 900px;
 }
 
 #loginSquare {
@@ -19,9 +20,79 @@
   position: relative;
   float: right;
   border: 2px solid #f96302;
-  height: 600px;
-  width: 600px;
+  height: 70%;
+  width: 45%;
   margin-top: 8%;
   margin-bottom: 8%;
   margin-right: 5%;
+  text-align: center;
+  overflow: visible;
+  min-height: 500px;
+  min-width: 380px;
+}
+
+#title {
+  margin-top: 3%;
+  text-align: center;
+  font-size: 6em;
+}
+
+#Corner {
+  color: #ffffff;
+  font-family: "Cutive", serif;
+  font-weight: bolder;
+}
+
+#Stone {
+  color: #f96302;
+  font-family: "Cutive", serif;
+  font-weight: bolder;
+}
+
+#Login {
+  background-color: #898989;
+  color: #ffffff;
+  width: 70%;
+  height: 10%;
+  font-size: 1.2em;
+  margin-top: 5%;
+  border-radius: 8px;
+}
+
+#HoverLogin {
+  background-color: #26ab7a;
+  color: #ffffff;
+  width: 70%;
+  height: 10%;
+  font-size: 1.2em;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+#field {
+  background-color: #ffffff;
+  color: #898989;
+  width: 100%;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 550px) {
+  #loginSquare {
+    left: 10vw;
+    position: fixed;
+  }
+
+  #title {
+    font-size: 4em;
+  }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 950px) {
+  #loginSquare {
+    left: 3vw;
+    position: fixed;
+  }
+
+  #title {
+    font-size: 4em;
+  }
 }
