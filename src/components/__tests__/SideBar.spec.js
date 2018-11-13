@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import SideBar from "../SideBar";
 import { shallow } from "enzyme";
 import { styles } from "../../css/SideBarcss";
