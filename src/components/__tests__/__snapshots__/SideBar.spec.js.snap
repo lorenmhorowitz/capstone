@@ -17,14 +17,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "classes": Object {
-        "divider": "Sidebar-divider-6",
-        "drawerPaper": "Sidebar-drawerPaper-2",
-        "drawerPaperClose": "Sidebar-drawerPaperClose-3",
-        "iconButton": "Sidebar-iconButton-4",
-        "listItem": "Sidebar-listItem-5",
-        "root": "Sidebar-root-1",
-      },
+      "classes": Object {},
       "theme": Object {
         "breakpoints": Object {
           "between": [Function],
@@ -396,14 +389,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "classes": Object {
-          "divider": "Sidebar-divider-6",
-          "drawerPaper": "Sidebar-drawerPaper-2",
-          "drawerPaperClose": "Sidebar-drawerPaperClose-3",
-          "iconButton": "Sidebar-iconButton-4",
-          "listItem": "Sidebar-listItem-5",
-          "root": "Sidebar-root-1",
-        },
+        "classes": Object {},
         "theme": Object {
           "breakpoints": Object {
             "between": [Function],
