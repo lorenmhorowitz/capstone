@@ -29,9 +29,7 @@ class CardSlide extends Component {
       pictures.push(picture);
       x += 1;
     });
-    this.setState({
-      slides: pictures
-    });
+    this.state.slides = pictures;
   };
 
   render() {
