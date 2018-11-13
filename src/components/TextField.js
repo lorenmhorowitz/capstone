@@ -8,7 +8,12 @@ class TextField extends Component {
     return (
       <div>
         <form id="textField">
-          <MuiTextField id="fieldStyle" label={label} />
+          <MuiTextField
+            id="fieldStyle"
+            label={label}
+            name={label}
+            type={label}
+          />
         </form>
       </div>
     );
