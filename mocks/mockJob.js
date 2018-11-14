@@ -1,7 +1,7 @@
 // GET A SPECIFIC JOB RETURN:
 // https://sandbox.hover.to/api/v2/jobs/611
 
-export const mockJobDetails = {
+export const mockJob = {
   id: 614,
   name: "Loren Horowitz Residence",
   location_line_1: "18807 NE 27th Way",
