@@ -11,8 +11,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 900px;
-
+  min-width: 800px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -28,7 +27,7 @@
   margin-bottom: 8%;
   margin-right: 5%;
   text-align: center;
-  min-height: 500px;
+  min-height: 550px;
   min-width: 380px;
 }
 
@@ -66,7 +65,8 @@
   width: 70%;
   height: 12%;
   font-size: 1.2em;
-  margin-top: 30px;
+  margin-top: 5%;
+  margin-bottom: 5%;
   border-radius: 8px;
 }
 
@@ -80,18 +80,38 @@
   font-size: 18px;
 }
 
-@media only screen and (min-width: 400px) and (max-width: 550px) {
-  #loginSquare {
-    float: left;
-    margin-left: 0.5%;
+@media only screen and (min-width: 1201px) {
+  #LoginSquare {
+    height: 90%;
   }
+}
 
+@media only screen and (min-width: 951px) and (max-width: 1200px) {
   #title {
     font-size: 4em;
   }
 }
 
-@media only screen and (min-width: 551px) and (max-width: 950px) {
+@media only screen and (min-width: 601px) and (max-width: 950px) {
+  #loginSquare {
+    float: left;
+    margin-left: 20%;
+    min-height: 425px;
+    max-height: 430px;
+  }
+  #title {
+    font-size: 4em;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  #loginSquare {
+    float: left;
+    margin-left: 1.5%;
+    min-height: 425px;
+    max-height: 430px;
+  }
+
   #title {
     font-size: 4em;
   }
