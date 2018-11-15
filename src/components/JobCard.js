@@ -29,7 +29,7 @@ class JobCard extends Component {
             image={this.props.image}
             title="Nice house"
           />
-          <CardContent>
+          <CardContent className="cardContent">
             <Typography variant="subtitle2" align="left">
               {this.props.name}
             </Typography>
