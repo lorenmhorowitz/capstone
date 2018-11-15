@@ -532,6 +532,7 @@ ShallowWrapper {
             </WithStyles(Button)>
           </form>
         </div>,
+        null,
       ],
       "className": "Hover",
     },
@@ -1634,6 +1635,7 @@ ShallowWrapper {
         ],
         "type": "div",
       },
+      null,
     ],
     "type": "div",
   },
@@ -2158,6 +2160,7 @@ ShallowWrapper {
               </WithStyles(Button)>
             </form>
           </div>,
+          null,
         ],
         "className": "Hover",
       },
@@ -3260,6 +3263,7 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        null,
       ],
       "type": "div",
     },
