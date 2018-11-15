@@ -3,8 +3,11 @@
 exports[`AppBar Component JobCard renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <WithStyles(ImgMediaCard)
+  Symbol(enzyme.__unrendered__): <WithStyles(JobCard)
     image="https://upload.wikimedia.org/wikipedia/commons/2/25/Houses_on_Garfield_Place,_Poughkeepsie,_NY.jpg"
+    location_city="Vancouver"
+    location_line_1="1119 W 32nd Street"
+    location_region="WA"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -20,10 +23,13 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "classes": Object {
-        "card": "ImgMediaCard-card-1",
-        "media": "ImgMediaCard-media-2",
+        "card": "JobCard-card-1",
+        "media": "JobCard-media-2",
       },
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/25/Houses_on_Garfield_Place,_Poughkeepsie,_NY.jpg",
+      "location_city": "Vancouver",
+      "location_line_1": "1119 W 32nd Street",
+      "location_region": "WA",
     },
     "ref": null,
     "rendered": null,
@@ -36,10 +42,13 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "classes": Object {
-          "card": "ImgMediaCard-card-1",
-          "media": "ImgMediaCard-media-2",
+          "card": "JobCard-card-1",
+          "media": "JobCard-media-2",
         },
         "image": "https://upload.wikimedia.org/wikipedia/commons/2/25/Houses_on_Garfield_Place,_Poughkeepsie,_NY.jpg",
+        "location_city": "Vancouver",
+        "location_line_1": "1119 W 32nd Street",
+        "location_region": "WA",
       },
       "ref": null,
       "rendered": null,

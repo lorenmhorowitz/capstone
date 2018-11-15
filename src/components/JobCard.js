@@ -17,7 +17,7 @@ const styles = {
   }
 };
 
-class ImgMediaCard extends Component {
+class JobCard extends Component {
   render() {
     return (
       <Card className="card">
@@ -30,10 +30,15 @@ class ImgMediaCard extends Component {
             title="Nice house"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              House
+            <Typography variant="subtitle2" align="left">
+              {this.props.name}
             </Typography>
-            <Typography component="p">You like this house</Typography>
+            <Typography variant="subtitle2" align="left">
+              {this.props.location_line_1}
+            </Typography>
+            <Typography variant="subtitle2" align="left">
+              {this.props.location_city}, {this.props.location_region}
+            </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
@@ -41,8 +46,8 @@ class ImgMediaCard extends Component {
   }
 }
 
-ImgMediaCard.propTypes = {
+JobCard.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(ImgMediaCard);
+export default withStyles(styles)(JobCard);
