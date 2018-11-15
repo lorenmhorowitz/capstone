@@ -12,8 +12,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-width: 800px;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 #loginSquare {
@@ -86,6 +84,12 @@
 }
 
 @media only screen and (min-width: 951px) and (max-width: 1200px) {
+  #loginSquare {
+    float: left;
+    margin-left: 20%;
+    min-height: 425px;
+    max-height: 550px;
+  }
   #title {
     font-size: 4em;
   }
@@ -114,5 +118,13 @@
 
   #title {
     font-size: 4em;
+  }
+}
+@media screen and (max-height: 1245px) {
+  #scroll {
+    max-height: 945px;
+    min-width: 380px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }

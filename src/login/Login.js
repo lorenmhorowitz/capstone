@@ -76,7 +76,7 @@ class Login extends Component {
     const errorMessage = <p id="error">Unable to log in. Please try again.</p>;
 
     return (
-      <div className="Img">
+      <div className="Img" id="scroll">
         <div id="loginSquare">
           <div id="title">
             <span id="Corner">Corner</span>

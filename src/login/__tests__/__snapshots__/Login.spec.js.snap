@@ -56,6 +56,7 @@ ShallowWrapper {
         </WithStyles(Button)>
       </div>,
       "className": "Img",
+      "id": "scroll",
     },
     "ref": null,
     "rendered": Object {
@@ -253,6 +254,7 @@ ShallowWrapper {
           </WithStyles(Button)>
         </div>,
         "className": "Img",
+        "id": "scroll",
       },
       "ref": null,
       "rendered": Object {
