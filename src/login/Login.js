@@ -16,7 +16,7 @@ class Login extends Component {
       password: "",
       redirect: false,
       username: "",
-      home: false
+      redirectHome: false
     };
   }
 
@@ -56,8 +56,7 @@ class Login extends Component {
         if (response.statusCode === 200) {
           this.setState({
             loginError: false,
-            redirect: true,
-            home: true
+            redirectHome: true
           });
         } else {
           this.setState({ loginError: true });
@@ -67,9 +66,9 @@ class Login extends Component {
   };
 
   render() {
-    if (this.state.redirect && this.state.home === false) {
+    if (this.state.redirect) {
       return <Redirect push to="/hover" />;
-    } else if (this.state.redirect && this.state.home) {
+    } else if (this.state.redirectHome) {
       return <Redirect push to="/home" />;
     }
 
