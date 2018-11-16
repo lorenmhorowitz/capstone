@@ -3,6 +3,7 @@ import Button from "@material-ui/core/Button";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import createPalette from "@material-ui/core/styles/createPalette";
 import hoverLogo from "../../hoverLogo.png";
+import Loading from "../../components/Loading";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import React, { Component } from "react";
 import request from "request";
@@ -30,6 +31,7 @@ class HoverLogin extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: false,
       loginError: false,
       password: "",
       redirect: false,
@@ -46,6 +48,9 @@ class HoverLogin extends Component {
   };
 
   handleHoverLogin = () => {
+    this.setState({
+      loading: true
+    });
     request.post(
       {
         url: LOGIN_ACCOUNT_API,
@@ -63,16 +68,23 @@ class HoverLogin extends Component {
       },
       function(error, response) {
         if (error) {
+          this.setState({
+            loading: false
+          });
           return;
         }
 
         if (response.statusCode === 200) {
           this.setState({
+            loading: false,
             loginError: false,
             redirect: true
           });
         } else {
-          this.setState({ loginError: true });
+          this.setState({
+            loading: false,
+            loginError: true
+          });
         }
       }.bind(this)
     );
@@ -188,6 +200,7 @@ class HoverLogin extends Component {
             </Button>
           </form>
         </div>
+        {this.state.loading ? <Loading /> : null}
       </div>
     );
   }

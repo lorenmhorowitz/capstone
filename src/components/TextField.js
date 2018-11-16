@@ -13,6 +13,7 @@ class TextField extends Component {
             label={label}
             name={label}
             type={label}
+            onChange={this.props.handleChange}
           />
         </form>
       </div>
