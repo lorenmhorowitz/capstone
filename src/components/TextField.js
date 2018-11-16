@@ -9,6 +9,7 @@ class TextField extends Component {
       <div>
         <form className="textField">
           <MuiTextField
+            id="fieldStyle"
             label={label}
             type={label}
             className="fieldStyle"

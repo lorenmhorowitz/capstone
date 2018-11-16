@@ -36,7 +36,7 @@
   margin-top: 5%;
   border-radius: 8px;
   width: 70%;
-  height: 18%;
+
   margin-left: 15%;
   margin-right: 15%;
   text-align: left;
@@ -48,15 +48,45 @@
   background-position: center;
   border-radius: 8px;
   margin: 0;
+  height: 12%;
   width: 30vw;
-
   right: 2vw;
   margin-bottom: 5px;
   text-indent: 5%;
   padding-bottom: 4px;
 }
 
-@media only screen and (min-width: 380px) and (max-width: 850px) {
+@media only screen and (min-width: 1201px) {
+  .fieldStyle {
+    margin-bottom: 5px;
+    padding-bottom: 4px;
+    text-align: left;
+    text-indent: 5%;
+    height: 66px;
+    width: 250px;
+    right: 15px;
+  }
+}
+
+@media only screen and (min-width: 951px) and (max-width: 1200px) {
+  #size {
+    height: 12%;
+  }
+  .fieldStyle {
+    margin-bottom: 5px;
+    padding-bottom: 4px;
+    text-align: left;
+    text-indent: 5%;
+    height: 51.45px;
+    width: 250px;
+    right: 15px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 950px) {
+  #size {
+    height: 12%;
+  }
   .fieldStyle {
     margin-bottom: 5px;
     padding-bottom: 4px;
@@ -68,6 +98,20 @@
   }
 }
 
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  #size {
+    height: 12%;
+  }
+  .fieldStyle {
+    margin-bottom: 5px;
+    padding-bottom: 4px;
+    text-align: left;
+    text-indent: 5%;
+    height: 12%;
+    width: 250px;
+    right: 15px;
+  }
+}
 ::before {
   border-bottom: none !important;
 }
@@ -77,10 +121,4 @@
 label {
   color: #9b9b9b !important;
   border-bottom: none #ffffff !important;
-}
-
-@media only screen and (min-width: 300px) and (max-width: 800px) {
-  .fieldStyle {
-    height: 12%;
-  }
 }
