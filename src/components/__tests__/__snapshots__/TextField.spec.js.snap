@@ -20,7 +20,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <form
-        id="textField"
+        className="textField"
       >
         <TextField
           id="fieldStyle"
@@ -46,7 +46,7 @@ ShallowWrapper {
           type="email"
           variant="standard"
         />,
-        "id": "textField",
+        "className": "textField",
       },
       "ref": null,
       "rendered": Object {
@@ -78,7 +78,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <form
-          id="textField"
+          className="textField"
         >
           <TextField
             id="fieldStyle"
@@ -104,7 +104,7 @@ ShallowWrapper {
             type="email"
             variant="standard"
           />,
-          "id": "textField",
+          "className": "textField",
         },
         "ref": null,
         "rendered": Object {

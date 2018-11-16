@@ -7,7 +7,7 @@ class TextField extends Component {
     const { label, handler } = this.props;
     return (
       <div>
-        <form id="textField">
+        <form className="textField">
           <MuiTextField
             id="fieldStyle"
             label={label}
