@@ -36,7 +36,7 @@
   margin-top: 5%;
   border-radius: 8px;
   width: 70%;
-
+  height: 18%;
   margin-left: 15%;
   margin-right: 15%;
   text-align: left;
@@ -47,23 +47,27 @@
   position: relative;
   background-position: center;
   border-radius: 8px;
+  margin: 0;
   width: 30vw;
+
   right: 2vw;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   text-indent: 5%;
   padding-bottom: 4px;
 }
 
 @media only screen and (min-width: 380px) and (max-width: 850px) {
   .fieldStyle {
+    margin-bottom: 5px;
+    padding-bottom: 4px;
+    text-align: left;
+    text-indent: 5%;
+    height: 12%;
     width: 250px;
     right: 15px;
   }
 }
-underline-27 {
-  position: relative;
-  border-bottom: none !important;
-}
+
 ::before {
   border-bottom: none !important;
 }
@@ -75,8 +79,8 @@ label {
   border-bottom: none #ffffff !important;
 }
 
-@media only screen and (min-width: 400px) and (max-width: 550px) {
-  #textfiled {
-    height: 12vw;
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+  .fieldStyle {
+    height: 12%;
   }
 }
