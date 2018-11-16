@@ -77,13 +77,14 @@
   font-size: 18px;
 }
 
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1221px) {
   #loginSquare {
-    max-height: 600px;
+    min-height: 650px;
+    max-height: 650px;
   }
 }
 
-@media only screen and (min-width: 951px) and (max-width: 1200px) {
+@media only screen and (min-width: 951px) and (max-width: 1222px) {
   #loginSquare {
     float: left;
     margin-left: 20%;
