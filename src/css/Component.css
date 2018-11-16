@@ -53,32 +53,28 @@
   text-indent: 5%;
   padding-bottom: 4px;
 }
-.fieldStyle:hover {
-  color: #009788;
-}
+
 @media only screen and (min-width: 380px) and (max-width: 850px) {
   .fieldStyle {
     width: 250px;
     right: 15px;
   }
 }
-
-label,
-#textStyle {
+underline-27 {
+  position: relative;
+  border-bottom: none !important;
+}
+::before {
+  border-bottom: none !important;
+}
+::after {
+  border-bottom: none !important;
+}
+label {
   color: #9b9b9b !important;
+  border-bottom: none #ffffff !important;
 }
-underline-27,
-#lineStyle {
-  color: #ffffff;
-}
-/* input-46,
-#lineStyle{
-  color: #FFFFFF;
-} */
-.form__field:focus {
-  padding-bottom: 6px;
-  border-bottom: 2px solid #009788;
-}
+
 @media only screen and (min-width: 400px) and (max-width: 550px) {
   #textfiled {
     height: 12vw;
