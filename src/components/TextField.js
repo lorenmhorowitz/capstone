@@ -12,7 +12,7 @@ class TextField extends Component {
             id="fieldStyle"
             label={label}
             type={label}
-            className={this.props.textField}
+            className="fieldStyle"
             onChange={handler}
           />
         </form>

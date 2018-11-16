@@ -23,6 +23,7 @@ ShallowWrapper {
         className="textField"
       >
         <TextField
+          className="fieldStyle"
           id="fieldStyle"
           label="email"
           required={false}
@@ -39,6 +40,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <TextField
+          className="fieldStyle"
           id="fieldStyle"
           label="email"
           required={false}
@@ -54,7 +56,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "className": undefined,
+          "className": "fieldStyle",
           "id": "fieldStyle",
           "label": "email",
           "onChange": undefined,
@@ -81,6 +83,7 @@ ShallowWrapper {
           className="textField"
         >
           <TextField
+            className="fieldStyle"
             id="fieldStyle"
             label="email"
             required={false}
@@ -97,6 +100,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <TextField
+            className="fieldStyle"
             id="fieldStyle"
             label="email"
             required={false}
@@ -112,7 +116,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "className": undefined,
+            "className": "fieldStyle",
             "id": "fieldStyle",
             "label": "email",
             "onChange": undefined,

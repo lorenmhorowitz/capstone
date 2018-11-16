@@ -36,35 +36,49 @@
   margin-top: 5%;
   border-radius: 8px;
   width: 70%;
+
   margin-left: 15%;
   margin-right: 15%;
   text-align: left;
   text-indent: 5%;
 }
 
-#fieldStyle {
+.fieldStyle {
   position: relative;
   background-position: center;
   border-radius: 8px;
   width: 30vw;
   right: 2vw;
-  margin-right: -4255px;
   margin-bottom: 15px;
   text-indent: 5%;
+  padding-bottom: 4px;
 }
-
+.fieldStyle:hover {
+  color: #009788;
+}
 @media only screen and (min-width: 380px) and (max-width: 850px) {
-  #fieldStyle {
+  .fieldStyle {
     width: 250px;
     right: 15px;
   }
 }
 
 label,
-#fieldStyle:focus ~ .form_label {
+#textStyle {
   color: #9b9b9b !important;
 }
-
+underline-27,
+#lineStyle {
+  color: #ffffff;
+}
+/* input-46,
+#lineStyle{
+  color: #FFFFFF;
+} */
+.form__field:focus {
+  padding-bottom: 6px;
+  border-bottom: 2px solid #009788;
+}
 @media only screen and (min-width: 400px) and (max-width: 550px) {
   #textfiled {
     height: 12vw;
