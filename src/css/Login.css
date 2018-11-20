@@ -1,34 +1,32 @@
 /*#26AB7A  -green hover color*/
 
 .Img {
-  text-align: center;
   background-image: url("https://cdn.discordapp.com/attachments/489154865344282625/508368921666256936/Office.png");
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: scroll;
   background-size: cover;
-  min-width: 900px;
+  bottom: 0px;
+  left: 0px;
+  min-width: 800px;
+  position: fixed;
+  right: 0px;
+  text-align: center;
+  top: 0px;
 }
 
 #loginSquare {
   background-color: rgba(38, 38, 38, 0.8);
-  position: relative;
-  float: right;
   border: 2px solid #f96302;
-  height: 70%;
-  width: 45%;
-  margin-top: 8%;
+  float: right;
+  height: 80%;
   margin-bottom: 8%;
   margin-right: 5%;
-  text-align: center;
-  overflow: visible;
-  min-height: 500px;
+  margin-top: 8%;
+  min-height: 550px;
   min-width: 380px;
+  position: relative;
+  text-align: center;
+  width: 45%;
 }
 
 #title {
@@ -51,34 +49,47 @@
 
 #Login {
   background-color: #898989;
-  color: #ffffff;
-  width: 70%;
-  height: 10%;
-  font-size: 1.2em;
-  margin-top: 5%;
   border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.2em;
+  height: 12%;
+  margin-top: 5%;
+  width: 70%;
 }
 
 #HoverLogin {
   background-color: #26ab7a;
-  color: #ffffff;
-  width: 70%;
-  height: 10%;
-  font-size: 1.2em;
-  margin-top: 30px;
   border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.2em;
+  height: 12%;
+  margin-top: 5%;
+  width: 70%;
 }
 
-#field {
-  background-color: #ffffff;
-  color: #898989;
-  width: 100%;
+#error {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: white;
+  font-size: 18px;
 }
 
-@media only screen and (min-width: 400px) and (max-width: 550px) {
+@media only screen and (min-width: 1221px) {
   #loginSquare {
-    left: 10vw;
-    position: fixed;
+    min-height: 650px;
+    max-height: 650px;
+  }
+}
+
+@media only screen and (min-width: 951px) and (max-width: 1222px) {
+  #loginSquare {
+    float: left;
+    margin-left: 20%;
+    min-height: 425px;
+    max-height: 450px;
   }
 
   #title {
@@ -86,13 +97,38 @@
   }
 }
 
-@media only screen and (min-width: 551px) and (max-width: 950px) {
+@media only screen and (min-width: 601px) and (max-width: 950px) {
   #loginSquare {
-    left: 3vw;
-    position: fixed;
+    float: left;
+    margin-left: 20%;
+    min-height: 425px;
+    max-height: 430px;
   }
 
   #title {
     font-size: 4em;
+  }
+}
+
+@media only screen and (min-width: 380px) and (max-width: 600px) {
+  #loginSquare {
+    height: 100%;
+    float: left;
+    margin-left: 2%;
+    min-height: 425px;
+    max-height: 430px;
+  }
+
+  #title {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-height: 1245px) {
+  #scroll {
+    max-height: 945px;
+    min-width: 380px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }

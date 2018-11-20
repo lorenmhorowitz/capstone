@@ -13,11 +13,11 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      homeRedirect: false,
+      hoverRedirect: false,
       loading: false,
       loginError: false,
       password: "",
-      homeRedirect: false,
-      hoverRedirect: false,
       username: ""
     };
   }
@@ -86,24 +86,24 @@ class Login extends Component {
       return <Redirect push to="/home" />;
     }
 
+    const errorMessage = <p id="error">Unable to log in. Please try again.</p>;
+
     return (
-      <div className="Img">
+      <div className="Img" id="scroll">
         <div id="loginSquare">
           <div id="title">
             <span id="Corner">Corner</span>
             <span id="Stone">Stone</span>
           </div>
-          <TextField label="email" handleChange={this.handleEmailChange} />
-          <TextField
-            label="password"
-            handleChange={this.handlePasswordChange}
-          />
+          <TextField label="email" handler={this.handleEmailChange} />
+          <TextField label="password" handler={this.handlePasswordChange} />
           <Button id="Login" onClick={this.handleLogin}>
             Log In
           </Button>
           <Button id="HoverLogin" onClick={this.handleHoverLogin}>
             Login With Hover
           </Button>
+          {this.state.loginError ? errorMessage : null}
         </div>
         {this.state.loading ? <Loading /> : null}
       </div>

@@ -20,10 +20,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <form
-        id="textField"
+        className="textField"
       >
         <TextField
-          id="fieldStyle"
+          className="fieldStyle"
           label="email"
           name="email"
           required={false}
@@ -40,7 +40,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <TextField
-          id="fieldStyle"
+          className="fieldStyle"
           label="email"
           name="email"
           required={false}
@@ -48,7 +48,7 @@ ShallowWrapper {
           type="email"
           variant="standard"
         />,
-        "id": "textField",
+        "className": "textField",
       },
       "ref": null,
       "rendered": Object {
@@ -56,7 +56,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "id": "fieldStyle",
+          "className": "fieldStyle",
           "label": "email",
           "name": "email",
           "onChange": undefined,
@@ -80,10 +80,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <form
-          id="textField"
+          className="textField"
         >
           <TextField
-            id="fieldStyle"
+            className="fieldStyle"
             label="email"
             name="email"
             required={false}
@@ -100,7 +100,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <TextField
-            id="fieldStyle"
+            className="fieldStyle"
             label="email"
             name="email"
             required={false}
@@ -108,7 +108,7 @@ ShallowWrapper {
             type="email"
             variant="standard"
           />,
-          "id": "textField",
+          "className": "textField",
         },
         "ref": null,
         "rendered": Object {
@@ -116,7 +116,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "id": "fieldStyle",
+            "className": "fieldStyle",
             "label": "email",
             "name": "email",
             "onChange": undefined,

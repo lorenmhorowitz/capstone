@@ -36,11 +36,11 @@ ShallowWrapper {
             </span>
           </div>
           <TextField
-            handleChange={[Function]}
+            handler={[Function]}
             label="email"
           />
           <TextField
-            handleChange={[Function]}
+            handler={[Function]}
             label="password"
           />
           <WithStyles(Button)
@@ -59,6 +59,7 @@ ShallowWrapper {
         null,
       ],
       "className": "Img",
+      "id": "scroll",
     },
     "ref": null,
     "rendered": Array [
@@ -83,11 +84,11 @@ ShallowWrapper {
               </span>
             </div>,
             <TextField
-              handleChange={[Function]}
+              handler={[Function]}
               label="email"
             />,
             <TextField
-              handleChange={[Function]}
+              handler={[Function]}
               label="password"
             />,
             <WithStyles(Button)
@@ -102,6 +103,7 @@ ShallowWrapper {
             >
               Login With Hover
             </WithStyles(Button)>,
+            null,
           ],
           "id": "loginSquare",
         },
@@ -160,7 +162,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "handleChange": [Function],
+              "handler": [Function],
               "label": "email",
             },
             "ref": null,
@@ -172,7 +174,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "handleChange": [Function],
+              "handler": [Function],
               "label": "password",
             },
             "ref": null,
@@ -205,6 +207,7 @@ ShallowWrapper {
             "rendered": "Login With Hover",
             "type": [Function],
           },
+          null,
         ],
         "type": "div",
       },
@@ -237,11 +240,11 @@ ShallowWrapper {
               </span>
             </div>
             <TextField
-              handleChange={[Function]}
+              handler={[Function]}
               label="email"
             />
             <TextField
-              handleChange={[Function]}
+              handler={[Function]}
               label="password"
             />
             <WithStyles(Button)
@@ -260,6 +263,7 @@ ShallowWrapper {
           null,
         ],
         "className": "Img",
+        "id": "scroll",
       },
       "ref": null,
       "rendered": Array [
@@ -284,11 +288,11 @@ ShallowWrapper {
                 </span>
               </div>,
               <TextField
-                handleChange={[Function]}
+                handler={[Function]}
                 label="email"
               />,
               <TextField
-                handleChange={[Function]}
+                handler={[Function]}
                 label="password"
               />,
               <WithStyles(Button)
@@ -303,6 +307,7 @@ ShallowWrapper {
               >
                 Login With Hover
               </WithStyles(Button)>,
+              null,
             ],
             "id": "loginSquare",
           },
@@ -361,7 +366,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "handleChange": [Function],
+                "handler": [Function],
                 "label": "email",
               },
               "ref": null,
@@ -373,7 +378,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "handleChange": [Function],
+                "handler": [Function],
                 "label": "password",
               },
               "ref": null,
@@ -406,6 +411,7 @@ ShallowWrapper {
               "rendered": "Login With Hover",
               "type": [Function],
             },
+            null,
           ],
           "type": "div",
         },
