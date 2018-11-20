@@ -4,8 +4,7 @@
 node_modules/
 
 # mac
-Icon
-/**/*Icon*
+/**/Icon*
 .DS_Store
 
 # testing
