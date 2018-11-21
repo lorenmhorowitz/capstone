@@ -1,5 +1,6 @@
 .root {
   display: flex;
+  color: white; /* colors Chevron icons */
 }
 
 .drawerPaper {
@@ -8,11 +9,7 @@
   width: 220px;
   position: fixed;
   white-space: nowrap; /* text doesn't shrink into side */
-  /* light grey */
   transition: all 0.2s linear;
-  overflow: hidden; /* removes scrollbar during transition */
-  overflow-y: hidden;
-  text-overflow: clip;
 }
 
 .drawerPaperClose {
@@ -21,11 +18,14 @@
 }
 
 #listItemFirst {
-  /* fixes spacing on first list Item */
-  margin-top: -8px;
+  margin-top: -8px; /* fixes spacing on first list Item */
 }
 
 .listItem {
   height: 75px;
+  color: white;
+}
+
+.listItemIcon {
   color: white;
 }

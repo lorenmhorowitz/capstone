@@ -9,9 +9,9 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import "../css/Sidebar.css";
 
 const styles = {
-  drawerPaperSpecial: {
+  drawerPaperOverrides: {
     overflow: "hidden",
-    backgroundColor: "#9b9b9b"
+    backgroundColor: "#9b9b9b" //grey
   }
 };
 
@@ -37,30 +37,23 @@ class Sidebar extends Component {
           classes={{
             paper: classNames(
               "drawerPaper",
-              classes.drawerPaperSpecial,
+              classes.drawerPaperOverrides,
               !open && "drawerPaperClose"
             )
           }}
-          style={{ backgroundColor: "#9b9b9b" }}
         >
           <List>
             <ListItem
               className="listItem"
               id="listItemFirst"
               onClick={this.handleSidebarToggle}
-              style={{ color: "white" }}
               button
             >
               {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
             </ListItem>
             <ListItem className="listItem" button>
               <ListItemIcon>
-                <i
-                  className="material-icons outline"
-                  style={{ color: "white" }}
-                >
-                  info
-                </i>
+                <i className="material-icons outline listItemIcon">info</i>
               </ListItemIcon>
               <ListItemText
                 primary="Information"
@@ -69,9 +62,7 @@ class Sidebar extends Component {
             </ListItem>
             <ListItem className="listItem" button>
               <ListItemIcon>
-                <i className="material-icons" style={{ color: "white" }}>
-                  home
-                </i>
+                <i className="material-icons outline listItemIcon">home</i>
               </ListItemIcon>
               <ListItemText
                 primary="Roofing"
@@ -80,7 +71,7 @@ class Sidebar extends Component {
             </ListItem>
             <ListItem className="listItem" button>
               <ListItemIcon>
-                <i className="material-icons" style={{ color: "white" }}>
+                <i className="material-icons outline listItemIcon">
                   view_headline
                 </i>
               </ListItemIcon>
@@ -91,9 +82,7 @@ class Sidebar extends Component {
             </ListItem>
             <ListItem className="listItem" button>
               <ListItemIcon>
-                <i className="material-icons" style={{ color: "white" }}>
-                  web_asset
-                </i>
+                <i className="material-icons outline listItemIcon">web_asset</i>
               </ListItemIcon>
               <ListItemText
                 primary="Windows"
@@ -102,13 +91,13 @@ class Sidebar extends Component {
             </ListItem>
             <ListItem className="listItem" button>
               <ListItemIcon>
-                <i className="material-icons" style={{ color: "white" }}>
+                <i className="material-icons outline listItemIcon">
                   shopping_cart
                 </i>
               </ListItemIcon>
               <ListItemText
                 primary="Shop"
-                primaryTypographyProps={{ color: "white" }}
+                primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
           </List>
