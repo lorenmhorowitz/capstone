@@ -46,7 +46,9 @@ class Sidebar extends Component {
           <List>
             <ListItem
               className="listItem"
+              id="listItemFirst"
               onClick={this.handleSidebarToggle}
+              style={{ color: "white" }}
               button
             >
               {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -121,44 +123,3 @@ Sidebar.propTypes = {
 };
 
 export default withStyles(styles, { withTheme: true })(Sidebar); // {withTheme} prevents Warning
-
-/*
-
-const styles = theme => ({
-  root: {
-    display: "flex"
-  },
-  drawerPaper: {
-    top: "70px", //moves Sidebar below AppBar
-    height: "450px", //removes unneeded space from bottom
-    width: "220px",
-    position: "fixed",
-    whiteSpace: "nowrap", //text doesn't shrink into side
-    backgroundColor: "#9b9b9b", // light grey
-    transition: "all 0.2s linear",
-    overflow: "hidden" //removes scrollbar during transition
-  },
-  drawerPaperClose: {
-    width: theme.spacing.unit * 7,
-    [theme.breakpoints.up("sm")]: {
-      width: theme.spacing.unit * 9
-    },
-    transition: "all 0.2s linear",
-    overflow: "hidden" //display mini sidebar
-  },
-  iconButton: {
-    //fixes spacing
-    marginTop: "-8px",
-    height: "75px",
-    color: "white"
-  },
-  listItem: {
-    height: "75px",
-    color: "white"
-  },
-  divider: {
-    background: "#ff7043" //orange
-  }
-});
-
-*/

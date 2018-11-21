@@ -4,7 +4,7 @@
 
 .drawerPaper {
   margin-top: 70px;
-  max-height: 458px; /* removes unneeded space from bottom */
+  max-height: 450px; /* removes unneeded space from bottom */
   width: 220px;
   position: fixed;
   white-space: nowrap; /* text doesn't shrink into side */
@@ -20,11 +20,9 @@
   transition: all 0.2s linear;
 }
 
-.iconButton {
-  /* fixes spacing */
+#listItemFirst {
+  /* fixes spacing on first list Item */
   margin-top: -8px;
-  height: 75px;
-  color: white;
 }
 
 .listItem {
