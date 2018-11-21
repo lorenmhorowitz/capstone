@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+}
+
+.drawerPaper {
+  margin-top: 70px;
+  max-height: 458px; /* removes unneeded space from bottom */
+  width: 220px;
+  position: fixed;
+  white-space: nowrap; /* text doesn't shrink into side */
+  /* light grey */
+  transition: all 0.2s linear;
+  overflow: hidden; /* removes scrollbar during transition */
+  overflow-y: hidden;
+  text-overflow: clip;
+}
+
+.drawerPaperClose {
+  width: 75px;
+  transition: all 0.2s linear;
+}
+
+.iconButton {
+  /* fixes spacing */
+  margin-top: -8px;
+  height: 75px;
+  color: white;
+}
+
+.listItem {
+  height: 75px;
+  color: white;
+}

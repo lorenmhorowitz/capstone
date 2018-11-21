@@ -6,7 +6,14 @@ import { withStyles } from "@material-ui/core/styles";
 import { List, ListItem, ListItemText, ListItemIcon } from "@material-ui/core";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import styles from "../css/SideBarcss.js";
+import "../css/Sidebar.css";
+
+const styles = {
+  drawerPaperSpecial: {
+    overflow: "hidden",
+    backgroundColor: "#9b9b9b"
+  }
+};
 
 class Sidebar extends Component {
   state = {
@@ -22,27 +29,29 @@ class Sidebar extends Component {
     const { open } = this.state;
 
     return (
-      <div className={classes.root}>
+      <div className="root">
         <Drawer
           variant="permanent"
           anchor="left"
           open={open}
           classes={{
             paper: classNames(
-              classes.drawerPaper,
-              !open && classes.drawerPaperClose
+              "drawerPaper",
+              classes.drawerPaperSpecial,
+              !open && "drawerPaperClose"
             )
           }}
+          style={{ backgroundColor: "#9b9b9b" }}
         >
           <List>
             <ListItem
-              className={classes.iconButton}
+              className="listItem"
               onClick={this.handleSidebarToggle}
               button
             >
               {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
             </ListItem>
-            <ListItem className={classes.listItem} button>
+            <ListItem className="listItem" button>
               <ListItemIcon>
                 <i
                   className="material-icons outline"
@@ -56,7 +65,7 @@ class Sidebar extends Component {
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
-            <ListItem className={classes.listItem} button>
+            <ListItem className="listItem" button>
               <ListItemIcon>
                 <i className="material-icons" style={{ color: "white" }}>
                   home
@@ -67,7 +76,7 @@ class Sidebar extends Component {
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
-            <ListItem className={classes.listItem} button>
+            <ListItem className="listItem" button>
               <ListItemIcon>
                 <i className="material-icons" style={{ color: "white" }}>
                   view_headline
@@ -78,7 +87,7 @@ class Sidebar extends Component {
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
-            <ListItem className={classes.listItem} button>
+            <ListItem className="listItem" button>
               <ListItemIcon>
                 <i className="material-icons" style={{ color: "white" }}>
                   web_asset
@@ -89,7 +98,7 @@ class Sidebar extends Component {
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
-            <ListItem className={classes.listItem} button>
+            <ListItem className="listItem" button>
               <ListItemIcon>
                 <i className="material-icons" style={{ color: "white" }}>
                   shopping_cart
@@ -97,7 +106,7 @@ class Sidebar extends Component {
               </ListItemIcon>
               <ListItemText
                 primary="Shop"
-                primaryTypographyProps={{ color: "inherit" }}
+                primaryTypographyProps={{ color: "white" }}
               />
             </ListItem>
           </List>
@@ -108,8 +117,48 @@ class Sidebar extends Component {
 }
 
 Sidebar.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles, { withTheme: true })(Sidebar); // {withTheme} prevents Warning
+
+/*
+
+const styles = theme => ({
+  root: {
+    display: "flex"
+  },
+  drawerPaper: {
+    top: "70px", //moves Sidebar below AppBar
+    height: "450px", //removes unneeded space from bottom
+    width: "220px",
+    position: "fixed",
+    whiteSpace: "nowrap", //text doesn't shrink into side
+    backgroundColor: "#9b9b9b", // light grey
+    transition: "all 0.2s linear",
+    overflow: "hidden" //removes scrollbar during transition
+  },
+  drawerPaperClose: {
+    width: theme.spacing.unit * 7,
+    [theme.breakpoints.up("sm")]: {
+      width: theme.spacing.unit * 9
+    },
+    transition: "all 0.2s linear",
+    overflow: "hidden" //display mini sidebar
+  },
+  iconButton: {
+    //fixes spacing
+    marginTop: "-8px",
+    height: "75px",
+    color: "white"
+  },
+  listItem: {
+    height: "75px",
+    color: "white"
+  },
+  divider: {
+    background: "#ff7043" //orange
+  }
+});
+
+*/
