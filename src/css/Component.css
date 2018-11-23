@@ -12,6 +12,11 @@
   position: absolute;
   left: 20px;
 }
+a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: none;
+  text-decoration-style: none;
+}
 
 #StoneTitle {
   color: #f96302;

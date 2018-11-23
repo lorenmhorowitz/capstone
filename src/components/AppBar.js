@@ -1,10 +1,11 @@
 import AppBars from "@material-ui/core/AppBar";
 import { createMuiTheme, IconButton } from "@material-ui/core";
-import styles from "../css/Component.css";
+import { Link } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import styles from "../css/Component.css";
 import Toolbar from "@material-ui/core/Toolbar";
 import { withStyles } from "@material-ui/core/styles";
 
@@ -42,12 +43,11 @@ class AppBar extends Component {
         <MuiThemeProvider theme={muiTheme}>
           <AppBars id="root" color="primary">
             <Toolbar>
-              <div id="logo" onClick={this.clickHandler}>
-                <span id="HomeTitle">
-                  Corner
-                  <span id="StoneTitle">Stone</span>
-                </span>
-              </div>
+              <Link to="/home" id="Logo">
+                <span id="HomeTitle">Corner</span>
+                <span id="StoneTitle">Stone</span>
+              </Link>
+
               <div id="menuButton">
                 <IconButton
                   aria-owns={open ? "Menu" : null}
