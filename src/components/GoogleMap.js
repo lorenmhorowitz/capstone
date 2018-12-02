@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import Geocode from "react-geocode";
 
+const GOOGLE_MAPS_API_KEY = "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8";
+
 class GoogleMap extends Component {
   state = {
     center: {
@@ -12,7 +14,7 @@ class GoogleMap extends Component {
   };
 
   componentDidMount() {
-    Geocode.setApiKey(process.env.GOOGLE_MAPS_API_KEY);
+    Geocode.setApiKey(GOOGLE_MAPS_API_KEY);
     if (this.props.location) {
       Geocode.fromAddress(this.props.location).then(response => {
         const { lat, lng } = response.results[0].geometry.location;
@@ -36,7 +38,7 @@ class GoogleMap extends Component {
         }}
       >
         <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
+          bootstrapURLKeys={{ key: GOOGLE_MAPS_API_KEY }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           center={this.state.center}
