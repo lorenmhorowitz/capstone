@@ -10,7 +10,13 @@
 
 #logo {
   position: absolute;
+  text-decoration: none;
   left: 20px;
+}
+a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: none;
+  text-decoration-style: none;
 }
 
 #StoneTitle {
@@ -56,7 +62,7 @@
   width: 30vw;
 }
 
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1221px) {
   .fieldStyle {
     margin-bottom: 5px;
     padding-bottom: 4px;
@@ -67,7 +73,7 @@
     right: 15px;
   }
 }
-@media only screen and (min-width: 951px) and (max-width: 1200px) {
+@media only screen and (min-width: 951px) and (max-width: 1220px) {
   #size {
     height: 12%;
   }
