@@ -10,6 +10,7 @@
 
 #logo {
   position: absolute;
+  text-decoration: none;
   left: 20px;
 }
 a:-webkit-any-link {

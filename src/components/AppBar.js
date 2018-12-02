@@ -43,7 +43,7 @@ class AppBar extends Component {
         <MuiThemeProvider theme={muiTheme}>
           <AppBars id="root" color="primary">
             <Toolbar>
-              <Link to="/home" id="Logo">
+              <Link to="/home" id="logo">
                 <span id="HomeTitle">Corner</span>
                 <span id="StoneTitle">Stone</span>
               </Link>
