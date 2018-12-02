@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  color: white; /* colors Chevron icons */
+}
+
+.drawerPaper {
+  margin-top: 70px;
+  max-height: 450px; /* removes unneeded space from bottom */
+  width: 220px;
+  position: fixed;
+  white-space: nowrap; /* text doesn't shrink into side */
+  transition: all 0.2s linear;
+}
+
+.drawerPaperClose {
+  width: 75px;
+  transition: all 0.2s linear;
+}
+
+#listItemFirst {
+  margin-top: -8px; /* fixes spacing on first list Item */
+}
+
+.listItem {
+  height: 75px;
+  color: white;
+}
+
+.listItemIcon {
+  color: white;
+}
