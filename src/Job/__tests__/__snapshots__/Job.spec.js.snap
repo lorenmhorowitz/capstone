@@ -21,6 +21,19 @@ ShallowWrapper {
         <WithStyles(AppBar) />,
         <WithStyles(CircularIndeterminate) />,
         <WithStyles(Sidebar) />,
+        <h
+          style={
+            Object {
+              "left": "50%",
+              "position": "fixed",
+              "top": "50%",
+            }
+          }
+        >
+          <GoogleMap
+            location="Las Vegas, NV"
+          />
+        </h>,
       ],
     },
     "ref": null,
@@ -52,6 +65,34 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <GoogleMap
+            location="Las Vegas, NV"
+          />,
+          "style": Object {
+            "left": "50%",
+            "position": "fixed",
+            "top": "50%",
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "location": "Las Vegas, NV",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "h",
+      },
     ],
     "type": "div",
   },
@@ -65,6 +106,19 @@ ShallowWrapper {
           <WithStyles(AppBar) />,
           <WithStyles(CircularIndeterminate) />,
           <WithStyles(Sidebar) />,
+          <h
+            style={
+              Object {
+                "left": "50%",
+                "position": "fixed",
+                "top": "50%",
+              }
+            }
+          >
+            <GoogleMap
+              location="Las Vegas, NV"
+            />
+          </h>,
         ],
       },
       "ref": null,
@@ -95,6 +149,34 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <GoogleMap
+              location="Las Vegas, NV"
+            />,
+            "style": Object {
+              "left": "50%",
+              "position": "fixed",
+              "top": "50%",
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "location": "Las Vegas, NV",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "h",
         },
       ],
       "type": "div",
