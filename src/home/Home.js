@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import request from "request"
 import AppBar from "../components/AppBar";
 import Loading from "../components/Loading";
 import "../css/home.css";
@@ -6,12 +7,40 @@ import { GridList } from "@material-ui/core";
 import JobCard from "../components/JobCard";
 import { mockJobsList } from "../../mocks/mockJobsList";
 
+// const JOBSURL = "https://us-central1-hdqc-capstone.cloudfunctions.net/getJobs";
+
 class Home extends Component {
   state = {
     loading: true,
     dataArr: mockJobsList,
     jobCardArray: []
   };
+
+  // componentWillMount(){
+  //     request.get(
+  //       {
+  //           url: JOBSURL,
+  //           header: {
+  //             "Access-Control-Request-Headers": "",
+  //             "Access-Control-Request-Method": ""
+  //           },
+  //           json: true,
+  //           body: {
+  //             kind: "jobs",
+  //             key: "username"
+  //           },
+  //           function(error, response){
+  //             if (error){
+  //             console.log(error)
+  //             return
+  //             }
+  //             if (response.statusCode === 200){
+  //               console.log(response)
+  //             }
+  //           }
+  //       }
+  //     )
+  // }
 
   render() {
     return (
