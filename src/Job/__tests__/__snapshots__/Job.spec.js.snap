@@ -21,7 +21,7 @@ ShallowWrapper {
         <WithStyles(AppBar) />,
         <WithStyles(CircularIndeterminate) />,
         <WithStyles(Sidebar) />,
-        <h
+        <div
           style={
             Object {
               "left": "50%",
@@ -33,7 +33,7 @@ ShallowWrapper {
           <GoogleMap
             location="Las Vegas, NV"
           />
-        </h>,
+        </div>,
       ],
     },
     "ref": null,
@@ -91,7 +91,7 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
-        "type": "h",
+        "type": "div",
       },
     ],
     "type": "div",
@@ -106,7 +106,7 @@ ShallowWrapper {
           <WithStyles(AppBar) />,
           <WithStyles(CircularIndeterminate) />,
           <WithStyles(Sidebar) />,
-          <h
+          <div
             style={
               Object {
                 "left": "50%",
@@ -118,7 +118,7 @@ ShallowWrapper {
             <GoogleMap
               location="Las Vegas, NV"
             />
-          </h>,
+          </div>,
         ],
       },
       "ref": null,
@@ -176,7 +176,7 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
-          "type": "h",
+          "type": "div",
         },
       ],
       "type": "div",

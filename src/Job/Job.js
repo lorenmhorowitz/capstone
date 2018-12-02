@@ -15,9 +15,9 @@ class Job extends Component {
         <AppBar />
         {this.state.loading ? <Loading /> : null}
         <SideBar />
-        <h style={{ position: "fixed", top: "50%", left: "50%" }}>
+        <div style={{ position: "fixed", top: "50%", left: "50%" }}>
           <GoogleMap location="Las Vegas, NV" />
-        </h>
+        </div>
       </div>
     );
   }
