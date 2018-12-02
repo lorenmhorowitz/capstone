@@ -4,7 +4,6 @@ import Loading from "../components/Loading";
 import SideBar from "../components/SideBar";
 import CardSlide from "../components/CardSlide";
 import Grid from "@material-ui/core/Grid";
-import "../css/Component.css";
 import "../css/job.css";
 
 class Job extends Component {
@@ -22,7 +21,7 @@ class Job extends Component {
           <AppBar />
         </div>
         <Grid container id="grid">
-          <Grid item>
+          <Grid item id="grid1">
             <div id="font1">2910 NE 168th Ave</div>
             <div id="font1">Vancouver, WA 98682</div>
             <div id="font2">Arnold Castro</div>
@@ -35,6 +34,7 @@ class Job extends Component {
             </div>
           </Grid>
         </Grid>
+
         {this.state.loading ? <Loading /> : null}
 
         <SideBar />

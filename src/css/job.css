@@ -1,12 +1,11 @@
-.picture {
-  width: 750px;
-  align-content: center;
-}
-
 #grid {
+  min-width: 1000px;
   margin-top: 5%;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-right: 5%;
+}
+#grid1 {
+  width: 30%;
 }
 #grid2 {
   margin-left: 2.5%;
@@ -14,15 +13,18 @@
 }
 
 #font1 {
-  font-size: 2em;
+  font-size: 1.8em;
   text-align: left;
   margin-left: 20%;
   font-family: "Cutive", serif;
 }
 
 #font2 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-align: left;
   margin-left: 20%;
   font-family: "Cutive", serif;
+}
+.picture {
+  width: 750px;
 }
