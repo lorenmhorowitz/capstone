@@ -28,6 +28,11 @@ ShallowWrapper {
             id="grid1"
           >
             <div
+              id="header"
+            >
+              Address:
+            </div>
+            <div
               id="font1"
             >
               2910 NE 168th Ave
@@ -38,9 +43,19 @@ ShallowWrapper {
               Vancouver, WA 98682
             </div>
             <div
+              id="header"
+            >
+              Client:
+            </div>
+            <div
               id="font2"
             >
               Arnold Castro
+            </div>
+            <div
+              id="header"
+            >
+              Contact Information: 
             </div>
             <div
               id="font2"
@@ -54,8 +69,7 @@ ShallowWrapper {
             </div>
           </div>
           <div
-            className="picture"
-            id="grid2"
+            id="picture"
           >
             <CardSlide
               height={450}
@@ -70,7 +84,9 @@ ShallowWrapper {
           </div>
         </div>,
         <WithStyles(CircularIndeterminate) />,
-        <WithStyles(Sidebar) />,
+        <WithStyles(Sidebar)
+          id="sideBar"
+        />,
       ],
     },
     "ref": null,
@@ -104,6 +120,11 @@ ShallowWrapper {
               id="grid1"
             >
               <div
+                id="header"
+              >
+                Address:
+              </div>
+              <div
                 id="font1"
               >
                 2910 NE 168th Ave
@@ -114,9 +135,19 @@ ShallowWrapper {
                 Vancouver, WA 98682
               </div>
               <div
+                id="header"
+              >
+                Client:
+              </div>
+              <div
                 id="font2"
               >
                 Arnold Castro
+              </div>
+              <div
+                id="header"
+              >
+                Contact Information: 
               </div>
               <div
                 id="font2"
@@ -130,8 +161,7 @@ ShallowWrapper {
               </div>
             </div>,
             <div
-              className="picture"
-              id="grid2"
+              id="picture"
             >
               <CardSlide
                 height={450}
@@ -156,6 +186,11 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <div
+                  id="header"
+                >
+                  Address:
+                </div>,
+                <div
                   id="font1"
                 >
                   2910 NE 168th Ave
@@ -166,9 +201,19 @@ ShallowWrapper {
                   Vancouver, WA 98682
                 </div>,
                 <div
+                  id="header"
+                >
+                  Client:
+                </div>,
+                <div
                   id="font2"
                 >
                   Arnold Castro
+                </div>,
+                <div
+                  id="header"
+                >
+                  Contact Information: 
                 </div>,
                 <div
                   id="font2"
@@ -185,6 +230,18 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Address:",
+                  "id": "header",
+                },
+                "ref": null,
+                "rendered": "Address:",
+                "type": "div",
+              },
               Object {
                 "instance": null,
                 "key": undefined,
@@ -214,11 +271,35 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "children": "Client:",
+                  "id": "header",
+                },
+                "ref": null,
+                "rendered": "Client:",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
                   "children": "Arnold Castro",
                   "id": "font2",
                 },
                 "ref": null,
                 "rendered": "Arnold Castro",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Contact Information: ",
+                  "id": "header",
+                },
+                "ref": null,
+                "rendered": "Contact Information: ",
                 "type": "div",
               },
               Object {
@@ -263,8 +344,7 @@ ShallowWrapper {
                 }
                 width={750}
               />,
-              "className": "picture",
-              "id": "grid2",
+              "id": "picture",
             },
             "ref": null,
             "rendered": Object {
@@ -301,7 +381,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "id": "sideBar",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -326,6 +408,11 @@ ShallowWrapper {
               id="grid1"
             >
               <div
+                id="header"
+              >
+                Address:
+              </div>
+              <div
                 id="font1"
               >
                 2910 NE 168th Ave
@@ -336,9 +423,19 @@ ShallowWrapper {
                 Vancouver, WA 98682
               </div>
               <div
+                id="header"
+              >
+                Client:
+              </div>
+              <div
                 id="font2"
               >
                 Arnold Castro
+              </div>
+              <div
+                id="header"
+              >
+                Contact Information: 
               </div>
               <div
                 id="font2"
@@ -352,8 +449,7 @@ ShallowWrapper {
               </div>
             </div>
             <div
-              className="picture"
-              id="grid2"
+              id="picture"
             >
               <CardSlide
                 height={450}
@@ -368,7 +464,9 @@ ShallowWrapper {
             </div>
           </div>,
           <WithStyles(CircularIndeterminate) />,
-          <WithStyles(Sidebar) />,
+          <WithStyles(Sidebar)
+            id="sideBar"
+          />,
         ],
       },
       "ref": null,
@@ -402,6 +500,11 @@ ShallowWrapper {
                 id="grid1"
               >
                 <div
+                  id="header"
+                >
+                  Address:
+                </div>
+                <div
                   id="font1"
                 >
                   2910 NE 168th Ave
@@ -412,9 +515,19 @@ ShallowWrapper {
                   Vancouver, WA 98682
                 </div>
                 <div
+                  id="header"
+                >
+                  Client:
+                </div>
+                <div
                   id="font2"
                 >
                   Arnold Castro
+                </div>
+                <div
+                  id="header"
+                >
+                  Contact Information: 
                 </div>
                 <div
                   id="font2"
@@ -428,8 +541,7 @@ ShallowWrapper {
                 </div>
               </div>,
               <div
-                className="picture"
-                id="grid2"
+                id="picture"
               >
                 <CardSlide
                   height={450}
@@ -454,6 +566,11 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <div
+                    id="header"
+                  >
+                    Address:
+                  </div>,
+                  <div
                     id="font1"
                   >
                     2910 NE 168th Ave
@@ -464,9 +581,19 @@ ShallowWrapper {
                     Vancouver, WA 98682
                   </div>,
                   <div
+                    id="header"
+                  >
+                    Client:
+                  </div>,
+                  <div
                     id="font2"
                   >
                     Arnold Castro
+                  </div>,
+                  <div
+                    id="header"
+                  >
+                    Contact Information: 
                   </div>,
                   <div
                     id="font2"
@@ -483,6 +610,18 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Address:",
+                    "id": "header",
+                  },
+                  "ref": null,
+                  "rendered": "Address:",
+                  "type": "div",
+                },
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -512,11 +651,35 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "children": "Client:",
+                    "id": "header",
+                  },
+                  "ref": null,
+                  "rendered": "Client:",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
                     "children": "Arnold Castro",
                     "id": "font2",
                   },
                   "ref": null,
                   "rendered": "Arnold Castro",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Contact Information: ",
+                    "id": "header",
+                  },
+                  "ref": null,
+                  "rendered": "Contact Information: ",
                   "type": "div",
                 },
                 Object {
@@ -561,8 +724,7 @@ ShallowWrapper {
                   }
                   width={750}
                 />,
-                "className": "picture",
-                "id": "grid2",
+                "id": "picture",
               },
               "ref": null,
               "rendered": Object {
@@ -599,7 +761,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "id": "sideBar",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

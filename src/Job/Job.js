@@ -22,20 +22,23 @@ class Job extends Component {
         </div>
         <div id="grid">
           <div id="grid1">
+            <div id="header">Address:</div>
             <div id="font1">2910 NE 168th Ave</div>
             <div id="font1">Vancouver, WA 98682</div>
+            <div id="header">Client:</div>
             <div id="font2">Arnold Castro</div>
+            <div id="header">Contact Information: </div>
             <div id="font2">(360) 123-4567</div>
             <div id="font2">test@wsu.edu</div>
           </div>
-          <div className="picture" id="grid2">
+          <div id="picture">
             <CardSlide images={images} width={750} height={450} />
           </div>
         </div>
 
         {this.state.loading ? <Loading /> : null}
 
-        <SideBar />
+        <SideBar id="sideBar" />
       </div>
     );
   }

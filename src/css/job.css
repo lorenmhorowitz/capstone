@@ -1,33 +1,42 @@
-#grid {
-  min-width: 1000px;
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+
+#header {
+  font-size: 1.2em;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
+
+#grid {
+  padding-top: 80px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
 #grid1 {
   position: absolute;
   float: left;
-  width: 30%;
+  width: 25em;
+  text-align: left;
   margin-left: 5%;
-}
-#grid2 {
-  float: right;
-  margin-right: 5%;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 
 #font1 {
   font-size: 1.8em;
-  text-align: left;
   margin-left: 20%;
-  font-family: "Cutive", serif;
 }
 
 #font2 {
   font-size: 1.2em;
-  text-align: left;
   margin-left: 20%;
-  font-family: "Cutive", serif;
 }
-.picture {
-  width: 750px;
+#picture {
+  width: 52%;
+  min-width: 380px;
+  height: 300px;
+  position: relative;
+  float: right;
+  margin-right: 10%;
+  margin-left: 50%;
 }
