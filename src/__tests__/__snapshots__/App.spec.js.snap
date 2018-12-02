@@ -33,6 +33,10 @@ ShallowWrapper {
           exact={true}
           path="/home"
         />
+        <Route
+          component={[Function]}
+          path="/job/:id"
+        />
         <Redirect
           exact={true}
           from="/"
@@ -66,6 +70,10 @@ ShallowWrapper {
             component={[Function]}
             exact={true}
             path="/home"
+          />,
+          <Route
+            component={[Function]}
+            path="/job/:id"
           />,
           <Redirect
             exact={true}
@@ -124,6 +132,18 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
+            "path": "/job/:id",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
             "exact": true,
             "from": "/",
             "push": false,
@@ -171,6 +191,10 @@ ShallowWrapper {
             exact={true}
             path="/home"
           />
+          <Route
+            component={[Function]}
+            path="/job/:id"
+          />
           <Redirect
             exact={true}
             from="/"
@@ -204,6 +228,10 @@ ShallowWrapper {
               component={[Function]}
               exact={true}
               path="/home"
+            />,
+            <Route
+              component={[Function]}
+              path="/job/:id"
             />,
             <Redirect
               exact={true}
@@ -252,6 +280,18 @@ ShallowWrapper {
               "component": [Function],
               "exact": true,
               "path": "/home",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "path": "/job/:id",
             },
             "ref": null,
             "rendered": null,
