@@ -30,8 +30,7 @@ class AppBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      anchorEl: null,
-      redirectHome: false
+      anchorEl: null
     };
   }
 
