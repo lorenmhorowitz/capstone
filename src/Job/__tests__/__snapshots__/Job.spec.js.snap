@@ -18,7 +18,62 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <WithStyles(AppBar) />,
+        <div>
+          <WithStyles(AppBar) />
+        </div>,
+        <WithStyles(Grid)
+          container={true}
+          id="grid"
+        >
+          <WithStyles(Grid)
+            item={true}
+          >
+            <div
+              id="font1"
+            >
+              2910 NE 168th Ave
+            </div>
+            <div
+              id="font1"
+            >
+              Vancouver, WA 98682
+            </div>
+            <div
+              id="font2"
+            >
+              Arnold Castro
+            </div>
+            <div
+              id="font2"
+            >
+              (360) 123-4567
+            </div>
+            <div
+              id="font2"
+            >
+              test@wsu.edu
+            </div>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            id="grid2"
+            item={true}
+          >
+            <div
+              className="picture"
+            >
+              <CardSlide
+                height={450}
+                images={
+                  Array [
+                    "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
+                    "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1",
+                  ]
+                }
+                width={750}
+              />
+            </div>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>,
         <WithStyles(CircularIndeterminate) />,
         <WithStyles(Sidebar) />,
       ],
@@ -28,10 +83,243 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
+        "nodeType": "host",
+        "props": Object {
+          "children": <WithStyles(AppBar) />,
+        },
         "ref": null,
-        "rendered": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <WithStyles(Grid)
+              item={true}
+            >
+              <div
+                id="font1"
+              >
+                2910 NE 168th Ave
+              </div>
+              <div
+                id="font1"
+              >
+                Vancouver, WA 98682
+              </div>
+              <div
+                id="font2"
+              >
+                Arnold Castro
+              </div>
+              <div
+                id="font2"
+              >
+                (360) 123-4567
+              </div>
+              <div
+                id="font2"
+              >
+                test@wsu.edu
+              </div>
+            </WithStyles(Grid)>,
+            <WithStyles(Grid)
+              id="grid2"
+              item={true}
+            >
+              <div
+                className="picture"
+              >
+                <CardSlide
+                  height={450}
+                  images={
+                    Array [
+                      "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
+                      "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1",
+                    ]
+                  }
+                  width={750}
+                />
+              </div>
+            </WithStyles(Grid)>,
+          ],
+          "container": true,
+          "id": "grid",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <div
+                  id="font1"
+                >
+                  2910 NE 168th Ave
+                </div>,
+                <div
+                  id="font1"
+                >
+                  Vancouver, WA 98682
+                </div>,
+                <div
+                  id="font2"
+                >
+                  Arnold Castro
+                </div>,
+                <div
+                  id="font2"
+                >
+                  (360) 123-4567
+                </div>,
+                <div
+                  id="font2"
+                >
+                  test@wsu.edu
+                </div>,
+              ],
+              "item": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2910 NE 168th Ave",
+                  "id": "font1",
+                },
+                "ref": null,
+                "rendered": "2910 NE 168th Ave",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Vancouver, WA 98682",
+                  "id": "font1",
+                },
+                "ref": null,
+                "rendered": "Vancouver, WA 98682",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Arnold Castro",
+                  "id": "font2",
+                },
+                "ref": null,
+                "rendered": "Arnold Castro",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "(360) 123-4567",
+                  "id": "font2",
+                },
+                "ref": null,
+                "rendered": "(360) 123-4567",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "test@wsu.edu",
+                  "id": "font2",
+                },
+                "ref": null,
+                "rendered": "test@wsu.edu",
+                "type": "div",
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <div
+                className="picture"
+              >
+                <CardSlide
+                  height={450}
+                  images={
+                    Array [
+                      "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
+                      "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1",
+                    ]
+                  }
+                  width={750}
+                />
+              </div>,
+              "id": "grid2",
+              "item": true,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <CardSlide
+                  height={450}
+                  images={
+                    Array [
+                      "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
+                      "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1",
+                    ]
+                  }
+                  width={750}
+                />,
+                "className": "picture",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "height": 450,
+                  "images": Array [
+                    "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
+                    "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1",
+                  ],
+                  "width": 750,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
       Object {
@@ -62,7 +350,62 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <WithStyles(AppBar) />,
+          <div>
+            <WithStyles(AppBar) />
+          </div>,
+          <WithStyles(Grid)
+            container={true}
+            id="grid"
+          >
+            <WithStyles(Grid)
+              item={true}
+            >
+              <div
+                id="font1"
+              >
+                2910 NE 168th Ave
+              </div>
+              <div
+                id="font1"
+              >
+                Vancouver, WA 98682
+              </div>
+              <div
+                id="font2"
+              >
+                Arnold Castro
+              </div>
+              <div
+                id="font2"
+              >
+                (360) 123-4567
+              </div>
+              <div
+                id="font2"
+              >
+                test@wsu.edu
+              </div>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              id="grid2"
+              item={true}
+            >
+              <div
+                className="picture"
+              >
+                <CardSlide
+                  height={450}
+                  images={
+                    Array [
+                      "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
+                      "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1",
+                    ]
+                  }
+                  width={750}
+                />
+              </div>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>,
           <WithStyles(CircularIndeterminate) />,
           <WithStyles(Sidebar) />,
         ],
@@ -72,10 +415,243 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
+          "nodeType": "host",
+          "props": Object {
+            "children": <WithStyles(AppBar) />,
+          },
           "ref": null,
-          "rendered": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  id="font1"
+                >
+                  2910 NE 168th Ave
+                </div>
+                <div
+                  id="font1"
+                >
+                  Vancouver, WA 98682
+                </div>
+                <div
+                  id="font2"
+                >
+                  Arnold Castro
+                </div>
+                <div
+                  id="font2"
+                >
+                  (360) 123-4567
+                </div>
+                <div
+                  id="font2"
+                >
+                  test@wsu.edu
+                </div>
+              </WithStyles(Grid)>,
+              <WithStyles(Grid)
+                id="grid2"
+                item={true}
+              >
+                <div
+                  className="picture"
+                >
+                  <CardSlide
+                    height={450}
+                    images={
+                      Array [
+                        "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
+                        "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1",
+                      ]
+                    }
+                    width={750}
+                  />
+                </div>
+              </WithStyles(Grid)>,
+            ],
+            "container": true,
+            "id": "grid",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <div
+                    id="font1"
+                  >
+                    2910 NE 168th Ave
+                  </div>,
+                  <div
+                    id="font1"
+                  >
+                    Vancouver, WA 98682
+                  </div>,
+                  <div
+                    id="font2"
+                  >
+                    Arnold Castro
+                  </div>,
+                  <div
+                    id="font2"
+                  >
+                    (360) 123-4567
+                  </div>,
+                  <div
+                    id="font2"
+                  >
+                    test@wsu.edu
+                  </div>,
+                ],
+                "item": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2910 NE 168th Ave",
+                    "id": "font1",
+                  },
+                  "ref": null,
+                  "rendered": "2910 NE 168th Ave",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Vancouver, WA 98682",
+                    "id": "font1",
+                  },
+                  "ref": null,
+                  "rendered": "Vancouver, WA 98682",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Arnold Castro",
+                    "id": "font2",
+                  },
+                  "ref": null,
+                  "rendered": "Arnold Castro",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "(360) 123-4567",
+                    "id": "font2",
+                  },
+                  "ref": null,
+                  "rendered": "(360) 123-4567",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "test@wsu.edu",
+                    "id": "font2",
+                  },
+                  "ref": null,
+                  "rendered": "test@wsu.edu",
+                  "type": "div",
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <div
+                  className="picture"
+                >
+                  <CardSlide
+                    height={450}
+                    images={
+                      Array [
+                        "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
+                        "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1",
+                      ]
+                    }
+                    width={750}
+                  />
+                </div>,
+                "id": "grid2",
+                "item": true,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <CardSlide
+                    height={450}
+                    images={
+                      Array [
+                        "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
+                        "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1",
+                      ]
+                    }
+                    width={750}
+                  />,
+                  "className": "picture",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "height": 450,
+                    "images": Array [
+                      "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
+                      "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1",
+                    ],
+                    "width": 750,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         Object {
