@@ -10,11 +10,10 @@ import "../css/JobCard.css";
 
 const styles = {
   card: {
-    maxWidth: 300
+    maxWidth: "300px",
+    width: "100px"
   },
-  media: {
-    objectFit: "cover"
-  }
+  media: {}
 };
 
 class JobCard extends Component {
