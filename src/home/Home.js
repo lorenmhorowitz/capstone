@@ -13,8 +13,7 @@ const JOBSURL = "https://us-central1-hdqc-capstone.cloudfunctions.net/getJobs";
 class Home extends Component {
   state = {
     loading: true,
-    dataArr: [],
-    jobCardArray: []
+    dataArr: []
   };
 
   UNSAFE_componentWillMount() {
@@ -47,7 +46,7 @@ class Home extends Component {
         {this.state.loading ? <Loading /> : null}
         <div className="gridContainer">
           <Grid container justify="center" spacing={16}>
-            {this.state.dataArr.results.map(data => (
+            {this.state.dataArr.map(data => (
               <JobCard
                 key={data.id}
                 name={data.name}
