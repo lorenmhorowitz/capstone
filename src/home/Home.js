@@ -5,13 +5,23 @@ import Loading from "../components/Loading";
 import "../css/home.css";
 import { Grid } from "@material-ui/core";
 import JobCard from "../components/JobCard";
+import { Redirect } from "react-router-dom";
 
 const JOBSURL = "https://us-central1-hdqc-capstone.cloudfunctions.net/getJobs";
 
 class Home extends Component {
   state = {
     loading: true,
-    dataArr: []
+    dataArr: [],
+    jobRedirect: false,
+    jobRedirectID: 0
+  };
+
+  handleJobRedirect = (data, event) => {
+    this.setState({
+      jobRedirect: true,
+      jobRedirectID: data
+    });
   };
 
   UNSAFE_componentWillMount() {
@@ -38,6 +48,9 @@ class Home extends Component {
   }
 
   render() {
+    if (this.state.jobRedirect) {
+      return <Redirect push to={"/job/" + this.state.jobRedirectID} />;
+    }
     return (
       <div>
         <AppBar />
@@ -47,11 +60,13 @@ class Home extends Component {
             {this.state.dataArr.map(data => (
               <JobCard
                 key={data.id}
+                jobId={data.id}
                 name={data.name}
                 location_line_1={data.location_line_1}
                 location_city={data.location_city}
                 location_region={data.location_region}
                 image="https://upload.wikimedia.org/wikipedia/commons/2/25/Houses_on_Garfield_Place,_Poughkeepsie,_NY.jpg"
+                clickHandler={this.handleJobRedirect}
               />
             ))}
           </Grid>

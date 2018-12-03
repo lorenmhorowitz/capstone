@@ -19,7 +19,10 @@ const styles = {
 class JobCard extends Component {
   render() {
     return (
-      <Card className="card">
+      <Card
+        className="card"
+        onClick={() => this.props.clickHandler(this.props.jobId)}
+      >
         <CardActionArea>
           <CardMedia
             component="img"
