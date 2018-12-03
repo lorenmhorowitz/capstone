@@ -6,10 +6,15 @@
   padding-bottom: 8px;
 }
 
-#grid {
-  padding-top: 80px;
+#mainWindow {
+  margin-top: 90px;
   margin-right: 5%;
-  margin-left: 5%;
+  margin-left: 10%;
+}
+
+#subWindow {
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 #grid1 {
@@ -17,7 +22,6 @@
   float: left;
   width: 25em;
   text-align: left;
-  margin-left: 5%;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
