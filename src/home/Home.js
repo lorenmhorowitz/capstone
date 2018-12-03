@@ -8,6 +8,8 @@ import JobCard from "../components/JobCard";
 
 const JOBSURL = "https://us-central1-hdqc-capstone.cloudfunctions.net/getJobs";
 
+//This is a comment
+
 class Home extends Component {
   state = {
     loading: true,
