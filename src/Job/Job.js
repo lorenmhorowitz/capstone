@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AppBar from "../components/AppBar";
+import GoogleMap from "../components/GoogleMap";
 import Loading from "../components/Loading";
 import SideBar from "../components/SideBar";
 import CardSlide from "../components/CardSlide";
@@ -39,6 +40,9 @@ class Job extends Component {
         {this.state.loading ? <Loading /> : null}
 
         <SideBar id="sideBar" />
+        <div style={{ position: "absolute", top: "80%", left: "50%" }}>
+          <GoogleMap location="Las Vegas, NV" />
+        </div>
       </div>
     );
   }
