@@ -6,7 +6,7 @@ import { withStyles } from "@material-ui/core/styles";
 import { List, ListItem, ListItemText, ListItemIcon } from "@material-ui/core";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import "../css/Sidebar.css";
+import "../css/SideBar.css";
 
 const styles = {
   drawerPaperOverrides: {
