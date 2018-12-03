@@ -1,7 +1,7 @@
 .card {
-  width: "200px";
+  width: 20em;
+  margin: 20px 0px 20px 20px;
 }
-
 /* 
 .cardContent {
   margin-top: -5.5%;
