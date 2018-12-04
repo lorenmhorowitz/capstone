@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+
+#header {
+  font-size: 1.2em;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+#mainWindow {
+  margin-top: 90px;
+  margin-right: 5%;
+  margin-left: 10%;
+}
+
+#subWindow {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+#grid1 {
+  position: absolute;
+  float: left;
+  width: 25em;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+#font1 {
+  font-size: 1.8em;
+  margin-left: 20%;
+}
+
+#font2 {
+  font-size: 1.2em;
+  margin-left: 20%;
+}
+#picture {
+  width: 52%;
+  min-width: 380px;
+  height: 300px;
+  position: relative;
+  float: right;
+  margin-right: 10%;
+  margin-left: 50%;
+}

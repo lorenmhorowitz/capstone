@@ -21,7 +21,7 @@ class CardSlide extends Component {
       const picture = (
         <div key={x}>
           <img
-            style={{ width: this.props.width, height: this.props.height }}
+            style={{ width: this.props.width, height: "100%" }}
             src={image}
           />
         </div>
@@ -34,11 +34,9 @@ class CardSlide extends Component {
 
   render() {
     return (
-      <div>
-        <Carousel infiniteLoop={true} showThumbs={false} dynamicHeight={true}>
-          {this.state.slides}
-        </Carousel>
-      </div>
+      <Carousel infiniteLoop={true} showThumbs={false}>
+        {this.state.slides}
+      </Carousel>
     );
   }
 }

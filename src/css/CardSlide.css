@@ -57,7 +57,6 @@
 
 .carousel {
   position: relative;
-  width: 100%;
 }
 .carousel * {
   -webkit-box-sizing: border-box;
