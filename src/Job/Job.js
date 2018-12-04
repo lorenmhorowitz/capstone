@@ -17,26 +17,26 @@ class Job extends Component {
       <div>
         <AppBar />
         <div id="mainWindow">
-          <Typography variant="h4">Job Information</Typography>
+          <Typography id="header">Job Information</Typography>
           <Divider />
           <div>
             <Information />
             <p />
           </div>
 
-          <Typography variant="h4">Roofing Information</Typography>
+          <Typography id="header">Roofing Information</Typography>
           <Divider />
           <div>
             <p />
           </div>
 
-          <Typography variant="h4">Siding Information</Typography>
+          <Typography id="header">Siding Information</Typography>
           <Divider />
           <div>
             <p />
           </div>
 
-          <Typography variant="h4">Windows Information</Typography>
+          <Typography id="header">Windows Information</Typography>
           <Divider />
           <div />
         </div>

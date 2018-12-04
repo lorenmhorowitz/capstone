@@ -23,7 +23,7 @@ ShallowWrapper {
           id="mainWindow"
         >
           <WithStyles(Typography)
-            variant="h4"
+            id="header"
           >
             Job Information
           </WithStyles(Typography)>
@@ -33,7 +33,7 @@ ShallowWrapper {
             <p />
           </div>
           <WithStyles(Typography)
-            variant="h4"
+            id="header"
           >
             Roofing Information
           </WithStyles(Typography)>
@@ -42,7 +42,7 @@ ShallowWrapper {
             <p />
           </div>
           <WithStyles(Typography)
-            variant="h4"
+            id="header"
           >
             Siding Information
           </WithStyles(Typography)>
@@ -51,7 +51,7 @@ ShallowWrapper {
             <p />
           </div>
           <WithStyles(Typography)
-            variant="h4"
+            id="header"
           >
             Windows Information
           </WithStyles(Typography)>
@@ -82,7 +82,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Job Information
             </WithStyles(Typography)>,
@@ -92,7 +92,7 @@ ShallowWrapper {
               <p />
             </div>,
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Roofing Information
             </WithStyles(Typography)>,
@@ -101,7 +101,7 @@ ShallowWrapper {
               <p />
             </div>,
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Siding Information
             </WithStyles(Typography)>,
@@ -110,7 +110,7 @@ ShallowWrapper {
               <p />
             </div>,
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Windows Information
             </WithStyles(Typography)>,
@@ -127,7 +127,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Job Information",
-              "variant": "h4",
+              "id": "header",
             },
             "ref": null,
             "rendered": "Job Information",
@@ -181,7 +181,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Roofing Information",
-              "variant": "h4",
+              "id": "header",
             },
             "ref": null,
             "rendered": "Roofing Information",
@@ -221,7 +221,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Siding Information",
-              "variant": "h4",
+              "id": "header",
             },
             "ref": null,
             "rendered": "Siding Information",
@@ -261,7 +261,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Windows Information",
-              "variant": "h4",
+              "id": "header",
             },
             "ref": null,
             "rendered": "Windows Information",
@@ -323,7 +323,7 @@ ShallowWrapper {
             id="mainWindow"
           >
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Job Information
             </WithStyles(Typography)>
@@ -333,7 +333,7 @@ ShallowWrapper {
               <p />
             </div>
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Roofing Information
             </WithStyles(Typography)>
@@ -342,7 +342,7 @@ ShallowWrapper {
               <p />
             </div>
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Siding Information
             </WithStyles(Typography)>
@@ -351,7 +351,7 @@ ShallowWrapper {
               <p />
             </div>
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Windows Information
             </WithStyles(Typography)>
@@ -382,7 +382,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <WithStyles(Typography)
-                variant="h4"
+                id="header"
               >
                 Job Information
               </WithStyles(Typography)>,
@@ -392,7 +392,7 @@ ShallowWrapper {
                 <p />
               </div>,
               <WithStyles(Typography)
-                variant="h4"
+                id="header"
               >
                 Roofing Information
               </WithStyles(Typography)>,
@@ -401,7 +401,7 @@ ShallowWrapper {
                 <p />
               </div>,
               <WithStyles(Typography)
-                variant="h4"
+                id="header"
               >
                 Siding Information
               </WithStyles(Typography)>,
@@ -410,7 +410,7 @@ ShallowWrapper {
                 <p />
               </div>,
               <WithStyles(Typography)
-                variant="h4"
+                id="header"
               >
                 Windows Information
               </WithStyles(Typography)>,
@@ -427,7 +427,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Job Information",
-                "variant": "h4",
+                "id": "header",
               },
               "ref": null,
               "rendered": "Job Information",
@@ -481,7 +481,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Roofing Information",
-                "variant": "h4",
+                "id": "header",
               },
               "ref": null,
               "rendered": "Roofing Information",
@@ -521,7 +521,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Siding Information",
-                "variant": "h4",
+                "id": "header",
               },
               "ref": null,
               "rendered": "Siding Information",
@@ -561,7 +561,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Windows Information",
-                "variant": "h4",
+                "id": "header",
               },
               "ref": null,
               "rendered": "Windows Information",
