@@ -33,16 +33,15 @@
   line-height: 0.75;
   letter-spacing: 0.00735em;
 }
-
-#font1 {
-  font-size: 1.8em;
-  margin-left: 20%;
+#title1 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
 }
 
-#font2 {
-  font-size: 1.2em;
-  margin-left: 20%;
-}
 #picture {
   width: 35vw;
   min-width: 280px;
@@ -60,9 +59,7 @@
   #header {
     font-size: 1.5rem;
   }
-
-  #font2 {
-    font-size: 0.8em;
-    margin-left: 20%;
+  #title1 {
+    font-size: 0.75rem;
   }
 }

@@ -18,14 +18,14 @@ class Information extends Component {
         <Grid container style={{ paddingTop: "2em" }}>
           <Grid item xs={4}>
             <div id="grid1">
-              <Typography variant="subtitle1">Address:</Typography>
+              <Typography id="title1">Address:</Typography>
               <Divider style={{ color: "orange" }} />
               <Typography variant="h6">2910 NE 168th Ave</Typography>
               <Typography variant="h6">Vancouver, WA 98682</Typography> <p />
-              <Typography variant="subtitle1">Client:</Typography>
+              <Typography id="title1">Client:</Typography>
               <Divider />
               <Typography variant="h6">Arnold Castro</Typography> <p />
-              <Typography variant="subtitle1">Contact Information: </Typography>
+              <Typography id="title1">Contact Information: </Typography>
               <Divider />
               <Typography variant="h6">(360) 123-4567</Typography>
               <Typography variant="h6">test@wsu.edu</Typography>
