@@ -22,12 +22,14 @@ ShallowWrapper {
         <div
           id="mainWindow"
         >
-          <WithStyles(Typography)
-            id="info"
-            variant="h4"
-          >
-            Job Information
-          </WithStyles(Typography)>
+          <div>
+            <WithStyles(Typography)
+              id="info"
+              variant="h4"
+            >
+              Job Information
+            </WithStyles(Typography)>
+          </div>
           <WithStyles(Divider) />
           <div>
             <Information />
@@ -63,12 +65,14 @@ ShallowWrapper {
           <div>
             <p />
           </div>
-          <WithStyles(Typography)
-            id="windows"
-            variant="h4"
-          >
-            Windows Information
-          </WithStyles(Typography)>
+          <div>
+            <WithStyles(Typography)
+              id="windows"
+              variant="h4"
+            >
+              Windows Information
+            </WithStyles(Typography)>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
           </p>
@@ -78,8 +82,10 @@ ShallowWrapper {
         <WithStyles(CircularIndeterminate) />,
         <WithStyles(Sidebar)
           id="sideBar"
+          infoRef={[Function]}
           roofingRef={[Function]}
           sidingRef={[Function]}
+          windowsRef={[Function]}
         />,
       ],
     },
@@ -100,12 +106,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <WithStyles(Typography)
-              id="info"
-              variant="h4"
-            >
-              Job Information
-            </WithStyles(Typography)>,
+            <div>
+              <WithStyles(Typography)
+                id="info"
+                variant="h4"
+              >
+                Job Information
+              </WithStyles(Typography)>
+            </div>,
             <WithStyles(Divider) />,
             <div>
               <Information />
@@ -141,12 +149,14 @@ ShallowWrapper {
             <div>
               <p />
             </div>,
-            <WithStyles(Typography)
-              id="windows"
-              variant="h4"
-            >
-              Windows Information
-            </WithStyles(Typography)>,
+            <div>
+              <WithStyles(Typography)
+                id="windows"
+                variant="h4"
+              >
+                Windows Information
+              </WithStyles(Typography)>
+            </div>,
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
             </p>,
@@ -160,15 +170,32 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
-              "children": "Job Information",
-              "id": "info",
-              "variant": "h4",
+              "children": <WithStyles(Typography)
+                id="info"
+                variant="h4"
+              >
+                Job Information
+              </WithStyles(Typography)>,
             },
-            "ref": null,
-            "rendered": "Job Information",
-            "type": [Function],
+            "ref": Object {
+              "current": null,
+            },
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Job Information",
+                "id": "info",
+                "variant": "h4",
+              },
+              "ref": null,
+              "rendered": "Job Information",
+              "type": [Function],
+            },
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -353,15 +380,32 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
-              "children": "Windows Information",
-              "id": "windows",
-              "variant": "h4",
+              "children": <WithStyles(Typography)
+                id="windows"
+                variant="h4"
+              >
+                Windows Information
+              </WithStyles(Typography)>,
             },
-            "ref": null,
-            "rendered": "Windows Information",
-            "type": [Function],
+            "ref": Object {
+              "current": null,
+            },
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Windows Information",
+                "id": "windows",
+                "variant": "h4",
+              },
+              "ref": null,
+              "rendered": "Windows Information",
+              "type": [Function],
+            },
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -410,8 +454,10 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "id": "sideBar",
+          "infoRef": [Function],
           "roofingRef": [Function],
           "sidingRef": [Function],
+          "windowsRef": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -431,12 +477,14 @@ ShallowWrapper {
           <div
             id="mainWindow"
           >
-            <WithStyles(Typography)
-              id="info"
-              variant="h4"
-            >
-              Job Information
-            </WithStyles(Typography)>
+            <div>
+              <WithStyles(Typography)
+                id="info"
+                variant="h4"
+              >
+                Job Information
+              </WithStyles(Typography)>
+            </div>
             <WithStyles(Divider) />
             <div>
               <Information />
@@ -472,12 +520,14 @@ ShallowWrapper {
             <div>
               <p />
             </div>
-            <WithStyles(Typography)
-              id="windows"
-              variant="h4"
-            >
-              Windows Information
-            </WithStyles(Typography)>
+            <div>
+              <WithStyles(Typography)
+                id="windows"
+                variant="h4"
+              >
+                Windows Information
+              </WithStyles(Typography)>
+            </div>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
             </p>
@@ -487,8 +537,10 @@ ShallowWrapper {
           <WithStyles(CircularIndeterminate) />,
           <WithStyles(Sidebar)
             id="sideBar"
+            infoRef={[Function]}
             roofingRef={[Function]}
             sidingRef={[Function]}
+            windowsRef={[Function]}
           />,
         ],
       },
@@ -509,12 +561,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <WithStyles(Typography)
-                id="info"
-                variant="h4"
-              >
-                Job Information
-              </WithStyles(Typography)>,
+              <div>
+                <WithStyles(Typography)
+                  id="info"
+                  variant="h4"
+                >
+                  Job Information
+                </WithStyles(Typography)>
+              </div>,
               <WithStyles(Divider) />,
               <div>
                 <Information />
@@ -550,12 +604,14 @@ ShallowWrapper {
               <div>
                 <p />
               </div>,
-              <WithStyles(Typography)
-                id="windows"
-                variant="h4"
-              >
-                Windows Information
-              </WithStyles(Typography)>,
+              <div>
+                <WithStyles(Typography)
+                  id="windows"
+                  variant="h4"
+                >
+                  Windows Information
+                </WithStyles(Typography)>
+              </div>,
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
               </p>,
@@ -569,15 +625,32 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "children": "Job Information",
-                "id": "info",
-                "variant": "h4",
+                "children": <WithStyles(Typography)
+                  id="info"
+                  variant="h4"
+                >
+                  Job Information
+                </WithStyles(Typography)>,
               },
-              "ref": null,
-              "rendered": "Job Information",
-              "type": [Function],
+              "ref": Object {
+                "current": null,
+              },
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Job Information",
+                  "id": "info",
+                  "variant": "h4",
+                },
+                "ref": null,
+                "rendered": "Job Information",
+                "type": [Function],
+              },
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -762,15 +835,32 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "children": "Windows Information",
-                "id": "windows",
-                "variant": "h4",
+                "children": <WithStyles(Typography)
+                  id="windows"
+                  variant="h4"
+                >
+                  Windows Information
+                </WithStyles(Typography)>,
               },
-              "ref": null,
-              "rendered": "Windows Information",
-              "type": [Function],
+              "ref": Object {
+                "current": null,
+              },
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Windows Information",
+                  "id": "windows",
+                  "variant": "h4",
+                },
+                "ref": null,
+                "rendered": "Windows Information",
+                "type": [Function],
+              },
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -819,8 +909,10 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "id": "sideBar",
+            "infoRef": [Function],
             "roofingRef": [Function],
             "sidingRef": [Function],
+            "windowsRef": [Function],
           },
           "ref": null,
           "rendered": null,

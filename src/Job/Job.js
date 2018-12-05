@@ -11,22 +11,38 @@ import "../css/job.css";
 class Job extends Component {
   constructor(props) {
     super(props);
-    this.sidingRef = React.createRef();
+    this.infoRef = React.createRef();
     this.roofingRef = React.createRef();
+    this.sidingRef = React.createRef();
+    this.windowsRef = React.createRef();
   }
   state = {
     loading: true
   };
-  scrollToSidingRef = () => {
+  scrollToInfoRef = () => {
     window.scrollTo({
-      top: this.sidingRef.current.offsetTop,
+      top: this.infoRef.current.offsetTop - 65,
       behavior: "smooth"
     });
   };
 
   scrollToRoofingRef = () => {
     window.scrollTo({
-      top: this.roofingRef.current.offsetTop,
+      top: this.roofingRef.current.offsetTop - 65,
+      behavior: "smooth"
+    });
+  };
+
+  scrollToSidingRef = () => {
+    window.scrollTo({
+      top: this.sidingRef.current.offsetTop - 65,
+      behavior: "smooth"
+    });
+  };
+
+  scrollToWindowsRef = () => {
+    window.scrollTo({
+      top: this.windowsRef.current.offsetTop - 65,
       behavior: "smooth"
     });
   };
@@ -36,9 +52,11 @@ class Job extends Component {
       <div>
         <AppBar />
         <div id="mainWindow">
-          <Typography id="info" variant="h4">
-            Job Information
-          </Typography>
+          <div ref={this.infoRef}>
+            <Typography id="info" variant="h4">
+              Job Information
+            </Typography>
+          </div>
           <Divider />
           <div>
             <Information />
@@ -113,10 +131,11 @@ class Job extends Component {
           <div>
             <p />
           </div>
-
-          <Typography id="windows" variant="h4">
-            Windows Information
-          </Typography>
+          <div ref={this.windowsRef}>
+            <Typography id="windows" variant="h4">
+              Windows Information
+            </Typography>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
             mattis tellus quis turpis gravida sollicitudin. Quisque vehicula
@@ -147,8 +166,10 @@ class Job extends Component {
         </div>
         {this.state.loading ? <Loading /> : null}
         <SideBar
+          infoRef={this.scrollToInfoRef}
           roofingRef={this.scrollToRoofingRef}
           sidingRef={this.scrollToSidingRef}
+          windowsRef={this.scrollToWindowsRef}
           id="sideBar"
         />
       </div>
