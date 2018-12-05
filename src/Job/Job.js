@@ -8,6 +8,8 @@ import Typography from "@material-ui/core/Typography";
 
 import "../css/job.css";
 
+const topOffset = 65;
+
 class Job extends Component {
   constructor(props) {
     super(props);
@@ -21,28 +23,28 @@ class Job extends Component {
   };
   scrollToInfoRef = () => {
     window.scrollTo({
-      top: this.infoRef.current.offsetTop - 65,
+      top: this.infoRef.current.offsetTop - topOffset,
       behavior: "smooth"
     });
   };
 
   scrollToRoofingRef = () => {
     window.scrollTo({
-      top: this.roofingRef.current.offsetTop - 65,
+      top: this.roofingRef.current.offsetTop - topOffset,
       behavior: "smooth"
     });
   };
 
   scrollToSidingRef = () => {
     window.scrollTo({
-      top: this.sidingRef.current.offsetTop - 65,
+      top: this.sidingRef.current.offsetTop - topOffset,
       behavior: "smooth"
     });
   };
 
   scrollToWindowsRef = () => {
     window.scrollTo({
-      top: this.windowsRef.current.offsetTop - 65,
+      top: this.windowsRef.current.offsetTop - topOffset,
       behavior: "smooth"
     });
   };
