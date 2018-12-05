@@ -27,7 +27,9 @@ ShallowWrapper {
           >
             Job Information
           </WithStyles(Typography)>
-          <WithStyles(Divider) />
+          <WithStyles(Divider)
+            id="bar1"
+          />
           <div>
             <Information />
             <p />
@@ -37,7 +39,9 @@ ShallowWrapper {
           >
             Roofing Information
           </WithStyles(Typography)>
-          <WithStyles(Divider) />
+          <WithStyles(Divider)
+            id="bar1"
+          />
           <div>
             <p />
           </div>
@@ -46,7 +50,9 @@ ShallowWrapper {
           >
             Siding Information
           </WithStyles(Typography)>
-          <WithStyles(Divider) />
+          <WithStyles(Divider)
+            id="bar1"
+          />
           <div>
             <p />
           </div>
@@ -55,7 +61,9 @@ ShallowWrapper {
           >
             Windows Information
           </WithStyles(Typography)>
-          <WithStyles(Divider) />
+          <WithStyles(Divider)
+            id="bar1"
+          />
           <div />
         </div>,
         <WithStyles(CircularIndeterminate) />,
@@ -86,7 +94,9 @@ ShallowWrapper {
             >
               Job Information
             </WithStyles(Typography)>,
-            <WithStyles(Divider) />,
+            <WithStyles(Divider)
+              id="bar1"
+            />,
             <div>
               <Information />
               <p />
@@ -96,7 +106,9 @@ ShallowWrapper {
             >
               Roofing Information
             </WithStyles(Typography)>,
-            <WithStyles(Divider) />,
+            <WithStyles(Divider)
+              id="bar1"
+            />,
             <div>
               <p />
             </div>,
@@ -105,7 +117,9 @@ ShallowWrapper {
             >
               Siding Information
             </WithStyles(Typography)>,
-            <WithStyles(Divider) />,
+            <WithStyles(Divider)
+              id="bar1"
+            />,
             <div>
               <p />
             </div>,
@@ -114,7 +128,9 @@ ShallowWrapper {
             >
               Windows Information
             </WithStyles(Typography)>,
-            <WithStyles(Divider) />,
+            <WithStyles(Divider)
+              id="bar1"
+            />,
             <div />,
           ],
           "id": "mainWindow",
@@ -137,7 +153,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
-            "props": Object {},
+            "props": Object {
+              "id": "bar1",
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
@@ -191,7 +209,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
-            "props": Object {},
+            "props": Object {
+              "id": "bar1",
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
@@ -231,7 +251,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
-            "props": Object {},
+            "props": Object {
+              "id": "bar1",
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
@@ -271,7 +293,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
-            "props": Object {},
+            "props": Object {
+              "id": "bar1",
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
@@ -327,7 +351,9 @@ ShallowWrapper {
             >
               Job Information
             </WithStyles(Typography)>
-            <WithStyles(Divider) />
+            <WithStyles(Divider)
+              id="bar1"
+            />
             <div>
               <Information />
               <p />
@@ -337,7 +363,9 @@ ShallowWrapper {
             >
               Roofing Information
             </WithStyles(Typography)>
-            <WithStyles(Divider) />
+            <WithStyles(Divider)
+              id="bar1"
+            />
             <div>
               <p />
             </div>
@@ -346,7 +374,9 @@ ShallowWrapper {
             >
               Siding Information
             </WithStyles(Typography)>
-            <WithStyles(Divider) />
+            <WithStyles(Divider)
+              id="bar1"
+            />
             <div>
               <p />
             </div>
@@ -355,7 +385,9 @@ ShallowWrapper {
             >
               Windows Information
             </WithStyles(Typography)>
-            <WithStyles(Divider) />
+            <WithStyles(Divider)
+              id="bar1"
+            />
             <div />
           </div>,
           <WithStyles(CircularIndeterminate) />,
@@ -386,7 +418,9 @@ ShallowWrapper {
               >
                 Job Information
               </WithStyles(Typography)>,
-              <WithStyles(Divider) />,
+              <WithStyles(Divider)
+                id="bar1"
+              />,
               <div>
                 <Information />
                 <p />
@@ -396,7 +430,9 @@ ShallowWrapper {
               >
                 Roofing Information
               </WithStyles(Typography)>,
-              <WithStyles(Divider) />,
+              <WithStyles(Divider)
+                id="bar1"
+              />,
               <div>
                 <p />
               </div>,
@@ -405,7 +441,9 @@ ShallowWrapper {
               >
                 Siding Information
               </WithStyles(Typography)>,
-              <WithStyles(Divider) />,
+              <WithStyles(Divider)
+                id="bar1"
+              />,
               <div>
                 <p />
               </div>,
@@ -414,7 +452,9 @@ ShallowWrapper {
               >
                 Windows Information
               </WithStyles(Typography)>,
-              <WithStyles(Divider) />,
+              <WithStyles(Divider)
+                id="bar1"
+              />,
               <div />,
             ],
             "id": "mainWindow",
@@ -437,7 +477,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
-              "props": Object {},
+              "props": Object {
+                "id": "bar1",
+              },
               "ref": null,
               "rendered": null,
               "type": [Function],
@@ -491,7 +533,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
-              "props": Object {},
+              "props": Object {
+                "id": "bar1",
+              },
               "ref": null,
               "rendered": null,
               "type": [Function],
@@ -531,7 +575,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
-              "props": Object {},
+              "props": Object {
+                "id": "bar1",
+              },
               "ref": null,
               "rendered": null,
               "type": [Function],
@@ -571,7 +617,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
-              "props": Object {},
+              "props": Object {
+                "id": "bar1",
+              },
               "ref": null,
               "rendered": null,
               "type": [Function],

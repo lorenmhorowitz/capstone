@@ -5,7 +5,13 @@
   padding-top: 8px;
   padding-bottom: 8px;
 }
-
+#bar1 {
+  height: 1px;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+}
 #mainWindow {
   margin-top: 90px;
   margin-right: 5%;
@@ -41,6 +47,14 @@
   line-height: 1.75;
   letter-spacing: 0.00938em;
 }
+#content {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.0075em;
+}
 
 #picture {
   width: 35vw;
@@ -50,14 +64,26 @@
 
 @media only screen and (min-width: 300px) and (max-width: 600px) {
   #grid1 {
-    margin-top: 200px;
+    margin-top: 180px;
+    margin-left: 40px;
+    margin-right: 100px;
   }
-  #font1 {
-    font-size: 1.4em;
-    margin-left: 20%;
+  #picture {
+    margin-left: -60px;
+    margin-right: 40px;
   }
   #header {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    margin-left: 40px;
+  }
+  #content {
+    font-size: 1rem;
+  }
+  #bar1 {
+    margin-left: 40px;
+  }
+  #bar2 {
+    margin-right: 35%;
   }
   #title1 {
     font-size: 0.75rem;

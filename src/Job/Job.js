@@ -18,26 +18,26 @@ class Job extends Component {
         <AppBar />
         <div id="mainWindow">
           <Typography id="header">Job Information</Typography>
-          <Divider />
+          <Divider id="bar1" />
           <div>
             <Information />
             <p />
           </div>
 
           <Typography id="header">Roofing Information</Typography>
-          <Divider />
+          <Divider id="bar1" />
           <div>
             <p />
           </div>
 
           <Typography id="header">Siding Information</Typography>
-          <Divider />
+          <Divider id="bar1" />
           <div>
             <p />
           </div>
 
           <Typography id="header">Windows Information</Typography>
-          <Divider />
+          <Divider id="bar1" />
           <div />
         </div>
         {this.state.loading ? <Loading /> : null}

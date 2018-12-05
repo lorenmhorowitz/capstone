@@ -19,16 +19,16 @@ class Information extends Component {
           <Grid item xs={4}>
             <div id="grid1">
               <Typography id="title1">Address:</Typography>
-              <Divider style={{ color: "orange" }} />
-              <Typography variant="h6">2910 NE 168th Ave</Typography>
-              <Typography variant="h6">Vancouver, WA 98682</Typography> <p />
+              <Divider id="bar2" />
+              <Typography id="content">2910 NE 168th Ave</Typography>
+              <Typography id="content">Vancouver, WA 98682</Typography> <p />
               <Typography id="title1">Client:</Typography>
-              <Divider />
-              <Typography variant="h6">Arnold Castro</Typography> <p />
+              <Divider id="bar2" />
+              <Typography id="content">Arnold Castro</Typography> <p />
               <Typography id="title1">Contact Information: </Typography>
-              <Divider />
-              <Typography variant="h6">(360) 123-4567</Typography>
-              <Typography variant="h6">test@wsu.edu</Typography>
+              <Divider id="bar2" />
+              <Typography id="content">(360) 123-4567</Typography>
+              <Typography id="content">test@wsu.edu</Typography>
             </div>
           </Grid>
           <Grid item xs={8}>
