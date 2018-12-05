@@ -9,9 +9,28 @@ import Typography from "@material-ui/core/Typography";
 import "../css/job.css";
 
 class Job extends Component {
+  constructor(props) {
+    super(props);
+    this.sidingRef = React.createRef();
+    this.roofingRef = React.createRef();
+  }
   state = {
     loading: true
   };
+  scrollToSidingRef = () => {
+    window.scrollTo({
+      top: this.sidingRef.current.offsetTop,
+      behavior: "smooth"
+    });
+  };
+
+  scrollToRoofingRef = () => {
+    window.scrollTo({
+      top: this.roofingRef.current.offsetTop,
+      behavior: "smooth"
+    });
+  };
+
   render() {
     return (
       <div>
@@ -26,9 +45,11 @@ class Job extends Component {
             <p />
           </div>
 
-          <Typography id="roofing" variant="h4">
-            Roofing Information
-          </Typography>
+          <div ref={this.roofingRef}>
+            <Typography id="roofing" variant="h4">
+              Roofing Information
+            </Typography>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
             mattis tellus quis turpis gravida sollicitudin. Quisque vehicula
@@ -58,9 +79,11 @@ class Job extends Component {
             <p />
           </div>
 
-          <Typography id="siding" variant="h4">
-            Siding Information
-          </Typography>
+          <div ref={this.sidingRef}>
+            <Typography id="siding" variant="h4">
+              Siding Information
+            </Typography>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
             mattis tellus quis turpis gravida sollicitudin. Quisque vehicula
@@ -123,7 +146,11 @@ class Job extends Component {
           <div />
         </div>
         {this.state.loading ? <Loading /> : null}
-        <SideBar route={this.path} id="sideBar" />
+        <SideBar
+          roofingRef={this.scrollToRoofingRef}
+          sidingRef={this.scrollToSidingRef}
+          id="sideBar"
+        />
       </div>
     );
   }

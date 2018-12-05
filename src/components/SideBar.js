@@ -26,7 +26,7 @@ class Sidebar extends Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { classes, roofingRef, sidingRef } = this.props;
     const { open } = this.state;
 
     return (
@@ -67,6 +67,7 @@ class Sidebar extends Component {
             </ListItem>
             <ListItem
               containerelement={<Link to="#roofing" />}
+              onClick={roofingRef}
               className="listItem"
               button
             >
@@ -81,6 +82,7 @@ class Sidebar extends Component {
             <ListItem
               containerelement={<Link to="#siding" />}
               className="listItem"
+              onClick={sidingRef}
               button
             >
               <ListItemIcon>
