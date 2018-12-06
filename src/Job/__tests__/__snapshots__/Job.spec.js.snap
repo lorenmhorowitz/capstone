@@ -82,10 +82,27 @@ ShallowWrapper {
         <WithStyles(CircularIndeterminate) />,
         <WithStyles(Sidebar)
           id="sideBar"
-          infoRef={[Function]}
-          roofingRef={[Function]}
-          sidingRef={[Function]}
-          windowsRef={[Function]}
+          infoRef={
+            Object {
+              "current": null,
+            }
+          }
+          roofingRef={
+            Object {
+              "current": null,
+            }
+          }
+          scrollToRef={[Function]}
+          sidingRef={
+            Object {
+              "current": null,
+            }
+          }
+          windowsRef={
+            Object {
+              "current": null,
+            }
+          }
         />,
       ],
     },
@@ -454,10 +471,19 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "id": "sideBar",
-          "infoRef": [Function],
-          "roofingRef": [Function],
-          "sidingRef": [Function],
-          "windowsRef": [Function],
+          "infoRef": Object {
+            "current": null,
+          },
+          "roofingRef": Object {
+            "current": null,
+          },
+          "scrollToRef": [Function],
+          "sidingRef": Object {
+            "current": null,
+          },
+          "windowsRef": Object {
+            "current": null,
+          },
         },
         "ref": null,
         "rendered": null,
@@ -537,10 +563,27 @@ ShallowWrapper {
           <WithStyles(CircularIndeterminate) />,
           <WithStyles(Sidebar)
             id="sideBar"
-            infoRef={[Function]}
-            roofingRef={[Function]}
-            sidingRef={[Function]}
-            windowsRef={[Function]}
+            infoRef={
+              Object {
+                "current": null,
+              }
+            }
+            roofingRef={
+              Object {
+                "current": null,
+              }
+            }
+            scrollToRef={[Function]}
+            sidingRef={
+              Object {
+                "current": null,
+              }
+            }
+            windowsRef={
+              Object {
+                "current": null,
+              }
+            }
           />,
         ],
       },
@@ -909,10 +952,19 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "id": "sideBar",
-            "infoRef": [Function],
-            "roofingRef": [Function],
-            "sidingRef": [Function],
-            "windowsRef": [Function],
+            "infoRef": Object {
+              "current": null,
+            },
+            "roofingRef": Object {
+              "current": null,
+            },
+            "scrollToRef": [Function],
+            "sidingRef": Object {
+              "current": null,
+            },
+            "windowsRef": Object {
+              "current": null,
+            },
           },
           "ref": null,
           "rendered": null,

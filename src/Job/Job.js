@@ -18,33 +18,14 @@ class Job extends Component {
     this.sidingRef = React.createRef();
     this.windowsRef = React.createRef();
   }
+
   state = {
     loading: true
   };
-  scrollToInfoRef = () => {
-    window.scrollTo({
-      top: this.infoRef.current.offsetTop - topOffset,
-      behavior: "smooth"
-    });
-  };
 
-  scrollToRoofingRef = () => {
+  scrollToRef = ref => {
     window.scrollTo({
-      top: this.roofingRef.current.offsetTop - topOffset,
-      behavior: "smooth"
-    });
-  };
-
-  scrollToSidingRef = () => {
-    window.scrollTo({
-      top: this.sidingRef.current.offsetTop - topOffset,
-      behavior: "smooth"
-    });
-  };
-
-  scrollToWindowsRef = () => {
-    window.scrollTo({
-      top: this.windowsRef.current.offsetTop - topOffset,
+      top: ref.current.offsetTop - topOffset,
       behavior: "smooth"
     });
   };
@@ -168,10 +149,11 @@ class Job extends Component {
         </div>
         {this.state.loading ? <Loading /> : null}
         <SideBar
-          infoRef={this.scrollToInfoRef}
-          roofingRef={this.scrollToRoofingRef}
-          sidingRef={this.scrollToSidingRef}
-          windowsRef={this.scrollToWindowsRef}
+          scrollToRef={this.scrollToRef}
+          infoRef={this.infoRef}
+          roofingRef={this.roofingRef}
+          sidingRef={this.sidingRef}
+          windowsRef={this.windowsRef}
           id="sideBar"
         />
       </div>
