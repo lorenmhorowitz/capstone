@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:700");
 
-#header {
-  font-size: 1.2em;
+#header2 {
+  font-size: 2.125em;
   padding-top: 8px;
   padding-bottom: 8px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 0.75;
+  letter-spacing: 0.00735em;
 }
 #bar1 {
   height: 1px;
@@ -37,6 +41,8 @@
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   line-height: 0.75;
+  padding-top: 8px;
+  padding-bottom: 8px;
   letter-spacing: 0.00735em;
 }
 #title1 {
@@ -70,22 +76,28 @@
 
 @media only screen and (min-width: 300px) and (max-width: 600px) {
   #grid1 {
-    margin-top: 180px;
+    margin-top: 320px;
     margin-left: 40px;
     margin-right: 100px;
   }
   #picture {
     margin-left: -60px;
+    height: 11em;
     margin-right: 40px;
   }
   #map {
-    width: 8em;
-    height: 6em;
-    margin-top: -40px;
-    margin-left: 70px;
+    width: 280px;
+    height: 8em;
+    margin-left: -60px;
+    margin-right: 40px;
   }
   #header {
     font-size: 1.7rem;
+    margin-left: 40px;
+  }
+  #header2 {
+    font-size: 1.7em;
+    margin-top: 230px;
     margin-left: 40px;
   }
   #content {

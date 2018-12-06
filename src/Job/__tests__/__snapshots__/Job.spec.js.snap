@@ -35,7 +35,7 @@ ShallowWrapper {
             <p />
           </div>
           <WithStyles(Typography)
-            id="header"
+            id="header2"
           >
             Roofing Information
           </WithStyles(Typography)>
@@ -100,7 +100,7 @@ ShallowWrapper {
               <p />
             </div>,
             <WithStyles(Typography)
-              id="header"
+              id="header2"
             >
               Roofing Information
             </WithStyles(Typography)>,
@@ -197,7 +197,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Roofing Information",
-              "id": "header",
+              "id": "header2",
             },
             "ref": null,
             "rendered": "Roofing Information",
@@ -355,7 +355,7 @@ ShallowWrapper {
               <p />
             </div>
             <WithStyles(Typography)
-              id="header"
+              id="header2"
             >
               Roofing Information
             </WithStyles(Typography)>
@@ -420,7 +420,7 @@ ShallowWrapper {
                 <p />
               </div>,
               <WithStyles(Typography)
-                id="header"
+                id="header2"
               >
                 Roofing Information
               </WithStyles(Typography)>,
@@ -517,7 +517,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Roofing Information",
-                "id": "header",
+                "id": "header2",
               },
               "ref": null,
               "rendered": "Roofing Information",

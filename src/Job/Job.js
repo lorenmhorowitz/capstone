@@ -24,7 +24,7 @@ class Job extends Component {
             <p />
           </div>
 
-          <Typography id="header">Roofing Information</Typography>
+          <Typography id="header2">Roofing Information</Typography>
           <Divider id="bar1" />
           <div>
             <p />
