@@ -31,17 +31,17 @@ class Information extends Component {
         <Grid container style={{ paddingTop: "2em" }}>
           <Grid item xs={4}>
             <div id="grid1">
-              <Typography variant="subtitle1">Address:</Typography>
+              <Typography id="title1">Address:</Typography>
               <Divider style={{ color: "orange" }} />
-              <Typography variant="h6">{jobDetails.location_line_1}</Typography>
-              <Typography variant="h6">{formattedAddress}</Typography> <p />
-              <Typography variant="subtitle1">Client:</Typography>
+              <Typography id="content">{jobDetails.location_line_1}</Typography>
+              <Typography id="content">{formattedAddress}</Typography> <p />
+              <Typography id="title1">Client:</Typography>
               <Divider />
-              <Typography variant="h6">{jobDetails.name}</Typography> <p />
-              <Typography variant="subtitle1">Contact Information: </Typography>
+              <Typography id="content">{jobDetails.name}</Typography> <p />
+              <Typography id="title1">Contact Information: </Typography>
               <Divider />
-              <Typography variant="h6">(360) 123-4567</Typography>
-              <Typography variant="h6">test@wsu.edu</Typography>
+              <Typography id="content">(360) 123-4567</Typography>
+              <Typography id="content">test@wsu.edu</Typography>
             </div>
           </Grid>
           <Grid item xs={8}>

@@ -42,34 +42,50 @@ class Job extends Component {
   }
 
   render() {
+    const loaded = (
+      <div id="mainWindow">
+        <Typography id="header">Job Information</Typography>
+        <Divider id="bar1" />
+        <div>
+          <Information jobDetails={this.state.jobDetails} />
+          <p />
+        </div>
+
+        <Typography id="header2">Roofing Information</Typography>
+        <Divider id="bar1" />
+        <div>
+          <p />
+        </div>
+
+        <Typography id="header">Siding Information</Typography>
+        <Divider id="bar1" />
+        <div>
+          <p />
+        </div>
+
+        <Typography id="header">Windows Information</Typography>
+        <Divider id="bar1" />
+        <div />
+      </div>
+    );
+
     return (
       <div>
         <AppBar />
-        <div id="mainWindow">
-          <Typography id="header">Job Information</Typography>
-          <Divider id="bar1" />
-          <div>
-            <Information jobDetails={this.state.jobDetails} />
-            <p />
+        {!this.state.loading &&
+        this.state.jobDetails.hasOwnProperty("location_line_1")
+          ? loaded
+          : null}
+        {this.state.loading ? (
+          <Loading />
+        ) : (
+          <div id="mainWindow">
+            <Typography id="title1">
+              Unable to load job {window.location.pathname.replace("/job/", "")}
+              .
+            </Typography>
           </div>
-
-          <Typography id="header2">Roofing Information</Typography>
-          <Divider id="bar1" />
-          <div>
-            <p />
-          </div>
-
-          <Typography id="header">Siding Information</Typography>
-          <Divider id="bar1" />
-          <div>
-            <p />
-          </div>
-
-          <Typography id="header">Windows Information</Typography>
-          <Divider id="bar1" />
-          <div />
-        </div>
-        {this.state.loading ? <Loading /> : null}
+        )}
         <SideBar />
       </div>
     );
