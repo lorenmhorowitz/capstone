@@ -29,3 +29,9 @@
 .listItemIcon {
   color: white;
 }
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .drawerPaperClose {
+    width: 60px;
+    transition: all 0.2s linear;
+  }
+}

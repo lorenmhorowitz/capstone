@@ -41,7 +41,7 @@ class Job extends Component {
           <div />
         </div>
         {this.state.loading ? <Loading /> : null}
-        <SideBar id="sideBar" />
+        <SideBar />
       </div>
     );
   }

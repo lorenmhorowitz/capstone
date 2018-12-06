@@ -67,9 +67,7 @@ ShallowWrapper {
           <div />
         </div>,
         <WithStyles(CircularIndeterminate) />,
-        <WithStyles(Sidebar)
-          id="sideBar"
-        />,
+        <WithStyles(Sidebar) />,
       ],
     },
     "ref": null,
@@ -325,9 +323,7 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {
-          "id": "sideBar",
-        },
+        "props": Object {},
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -391,9 +387,7 @@ ShallowWrapper {
             <div />
           </div>,
           <WithStyles(CircularIndeterminate) />,
-          <WithStyles(Sidebar)
-            id="sideBar"
-          />,
+          <WithStyles(Sidebar) />,
         ],
       },
       "ref": null,
@@ -649,9 +643,7 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {
-            "id": "sideBar",
-          },
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],
