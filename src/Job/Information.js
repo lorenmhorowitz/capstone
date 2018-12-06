@@ -18,30 +18,28 @@ class Information extends Component {
         <Grid container style={{ paddingTop: "2em" }}>
           <Grid item xs={4}>
             <div id="grid1">
-              <Typography variant="subtitle1">Address:</Typography>
-              <Divider style={{ color: "orange" }} />
-              <Typography variant="h6">2910 NE 168th Ave</Typography>
-              <Typography variant="h6">Vancouver, WA 98682</Typography> <p />
-              <Typography variant="subtitle1">Client:</Typography>
-              <Divider />
-              <Typography variant="h6">Arnold Castro</Typography> <p />
-              <Typography variant="subtitle1">Contact Information: </Typography>
-              <Divider />
-              <Typography variant="h6">(360) 123-4567</Typography>
-              <Typography variant="h6">test@wsu.edu</Typography>
+              <Typography id="title1">Address:</Typography>
+              <Divider id="bar2" />
+              <Typography id="content">2910 NE 168th Ave</Typography>
+              <Typography id="content">Vancouver, WA 98682</Typography> <p />
+              <Typography id="title1">Client:</Typography>
+              <Divider id="bar2" />
+              <Typography id="content">Arnold Castro</Typography> <p />
+              <Typography id="title1">Contact Information: </Typography>
+              <Divider id="bar2" />
+              <Typography id="content">(360) 123-4567</Typography>
+              <Typography id="content">test@wsu.edu</Typography>
             </div>
           </Grid>
           <Grid item xs={8}>
             <Grid container>
               <Grid item>
-                <div style={{ width: "35vw", height: "20em" }}>
+                <div id="picture">
                   <CardSlide images={images} width={"100%"} height={"100%"} />
                 </div>
               </Grid>
               <Grid item>
-                <div
-                  style={{ width: "15em", height: "12em", marginLeft: "2vw" }}
-                >
+                <div id="map">
                   <GoogleMap
                     location="Las Vegas, NV"
                     height="100%"
