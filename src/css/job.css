@@ -16,6 +16,14 @@
   flex-shrink: 0;
   background-color: rgba(0, 0, 0, 0.12);
 }
+#bar2 {
+  height: 1px;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+  margin-right: 30%;
+}
 #mainWindow {
   margin-top: 90px;
   margin-right: 5%;
@@ -73,8 +81,41 @@
   height: 12em;
   margin-left: 2vw;
 }
+@media only screen and (min-width: 1001px) and (max-width: 1320px) {
+  #picture {
+    margin-left: 10%;
+    height: 22vw;
+    margin-right: 40px;
+  }
+  #map {
+    width: 35vw;
+    min-height: 159px;
+    min-width: 280px;
+    margin-left: 11%;
+  }
+  #bar2 {
+    margin-right: 40%;
+  }
+}
 
-@media only screen and (min-width: 300px) and (max-width: 600px) {
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+  #picture {
+    margin-left: 10%;
+    height: 13em;
+    margin-right: 40px;
+  }
+  #map {
+    width: 35vw;
+    min-height: 159px;
+    min-width: 280px;
+    margin-left: 10%;
+    margin-right: 40px;
+  }
+  #bar2 {
+    margin-right: 40%;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 800px) {
   #grid1 {
     margin-top: 320px;
     margin-left: 40px;
