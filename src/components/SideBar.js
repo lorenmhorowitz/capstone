@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import Drawer from "@material-ui/core/Drawer";
@@ -52,12 +51,7 @@ class Sidebar extends Component {
             >
               {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
             </ListItem>
-            <ListItem
-              containerelement={<Link to="#info" />}
-              onClick={infoRef}
-              className="listItem"
-              button
-            >
+            <ListItem onClick={infoRef} className="listItem" button>
               <ListItemIcon>
                 <i className="material-icons outline listItemIcon">info</i>
               </ListItemIcon>
@@ -66,12 +60,7 @@ class Sidebar extends Component {
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
-            <ListItem
-              containerelement={<Link to="#roofing" />}
-              onClick={roofingRef}
-              className="listItem"
-              button
-            >
+            <ListItem onClick={roofingRef} className="listItem" button>
               <ListItemIcon>
                 <i className="material-icons outline listItemIcon">home</i>
               </ListItemIcon>
@@ -80,12 +69,7 @@ class Sidebar extends Component {
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
-            <ListItem
-              containerelement={<Link to="#siding" />}
-              className="listItem"
-              onClick={sidingRef}
-              button
-            >
+            <ListItem className="listItem" onClick={sidingRef} button>
               <ListItemIcon>
                 <i className="material-icons outline listItemIcon">
                   view_headline
@@ -96,12 +80,7 @@ class Sidebar extends Component {
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
-            <ListItem
-              containerelement={<Link to="#windows" />}
-              className="listItem"
-              onClick={windowsRef}
-              button
-            >
+            <ListItem className="listItem" onClick={windowsRef} button>
               <ListItemIcon>
                 <i className="material-icons outline listItemIcon">web_asset</i>
               </ListItemIcon>
@@ -110,11 +89,7 @@ class Sidebar extends Component {
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
-            <ListItem
-              containerelement={<Link to="#shop" />}
-              className="listItem"
-              button
-            >
+            <ListItem className="listItem" button>
               <ListItemIcon>
                 <i className="material-icons outline listItemIcon">
                   shopping_cart
