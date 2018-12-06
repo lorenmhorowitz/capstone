@@ -17,31 +17,31 @@ class Job extends Component {
       <div>
         <AppBar />
         <div id="mainWindow">
-          <Typography variant="h4">Job Information</Typography>
-          <Divider />
+          <Typography id="header">Job Information</Typography>
+          <Divider id="bar1" />
           <div>
             <Information />
             <p />
           </div>
 
-          <Typography variant="h4">Roofing Information</Typography>
-          <Divider />
+          <Typography id="header2">Roofing Information</Typography>
+          <Divider id="bar1" />
           <div>
             <p />
           </div>
 
-          <Typography variant="h4">Siding Information</Typography>
-          <Divider />
+          <Typography id="header">Siding Information</Typography>
+          <Divider id="bar1" />
           <div>
             <p />
           </div>
 
-          <Typography variant="h4">Windows Information</Typography>
-          <Divider />
+          <Typography id="header">Windows Information</Typography>
+          <Divider id="bar1" />
           <div />
         </div>
         {this.state.loading ? <Loading /> : null}
-        <SideBar id="sideBar" />
+        <SideBar />
       </div>
     );
   }
