@@ -47,7 +47,11 @@ ShallowWrapper {
             id="bar1"
           />
           <div>
-            <p />
+            <p
+              id="para"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
+            </p>
           </div>
           <div>
             <WithStyles(Typography)
@@ -60,24 +64,27 @@ ShallowWrapper {
             id="bar1"
           />
           <div>
-            <p />
+            <p
+              id="para"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
+            </p>
           </div>
           <div>
             <WithStyles(Typography)
-              id="windows"
-              variant="h4"
+              id="header"
             >
               Windows Information
             </WithStyles(Typography)>
           </div>
-          <p>
+          <WithStyles(Divider)
+            id="bar1"
+          />
+          <p
+            id="para"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
           </p>
-          <WithStyles(Typography)
-            id="header"
-          >
-            Windows Information
-          </WithStyles(Typography)>
           <WithStyles(Divider)
             id="bar1"
           />
@@ -152,7 +159,11 @@ ShallowWrapper {
               id="bar1"
             />,
             <div>
-              <p />
+              <p
+                id="para"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
+              </p>
             </div>,
             <div>
               <WithStyles(Typography)
@@ -165,24 +176,27 @@ ShallowWrapper {
               id="bar1"
             />,
             <div>
-              <p />
+              <p
+                id="para"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
+              </p>
             </div>,
             <div>
               <WithStyles(Typography)
-                id="windows"
-                variant="h4"
+                id="header"
               >
                 Windows Information
               </WithStyles(Typography)>
             </div>,
-            <p>
+            <WithStyles(Divider)
+              id="bar1"
+            />,
+            <p
+              id="para"
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
             </p>,
-            <WithStyles(Typography)
-              id="header"
-            >
-              Windows Information
-            </WithStyles(Typography)>,
             <WithStyles(Divider)
               id="bar1"
             />,
@@ -308,16 +322,23 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <p />,
+              "children": <p
+                id="para"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
+              </p>,
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
-              "props": Object {},
+              "props": Object {
+                "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
+                "id": "para",
+              },
               "ref": null,
-              "rendered": null,
+              "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
               "type": "p",
             },
             "type": "div",
@@ -366,16 +387,23 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <p />,
+              "children": <p
+                id="para"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
+              </p>,
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
-              "props": Object {},
+              "props": Object {
+                "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
+                "id": "para",
+              },
               "ref": null,
-              "rendered": null,
+              "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
               "type": "p",
             },
             "type": "div",
@@ -386,8 +414,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <WithStyles(Typography)
-                id="windows"
-                variant="h4"
+                id="header"
               >
                 Windows Information
               </WithStyles(Typography)>,
@@ -401,8 +428,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Windows Information",
-                "id": "windows",
-                "variant": "h4",
+                "id": "header",
               },
               "ref": null,
               "rendered": "Windows Information",
@@ -413,25 +439,25 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
-              "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
+              "id": "bar1",
             },
             "ref": null,
-            "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
-            "type": "p",
+            "rendered": null,
+            "type": [Function],
           },
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
-              "children": "Windows Information",
-              "id": "header",
+              "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
+              "id": "para",
             },
             "ref": null,
-            "rendered": "Windows Information",
-            "type": [Function],
+            "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
+            "type": "p",
           },
           Object {
             "instance": null,
@@ -528,7 +554,11 @@ ShallowWrapper {
               id="bar1"
             />
             <div>
-              <p />
+              <p
+                id="para"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
+              </p>
             </div>
             <div>
               <WithStyles(Typography)
@@ -541,24 +571,27 @@ ShallowWrapper {
               id="bar1"
             />
             <div>
-              <p />
+              <p
+                id="para"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
+              </p>
             </div>
             <div>
               <WithStyles(Typography)
-                id="windows"
-                variant="h4"
+                id="header"
               >
                 Windows Information
               </WithStyles(Typography)>
             </div>
-            <p>
+            <WithStyles(Divider)
+              id="bar1"
+            />
+            <p
+              id="para"
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
             </p>
-            <WithStyles(Typography)
-              id="header"
-            >
-              Windows Information
-            </WithStyles(Typography)>
             <WithStyles(Divider)
               id="bar1"
             />
@@ -633,7 +666,11 @@ ShallowWrapper {
                 id="bar1"
               />,
               <div>
-                <p />
+                <p
+                  id="para"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
+                </p>
               </div>,
               <div>
                 <WithStyles(Typography)
@@ -646,24 +683,27 @@ ShallowWrapper {
                 id="bar1"
               />,
               <div>
-                <p />
+                <p
+                  id="para"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
+                </p>
               </div>,
               <div>
                 <WithStyles(Typography)
-                  id="windows"
-                  variant="h4"
+                  id="header"
                 >
                   Windows Information
                 </WithStyles(Typography)>
               </div>,
-              <p>
+              <WithStyles(Divider)
+                id="bar1"
+              />,
+              <p
+                id="para"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
               </p>,
-              <WithStyles(Typography)
-                id="header"
-              >
-                Windows Information
-              </WithStyles(Typography)>,
               <WithStyles(Divider)
                 id="bar1"
               />,
@@ -789,16 +829,23 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <p />,
+                "children": <p
+                  id="para"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
+                </p>,
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
-                "props": Object {},
+                "props": Object {
+                  "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
+                  "id": "para",
+                },
                 "ref": null,
-                "rendered": null,
+                "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
                 "type": "p",
               },
               "type": "div",
@@ -847,16 +894,23 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <p />,
+                "children": <p
+                  id="para"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.
+                </p>,
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
-                "props": Object {},
+                "props": Object {
+                  "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
+                  "id": "para",
+                },
                 "ref": null,
-                "rendered": null,
+                "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
                 "type": "p",
               },
               "type": "div",
@@ -867,8 +921,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <WithStyles(Typography)
-                  id="windows"
-                  variant="h4"
+                  id="header"
                 >
                   Windows Information
                 </WithStyles(Typography)>,
@@ -882,8 +935,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": "Windows Information",
-                  "id": "windows",
-                  "variant": "h4",
+                  "id": "header",
                 },
                 "ref": null,
                 "rendered": "Windows Information",
@@ -894,25 +946,25 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
-                "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
+                "id": "bar1",
               },
               "ref": null,
-              "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
-              "type": "p",
+              "rendered": null,
+              "type": [Function],
             },
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "children": "Windows Information",
-                "id": "header",
+                "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
+                "id": "para",
               },
               "ref": null,
-              "rendered": "Windows Information",
-              "type": [Function],
+              "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis tellus quis turpis gravida sollicitudin. Quisque vehicula lorem consectetur vehicula imperdiet. Nullam non suscipit ex, et dictum tortor. Vivamus eget volutpat elit. Fusce posuere finibus laoreet. Donec tempus orci nec elit condimentum rhoncus. Etiam diam nunc, rutrum sed condimentum nec, gravida ut metus. Nullam tempus aliquet ante sit amet facilisis. Ut et finibus massa. Pellentesque eget elit a neque venenatis scelerisque. Maecenas nec nunc massa. Phasellus eget velit vitae orci gravida venenatis in quis nisl. Phasellus non lectus eu velit tristique suscipit quis nec enim. Quisque venenatis ultricies tortor maximus maximus. Aenean ut pharetra nisl. Quisque porttitor, lorem et euismod congue, felis turpis hendrerit sem, quis tempor purus nisl accumsan dolor. Suspendisse fringilla ex vitae nisl convallis ornare. Quisque porta tempus sollicitudin. Quisque suscipit velit ut elit hendrerit, in varius mauris malesuada. Aenean vitae elementum libero. Sed dignissim porttitor nisl, viverra ornare erat porttitor sit amet. In tincidunt orci nibh, ut fermentum urna volutpat non. Ut condimentum accumsan neque ut facilisis. Nunc congue luctus est a lacinia. Cras a ultricies erat, et tincidunt elit. Suspendisse eget mi vel leo luctus dapibus. Praesent convallis arcu vitae dolor sagittis, porta euismod quam aliquam. Sed vitae sollicitudin eros.",
+              "type": "p",
             },
             Object {
               "instance": null,

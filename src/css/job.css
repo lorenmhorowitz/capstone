@@ -153,4 +153,8 @@
   #title1 {
     font-size: 0.75rem;
   }
+  #para {
+    font-size: 1rem;
+    margin-left: 40px;
+  }
 }
