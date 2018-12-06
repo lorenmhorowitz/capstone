@@ -23,11 +23,13 @@ ShallowWrapper {
           id="mainWindow"
         >
           <WithStyles(Typography)
-            variant="h4"
+            id="header"
           >
             Job Information
           </WithStyles(Typography)>
-          <WithStyles(Divider) />
+          <WithStyles(Divider)
+            id="bar1"
+          />
           <div>
             <Information
               jobDetails={Object {}}
@@ -35,35 +37,39 @@ ShallowWrapper {
             <p />
           </div>
           <WithStyles(Typography)
-            variant="h4"
+            id="header2"
           >
             Roofing Information
           </WithStyles(Typography)>
-          <WithStyles(Divider) />
+          <WithStyles(Divider)
+            id="bar1"
+          />
           <div>
             <p />
           </div>
           <WithStyles(Typography)
-            variant="h4"
+            id="header"
           >
             Siding Information
           </WithStyles(Typography)>
-          <WithStyles(Divider) />
+          <WithStyles(Divider)
+            id="bar1"
+          />
           <div>
             <p />
           </div>
           <WithStyles(Typography)
-            variant="h4"
+            id="header"
           >
             Windows Information
           </WithStyles(Typography)>
-          <WithStyles(Divider) />
+          <WithStyles(Divider)
+            id="bar1"
+          />
           <div />
         </div>,
         <WithStyles(CircularIndeterminate) />,
-        <WithStyles(Sidebar)
-          id="sideBar"
-        />,
+        <WithStyles(Sidebar) />,
       ],
     },
     "ref": null,
@@ -84,11 +90,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Job Information
             </WithStyles(Typography)>,
-            <WithStyles(Divider) />,
+            <WithStyles(Divider)
+              id="bar1"
+            />,
             <div>
               <Information
                 jobDetails={Object {}}
@@ -96,29 +104,35 @@ ShallowWrapper {
               <p />
             </div>,
             <WithStyles(Typography)
-              variant="h4"
+              id="header2"
             >
               Roofing Information
             </WithStyles(Typography)>,
-            <WithStyles(Divider) />,
+            <WithStyles(Divider)
+              id="bar1"
+            />,
             <div>
               <p />
             </div>,
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Siding Information
             </WithStyles(Typography)>,
-            <WithStyles(Divider) />,
+            <WithStyles(Divider)
+              id="bar1"
+            />,
             <div>
               <p />
             </div>,
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Windows Information
             </WithStyles(Typography)>,
-            <WithStyles(Divider) />,
+            <WithStyles(Divider)
+              id="bar1"
+            />,
             <div />,
           ],
           "id": "mainWindow",
@@ -131,7 +145,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Job Information",
-              "variant": "h4",
+              "id": "header",
             },
             "ref": null,
             "rendered": "Job Information",
@@ -141,7 +155,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
-            "props": Object {},
+            "props": Object {
+              "id": "bar1",
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
@@ -189,7 +205,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Roofing Information",
-              "variant": "h4",
+              "id": "header2",
             },
             "ref": null,
             "rendered": "Roofing Information",
@@ -199,7 +215,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
-            "props": Object {},
+            "props": Object {
+              "id": "bar1",
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
@@ -229,7 +247,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Siding Information",
-              "variant": "h4",
+              "id": "header",
             },
             "ref": null,
             "rendered": "Siding Information",
@@ -239,7 +257,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
-            "props": Object {},
+            "props": Object {
+              "id": "bar1",
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
@@ -269,7 +289,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Windows Information",
-              "variant": "h4",
+              "id": "header",
             },
             "ref": null,
             "rendered": "Windows Information",
@@ -279,7 +299,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
-            "props": Object {},
+            "props": Object {
+              "id": "bar1",
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
@@ -309,9 +331,7 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {
-          "id": "sideBar",
-        },
+        "props": Object {},
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -331,11 +351,13 @@ ShallowWrapper {
             id="mainWindow"
           >
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Job Information
             </WithStyles(Typography)>
-            <WithStyles(Divider) />
+            <WithStyles(Divider)
+              id="bar1"
+            />
             <div>
               <Information
                 jobDetails={Object {}}
@@ -343,35 +365,39 @@ ShallowWrapper {
               <p />
             </div>
             <WithStyles(Typography)
-              variant="h4"
+              id="header2"
             >
               Roofing Information
             </WithStyles(Typography)>
-            <WithStyles(Divider) />
+            <WithStyles(Divider)
+              id="bar1"
+            />
             <div>
               <p />
             </div>
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Siding Information
             </WithStyles(Typography)>
-            <WithStyles(Divider) />
+            <WithStyles(Divider)
+              id="bar1"
+            />
             <div>
               <p />
             </div>
             <WithStyles(Typography)
-              variant="h4"
+              id="header"
             >
               Windows Information
             </WithStyles(Typography)>
-            <WithStyles(Divider) />
+            <WithStyles(Divider)
+              id="bar1"
+            />
             <div />
           </div>,
           <WithStyles(CircularIndeterminate) />,
-          <WithStyles(Sidebar)
-            id="sideBar"
-          />,
+          <WithStyles(Sidebar) />,
         ],
       },
       "ref": null,
@@ -392,11 +418,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <WithStyles(Typography)
-                variant="h4"
+                id="header"
               >
                 Job Information
               </WithStyles(Typography)>,
-              <WithStyles(Divider) />,
+              <WithStyles(Divider)
+                id="bar1"
+              />,
               <div>
                 <Information
                   jobDetails={Object {}}
@@ -404,29 +432,35 @@ ShallowWrapper {
                 <p />
               </div>,
               <WithStyles(Typography)
-                variant="h4"
+                id="header2"
               >
                 Roofing Information
               </WithStyles(Typography)>,
-              <WithStyles(Divider) />,
+              <WithStyles(Divider)
+                id="bar1"
+              />,
               <div>
                 <p />
               </div>,
               <WithStyles(Typography)
-                variant="h4"
+                id="header"
               >
                 Siding Information
               </WithStyles(Typography)>,
-              <WithStyles(Divider) />,
+              <WithStyles(Divider)
+                id="bar1"
+              />,
               <div>
                 <p />
               </div>,
               <WithStyles(Typography)
-                variant="h4"
+                id="header"
               >
                 Windows Information
               </WithStyles(Typography)>,
-              <WithStyles(Divider) />,
+              <WithStyles(Divider)
+                id="bar1"
+              />,
               <div />,
             ],
             "id": "mainWindow",
@@ -439,7 +473,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Job Information",
-                "variant": "h4",
+                "id": "header",
               },
               "ref": null,
               "rendered": "Job Information",
@@ -449,7 +483,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
-              "props": Object {},
+              "props": Object {
+                "id": "bar1",
+              },
               "ref": null,
               "rendered": null,
               "type": [Function],
@@ -497,7 +533,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Roofing Information",
-                "variant": "h4",
+                "id": "header2",
               },
               "ref": null,
               "rendered": "Roofing Information",
@@ -507,7 +543,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
-              "props": Object {},
+              "props": Object {
+                "id": "bar1",
+              },
               "ref": null,
               "rendered": null,
               "type": [Function],
@@ -537,7 +575,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Siding Information",
-                "variant": "h4",
+                "id": "header",
               },
               "ref": null,
               "rendered": "Siding Information",
@@ -547,7 +585,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
-              "props": Object {},
+              "props": Object {
+                "id": "bar1",
+              },
               "ref": null,
               "rendered": null,
               "type": [Function],
@@ -577,7 +617,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Windows Information",
-                "variant": "h4",
+                "id": "header",
               },
               "ref": null,
               "rendered": "Windows Information",
@@ -587,7 +627,9 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
-              "props": Object {},
+              "props": Object {
+                "id": "bar1",
+              },
               "ref": null,
               "rendered": null,
               "type": [Function],
@@ -617,9 +659,7 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {
-            "id": "sideBar",
-          },
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],

@@ -47,14 +47,12 @@ class Information extends Component {
           <Grid item xs={8}>
             <Grid container>
               <Grid item>
-                <div style={{ width: "35vw", height: "20em" }}>
+                <div id="picture">
                   <CardSlide images={images} width={"100%"} height={"100%"} />
                 </div>
               </Grid>
               <Grid item>
-                <div
-                  style={{ width: "15em", height: "12em", marginLeft: "2vw" }}
-                >
+                <div id="map">
                   <GoogleMap
                     location={googleMapsAddress}
                     height="100%"

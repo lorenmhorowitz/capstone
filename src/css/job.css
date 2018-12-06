@@ -1,11 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:700");
 
-#header {
-  font-size: 1.2em;
+#header2 {
+  font-size: 2.125em;
   padding-top: 8px;
   padding-bottom: 8px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 0.75;
+  letter-spacing: 0.00735em;
 }
-
+#bar1 {
+  height: 1px;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+#bar2 {
+  height: 1px;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+  margin-right: 30%;
+}
 #mainWindow {
   margin-top: 90px;
   margin-right: 5%;
@@ -25,22 +43,114 @@
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
-
-#font1 {
-  font-size: 1.8em;
-  margin-left: 20%;
+#header {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 2.125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 0.75;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  letter-spacing: 0.00735em;
+}
+#title1 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+#content {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.0075em;
 }
 
-#font2 {
-  font-size: 1.2em;
-  margin-left: 20%;
-}
 #picture {
-  width: 52%;
-  min-width: 380px;
-  height: 300px;
-  position: relative;
-  float: right;
-  margin-right: 10%;
-  margin-left: 50%;
+  width: 35vw;
+  min-width: 280px;
+  height: 20em;
+}
+
+#map {
+  width: 15em;
+  height: 12em;
+  margin-left: 2vw;
+}
+@media only screen and (min-width: 1001px) and (max-width: 1320px) {
+  #picture {
+    margin-left: 10%;
+    height: 22vw;
+    margin-right: 40px;
+  }
+  #map {
+    width: 35vw;
+    min-height: 159px;
+    min-width: 280px;
+    margin-left: 11%;
+  }
+  #bar2 {
+    margin-right: 40%;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+  #picture {
+    margin-left: 10%;
+    height: 13em;
+    margin-right: 40px;
+  }
+  #map {
+    width: 35vw;
+    min-height: 159px;
+    min-width: 280px;
+    margin-left: 10%;
+    margin-right: 40px;
+  }
+  #bar2 {
+    margin-right: 40%;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+  #grid1 {
+    margin-top: 320px;
+    margin-left: 40px;
+    margin-right: 100px;
+  }
+  #picture {
+    margin-left: -60px;
+    height: 11em;
+    margin-right: 40px;
+  }
+  #map {
+    width: 280px;
+    height: 8em;
+    margin-left: -60px;
+    margin-right: 40px;
+  }
+  #header {
+    font-size: 1.7rem;
+    margin-left: 40px;
+  }
+  #header2 {
+    font-size: 1.7em;
+    margin-top: 230px;
+    margin-left: 40px;
+  }
+  #content {
+    font-size: 1rem;
+  }
+  #bar1 {
+    margin-left: 40px;
+  }
+  #bar2 {
+    margin-right: 35%;
+  }
+  #title1 {
+    font-size: 0.75rem;
+  }
 }
