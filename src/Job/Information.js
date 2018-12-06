@@ -1,3 +1,4 @@
+import { addressFormatter } from "./addressFormatter";
 import CardSlide from "../components/CardSlide";
 import Divider from "@material-ui/core/Divider";
 import GoogleMap from "../components/GoogleMap";
@@ -9,10 +10,22 @@ import "../css/job.css";
 
 class Information extends Component {
   render() {
+    const { jobDetails } = this.props;
     const images = [
       "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
       "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1"
     ];
+
+    const formattedAddress = addressFormatter(
+      jobDetails.location_city,
+      jobDetails.location_region,
+      jobDetails.location_postal_code
+    );
+    const googleMapsAddress =
+      formattedAddress !== ""
+        ? `${jobDetails.location_line_1} ${formattedAddress}`
+        : "Vancouver, WA";
+
     return (
       <Fragment>
         <Grid container style={{ paddingTop: "2em" }}>
@@ -20,11 +33,11 @@ class Information extends Component {
             <div id="grid1">
               <Typography variant="subtitle1">Address:</Typography>
               <Divider style={{ color: "orange" }} />
-              <Typography variant="h6">2910 NE 168th Ave</Typography>
-              <Typography variant="h6">Vancouver, WA 98682</Typography> <p />
+              <Typography variant="h6">{jobDetails.location_line_1}</Typography>
+              <Typography variant="h6">{formattedAddress}</Typography> <p />
               <Typography variant="subtitle1">Client:</Typography>
               <Divider />
-              <Typography variant="h6">Arnold Castro</Typography> <p />
+              <Typography variant="h6">{jobDetails.name}</Typography> <p />
               <Typography variant="subtitle1">Contact Information: </Typography>
               <Divider />
               <Typography variant="h6">(360) 123-4567</Typography>
@@ -43,7 +56,7 @@ class Information extends Component {
                   style={{ width: "15em", height: "12em", marginLeft: "2vw" }}
                 >
                   <GoogleMap
-                    location="Las Vegas, NV"
+                    location={googleMapsAddress}
                     height="100%"
                     width="100%"
                   />
