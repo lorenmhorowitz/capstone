@@ -39,9 +39,7 @@ class Information extends Component {
                 </div>
               </Grid>
               <Grid item>
-                <div
-                  style={{ width: "15em", height: "12em", marginLeft: "2vw" }}
-                >
+                <div id="map">
                   <GoogleMap
                     location="Las Vegas, NV"
                     height="100%"
