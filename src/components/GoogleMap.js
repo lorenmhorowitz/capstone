@@ -10,12 +10,12 @@ class GoogleMap extends Component {
       lat: 45.6272259,
       lng: -122.6727305
     },
+    geocoded: false,
     zoom: 11
   };
 
-  componentDidMount() {
-    Geocode.setApiKey(GOOGLE_MAPS_API_KEY);
-    if (this.props.location) {
+  updateLocation() {
+    if (!this.state.geocoded) {
       Geocode.fromAddress(this.props.location).then(response => {
         const { lat, lng } = response.results[0].geometry.location;
         this.setState({
@@ -23,13 +23,16 @@ class GoogleMap extends Component {
             lat: lat,
             lng: lng
           },
+          geocoded: true,
           zoom: 16
         });
       });
     }
+    Geocode.setApiKey(GOOGLE_MAPS_API_KEY);
   }
 
   render() {
+    if (!this.state.geocoded) this.updateLocation();
     return (
       <div
         style={{
