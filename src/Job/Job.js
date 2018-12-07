@@ -76,16 +76,17 @@ class Job extends Component {
         this.state.jobDetails.hasOwnProperty("location_line_1")
           ? loaded
           : null}
-        {this.state.loading ? (
-          <Loading />
-        ) : (
+        {!this.state.loading &&
+        !this.state.jobDetails.hasOwnProperty("location_line_1") ? (
           <div id="mainWindow">
             <Typography id="title1">
               Unable to load job {window.location.pathname.replace("/job/", "")}
               .
             </Typography>
           </div>
-        )}
+        ) : null}
+
+        {this.state.loading ? <Loading /> : null}
         <SideBar />
       </div>
     );
