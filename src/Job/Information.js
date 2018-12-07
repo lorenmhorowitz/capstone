@@ -1,3 +1,4 @@
+import { addressFormatter } from "./addressFormatter";
 import CardSlide from "../components/CardSlide";
 import Divider from "@material-ui/core/Divider";
 import GoogleMap from "../components/GoogleMap";
@@ -9,24 +10,36 @@ import "../css/job.css";
 
 class Information extends Component {
   render() {
+    const { jobDetails } = this.props;
     const images = [
       "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
       "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1"
     ];
+
+    const formattedAddress = addressFormatter(
+      jobDetails.location_city,
+      jobDetails.location_region,
+      jobDetails.location_postal_code
+    );
+    const googleMapsAddress =
+      formattedAddress !== ""
+        ? `${jobDetails.location_line_1} ${formattedAddress}`
+        : "Vancouver, WA";
+
     return (
       <Fragment>
         <Grid container style={{ paddingTop: "2em" }}>
           <Grid item xs={4}>
             <div id="grid1">
               <Typography id="title1">Address:</Typography>
-              <Divider id="bar2" />
-              <Typography id="content">2910 NE 168th Ave</Typography>
-              <Typography id="content">Vancouver, WA 98682</Typography> <p />
+              <Divider style={{ color: "orange" }} />
+              <Typography id="content">{jobDetails.location_line_1}</Typography>
+              <Typography id="content">{formattedAddress}</Typography> <p />
               <Typography id="title1">Client:</Typography>
-              <Divider id="bar2" />
-              <Typography id="content">Arnold Castro</Typography> <p />
+              <Divider />
+              <Typography id="content">{jobDetails.name}</Typography> <p />
               <Typography id="title1">Contact Information: </Typography>
-              <Divider id="bar2" />
+              <Divider />
               <Typography id="content">(360) 123-4567</Typography>
               <Typography id="content">test@wsu.edu</Typography>
             </div>
@@ -41,7 +54,7 @@ class Information extends Component {
               <Grid item>
                 <div id="map">
                   <GoogleMap
-                    location="Las Vegas, NV"
+                    location={googleMapsAddress}
                     height="100%"
                     width="100%"
                   />
