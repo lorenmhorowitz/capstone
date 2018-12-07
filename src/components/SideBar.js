@@ -25,7 +25,14 @@ class Sidebar extends Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const {
+      classes,
+      infoRef,
+      roofingRef,
+      sidingRef,
+      windowsRef,
+      scrollToRef
+    } = this.props;
     const { open } = this.state;
 
     return (
@@ -51,7 +58,11 @@ class Sidebar extends Component {
             >
               {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
             </ListItem>
-            <ListItem className="listItem" button>
+            <ListItem
+              onClick={() => scrollToRef(infoRef)}
+              className="listItem"
+              button
+            >
               <ListItemIcon>
                 <i className="material-icons outline listItemIcon">info</i>
               </ListItemIcon>
@@ -60,7 +71,11 @@ class Sidebar extends Component {
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
-            <ListItem className="listItem" button>
+            <ListItem
+              onClick={() => scrollToRef(roofingRef)}
+              className="listItem"
+              button
+            >
               <ListItemIcon>
                 <i className="material-icons outline listItemIcon">home</i>
               </ListItemIcon>
@@ -69,7 +84,11 @@ class Sidebar extends Component {
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
-            <ListItem className="listItem" button>
+            <ListItem
+              onClick={() => scrollToRef(sidingRef)}
+              className="listItem"
+              button
+            >
               <ListItemIcon>
                 <i className="material-icons outline listItemIcon">
                   view_headline
@@ -80,7 +99,11 @@ class Sidebar extends Component {
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
-            <ListItem className="listItem" button>
+            <ListItem
+              onClick={() => scrollToRef(windowsRef)}
+              className="listItem"
+              button
+            >
               <ListItemIcon>
                 <i className="material-icons outline listItemIcon">web_asset</i>
               </ListItemIcon>

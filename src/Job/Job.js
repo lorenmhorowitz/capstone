@@ -1,19 +1,25 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import AppBar from "../components/AppBar";
 import Divider from "@material-ui/core/Divider";
 import Information from "./Information";
 import Loading from "../components/Loading";
+import { lorem } from "./Lorem";
 import request from "request";
 import SideBar from "../components/SideBar";
 import Typography from "@material-ui/core/Typography";
 
 import "../css/job.css";
 
+const topOffset = 65;
 const JOBURL = "https://us-central1-hdqc-capstone.cloudfunctions.net/getJob";
 
 class Job extends Component {
   constructor(props) {
     super(props);
+    this.infoRef = React.createRef();
+    this.roofingRef = React.createRef();
+    this.sidingRef = React.createRef();
+    this.windowsRef = React.createRef();
     this.state = {
       jobDetails: {},
       loading: true
@@ -41,46 +47,60 @@ class Job extends Component {
     );
   }
 
+  scrollToRef = ref => {
+    window.scrollTo({
+      top: ref.current.offsetTop - topOffset,
+      behavior: "smooth"
+    });
+  };
+
   render() {
     const loaded = (
       <div id="mainWindow">
-        <Typography id="header">Job Information</Typography>
-        <Divider id="bar1" />
-        <div>
-          <Information jobDetails={this.state.jobDetails} />
-          <p />
+        {/* JOB INFORMATION SECTION */}
+        <div ref={this.infoRef}>
+          <Typography id="header">Job Information</Typography>
         </div>
+        <Divider id="bar1" />
+        <Information jobDetails={this.state.jobDetails} />
 
+        {/* ROOFING INFORMATION SECTION */}
         {this.state.jobDetails.hasOwnProperty("active_projects") &&
         this.state.jobDetails.active_projects.roofing ? (
-          <Fragment>
+          <div ref={this.roofingRef}>
             <Typography id="header2">Roofing Information</Typography>
             <Divider id="bar1" />
+            <p id="para">{lorem}</p>
             <div>
               <p />
             </div>
-          </Fragment>
+          </div>
         ) : null}
 
+        {/* SIDING INFORMATION SECTION */}
         {this.state.jobDetails.hasOwnProperty("active_projects") &&
         this.state.jobDetails.active_projects.siding ? (
-          <Fragment>
+          <div ref={this.sidingRef}>
             <Typography id="header">Siding Information</Typography>
             <Divider id="bar1" />
             <div>
-              <p />
+              <p id="para">{lorem}</p>
             </div>
-          </Fragment>
+          </div>
         ) : null}
 
+        {/* WINDOWS INFORMATION SECTION */}
         {this.state.jobDetails.hasOwnProperty("active_projects") &&
         this.state.jobDetails.active_projects.windows ? (
-          <Fragment>
+          <div ref={this.windowsRef}>
             <Typography id="header">Windows Information</Typography>
             <Divider id="bar1" />
+            <p id="para">{lorem}</p>
             <div />
-          </Fragment>
+          </div>
         ) : null}
+
+        <div />
       </div>
     );
 
@@ -96,13 +116,18 @@ class Job extends Component {
           <div id="mainWindow">
             <Typography id="title1">
               Unable to load job {window.location.pathname.replace("/job/", "")}
-              .
             </Typography>
           </div>
         ) : null}
-
         {this.state.loading ? <Loading /> : null}
-        <SideBar />
+        <SideBar
+          scrollToRef={this.scrollToRef}
+          infoRef={this.infoRef}
+          roofingRef={this.roofingRef}
+          sidingRef={this.sidingRef}
+          windowsRef={this.windowsRef}
+          id="sideBar"
+        />
       </div>
     );
   }
