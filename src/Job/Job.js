@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import AppBar from "../components/AppBar";
 import Divider from "@material-ui/core/Divider";
 import Information from "./Information";
@@ -51,21 +51,36 @@ class Job extends Component {
           <p />
         </div>
 
-        <Typography id="header2">Roofing Information</Typography>
-        <Divider id="bar1" />
-        <div>
-          <p />
-        </div>
+        {this.state.jobDetails.hasOwnProperty("active_projects") &&
+        this.state.jobDetails.active_projects.roofing ? (
+          <Fragment>
+            <Typography id="header2">Roofing Information</Typography>
+            <Divider id="bar1" />
+            <div>
+              <p />
+            </div>
+          </Fragment>
+        ) : null}
 
-        <Typography id="header">Siding Information</Typography>
-        <Divider id="bar1" />
-        <div>
-          <p />
-        </div>
+        {this.state.jobDetails.hasOwnProperty("active_projects") &&
+        this.state.jobDetails.active_projects.siding ? (
+          <Fragment>
+            <Typography id="header">Siding Information</Typography>
+            <Divider id="bar1" />
+            <div>
+              <p />
+            </div>
+          </Fragment>
+        ) : null}
 
-        <Typography id="header">Windows Information</Typography>
-        <Divider id="bar1" />
-        <div />
+        {this.state.jobDetails.hasOwnProperty("active_projects") &&
+        this.state.jobDetails.active_projects.windows ? (
+          <Fragment>
+            <Typography id="header">Windows Information</Typography>
+            <Divider id="bar1" />
+            <div />
+          </Fragment>
+        ) : null}
       </div>
     );
 
