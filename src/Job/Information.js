@@ -11,10 +11,6 @@ import "../css/job.css";
 class Information extends Component {
   render() {
     const { jobDetails } = this.props;
-    const images = [
-      "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg?w=1000&h=563&crop=1",
-      "https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc_fi.jpg?w=700&h=393&crop=1"
-    ];
 
     const formattedAddress = addressFormatter(
       jobDetails.location_city,
@@ -48,7 +44,11 @@ class Information extends Component {
             <Grid container>
               <Grid item>
                 <div id="picture">
-                  <CardSlide images={images} width={"100%"} height={"100%"} />
+                  <CardSlide
+                    images={jobDetails.images}
+                    width={"100%"}
+                    height={"100%"}
+                  />
                 </div>
               </Grid>
               <Grid item>

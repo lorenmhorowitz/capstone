@@ -26,10 +26,10 @@ class JobCard extends Component {
         <CardActionArea>
           <CardMedia
             component="img"
-            alt="Nice house"
+            alt={this.props.name}
             className="cardMedia"
             image={this.props.image}
-            title="Nice house"
+            title={this.props.name}
           />
           <CardContent>
             <Typography variant="subtitle2" align="left">

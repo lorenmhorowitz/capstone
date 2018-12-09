@@ -65,7 +65,7 @@ class Home extends Component {
                 location_line_1={data.location_line_1}
                 location_city={data.location_city}
                 location_region={data.location_region}
-                image="https://upload.wikimedia.org/wikipedia/commons/2/25/Houses_on_Garfield_Place,_Poughkeepsie,_NY.jpg"
+                image={data.images[0]}
                 clickHandler={this.handleJobRedirect}
               />
             ))}
