@@ -44,11 +44,7 @@ class Information extends Component {
             <Grid container>
               <Grid item>
                 <div id="picture">
-                  <CardSlide
-                    images={jobDetails.images}
-                    width={"100%"}
-                    height={"100%"}
-                  />
+                  <CardSlide images={jobDetails.images} width={"80%"} />
                 </div>
               </Grid>
               <Grid item>
