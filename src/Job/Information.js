@@ -33,7 +33,10 @@ class Information extends Component {
               <Typography id="content">{formattedAddress}</Typography> <p />
               <Typography id="title1">Client:</Typography>
               <Divider id="bar2" />
-              <Typography id="content">{jobDetails.name}</Typography> <p />
+              <Typography id="content">
+                {jobDetails.customer_name}
+              </Typography>{" "}
+              <p />
               <Typography id="title1">Contact Information: </Typography>
               <Divider id="bar2" />
               <Typography id="content">(360) 123-4567</Typography>
