@@ -32,14 +32,14 @@ class Information extends Component {
           <Grid item xs={4}>
             <div id="grid1">
               <Typography id="title1">Address:</Typography>
-              <Divider style={{ color: "orange" }} />
+              <Divider id="bar2" />
               <Typography id="content">{jobDetails.location_line_1}</Typography>
               <Typography id="content">{formattedAddress}</Typography> <p />
               <Typography id="title1">Client:</Typography>
-              <Divider />
+              <Divider id="bar2" />
               <Typography id="content">{jobDetails.name}</Typography> <p />
               <Typography id="title1">Contact Information: </Typography>
-              <Divider />
+              <Divider id="bar2" />
               <Typography id="content">(360) 123-4567</Typography>
               <Typography id="content">test@wsu.edu</Typography>
             </div>
