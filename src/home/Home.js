@@ -1,11 +1,12 @@
-import React, { Component } from "react";
-import request from "request";
 import AppBar from "../components/AppBar";
-import Loading from "../components/Loading";
-import "../css/home.css";
 import { Grid } from "@material-ui/core";
 import JobCard from "../components/JobCard";
+import Loading from "../components/Loading";
+import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import request from "request";
+import store from "../redux/reducers";
+import "../css/home.css";
 
 const JOBSURL = "https://us-central1-hdqc-capstone.cloudfunctions.net/getJobs";
 
@@ -15,6 +16,15 @@ class Home extends Component {
     dataArr: [],
     jobRedirect: false,
     jobRedirectID: 0
+  };
+
+  checkAuth = () => {
+    if (
+      store.getState().account.length === 0 ||
+      store.getState().account.isLoggedIn === false
+    ) {
+      return <Redirect to="/login" />;
+    }
   };
 
   handleJobRedirect = (data, event) => {
@@ -53,6 +63,7 @@ class Home extends Component {
     }
     return (
       <div>
+        {this.checkAuth()}
         <AppBar />
         {this.state.loading ? <Loading /> : null}
         <div className="gridContainer">

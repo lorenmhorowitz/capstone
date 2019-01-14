@@ -1,13 +1,14 @@
-import React, { Component } from "react";
 import AppBar from "../components/AppBar";
 import Divider from "@material-ui/core/Divider";
 import Information from "./Information";
 import Loading from "../components/Loading";
 import { lorem } from "./Lorem";
+import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import request from "request";
 import SideBar from "../components/SideBar";
+import store from "../redux/reducers";
 import Typography from "@material-ui/core/Typography";
-
 import "../css/job.css";
 
 const topOffset = 65;
@@ -47,6 +48,15 @@ class Job extends Component {
     );
   }
 
+  checkAuth = () => {
+    if (
+      store.getState().account.length === 0 ||
+      store.getState().account.isLoggedIn === false
+    ) {
+      return <Redirect to="/login" />;
+    }
+  };
+
   scrollToRef = ref => {
     window.scrollTo({
       top: ref.current.offsetTop - topOffset,
@@ -57,6 +67,8 @@ class Job extends Component {
   render() {
     const loaded = (
       <div id="mainWindow">
+        {this.checkAuth()}
+
         {/* JOB INFORMATION SECTION */}
         <div ref={this.infoRef}>
           <Typography id="header">Job Information</Typography>

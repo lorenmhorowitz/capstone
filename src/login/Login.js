@@ -1,9 +1,11 @@
-import React, { Component } from "react";
 import "../css/Login.css";
+import { actions } from "../redux/actions";
 import Button from "@material-ui/core/Button";
 import Loading from "../components/Loading";
-import request from "request";
+import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import request from "request";
+import store from "../redux/reducers";
 import TextField from "../components/TextField";
 
 const LOGIN_ACCOUNT_API =
@@ -67,6 +69,7 @@ class Login extends Component {
             loginError: false,
             homeRedirect: true
           });
+          store.dispatch(actions.loginUser(this.state.username));
         } else {
           this.setState({
             loading: false,
