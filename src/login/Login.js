@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../css/Login.css";
 import Button from "@material-ui/core/Button";
+import Loading from "../components/Loading";
 import request from "request";
 import { Redirect } from "react-router-dom";
 import TextField from "../components/TextField";
@@ -12,9 +13,11 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      homeRedirect: false,
+      hoverRedirect: false,
+      loading: false,
       loginError: false,
       password: "",
-      redirect: false,
       username: ""
     };
   }
@@ -28,10 +31,13 @@ class Login extends Component {
   };
 
   handleHoverLogin = () => {
-    this.setState({ redirect: true });
+    this.setState({ hoverRedirect: true });
   };
 
   handleLogin = () => {
+    this.setState({
+      loading: true
+    });
     request.post(
       {
         url: LOGIN_ACCOUNT_API,
@@ -49,41 +55,57 @@ class Login extends Component {
       },
       function(error, response) {
         if (error) {
+          this.setState({
+            loading: false
+          });
           return;
         }
 
         if (response.statusCode === 200) {
           this.setState({
+            loading: false,
             loginError: false,
-            redirect: true
+            homeRedirect: true
           });
         } else {
-          this.setState({ loginError: true });
+          this.setState({
+            loading: false,
+            loginError: true
+          });
         }
       }.bind(this)
     );
   };
 
   render() {
-    if (this.state.redirect) {
+    if (this.state.hoverRedirect) {
       return <Redirect push to="/hover" />;
     }
+
+    if (this.state.homeRedirect) {
+      return <Redirect push to="/home" />;
+    }
+
+    const errorMessage = <p id="error">Unable to log in. Please try again.</p>;
+
     return (
-      <div className="Img">
+      <div className="Img" id="scroll">
         <div id="loginSquare">
           <div id="title">
             <span id="Corner">Corner</span>
             <span id="Stone">Stone</span>
           </div>
-          <TextField label="email" />
-          <TextField label="password" />
+          <TextField label="email" handler={this.handleEmailChange} />
+          <TextField label="password" handler={this.handlePasswordChange} />
           <Button id="Login" onClick={this.handleLogin}>
             Log In
           </Button>
           <Button id="HoverLogin" onClick={this.handleHoverLogin}>
             Login With Hover
           </Button>
+          {this.state.loginError ? errorMessage : null}
         </div>
+        {this.state.loading ? <Loading /> : null}
       </div>
     );
   }

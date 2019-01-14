@@ -1,8 +1,5 @@
-#root {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
+#bar {
+  position: fixed;
 }
 #grow {
   flex-grow: 1;
@@ -10,7 +7,13 @@
 
 #logo {
   position: absolute;
+  text-decoration: none;
   left: 20px;
+}
+a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: none;
+  text-decoration-style: none;
 }
 
 #StoneTitle {
@@ -30,7 +33,7 @@
   color: #ffffff;
 }
 
-#textField {
+.textField {
   background-color: #ffffff;
   background-position: center;
   margin-top: 5%;
@@ -43,24 +46,66 @@
   text-indent: 5%;
 }
 
-#fieldStyle {
-  position: relative;
+.fieldStyle {
   background-position: center;
   border-radius: 8px;
-  width: 410px;
-  right: 29px;
-  margin-right: -4255px;
-  margin-bottom: 15px;
+  height: 12%;
+  margin: 0;
+  margin-bottom: 5px;
+  padding-bottom: 4px;
+  position: relative;
+  right: 2vw;
   text-indent: 5%;
+  width: 30vw;
 }
 
-label,
-#textField:focus ~ .form_label {
-  color: #9b9b9b !important;
-}
-
-@media only screen and (min-width: 400px) and (max-width: 550px) {
-  #textfiled {
-    height: 12vw;
+@media only screen and (min-width: 1221px) {
+  .fieldStyle {
+    margin-bottom: 5px;
+    padding-bottom: 4px;
+    text-align: left;
+    text-indent: 5%;
+    height: 66px;
+    width: 250px;
+    right: 15px;
   }
+}
+@media only screen and (min-width: 951px) and (max-width: 1220px) {
+  #size {
+    height: 12%;
+  }
+  .fieldStyle {
+    margin-bottom: 5px;
+    padding-bottom: 4px;
+    text-align: left;
+    text-indent: 5%;
+    height: 51.45px;
+    width: 250px;
+    right: 15px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  #size {
+    height: 12%;
+  }
+  .fieldStyle {
+    margin-bottom: 5px;
+    padding-bottom: 4px;
+    text-align: left;
+    text-indent: 5%;
+    height: 12%;
+    width: 250px;
+    right: 15px;
+  }
+}
+::before {
+  border-bottom: none !important;
+}
+::after {
+  border-bottom: none !important;
+}
+label {
+  color: #9b9b9b !important;
+  border-bottom: none #ffffff !important;
 }

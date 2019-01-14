@@ -13,14 +13,22 @@
     "test": "jest --setupFiles ./testUtils/setup.js"
   },
   "dependencies": {
+    "@google/maps": "^0.5.5",
     "@material-ui/core": "^3.3.1",
     "@material-ui/icons": "^3.0.1",
+    "classnames": "^2.2.6",
+    "dotenv": "^6.1.0",
+    "geocoder": "^0.2.3",
+    "google-map-react": "^1.1.1",
     "parcel": "^1.10.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-geocode": "^0.1.2",
     "react-hot-loader": "^4.3.12",
+    "react-responsive-carousel": "^3.1.43",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.5",
+    "req": "^0.1.4",
     "request": "^2.88.0"
   },
   "devDependencies": {
@@ -48,7 +56,8 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     },
-    "coveragePathIgnorePatterns": []
+    "coveragePathIgnorePatterns": [],
+    "testURL": "http://localhost"
   },
   "precommit": [
     "lynt",
