@@ -64,12 +64,13 @@ class Login extends Component {
         }
 
         if (response.statusCode === 200) {
+          store.dispatch(actions.loginUser(this.state.username));
+          console.log("Done adding state to store");
           this.setState({
             loading: false,
             loginError: false,
             homeRedirect: true
           });
-          store.dispatch(actions.loginUser(this.state.username));
         } else {
           this.setState({
             loading: false,

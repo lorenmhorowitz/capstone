@@ -12,19 +12,11 @@ const JOBSURL = "https://us-central1-hdqc-capstone.cloudfunctions.net/getJobs";
 
 class Home extends Component {
   state = {
-    loading: true,
     dataArr: [],
+    isLoaded: false,
     jobRedirect: false,
-    jobRedirectID: 0
-  };
-
-  checkAuth = () => {
-    if (
-      store.getState().account.length === 0 ||
-      store.getState().account.isLoggedIn === false
-    ) {
-      return <Redirect to="/login" />;
-    }
+    jobRedirectID: 0,
+    loading: true
   };
 
   handleJobRedirect = (data, event) => {
@@ -34,36 +26,46 @@ class Home extends Component {
     });
   };
 
-  UNSAFE_componentWillMount() {
-    request.post(
-      {
-        url: JOBSURL,
-        headers: {
-          "Content-Type": "application/json"
-        },
-        json: true,
-        body: {
-          key: "username",
-          kind: "jobs",
-          namespace: "username"
-        }
-      },
-      (error, response, body) => {
-        this.setState({
-          dataArr: JSON.parse(body.jobs).results,
-          loading: false
-        });
-      }
-    );
-  }
-
   render() {
+    console.log("Checking redux store");
+    if (
+      store.getState().account.length === 0 ||
+      store.getState().account.isLoggedIn === false
+    ) {
+      console.log("not authorized!");
+      console.log(store.getState());
+      return <Redirect to="login" />;
+    }
+
+    if (!this.state.isLoaded) {
+      request.post(
+        {
+          url: JOBSURL,
+          headers: {
+            "Content-Type": "application/json"
+          },
+          json: true,
+          body: {
+            key: "username",
+            kind: "jobs",
+            namespace: "username"
+          }
+        },
+        (error, response, body) => {
+          this.setState({
+            dataArr: JSON.parse(body.jobs).results,
+            isLoaded: true,
+            loading: false
+          });
+        }
+      );
+    }
+
     if (this.state.jobRedirect) {
       return <Redirect push to={"/job/" + this.state.jobRedirectID} />;
     }
     return (
       <div>
-        {this.checkAuth()}
         <AppBar />
         {this.state.loading ? <Loading /> : null}
         <div className="gridContainer">
