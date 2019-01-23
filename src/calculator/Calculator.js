@@ -1,17 +1,34 @@
-import React, { Component } from "react";
+import Component from "react";
 
-// Shingles
+const square = 100;
+class Calculator extends Component {
+  // Shingles
+  findBundles = sqFoot => {
+    const bundlesPerSquare = 3 / square;
+    const bundles = bundlesPerSquare * sqFoot;
+    return bundles;
+  };
+  findShingles = sqFoot => {
+    const shinglesPerBundle = 29;
+    const shingles = shinglesPerBundle * sqFoot;
+    return shingles;
+  };
+  findShingleNails = sqFoot => {
+    const nailsPerSquare = 320 / square;
+    const nails = nailsPerSquare * sqFoot;
+    return nails;
+  };
+  // Ridges and Hips
 
-// Ridges and Hips
+  // Roll Roofing
 
-// Roll Roofing
+  // Gutters and Eaves
 
-// Gutters and Eaves
+  // Rake
 
-// Rake
+  // Flashing
 
-// Flashing
+  // Step flashing
+}
 
-// Step flashing
-
-// Nails
+export default Calculator;
