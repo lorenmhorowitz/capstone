@@ -10,7 +10,7 @@ class Calculator extends Component {
   };
   findShingles = sqFoot => {
     const shinglesPerBundle = 29;
-    const shingles = shinglesPerBundle * sqFoot;
+    const shingles = shinglesPerBundle * this.findBundles(sqFoot);
     return shingles;
   };
   findShingleNails = sqFoot => {
