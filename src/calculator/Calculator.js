@@ -1,34 +1,46 @@
-import Component from "react";
+// Quantity Calculator
+// Calculates the quantity of each building material
 
-const square = 100;
-class Calculator extends Component {
-  // Shingles
-  findBundles = sqFoot => {
-    const bundlesPerSquare = 3 / square;
-    const bundles = bundlesPerSquare * sqFoot;
-    return bundles;
-  };
-  findShingles = sqFoot => {
-    const shinglesPerBundle = 29;
-    const shingles = shinglesPerBundle * this.findBundles(sqFoot);
-    return shingles;
-  };
-  findShingleNails = sqFoot => {
-    const nailsPerSquare = 320 / square;
-    const nails = nailsPerSquare * sqFoot;
-    return nails;
-  };
-  // Ridges and Hips
+const getSquares = squareFootage => {
+  return Math.ceil(squareFootage / 100);
+};
 
-  // Roll Roofing
+// Shingles
+const findBundles = squareFootage => {
+  // Industry standard of 3 bundles per square
+  return getSquares(squareFootage) * 3;
+};
 
-  // Gutters and Eaves
+const findShingles = squareFootage => {
+  // Industry standard of 29 shingles per bundle
+  return findBundles(squareFootage) * 29;
+};
 
-  // Rake
+const findShingleNails = squareFootage => {
+  const nailsPerSquare = 320 / 100;
+  const nails = nailsPerSquare * squareFootage;
+  return nails;
+};
+// Ridges and Hips
+const findCapShingles = () => {
+  const overlap = 12 / 7;
+  const capShingles = 100 * overlap;
+  return capShingles;
+};
+// Underlayment
 
-  // Flashing
+// Gutters and Eaves
 
-  // Step flashing
-}
+// Rake
 
-export default Calculator;
+// Flashing
+
+// Step flashing
+
+export default {
+  getSquares,
+  findCapShingles,
+  findShingleNails,
+  findBundles,
+  findShingles
+};
