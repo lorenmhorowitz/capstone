@@ -11,7 +11,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import Toolbar from "@material-ui/core/Toolbar";
 import { withStyles } from "@material-ui/core/styles";
-import QuantityCalculator from "../calculator/Calculator";
+import QuantityCalculator from "../calculator/roofingCalculator";
 
 const Measurements = {
   squareFootage: 3000,
@@ -76,7 +76,7 @@ class AppBar extends Component {
           <AppBars id="bar" color="primary">
             <Toolbar>
               <Link to="/home" id="logo">
-                <span id="HomeTitle">{`Bundles: ${QuantityCalculator.findStepFlashing(
+                <span id="HomeTitle">{`Bundles: ${QuantityCalculator.getStepFlashingQuantity(
                   Measurements
                 )}`}</span>
                 <span id="HomeTitle">Corner</span>
