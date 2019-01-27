@@ -115,6 +115,5 @@ export default {
   getFlashingQuantity,
   getRakesQuantity,
   getGuttersQuantity,
-  getUnderlaymentNailsQuantity,
   getUnderlaymentQuantity
 };
