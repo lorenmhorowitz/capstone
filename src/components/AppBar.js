@@ -11,14 +11,14 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import Toolbar from "@material-ui/core/Toolbar";
 import { withStyles } from "@material-ui/core/styles";
-import QuantityCalculator from "../calculator/roofingCalculator";
+import QuantityCalculator from "../calculator/calculator";
 
 const Measurements = {
   squareFootage: 3000,
   ridgeLength: 100,
   gutterLength: 120,
   rakeLength: 100,
-  wasteFactor: 0.05,
+  wasteFactor: 0,
   stepFlashing: {
     length: 10
   }
@@ -76,7 +76,7 @@ class AppBar extends Component {
           <AppBars id="bar" color="primary">
             <Toolbar>
               <Link to="/home" id="logo">
-                <span id="HomeTitle">{`Bundles: ${QuantityCalculator.getStepFlashingQuantity(
+                <span id="HomeTitle">{`Bundles: ${QuantityCalculator.getRoofingQuantities().getStepFlashingQuantity(
                   Measurements
                 )}`}</span>
                 <span id="HomeTitle">Corner</span>
