@@ -18,10 +18,8 @@ const Measurements = {
   ridgeLength: 100,
   gutterLength: 120,
   rakeLength: 100,
-  wasteFactor: 0,
-  stepFlashing: {
-    length: 10
-  }
+  wasteFactor: 0.1,
+  stepFlashing: 10
 };
 
 const muiTheme = createMuiTheme({
@@ -76,7 +74,7 @@ class AppBar extends Component {
           <AppBars id="bar" color="primary">
             <Toolbar>
               <Link to="/home" id="logo">
-                <span id="HomeTitle">{`Bundles: ${QuantityCalculator.getRoofingQuantities().getStepFlashingQuantity(
+                <span id="HomeTitle">{`Bundles: ${QuantityCalculator.getRoofingQuantities().getNailsQuantity(
                   Measurements
                 )}`}</span>
                 <span id="HomeTitle">Corner</span>

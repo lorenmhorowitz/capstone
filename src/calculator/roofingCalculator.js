@@ -20,12 +20,12 @@ const getWasteFactorAdjustedMeasurements = Measurements => {
     stepFlashing
   } = Measurements;
   return {
-    squareFootage: squareFootage * (1 + wasteFactor),
-    ridgeLength: ridgeLength * (1 + wasteFactor),
+    squareFootage: squareFootage + squareFootage * wasteFactor,
+    ridgeLength: ridgeLength + ridgeLength * wasteFactor,
     gutterLength: gutterLength * (1 + wasteFactor),
     rakeLength: rakeLength * (1 + wasteFactor),
     wasteFactor: 0,
-    length: stepFlashing.length * (1 + wasteFactor)
+    length: stepFlashing + stepFlashing * wasteFactor
   };
 };
 
@@ -57,7 +57,9 @@ const getShinglesNailsQuantity = Measurements => {
 const getCapShinglesQuantity = Measurements => {
   // Overlap of 5 inches per shingle, 12-5 = 7
   return Math.ceil(
-    (12 * getWasteFactorAdjustedMeasurements(Measurements.ridgeLength)) / 7
+    (12 *
+      Math.ceil(getWasteFactorAdjustedMeasurements(Measurements).ridgeLength)) /
+      7
   );
 };
 
@@ -115,5 +117,6 @@ export default {
   getFlashingQuantity,
   getRakesQuantity,
   getGuttersQuantity,
-  getUnderlaymentQuantity
+  getUnderlaymentQuantity,
+  getWasteFactorAdjustedMeasurements
 };
