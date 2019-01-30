@@ -1,4 +1,6 @@
+import "../css/job.css";
 import AppBar from "../components/AppBar";
+import { connect } from "react-redux";
 import Divider from "@material-ui/core/Divider";
 import Information from "./Information";
 import Loading from "../components/Loading";
@@ -7,9 +9,15 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import request from "request";
 import SideBar from "../components/SideBar";
-import store from "../redux/reducers";
 import Typography from "@material-ui/core/Typography";
-import "../css/job.css";
+
+const mapStateToProps = state => {
+  return {
+    signedIn: state.auth.signedIn
+  };
+};
+
+const mapDispatchToProps = dispatch => ({});
 
 const topOffset = 65;
 const JOBURL = "https://us-central1-hdqc-capstone.cloudfunctions.net/getJob";
@@ -26,36 +34,29 @@ class Job extends Component {
       loading: true
     };
 
-    request.post(
-      {
-        url: JOBURL,
-        headers: {
-          "Content-Type": "application/json"
+    if (this.props.signedIn) {
+      request.post(
+        {
+          url: JOBURL,
+          headers: {
+            "Content-Type": "application/json"
+          },
+          json: true,
+          body: {
+            key: "username",
+            kind: "jobs",
+            id: window.location.pathname.replace("/job/", "")
+          }
         },
-        json: true,
-        body: {
-          key: "username",
-          kind: "jobs",
-          id: window.location.pathname.replace("/job/", "")
+        (error, response, body) => {
+          this.setState({
+            jobDetails: { ...body },
+            loading: false
+          });
         }
-      },
-      (error, response, body) => {
-        this.setState({
-          jobDetails: { ...body },
-          loading: false
-        });
-      }
-    );
-  }
-
-  checkAuth = () => {
-    if (
-      store.getState().account.length === 0 ||
-      store.getState().account.isLoggedIn === false
-    ) {
-      return <Redirect to="/login" />;
+      );
     }
-  };
+  }
 
   scrollToRef = ref => {
     window.scrollTo({
@@ -65,10 +66,13 @@ class Job extends Component {
   };
 
   render() {
+    // Redirect to Login page if not signed in.
+    if (!this.props.signedIn) {
+      return <Redirect push to={"/login"} />;
+    }
+
     const loaded = (
       <div id="mainWindow">
-        {this.checkAuth()}
-
         {/* JOB INFORMATION SECTION */}
         <div ref={this.infoRef}>
           <Typography id="header">Job Information</Typography>
@@ -145,4 +149,7 @@ class Job extends Component {
   }
 }
 
-export default Job;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Job);

@@ -1,12 +1,20 @@
+import "../css/home.css";
 import AppBar from "../components/AppBar";
+import { connect } from "react-redux";
 import { Grid } from "@material-ui/core";
 import JobCard from "../components/JobCard";
 import Loading from "../components/Loading";
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import request from "request";
-import store from "../redux/reducers";
-import "../css/home.css";
+
+const mapStateToProps = state => {
+  return {
+    signedIn: state.auth.signedIn
+  };
+};
+
+const mapDispatchToProps = dispatch => ({});
 
 const JOBSURL = "https://us-central1-hdqc-capstone.cloudfunctions.net/getJobs";
 
@@ -27,14 +35,9 @@ class Home extends Component {
   };
 
   render() {
-    console.log("Checking redux store");
-    if (
-      store.getState().account.length === 0 ||
-      store.getState().account.isLoggedIn === false
-    ) {
-      console.log("not authorized!");
-      console.log(store.getState());
-      return <Redirect to="login" />;
+    // Redirect to Login page if not signed in.
+    if (!this.props.signedIn) {
+      return <Redirect push to={"/login"} />;
     }
 
     if (!this.state.isLoaded) {
@@ -89,4 +92,7 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);
