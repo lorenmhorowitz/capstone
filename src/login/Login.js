@@ -1,12 +1,12 @@
 import "../css/Login.css";
 import Button from "@material-ui/core/Button";
+import { connect } from "react-redux";
 import Loading from "../components/Loading";
+import { LOGIN } from "../constants/actionTypes";
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import request from "request";
 import TextField from "../components/TextField";
-import { connect } from "react-redux";
-import { LOGIN } from "../constants/actionTypes";
 
 const mapStateToProps = state => ({ ...state.auth });
 
