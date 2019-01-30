@@ -11,16 +11,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import Toolbar from "@material-ui/core/Toolbar";
 import { withStyles } from "@material-ui/core/styles";
-import QuantityCalculator from "../calculator/calculator";
 
-const Measurements = {
-  squareFootage: 3000,
-  ridgeLength: 100,
-  gutterLength: 120,
-  rakeLength: 100,
-  wasteFactor: 0.1,
-  stepFlashing: 10
-};
 
 const muiTheme = createMuiTheme({
   typography: {
@@ -74,9 +65,6 @@ class AppBar extends Component {
           <AppBars id="bar" color="primary">
             <Toolbar>
               <Link to="/home" id="logo">
-                <span id="HomeTitle">{`Bundles: ${QuantityCalculator.getRoofingQuantities().getNailsQuantity(
-                  Measurements
-                )}`}</span>
                 <span id="HomeTitle">Corner</span>
                 <span id="StoneTitle">Stone</span>
               </Link>
