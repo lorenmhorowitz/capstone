@@ -1,22 +1,8 @@
 {
     "presets": [
-        "env"
+        "@babel/preset-env",
+        "@babel/preset-react"
     ],
-    "env": {
-      "client": {
-        "presets": [
-          "env",
-          "react"
-        ]
-      },
-      "test": {
-        "presets": [
-          "env",
-          "react",
-          "stage-0"
-        ]
-      }
-    },
     "plugins": [
       ["transform-class-properties", { "spec": true }],
       "transform-es2015-modules-commonjs",

@@ -1,9 +1,11 @@
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
+import { connect } from "react-redux";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import createPalette from "@material-ui/core/styles/createPalette";
 import hoverLogo from "../../hoverLogo.png";
 import Loading from "../../components/Loading";
+import { LOGIN } from "../../constants/actionTypes";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import React, { Component } from "react";
 import request from "request";
@@ -12,6 +14,12 @@ import ToolBar from "@material-ui/core/Toolbar/Toolbar";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography/Typography";
 import "../../css/hover.css";
+
+const mapStateToProps = state => ({ ...state.auth });
+
+const mapDispatchToProps = dispatch => ({
+  onLogin: username => dispatch({ type: LOGIN, payload: username })
+});
 
 const LOGIN_ACCOUNT_API =
   "https://us-central1-hdqc-capstone.cloudfunctions.net/login";
@@ -75,6 +83,7 @@ class HoverLogin extends Component {
         }
 
         if (response.statusCode === 200) {
+          this.props.onLogin(this.state.username);
           this.setState({
             loading: false,
             loginError: false,
@@ -206,4 +215,7 @@ class HoverLogin extends Component {
   }
 }
 
-export default HoverLogin;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HoverLogin);
