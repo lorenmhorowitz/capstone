@@ -108,15 +108,15 @@ const getStepFlashingQuantity = Measurements => {
 };
 
 export default {
-  getNumberOfSquares,
-  getCapShinglesQuantity,
-  getNailsQuantity,
   getBundleQuantity,
+  getCapShinglesQuantity,
+  getFlashingQuantity,
+  getGuttersQuantity,
+  getNailsQuantity,
+  getNumberOfSquares,
+  getRakesQuantity,
   getShinglesQuantity,
   getStepFlashingQuantity,
-  getFlashingQuantity,
-  getRakesQuantity,
-  getGuttersQuantity,
   getUnderlaymentQuantity,
   getWasteFactorAdjustedMeasurements
 };
