@@ -39,9 +39,9 @@ describe("Roofing Quantity Calculator", () => {
     expect(mockNails).toEqual(15600);
     MockMeasurements.wasteFactor = 0.1;
     mockNails = calculator.getNailsQuantity(MockMeasurements);
-    console.log(calculator.getNumberOfSquares(MockMeasurements));
-    console.log(1 + MockMeasurements.wasteFactor);
-    console.log(MockMeasurements.squareFootage * MockMeasurements.wasteFactor);
+    // console.log(calculator.getNumberOfSquares(MockMeasurements));
+    // console.log(1 + MockMeasurements.wasteFactor);
+    // console.log(MockMeasurements.squareFootage * MockMeasurements.wasteFactor);
     expect(mockNails).toEqual(17160);
   });
   it("will calculate the quantity of cap shingles with mock data", () => {
@@ -84,12 +84,12 @@ describe("Roofing Quantity Calculator", () => {
     flashing = calculator.getFlashingQuantity(MockMeasurements);
     expect(flashing).toEqual(3);
   });
-  // it("will calculate the quantity of step flashing with mock data", () => {
-  //   MockMeasurements.wasteFactor = 0;
-  //   let stepFlashing = calculator.getStepFlashingQuantity(MockMeasurements);
-  //   expect(stepFlashing).toEqual(24);
-  //   MockMeasurements.wasteFactor = 0.1;
-  //   stepFlashing = calculator.getFlashingQuantity(MockMeasurements);
-  //   expect(stepFlashing).toEqual(27);
-  // });
+  it("will calculate the quantity of step flashing with mock data", () => {
+    MockMeasurements.wasteFactor = 0;
+    let stepFlashing = calculator.getStepFlashingQuantity(MockMeasurements);
+    expect(stepFlashing).toEqual(24);
+    MockMeasurements.wasteFactor = 0.1;
+    stepFlashing = calculator.getStepFlashingQuantity(MockMeasurements);
+    expect(stepFlashing).toEqual(27);
+  });
 });
