@@ -6,7 +6,7 @@ const datastore = new Datastore({}); // Creates a client
 async function addTask(description) {
   const taskKey = datastore.key({
     namespace: "TestNamespace",
-    path: ["TestData", null]
+    path: ["TestData", "TestNamespace-TestData-610"], //namespace + path + "610", // 610 = job id
   });
   const entity = {
     key: taskKey,
@@ -76,6 +76,27 @@ async function addTask(description) {
             }
           ]
         }
+      },
+      products: {
+        roof: [
+          {
+            item_id: 205655916,
+            model: 786353,
+            brand: "Owens Corning",
+            name: "Oakridge Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
+            price: 27.00,
+            dimensions: {
+              area: 33, //ft.
+              length: 33, //ft.
+              thickness: 7.4, //in.
+              width: 7.5 //ft.
+            },
+            weight: 13.5, //lbs
+            color: "Black",
+            quantity: 3,
+            //other attributes may be added as needed
+          }
+        ]
       }
     }
   };
