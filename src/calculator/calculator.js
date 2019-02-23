@@ -1,4 +1,4 @@
-import roofingQuantityCalculator from "../calculator/roofingCalculator";
+import roofingQuantityCalculator from "./roofingCalculator";
 
 const getRoofingQuantities = () => {
   return roofingQuantityCalculator;
