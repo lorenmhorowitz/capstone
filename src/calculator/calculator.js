@@ -1,6 +1,8 @@
 import roofingQuantityCalculator from "./roofingCalculator";
 
-const getRoofingQuantities = () => {
+export default {
+  ...getRoofingQuantities
+};
   return roofingQuantityCalculator;
 };
 
