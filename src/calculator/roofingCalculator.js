@@ -7,7 +7,6 @@ const getNumberOfSquares = Measurements => {
   return Math.ceil(
     getWasteFactorAdjustedMeasurements(Measurements).squareFootage / 100
   );
-  // return Math.ceil(wasteFactor(Measurements.squareFootage) / 100);
 };
 
 const getWasteFactorAdjustedMeasurements = Measurements => {
