@@ -7,7 +7,6 @@ import Loading from "../components/Loading";
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import request from "request";
-import calculator from "../calculator/calculator";
 
 const mapStateToProps = state => {
   return {
@@ -73,8 +72,6 @@ class Home extends Component {
         <AppBar />
         {this.state.loading ? <Loading /> : null}
         <div className="gridContainer">
-          <p>TEST CALCULATOR</p>
-          <p>{calculator.getBundleQuantity(1900)}</p>
           <Grid container justify="center" spacing={16}>
             {this.state.dataArr.map(data => (
               <JobCard
