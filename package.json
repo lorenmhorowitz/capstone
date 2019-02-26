@@ -6,7 +6,7 @@
     "build": "parcel build ./src/index.html",
     "client": "parcel ./src/index.html -p 4000 --out-dir www --no-cache",
     "eject": "react-scripts eject",
-    "lynt": "lynt src",
+    "lynt": "eslint src",
     "precommit": "npm run lynt && npm run pretty-quick && npm run test",
     "pretty-quick": "pretty-quick --staged",
     "start": "npm run client",
@@ -29,7 +29,7 @@
     "react-redux": "^6.0.0",
     "react-responsive-carousel": "^3.1.43",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.3",
+    "react-scripts": "^2.1.5",
     "redux": "^4.0.1",
     "req": "^0.1.4",
     "request": "^2.88.0"
@@ -49,6 +49,7 @@
     "lynt": "^0.5.3",
     "parcel-bundler": "^1.10.3",
     "pre-commit": "^1.2.2",
+    "prettier": "^1.16.4",
     "pretty-quick": "^1.8.0",
     "react-test-renderer": "^16.5.2"
   },
