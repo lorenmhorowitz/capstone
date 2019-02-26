@@ -34,6 +34,7 @@ ShallowWrapper {
       "children": Array [
         <div>
           <img
+            alt="Property 1"
             src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&h=350"
             style={
               Object {
@@ -45,6 +46,7 @@ ShallowWrapper {
         </div>,
         <div>
           <img
+            alt="Property 2"
             src="https://www.control4.com/files/large/e949244caec63b0c7d8c5edd86b8ee95.jpeg"
             style={
               Object {
@@ -84,6 +86,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <img
+            alt="Property 1"
             src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&h=350"
             style={
               Object {
@@ -99,6 +102,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "alt": "Property 1",
             "src": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&h=350",
             "style": Object {
               "height": "100%",
@@ -117,6 +121,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <img
+            alt="Property 2"
             src="https://www.control4.com/files/large/e949244caec63b0c7d8c5edd86b8ee95.jpeg"
             style={
               Object {
@@ -132,6 +137,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "alt": "Property 2",
             "src": "https://www.control4.com/files/large/e949244caec63b0c7d8c5edd86b8ee95.jpeg",
             "style": Object {
               "height": "100%",
@@ -160,6 +166,7 @@ ShallowWrapper {
         "children": Array [
           <div>
             <img
+              alt="Property 1"
               src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&h=350"
               style={
                 Object {
@@ -171,6 +178,7 @@ ShallowWrapper {
           </div>,
           <div>
             <img
+              alt="Property 2"
               src="https://www.control4.com/files/large/e949244caec63b0c7d8c5edd86b8ee95.jpeg"
               style={
                 Object {
@@ -210,6 +218,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <img
+              alt="Property 1"
               src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&h=350"
               style={
                 Object {
@@ -225,6 +234,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "alt": "Property 1",
               "src": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&h=350",
               "style": Object {
                 "height": "100%",
@@ -243,6 +253,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <img
+              alt="Property 2"
               src="https://www.control4.com/files/large/e949244caec63b0c7d8c5edd86b8ee95.jpeg"
               style={
                 Object {
@@ -258,6 +269,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "alt": "Property 2",
               "src": "https://www.control4.com/files/large/e949244caec63b0c7d8c5edd86b8ee95.jpeg",
               "style": Object {
                 "height": "100%",
@@ -295,5 +307,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

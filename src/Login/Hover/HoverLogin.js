@@ -126,7 +126,7 @@ class HoverLogin extends Component {
           <div>
             <AppBar>
               <ToolBar>
-                <img src={hoverLogo} style={{ width: 130 }} />
+                <img alt="Hover Logo" src={hoverLogo} style={{ width: 130 }} />
                 <div style={{ display: "inline", marginLeft: "auto" }}>
                   <Button color="primary" style={{ color: "white" }}>
                     PRODUCT

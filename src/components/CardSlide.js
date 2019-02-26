@@ -6,14 +6,6 @@ class CardSlide extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      slides: []
-    };
-
-    this.initializePictures();
-  }
-
-  initializePictures = () => {
     const pictures = [];
 
     let x = 1;
@@ -21,16 +13,19 @@ class CardSlide extends Component {
       const picture = (
         <div key={x}>
           <img
+            alt={`Property ${x++}`}
             style={{ width: this.props.width, height: "100%" }}
             src={image}
           />
         </div>
       );
       pictures.push(picture);
-      x += 1;
     });
-    this.state.slides = pictures;
-  };
+
+    this.state = {
+      slides: pictures
+    };
+  }
 
   render() {
     return (
