@@ -1,0 +1,4 @@
+{
+  "react": true,
+  "ignore": ["**/*.spec.js", "src/Components/Card*"]
+}

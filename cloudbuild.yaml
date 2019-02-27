@@ -1,0 +1,28 @@
+steps:
+  - id: "Installing Dependencies"
+    name: "gcr.io/cloud-builders/npm"
+    args: ["install"]
+
+  - id: "Running Tests"
+    name: "gcr.io/cloud-builders/npm"
+    args: ["run", "test"]
+
+  - id: "Lynting"
+    name: "gcr.io/cloud-builders/npm"
+    args: ["run", "lynt"]
+
+  - id: "Building the Client"
+    name: "gcr.io/cloud-builders/npm"
+    args: ["run", "build"]
+
+  - id: "Removing old build artifacts"
+    name: "gcr.io/cloud-builders/gsutil"
+    args: ["-m", "rm", "-r", "gs://cornerstone/dist/"]
+
+  - id: "Syncing new build artifacts"
+    name: "gcr.io/cloud-builders/gsutil"
+    args: ["-m", "cp", "-r", "./dist", "gs://cornerstone"]
+
+  - id: "Deploying"
+    name: gcr.io/cloud-builders/gcloud
+    args: ["app", "deploy", "--project=hdqc-capstone"]

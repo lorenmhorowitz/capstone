@@ -1,0 +1,20 @@
+.card {
+  width: 20em;
+  margin: 20px 0px 20px 20px;
+}
+/* 
+.cardContent {
+  margin-top: -5.5%;
+  margin-bottom: -5.5%;
+  margin-left: -8%;
+  margin-right: -8%;
+} */
+
+.cardContent2 {
+  border: 1px solid red;
+}
+
+.typography {
+  variant: "h6";
+  align: "left";
+}
