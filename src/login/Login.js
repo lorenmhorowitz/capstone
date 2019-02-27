@@ -1,10 +1,18 @@
-import React, { Component } from "react";
 import "../css/Login.css";
 import Button from "@material-ui/core/Button";
+import { connect } from "react-redux";
 import Loading from "../components/Loading";
-import request from "request";
+import { LOGIN } from "../constants/actionTypes";
+import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import request from "request";
 import TextField from "../components/TextField";
+
+const mapStateToProps = state => ({ ...state.auth });
+
+const mapDispatchToProps = dispatch => ({
+  onLogin: username => dispatch({ type: LOGIN, payload: username })
+});
 
 const LOGIN_ACCOUNT_API =
   "https://us-central1-hdqc-capstone.cloudfunctions.net/login";
@@ -62,6 +70,7 @@ class Login extends Component {
         }
 
         if (response.statusCode === 200) {
+          this.props.onLogin(this.state.username);
           this.setState({
             loading: false,
             loginError: false,
@@ -111,4 +120,7 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login);

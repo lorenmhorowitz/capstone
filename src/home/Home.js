@@ -1,20 +1,30 @@
-import React, { Component } from "react";
-import request from "request";
-import AppBar from "../components/AppBar";
-import Loading from "../components/Loading";
 import "../css/home.css";
+import AppBar from "../components/AppBar";
+import { connect } from "react-redux";
 import { Grid } from "@material-ui/core";
 import JobCard from "../components/JobCard";
+import Loading from "../components/Loading";
+import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import request from "request";
+
+const mapStateToProps = state => {
+  return {
+    signedIn: state.auth.signedIn
+  };
+};
+
+const mapDispatchToProps = dispatch => ({});
 
 const JOBSURL = "https://us-central1-hdqc-capstone.cloudfunctions.net/getJobs";
 
 class Home extends Component {
   state = {
-    loading: true,
     dataArr: [],
+    isLoaded: false,
     jobRedirect: false,
-    jobRedirectID: 0
+    jobRedirectID: 0,
+    loading: true
   };
 
   handleJobRedirect = (data, event) => {
@@ -24,30 +34,36 @@ class Home extends Component {
     });
   };
 
-  UNSAFE_componentWillMount() {
-    request.post(
-      {
-        url: JOBSURL,
-        headers: {
-          "Content-Type": "application/json"
-        },
-        json: true,
-        body: {
-          key: "username",
-          kind: "jobs",
-          namespace: "username"
-        }
-      },
-      (error, response, body) => {
-        this.setState({
-          dataArr: JSON.parse(body.jobs).results,
-          loading: false
-        });
-      }
-    );
-  }
-
   render() {
+    // Redirect to Login page if not signed in.
+    if (!this.props.signedIn) {
+      return <Redirect push to={"/login"} />;
+    }
+
+    if (!this.state.isLoaded) {
+      request.post(
+        {
+          url: JOBSURL,
+          headers: {
+            "Content-Type": "application/json"
+          },
+          json: true,
+          body: {
+            key: "username",
+            kind: "jobs",
+            namespace: "username"
+          }
+        },
+        (error, response, body) => {
+          this.setState({
+            dataArr: JSON.parse(body.jobs).results,
+            isLoaded: true,
+            loading: false
+          });
+        }
+      );
+    }
+
     if (this.state.jobRedirect) {
       return <Redirect push to={"/job/" + this.state.jobRedirectID} />;
     }
@@ -76,4 +92,7 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);

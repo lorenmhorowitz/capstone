@@ -1,6 +1,15 @@
-import React, { Component } from "react";
-import GoogleMapReact from "google-map-react";
+import { connect } from "react-redux";
 import Geocode from "react-geocode";
+import GoogleMapReact from "google-map-react";
+import React, { Component } from "react";
+
+const mapStateToProps = state => {
+  return {
+    signedIn: state.auth.signedIn
+  };
+};
+
+const mapDispatchToProps = dispatch => ({});
 
 const GOOGLE_MAPS_API_KEY = "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8";
 
@@ -39,6 +48,7 @@ class GoogleMap extends Component {
   }
 
   render() {
+    if (!this.props.signedIn) return;
     if (!this.state.geocoded) this.updateLocation();
     return (
       <div
@@ -59,4 +69,7 @@ class GoogleMap extends Component {
   }
 }
 
-export default GoogleMap;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(GoogleMap);

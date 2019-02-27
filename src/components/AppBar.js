@@ -12,6 +12,7 @@ import { Redirect } from "react-router-dom";
 import Toolbar from "@material-ui/core/Toolbar";
 import { withStyles } from "@material-ui/core/styles";
 
+
 const muiTheme = createMuiTheme({
   typography: {
     useNextVariants: true

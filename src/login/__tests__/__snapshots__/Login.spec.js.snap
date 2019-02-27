@@ -3,9 +3,10 @@
 exports[`The login page renders properly Login component renders the login page properly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Login />,
+  Symbol(enzyme.__unrendered__): <Connect(Login) />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -15,418 +16,72 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": Array [
-        <div
-          id="loginSquare"
-        >
-          <div
-            id="title"
-          >
-            <span
-              id="Corner"
-            >
-              Corner
-            </span>
-            <span
-              id="Stone"
-            >
-              Stone
-            </span>
-          </div>
-          <TextField
-            handler={[Function]}
-            label="email"
-          />
-          <TextField
-            handler={[Function]}
-            label="password"
-          />
-          <WithStyles(Button)
-            id="Login"
-            onClick={[Function]}
-          >
-            Log In
-          </WithStyles(Button)>
-          <WithStyles(Button)
-            id="HoverLogin"
-            onClick={[Function]}
-          >
-            Login With Hover
-          </WithStyles(Button)>
-        </div>,
-        null,
-      ],
-      "className": "Img",
-      "id": "scroll",
+      "children": [Function],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              id="title"
-            >
-              <span
-                id="Corner"
-              >
-                Corner
-              </span>
-              <span
-                id="Stone"
-              >
-                Stone
-              </span>
-            </div>,
-            <TextField
-              handler={[Function]}
-              label="email"
-            />,
-            <TextField
-              handler={[Function]}
-              label="password"
-            />,
-            <WithStyles(Button)
-              id="Login"
-              onClick={[Function]}
-            >
-              Log In
-            </WithStyles(Button)>,
-            <WithStyles(Button)
-              id="HoverLogin"
-              onClick={[Function]}
-            >
-              Login With Hover
-            </WithStyles(Button)>,
-            null,
-          ],
-          "id": "loginSquare",
+    "rendered": [Function],
+    "type": Object {
+      "$$typeof": Symbol(react.context),
+      "_calculateChangedBits": null,
+      "_context": Object {
+        "$$typeof": Symbol(react.context),
+        "Consumer": [Circular],
+        "Provider": Object {
+          "$$typeof": Symbol(react.provider),
+          "_context": [Circular],
         },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span
-                  id="Corner"
-                >
-                  Corner
-                </span>,
-                <span
-                  id="Stone"
-                >
-                  Stone
-                </span>,
-              ],
-              "id": "title",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Corner",
-                  "id": "Corner",
-                },
-                "ref": null,
-                "rendered": "Corner",
-                "type": "span",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Stone",
-                  "id": "Stone",
-                },
-                "ref": null,
-                "rendered": "Stone",
-                "type": "span",
-              },
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "handler": [Function],
-              "label": "email",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "handler": [Function],
-              "label": "password",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "Log In",
-              "id": "Login",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "Log In",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "Login With Hover",
-              "id": "HoverLogin",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "Login With Hover",
-            "type": [Function],
-          },
-          null,
-        ],
-        "type": "div",
+        "_calculateChangedBits": null,
+        "_currentRenderer": null,
+        "_currentRenderer2": null,
+        "_currentValue": null,
+        "_currentValue2": null,
+        "_threadCount": 0,
       },
-      null,
-    ],
-    "type": "div",
+    },
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": Array [
-          <div
-            id="loginSquare"
-          >
-            <div
-              id="title"
-            >
-              <span
-                id="Corner"
-              >
-                Corner
-              </span>
-              <span
-                id="Stone"
-              >
-                Stone
-              </span>
-            </div>
-            <TextField
-              handler={[Function]}
-              label="email"
-            />
-            <TextField
-              handler={[Function]}
-              label="password"
-            />
-            <WithStyles(Button)
-              id="Login"
-              onClick={[Function]}
-            >
-              Log In
-            </WithStyles(Button)>
-            <WithStyles(Button)
-              id="HoverLogin"
-              onClick={[Function]}
-            >
-              Login With Hover
-            </WithStyles(Button)>
-          </div>,
-          null,
-        ],
-        "className": "Img",
-        "id": "scroll",
+        "children": [Function],
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div
-                id="title"
-              >
-                <span
-                  id="Corner"
-                >
-                  Corner
-                </span>
-                <span
-                  id="Stone"
-                >
-                  Stone
-                </span>
-              </div>,
-              <TextField
-                handler={[Function]}
-                label="email"
-              />,
-              <TextField
-                handler={[Function]}
-                label="password"
-              />,
-              <WithStyles(Button)
-                id="Login"
-                onClick={[Function]}
-              >
-                Log In
-              </WithStyles(Button)>,
-              <WithStyles(Button)
-                id="HoverLogin"
-                onClick={[Function]}
-              >
-                Login With Hover
-              </WithStyles(Button)>,
-              null,
-            ],
-            "id": "loginSquare",
+      "rendered": [Function],
+      "type": Object {
+        "$$typeof": Symbol(react.context),
+        "_calculateChangedBits": null,
+        "_context": Object {
+          "$$typeof": Symbol(react.context),
+          "Consumer": [Circular],
+          "Provider": Object {
+            "$$typeof": Symbol(react.provider),
+            "_context": [Circular],
           },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <span
-                    id="Corner"
-                  >
-                    Corner
-                  </span>,
-                  <span
-                    id="Stone"
-                  >
-                    Stone
-                  </span>,
-                ],
-                "id": "title",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Corner",
-                    "id": "Corner",
-                  },
-                  "ref": null,
-                  "rendered": "Corner",
-                  "type": "span",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Stone",
-                    "id": "Stone",
-                  },
-                  "ref": null,
-                  "rendered": "Stone",
-                  "type": "span",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "handler": [Function],
-                "label": "email",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "handler": [Function],
-                "label": "password",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": "Log In",
-                "id": "Login",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": "Log In",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": "Login With Hover",
-                "id": "HoverLogin",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": "Login With Hover",
-              "type": [Function],
-            },
-            null,
-          ],
-          "type": "div",
+          "_calculateChangedBits": null,
+          "_currentRenderer": null,
+          "_currentRenderer2": null,
+          "_currentValue": null,
+          "_currentValue2": null,
+          "_threadCount": 0,
         },
-        null,
-      ],
-      "type": "div",
+      },
     },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -437,5 +92,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;
