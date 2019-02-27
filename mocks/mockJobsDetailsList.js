@@ -44,7 +44,7 @@ Schema summary:
 
 */
 
-export const mockJobsList = {
+const mockJobsDetailsList = {
   pagination: {
     current_page: 1,
     total_pages: 1,
@@ -2311,3 +2311,7 @@ export const mockJobsList = {
     request_received_at: 1529346004
   }
 };
+
+module.exports.mockJobsDetailsList = {
+  mockJobsDetailsList
+} 
