@@ -44,7 +44,7 @@ Schema summary:
 
 */
 
-const mockJobsDetailsList = {
+export const mockJobsDetailsList = {
   pagination: {
     current_page: 1,
     total_pages: 1,
@@ -126,7 +126,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655916,
-                  selected: true,
+                  selected: false,
                   model: "786353",
                   brand: "Owens Corning",
                   name: "Oakridge Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -149,7 +149,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655965,
-                  selected: true,
+                  selected: false,
                   model: "TD01",
                   brand: "Owens Corning",
                   name: "TruDefinition Duration Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -172,7 +172,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205658438,
-                  selected: true,
+                  selected: false,
                   model: "HL20",
                   brand: "Owens Corning",
                   name: "Oakridge Algae Resistant Estate Gray Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -275,7 +275,7 @@ const mockJobsDetailsList = {
                   model: "RE15WH",
                   brand: "Construction Metals",
                   name: "1-1/2 in. x 1-1/2 in. x 10 ft. Galvanized Steel Drip Edge Flashing in White",
-                  image: "https://www.homedepot.com/p/Construction-Metals-1-1-2-in-x-1-1-2-in-x-10-ft-Galvanized-Steel-Drip-Edge-Flashing-in-White-RE15WH/202093168",
+                  image: "https://images.homedepot-static.com/productImages/06b578fd-7346-43d8-8209-91dda4953220/svn/construction-metals-drip-edge-flashing-re15wh-64_1000.jpg",
                   price: 4.70,
                   dimensions: {
                     area: 1.5,
@@ -298,7 +298,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 305218602,
-                  selected: true,
+                  selected: false,
                   model: "US09-16-LG-S",
                   brand: "NewTechWood",
                   name: "All Weather System 0.5 in. x 5.5 in. x 1 ft. Westminster Gray Composite Siding Sample Board",
@@ -321,7 +321,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 301837334,
-                  selected: true,
+                  selected: false,
                   model: "PC4004H",
                   brand: "Ply Gem",
                   name: "Transformations Double 4 in. x 150 in. White Vinyl Lap Siding",
@@ -344,7 +344,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 100055901,
-                  selected: true,
+                  selected: false,
                   model: "27874",
                   brand: "LP SmartSide",
                   name: "SmartSide 48 in. x 96 in. Strand Panel Siding",
@@ -577,7 +577,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655916,
-                  selected: true,
+                  selected: false,
                   model: "786353",
                   brand: "Owens Corning",
                   name: "Oakridge Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -600,7 +600,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655965,
-                  selected: true,
+                  selected: false,
                   model: "TD01",
                   brand: "Owens Corning",
                   name: "TruDefinition Duration Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -623,7 +623,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205658438,
-                  selected: true,
+                  selected: false,
                   model: "HL20",
                   brand: "Owens Corning",
                   name: "Oakridge Algae Resistant Estate Gray Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -749,7 +749,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 305218602,
-                  selected: true,
+                  selected: false,
                   model: "US09-16-LG-S",
                   brand: "NewTechWood",
                   name: "All Weather System 0.5 in. x 5.5 in. x 1 ft. Westminster Gray Composite Siding Sample Board",
@@ -772,7 +772,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 301837334,
-                  selected: true,
+                  selected: false,
                   model: "PC4004H",
                   brand: "Ply Gem",
                   name: "Transformations Double 4 in. x 150 in. White Vinyl Lap Siding",
@@ -795,7 +795,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 100055901,
-                  selected: true,
+                  selected: false,
                   model: "27874",
                   brand: "LP SmartSide",
                   name: "SmartSide 48 in. x 96 in. Strand Panel Siding",
@@ -1028,7 +1028,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655916,
-                  selected: true,
+                  selected: false,
                   model: "786353",
                   brand: "Owens Corning",
                   name: "Oakridge Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -1051,7 +1051,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655965,
-                  selected: true,
+                  selected: false,
                   model: "TD01",
                   brand: "Owens Corning",
                   name: "TruDefinition Duration Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -1074,7 +1074,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205658438,
-                  selected: true,
+                  selected: false,
                   model: "HL20",
                   brand: "Owens Corning",
                   name: "Oakridge Algae Resistant Estate Gray Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -1200,7 +1200,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 305218602,
-                  selected: true,
+                  selected: false,
                   model: "US09-16-LG-S",
                   brand: "NewTechWood",
                   name: "All Weather System 0.5 in. x 5.5 in. x 1 ft. Westminster Gray Composite Siding Sample Board",
@@ -1223,7 +1223,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 301837334,
-                  selected: true,
+                  selected: false,
                   model: "PC4004H",
                   brand: "Ply Gem",
                   name: "Transformations Double 4 in. x 150 in. White Vinyl Lap Siding",
@@ -1246,7 +1246,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 100055901,
-                  selected: true,
+                  selected: false,
                   model: "27874",
                   brand: "LP SmartSide",
                   name: "SmartSide 48 in. x 96 in. Strand Panel Siding",
@@ -1479,7 +1479,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655916,
-                  selected: true,
+                  selected: false,
                   model: "786353",
                   brand: "Owens Corning",
                   name: "Oakridge Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -1502,7 +1502,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655965,
-                  selected: true,
+                  selected: false,
                   model: "TD01",
                   brand: "Owens Corning",
                   name: "TruDefinition Duration Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -1525,7 +1525,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205658438,
-                  selected: true,
+                  selected: false,
                   model: "HL20",
                   brand: "Owens Corning",
                   name: "Oakridge Algae Resistant Estate Gray Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -1651,7 +1651,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 305218602,
-                  selected: true,
+                  selected: false,
                   model: "US09-16-LG-S",
                   brand: "NewTechWood",
                   name: "All Weather System 0.5 in. x 5.5 in. x 1 ft. Westminster Gray Composite Siding Sample Board",
@@ -1674,7 +1674,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 301837334,
-                  selected: true,
+                  selected: false,
                   model: "PC4004H",
                   brand: "Ply Gem",
                   name: "Transformations Double 4 in. x 150 in. White Vinyl Lap Siding",
@@ -1697,7 +1697,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 100055901,
-                  selected: true,
+                  selected: false,
                   model: "27874",
                   brand: "LP SmartSide",
                   name: "SmartSide 48 in. x 96 in. Strand Panel Siding",
@@ -1930,7 +1930,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655916,
-                  selected: true,
+                  selected: false,
                   model: "786353",
                   brand: "Owens Corning",
                   name: "Oakridge Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -1953,7 +1953,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655965,
-                  selected: true,
+                  selected: false,
                   model: "TD01",
                   brand: "Owens Corning",
                   name: "TruDefinition Duration Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -1976,7 +1976,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205658438,
-                  selected: true,
+                  selected: false,
                   model: "HL20",
                   brand: "Owens Corning",
                   name: "Oakridge Algae Resistant Estate Gray Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
@@ -2102,7 +2102,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 305218602,
-                  selected: true,
+                  selected: false,
                   model: "US09-16-LG-S",
                   brand: "NewTechWood",
                   name: "All Weather System 0.5 in. x 5.5 in. x 1 ft. Westminster Gray Composite Siding Sample Board",
@@ -2125,7 +2125,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 301837334,
-                  selected: true,
+                  selected: false,
                   model: "PC4004H",
                   brand: "Ply Gem",
                   name: "Transformations Double 4 in. x 150 in. White Vinyl Lap Siding",
@@ -2148,7 +2148,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 100055901,
-                  selected: true,
+                  selected: false,
                   model: "27874",
                   brand: "LP SmartSide",
                   name: "SmartSide 48 in. x 96 in. Strand Panel Siding",
@@ -2311,7 +2311,3 @@ const mockJobsDetailsList = {
     request_received_at: 1529346004
   }
 };
-
-module.exports.mockJobsDetailsList = {
-  mockJobsDetailsList
-} 
