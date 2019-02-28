@@ -50,7 +50,7 @@ class Job extends Component {
         },
         (error, response, body) => {
           this.setState({
-            jobDetails: { ...body },
+            jobDetails: { ...body[0] },
             loading: false
           });
         }
