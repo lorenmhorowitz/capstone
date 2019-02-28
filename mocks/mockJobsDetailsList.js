@@ -53,6 +53,7 @@ const mockJobsDetailsList = {
   results: [
     {
       name: "Josh Feener Residence",
+      customer_name: "Josh Feener",
       validUsers: ["loren","jfeener"],
       customer_notes: null,
       location_line_1: "1119 W 32nd Street",
@@ -510,6 +511,7 @@ const mockJobsDetailsList = {
     },
     {
       name: "Max Ellis Residence",
+      customer_name: "Max Ellis",
       validUsers: ["loren","mellis"],
       customer_notes: null,
       location_line_1: "3401 NW 9th Avenue",
@@ -967,6 +969,7 @@ const mockJobsDetailsList = {
     },
     {
       name: "Arnold Castro Residence",
+      customer_name: "Arnold Castro",
       validUsers: ["loren","acastro"],
       customer_notes: null,
       location_line_1: "13010 NE 46th Street",
@@ -1423,6 +1426,7 @@ const mockJobsDetailsList = {
     },
     {
       name: "Chayce Heiberg Residence",
+      customer_name: "Chayce Heiberg",
       validUsers: ["loren","cheiberg"],
       customer_notes: null,
       location_line_1: "3019 NW Ogden Street",
@@ -1880,6 +1884,7 @@ const mockJobsDetailsList = {
     },
     {
       name: "Loren Horowitz Residence",
+      customer_name: "Loren Horowitz",
       validUsers: ["loren","lhorowitz"],
       customer_notes: null,
       location_line_1: "18807 NE 27th Way",
