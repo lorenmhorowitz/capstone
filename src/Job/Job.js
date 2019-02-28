@@ -88,13 +88,16 @@ class Job extends Component {
           <div ref={this.roofingRef}>
             <Typography id="header2">Roofing Information</Typography>
             <Divider id="bar1" />
-            <Grid container justify="center">
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-            </Grid>
-            <div>
-              <p />
+            <div class="grid-container">
+              <div class="grid-item">
+                <ProductCard />
+              </div>
+              <div class="grid-item">
+                <ProductCard />
+              </div>
+              <div class="grid-item">
+                <ProductCard />
+              </div>
             </div>
           </div>
         ) : null}
@@ -105,12 +108,17 @@ class Job extends Component {
           <div ref={this.sidingRef}>
             <Typography id="header">Siding Information</Typography>
             <Divider id="bar1" />
-            <Grid container justify="center" padding={20}>
-              {/*<p id="para">{lorem}</p>*/}
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-            </Grid>
+            <div class="grid-container">
+              <div class="grid-item">
+                <ProductCard />
+              </div>
+              <div class="grid-item">
+                <ProductCard />
+              </div>
+              <div class="grid-item">
+                <ProductCard />
+              </div>
+            </div>
           </div>
         ) : null}
 
@@ -120,11 +128,17 @@ class Job extends Component {
           <div ref={this.windowsRef}>
             <Typography id="header">Windows Information</Typography>
             <Divider id="bar1" />
-            <Grid container justify="center">
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-            </Grid>
+            <div class="grid-container">
+              <div class="grid-item">
+                <ProductCard />
+              </div>
+              <div class="grid-item">
+                <ProductCard />
+              </div>
+              <div class="grid-item">
+                <ProductCard />
+              </div>
+            </div>
           </div>
         ) : null}
 

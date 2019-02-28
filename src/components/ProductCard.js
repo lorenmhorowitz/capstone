@@ -47,16 +47,16 @@ class ProductCard extends Component {
       <Card className={classes.card}>
         <CardActionArea>
           <CardContent className={classes.title}>
-            <Typography>Roof Shingle</Typography>
+            <Typography>{this.props.productTitle}</Typography>
           </CardContent>
           <CardMedia
             className={classes.media}
             component="img"
-            image="https://images.homedepot-static.com/productImages/7b086e69-309f-4ce0-8520-f095acb2aebd/svn/driftwood-owens-corning-roof-shingles-hl30-64_1000.jpg"
-            title="Roof shingles"
+            image={this.props.productImage}
+            title={this.props.productTitle}
           />
           <CardContent>
-            <Typography>This is a roof shingle</Typography>
+            <Typography>{this.props.description}</Typography>
           </CardContent>
         </CardActionArea>
         <div className={classes.button}>
