@@ -43,7 +43,7 @@ class Job extends Component {
           },
           json: true,
           body: {
-            key: "username",
+            key: this.props.signedIn,
             kind: "jobs",
             id: window.location.pathname.replace("/job/", "")
           }
