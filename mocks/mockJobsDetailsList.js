@@ -44,7 +44,7 @@ Schema summary:
 
 */
 
-export const mockJobsDetailsList = {
+const mockJobsDetailsList = {
   pagination: {
     current_page: 1,
     total_pages: 1,
@@ -53,7 +53,8 @@ export const mockJobsDetailsList = {
   results: [
     {
       name: "Josh Feener Residence",
-      validUsers: ["jfeener"],
+      customer_name: "Josh Feener",
+      validUsers: ["loren","jfeener"],
       customer_notes: null,
       location_line_1: "1119 W 32nd Street",
       location_line_2: null,
@@ -62,6 +63,12 @@ export const mockJobsDetailsList = {
       location_postal_code: "98660",
       location_country: null,
       id: 610,
+      images: [ 
+        "https://photos.zillowstatic.com/p_f/IS6abpsvom3erx1000000000.jpg",
+        "https://photos.zillowstatic.com/p_f/ISqt30m9d4jxsx1000000000.jpg",
+        "https://photos.zillowstatic.com/p_f/ISy39dapkevgrx1000000000.jpg",
+        "https://photos.zillowstatic.com/p_f/ISin1o339wa0tx1000000000.jpg"
+      ],
       property_type: "single_family_residential",
       updated_at: "2018-11-13T14:48:12.428Z",
       completed_at: "2018-08-17T14:48:12.428Z",
@@ -504,7 +511,8 @@ export const mockJobsDetailsList = {
     },
     {
       name: "Max Ellis Residence",
-      validUsers: ["mellis"],
+      customer_name: "Max Ellis",
+      validUsers: ["loren","mellis"],
       customer_notes: null,
       location_line_1: "3401 NW 9th Avenue",
       location_line_2: null,
@@ -513,6 +521,12 @@ export const mockJobsDetailsList = {
       location_postal_code: "98607",
       location_country: null,
       id: 611,
+      images: [
+        "https://photos.zillowstatic.com/p_h/ISuomyqrbqxj350000000000.jpg",
+        "https://photos.zillowstatic.com/p_f/IS66w6xtonnuc70000000000.jpg",
+        "https://photos.zillowstatic.com/p_f/ISecmx6y0oe2u60000000000.jpg",
+        "https://photos.zillowstatic.com/p_f/ISecyif0tvvrc70000000000.jpg"
+      ],
       property_type: "single_family_residential",
       updated_at: "2018-11-13T14:51:12.428Z",
       completed_at: "2018-08-17T14:51:12.428Z",
@@ -955,7 +969,8 @@ export const mockJobsDetailsList = {
     },
     {
       name: "Arnold Castro Residence",
-      validUsers: ["acastro"],
+      customer_name: "Arnold Castro",
+      validUsers: ["loren","acastro"],
       customer_notes: null,
       location_line_1: "13010 NE 46th Street",
       location_line_2: null,
@@ -964,6 +979,11 @@ export const mockJobsDetailsList = {
       location_postal_code: "98682",
       location_country: null,
       id: 612,
+      images: [
+        "https://photos.zillowstatic.com/p_h/ISugw878qyhr3a1000000000.jpg",
+        "https://photos.zillowstatic.com/p_f/ISeoz7t8fo6e081000000000.jpg",
+        "https://photos.zillowstatic.com/p_f/ISe446fx9qimma1000000000.jpg"
+      ],
       property_type: "single_family_residential",
       updated_at: "2018-11-13T14:56:12.428Z",
       completed_at: "2018-08-17T14:56:12.428Z",
@@ -1406,7 +1426,8 @@ export const mockJobsDetailsList = {
     },
     {
       name: "Chayce Heiberg Residence",
-      validUsers: ["cheiberg"],
+      customer_name: "Chayce Heiberg",
+      validUsers: ["loren","cheiberg"],
       customer_notes: null,
       location_line_1: "3019 NW Ogden Street",
       location_line_2: null,
@@ -1415,6 +1436,12 @@ export const mockJobsDetailsList = {
       location_postal_code: "98607",
       location_country: null,
       id: 613,
+      images: [
+        "https://photos.zillowstatic.com/p_c/ISat4ciehg5lnb0000000000.jpg",
+        "https://photos.zillowstatic.com/p_h/ISal60olhtwt2c0000000000.jpg",
+        "https://photos.zillowstatic.com/p_f/ISy7c6m1ct7zub0000000000.jpg",
+        "https://photos.zillowstatic.com/p_f/IS6y597kojho6c0000000000.jpg"
+      ],
       property_type: "single_family_residential",
       updated_at: "2018-08-17T14:59:12.428Z",
       completed_at: "2018-08-17T14:59:12.428Z",
@@ -1857,7 +1884,8 @@ export const mockJobsDetailsList = {
     },
     {
       name: "Loren Horowitz Residence",
-      validUsers: ["lhorowitz"],
+      customer_name: "Loren Horowitz",
+      validUsers: ["loren","lhorowitz"],
       customer_notes: null,
       location_line_1: "18807 NE 27th Way",
       location_line_2: null,
@@ -1866,6 +1894,12 @@ export const mockJobsDetailsList = {
       location_postal_code: "98684",
       location_country: null,
       id: 614,
+      images: [
+        "https://photos.zillowstatic.com/p_c/IS2r16f47hhzi41000000000.jpg",
+        "https://photos.zillowstatic.com/p_h/ISyfaigundeoi41000000000.jpg",
+        "https://photos.zillowstatic.com/p_c/IS6m8z7o6v4dc41000000000.jpg",
+        "https://photos.zillowstatic.com/p_c/ISyf6nph2nwfc41000000000.jpg"
+      ],
       property_type: "single_family_residential",
       updated_at: "2018-11-13T14:59:12.428Z",
       completed_at: "2018-08-17T14:59:12.428Z",
@@ -2310,4 +2344,8 @@ export const mockJobsDetailsList = {
   meta: {
     request_received_at: 1529346004
   }
+};
+
+module.exports = {
+  mockJobsDetailsList
 };

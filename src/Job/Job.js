@@ -44,13 +44,13 @@ class Job extends Component {
           json: true,
           body: {
             key: this.props.signedIn,
-            kind: "jobs",
+            kind: "JobDetails",
             id: window.location.pathname.replace("/job/", "")
           }
         },
         (error, response, body) => {
           this.setState({
-            jobDetails: { ...body },
+            jobDetails: { ...body[0] },
             loading: false
           });
         }

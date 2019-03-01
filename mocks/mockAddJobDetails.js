@@ -1,6 +1,6 @@
 "use strict";
 
-const { mockJobsDetailsList } =  require("./mockJobsDetailsList");
+const mockJobsDetailsList =  require("./mockJobsDetailsList");
 const { Datastore } = require("@google-cloud/datastore");
 const datastore = new Datastore({
   projectId: "hdqc-capstone"
