@@ -2,13 +2,13 @@ import "../css/job.css";
 import AppBar from "../components/AppBar";
 import { connect } from "react-redux";
 import Divider from "@material-ui/core/Divider";
+import { Grid } from "@material-ui/core";
 import Information from "./Information";
 import Loading from "../components/Loading";
-import ProductCard from "../components/ProductCard";
 import { lorem } from "./Lorem";
-import { Grid } from "@material-ui/core";
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import ProductCard from "../components/ProductCard";
 import request from "request";
 import SideBar from "../components/SideBar";
 import Typography from "@material-ui/core/Typography";
@@ -45,20 +45,26 @@ class Job extends Component {
           },
           json: true,
           body: {
-            key: "username",
-            kind: "jobs",
+            key: this.props.signedIn,
+            kind: "JobDetails",
             id: window.location.pathname.replace("/job/", "")
           }
         },
         (error, response, body) => {
           this.setState({
-            jobDetails: { ...body },
+            jobDetails: { ...body[0] },
             loading: false
           });
         }
       );
     }
   }
+
+  toUpperCaseAndSplit = value => {
+    return value.replace(/([A-Z])/g, " $1").replace(/^./, function(str) {
+      return str.toUpperCase();
+    });
+  };
 
   scrollToRef = ref => {
     window.scrollTo({
@@ -68,6 +74,78 @@ class Job extends Component {
   };
 
   render() {
+    let roofingProductCards = [];
+    if (!this.state.loading) {
+      const jobDetails = this.state.jobDetails.products.roofing;
+      Object.keys(jobDetails).map(category => {
+        let quantity = jobDetails[category][0].quantity;
+        Object.keys(jobDetails[category]).map(product => {
+          let currentProduct = jobDetails[category][product].products[0];
+          if (currentProduct.selected) {
+            console.log(currentProduct);
+            roofingProductCards.push(
+              <ProductCard
+                productTitle={this.toUpperCaseAndSplit(category)}
+                brand={currentProduct.brand}
+                productImage={currentProduct.image}
+                description={currentProduct.name}
+                cost={currentProduct.price}
+                quantity={currentProduct.quantity}
+              />
+            );
+          }
+        });
+      });
+    }
+
+    let windowsProductCards = [];
+    if (!this.state.loading) {
+      const jobDetails = this.state.jobDetails.products.windows;
+      Object.keys(jobDetails).map(category => {
+        let quantity = jobDetails[category][0].quantity;
+        Object.keys(jobDetails[category]).map(product => {
+          let currentProduct = jobDetails[category][product].products[0];
+          if (currentProduct.selected) {
+            console.log(currentProduct);
+            windowsProductCards.push(
+              <ProductCard
+                productTitle={this.toUpperCaseAndSplit(category)}
+                brand={currentProduct.brand}
+                productImage={currentProduct.image}
+                description={currentProduct.name}
+                cost={currentProduct.price}
+                quantity={currentProduct.quantity}
+              />
+            );
+          }
+        });
+      });
+    }
+
+    let sidingProductCards = [];
+    if (!this.state.loading) {
+      const jobDetails = this.state.jobDetails.products.siding;
+      Object.keys(jobDetails).map(category => {
+        let quantity = jobDetails[category][0].quantity;
+        Object.keys(jobDetails[category]).map(product => {
+          let currentProduct = jobDetails[category][product].products[0];
+          if (currentProduct.selected) {
+            console.log(currentProduct);
+            sidingProductCards.push(
+              <ProductCard
+                productTitle={this.toUpperCaseAndSplit(category)}
+                brand={currentProduct.brand}
+                productImage={currentProduct.image}
+                description={currentProduct.name}
+                cost={currentProduct.price}
+                quantity={currentProduct.quantity}
+              />
+            );
+          }
+        });
+      });
+    }
+
     // Redirect to Login page if not signed in.
     if (!this.props.signedIn) {
       return <Redirect push to={"/login"} />;
@@ -88,16 +166,10 @@ class Job extends Component {
           <div ref={this.roofingRef}>
             <Typography id="header2">Roofing Information</Typography>
             <Divider id="bar1" />
-            <div class="grid-container">
-              <div class="grid-item">
-                <ProductCard />
-              </div>
-              <div class="grid-item">
-                <ProductCard />
-              </div>
-              <div class="grid-item">
-                <ProductCard />
-              </div>
+            <div className="grid-container">
+              <Grid container justify="center" spacing={16}>
+                {roofingProductCards}
+              </Grid>
             </div>
           </div>
         ) : null}
@@ -108,16 +180,10 @@ class Job extends Component {
           <div ref={this.sidingRef}>
             <Typography id="header">Siding Information</Typography>
             <Divider id="bar1" />
-            <div class="grid-container">
-              <div class="grid-item">
-                <ProductCard />
-              </div>
-              <div class="grid-item">
-                <ProductCard />
-              </div>
-              <div class="grid-item">
-                <ProductCard />
-              </div>
+            <div className="grid-container">
+              <Grid container justify="center" spacing={16}>
+                {sidingProductCards}
+              </Grid>
             </div>
           </div>
         ) : null}
@@ -128,17 +194,12 @@ class Job extends Component {
           <div ref={this.windowsRef}>
             <Typography id="header">Windows Information</Typography>
             <Divider id="bar1" />
-            <div class="grid-container">
-              <div class="grid-item">
-                <ProductCard />
-              </div>
-              <div class="grid-item">
-                <ProductCard />
-              </div>
-              <div class="grid-item">
-                <ProductCard />
-              </div>
+            <div className="grid-container">
+              <Grid container justify="center" spacing={16}>
+                {windowsProductCards}
+              </Grid>
             </div>
+            <div />
           </div>
         ) : null}
 

@@ -16,9 +16,25 @@ const styles = {
     margin: "auto",
     width: "75px"
   },
+  brand: {
+    fontWeight: "bold",
+    textAlign: "center"
+  },
   card: {
-    height: "350px",
-    width: "350px"
+    height: "100%",
+    width: "250px",
+    marginLeft: "10px",
+    marginRight: "10px",
+    marginTop: "10px"
+  },
+  cost: {
+    textAlign: "center",
+    marginTop: 30
+  },
+  description: {
+    fontSize: 12,
+    height: "5em",
+    textAlign: "center"
   },
   media: {
     display: "block",
@@ -28,6 +44,7 @@ const styles = {
     width: "150px"
   },
   title: {
+    fontWeight: "bold",
     textAlign: "center"
   }
 };
@@ -46,8 +63,10 @@ class ProductCard extends Component {
     return (
       <Card className={classes.card}>
         <CardActionArea>
-          <CardContent className={classes.title}>
-            <Typography>{this.props.productTitle}</Typography>
+          <CardContent>
+            <Typography className={classes.title}>
+              {this.props.productTitle}
+            </Typography>
           </CardContent>
           <CardMedia
             className={classes.media}
@@ -56,16 +75,22 @@ class ProductCard extends Component {
             title={this.props.productTitle}
           />
           <CardContent>
-            <Typography>{this.props.description}</Typography>
+            <Typography className={classes.brand}>
+              {this.props.brand}
+            </Typography>
+            <Typography className={classes.description}>
+              {this.props.description}
+            </Typography>
+            <div className={classes.cost}>
+              <Typography>
+                Cost: ${this.props.cost} Quantity: {this.props.quantity}
+              </Typography>
+            </div>
           </CardContent>
+          <div>
+            <p />
+          </div>
         </CardActionArea>
-        <div className={classes.button}>
-          <Button
-            style={{ color: "black", fontSize: "10px", width: 75, height: 40 }}
-          >
-            Buy now
-          </Button>
-        </div>
       </Card>
     );
   }
