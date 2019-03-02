@@ -32,10 +32,10 @@ const data = {
       roof_facets: {
         area: 3118,
         total: 2,
-        length: 0 
+        length: 0
       },
       ridges_hips: {
-        area: 0, 
+        area: 0,
         total: 1,
         length: 60
       },
@@ -50,12 +50,12 @@ const data = {
         length: 103.92
       },
       gutters_eaves: {
-        area: 0, 
+        area: 0,
         total: 2,
         length: 120
       },
       flashing: {
-        area: 0, 
+        area: 0,
         total: 0,
         length: 0
       },
@@ -84,9 +84,11 @@ const data = {
               selected: true,
               model: "786353",
               brand: "Owens Corning",
-              name: "Oakridge Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
-              image: "https://images.homedepot-static.com/productImages/271746c1-8a65-4cd8-86d7-bdd4e80e9f5e/svn/onyx-black-owens-corning-roof-shingles-786353-64_1000.jpg",
-              price: 27.00,
+              name:
+                "Oakridge Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
+              image:
+                "https://images.homedepot-static.com/productImages/271746c1-8a65-4cd8-86d7-bdd4e80e9f5e/svn/onyx-black-owens-corning-roof-shingles-786353-64_1000.jpg",
+              price: 27.0,
               dimensions: {
                 area: 33, //ft.
                 length: 33, //ft.
@@ -95,7 +97,7 @@ const data = {
               },
               weight: 13.5, //lbs
               color: "Black",
-              quantity: 3,
+              quantity: 3
               //other attributes may be added as needed
             }
           ]
@@ -110,9 +112,11 @@ const data = {
               selected: false,
               model: "0973",
               brand: "GAF",
-              name: "1000 sq. ft. FeltBuster Synthetic Roofing Underlayment Roll",
-              image: "https://images.homedepot-static.com/productImages/271746c1-8a65-4cd8-86d7-bdd4e80e9f5e/svn/onyx-black-owens-corning-roof-shingles-786353-64_1000.jpg",
-              price: 79.00,
+              name:
+                "1000 sq. ft. FeltBuster Synthetic Roofing Underlayment Roll",
+              image:
+                "https://images.homedepot-static.com/productImages/271746c1-8a65-4cd8-86d7-bdd4e80e9f5e/svn/onyx-black-owens-corning-roof-shingles-786353-64_1000.jpg",
+              price: 79.0,
               dimensions: {
                 area: 1000, //ft.
                 length: 250, //ft.
@@ -121,7 +125,7 @@ const data = {
               },
               weight: 23, //lbs
               color: "grey",
-              quantity: 1,
+              quantity: 1
             }
           ]
         }
@@ -135,20 +139,21 @@ const data = {
               selected: false,
               model: "S510ARN5",
               brand: "Simpson Strong-Tie",
-              name: "5d 1-3/4 in. Roofing Nail Annular Ring Shank (5 lbs.-Pack)",
-              image: "https://images.homedepot-static.com/productImages/8a78fe14-a4bc-4258-82d8-3a0fefd706da/svn/simpson-strong-tie-framing-nails-s510arn5-64_1000.jpg",
+              name:
+                "5d 1-3/4 in. Roofing Nail Annular Ring Shank (5 lbs.-Pack)",
+              image:
+                "https://images.homedepot-static.com/productImages/8a78fe14-a4bc-4258-82d8-3a0fefd706da/svn/simpson-strong-tie-framing-nails-s510arn5-64_1000.jpg",
               price: 53.76,
               dimensions: {
                 headwidth: 0.375, //ft.
-                length: 1.75, //ft.
+                length: 1.75 //ft.
               },
-              weight: 5, //lbs 
+              weight: 5, //lbs
               color: "Stainless Steel",
-              quantity: 4,
+              quantity: 4
             }
           ]
         }
-
       ],
       ridgeCaps: [
         {
@@ -160,17 +165,18 @@ const data = {
               model: "5259",
               brand: "Ondura",
               name: "3.3 ft. x 12-1/2 in. Tan Ridge Cap Asphalt Roof Panel",
-              image: "https://images.homedepot-static.com/productImages/3f8f96e8-e02b-47fe-9f7b-ffcbaa141340/svn/tan-ondura-asphalt-panels-5259-64_1000.jpg",
-              price: 8.00,
+              image:
+                "https://images.homedepot-static.com/productImages/3f8f96e8-e02b-47fe-9f7b-ffcbaa141340/svn/tan-ondura-asphalt-panels-5259-64_1000.jpg",
+              price: 8.0,
               dimensions: {
-                area: 3.4, 
-                length: 39.5, 
+                area: 3.4,
+                length: 39.5,
                 thickness: 0.125,
-                width: 12.5,
+                width: 12.5
               },
-              weight: 2.05, //lbs 
+              weight: 2.05, //lbs
               color: "Tan",
-              quantity: 5,
+              quantity: 5
             }
           ]
         }
@@ -184,18 +190,20 @@ const data = {
               selected: false,
               model: "RE15WH",
               brand: "Construction Metals",
-              name: "1-1/2 in. x 1-1/2 in. x 10 ft. Galvanized Steel Drip Edge Flashing in White",
-              image: "https://www.homedepot.com/p/Construction-Metals-1-1-2-in-x-1-1-2-in-x-10-ft-Galvanized-Steel-Drip-Edge-Flashing-in-White-RE15WH/202093168",
-              price: 4.70,
+              name:
+                "1-1/2 in. x 1-1/2 in. x 10 ft. Galvanized Steel Drip Edge Flashing in White",
+              image:
+                "https://www.homedepot.com/p/Construction-Metals-1-1-2-in-x-1-1-2-in-x-10-ft-Galvanized-Steel-Drip-Edge-Flashing-in-White-RE15WH/202093168",
+              price: 4.7,
               dimensions: {
-                area: 1.5, 
-                length: 120, 
+                area: 1.5,
+                length: 120,
                 thickness: 0.015625,
-                width: 1.5,
+                width: 1.5
               },
-              weight: 1.6, //lbs 
+              weight: 1.6, //lbs
               color: "White",
-              quantity: 2,
+              quantity: 2
             }
           ]
         }
@@ -205,10 +213,7 @@ const data = {
 };
 
 async function addEntity(datastoreKind, jobId, data) {
-  const taskKey = datastore.key([
-    datastoreKind,
-    jobId
-  ]);
+  const taskKey = datastore.key([datastoreKind, jobId]);
   const entity = {
     key: taskKey,
     data: data

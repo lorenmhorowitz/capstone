@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:700");
 
 body {
-  overflow-x: hidden;
 }
 
 #header2 {
@@ -37,6 +36,21 @@ body {
 #subWindow {
   margin-right: 10%;
   margin-left: 10%;
+}
+
+.grid-container {
+  max-width: 90%;
+  display: grid;
+  grid-gap: 10px 10px;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
 }
 
 #grid1 {
