@@ -2,11 +2,12 @@ import "../css/job.css";
 import AppBar from "../components/AppBar";
 import { connect } from "react-redux";
 import Divider from "@material-ui/core/Divider";
+import { Grid } from "@material-ui/core";
 import Information from "./Information";
 import Loading from "../components/Loading";
-import { lorem } from "./Lorem";
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import ProductCard from "../components/ProductCard";
 import request from "request";
 import SideBar from "../components/SideBar";
 import Typography from "@material-ui/core/Typography";
@@ -58,6 +59,12 @@ class Job extends Component {
     }
   }
 
+  toUpperCaseAndSplit = value => {
+    return value.replace(/([A-Z])/g, " $1").replace(/^./, function(str) {
+      return str.toUpperCase();
+    });
+  };
+
   scrollToRef = ref => {
     window.scrollTo({
       top: ref.current.offsetTop - topOffset,
@@ -66,6 +73,76 @@ class Job extends Component {
   };
 
   render() {
+    let index = 0;
+    let roofingProductCards = [];
+    if (!this.state.loading) {
+      const jobDetails = this.state.jobDetails.products.roofing;
+      Object.keys(jobDetails).map(category => {
+        Object.keys(jobDetails[category]).map(product => {
+          let currentProduct = jobDetails[category][product].products[0];
+          if (currentProduct.selected) {
+            roofingProductCards.push(
+              <ProductCard
+                productTitle={this.toUpperCaseAndSplit(category)}
+                key={index++}
+                brand={currentProduct.brand}
+                productImage={currentProduct.image}
+                description={currentProduct.name}
+                cost={currentProduct.price}
+                quantity={currentProduct.quantity}
+              />
+            );
+          }
+        });
+      });
+    }
+
+    let windowsProductCards = [];
+    if (!this.state.loading) {
+      const jobDetails = this.state.jobDetails.products.windows;
+      Object.keys(jobDetails).map(category => {
+        Object.keys(jobDetails[category]).map(product => {
+          let currentProduct = jobDetails[category][product].products[0];
+          if (currentProduct.selected) {
+            windowsProductCards.push(
+              <ProductCard
+                productTitle={this.toUpperCaseAndSplit(category)}
+                key={index++}
+                brand={currentProduct.brand}
+                productImage={currentProduct.image}
+                description={currentProduct.name}
+                cost={currentProduct.price}
+                quantity={currentProduct.quantity}
+              />
+            );
+          }
+        });
+      });
+    }
+
+    let sidingProductCards = [];
+    if (!this.state.loading) {
+      const jobDetails = this.state.jobDetails.products.siding;
+      Object.keys(jobDetails).map(category => {
+        Object.keys(jobDetails[category]).map(product => {
+          let currentProduct = jobDetails[category][product].products[0];
+          if (currentProduct.selected) {
+            sidingProductCards.push(
+              <ProductCard
+                productTitle={this.toUpperCaseAndSplit(category)}
+                key={index++}
+                brand={currentProduct.brand}
+                productImage={currentProduct.image}
+                description={currentProduct.name}
+                cost={currentProduct.price}
+                quantity={currentProduct.quantity}
+              />
+            );
+          }
+        });
+      });
+    }
+
     // Redirect to Login page if not signed in.
     if (!this.props.signedIn) {
       return <Redirect push to={"/login"} />;
@@ -83,12 +160,13 @@ class Job extends Component {
         {/* ROOFING INFORMATION SECTION */}
         {this.state.jobDetails.hasOwnProperty("active_projects") &&
         this.state.jobDetails.active_projects.roofing ? (
-          <div ref={this.roofingRef}>
+          <div style={{ paddingTop: "2em" }} ref={this.roofingRef}>
             <Typography id="header2">Roofing Information</Typography>
             <Divider id="bar1" />
-            <p id="para">{lorem}</p>
-            <div>
-              <p />
+            <div className="grid-container">
+              <Grid container spacing={16} alignContent="center">
+                {roofingProductCards}
+              </Grid>
             </div>
           </div>
         ) : null}
@@ -96,11 +174,13 @@ class Job extends Component {
         {/* SIDING INFORMATION SECTION */}
         {this.state.jobDetails.hasOwnProperty("active_projects") &&
         this.state.jobDetails.active_projects.siding ? (
-          <div ref={this.sidingRef}>
+          <div style={{ paddingTop: "2em" }} ref={this.sidingRef}>
             <Typography id="header">Siding Information</Typography>
             <Divider id="bar1" />
-            <div>
-              <p id="para">{lorem}</p>
+            <div className="grid-container">
+              <Grid container spacing={16} alignContent="center">
+                {sidingProductCards}
+              </Grid>
             </div>
           </div>
         ) : null}
@@ -108,10 +188,14 @@ class Job extends Component {
         {/* WINDOWS INFORMATION SECTION */}
         {this.state.jobDetails.hasOwnProperty("active_projects") &&
         this.state.jobDetails.active_projects.windows ? (
-          <div ref={this.windowsRef}>
+          <div style={{ paddingTop: "2em" }} ref={this.windowsRef}>
             <Typography id="header">Windows Information</Typography>
             <Divider id="bar1" />
-            <p id="para">{lorem}</p>
+            <div className="grid-container">
+              <Grid container spacing={16} alignContent="center">
+                {windowsProductCards}
+              </Grid>
+            </div>
             <div />
           </div>
         ) : null}
@@ -137,6 +221,11 @@ class Job extends Component {
         ) : null}
         {this.state.loading ? <Loading /> : null}
         <SideBar
+          activeProjects={
+            this.state.jobDetails.hasOwnProperty("active_projects")
+              ? this.state.jobDetails.active_projects
+              : []
+          }
           scrollToRef={this.scrollToRef}
           infoRef={this.infoRef}
           roofingRef={this.roofingRef}

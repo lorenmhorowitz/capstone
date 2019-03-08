@@ -27,6 +27,7 @@ class Sidebar extends Component {
   render() {
     const {
       classes,
+      activeProjects,
       infoRef,
       roofingRef,
       sidingRef,
@@ -71,47 +72,55 @@ class Sidebar extends Component {
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
-            <ListItem
-              onClick={() => scrollToRef(roofingRef)}
-              className="listItem"
-              button
-            >
-              <ListItemIcon>
-                <i className="material-icons outline listItemIcon">home</i>
-              </ListItemIcon>
-              <ListItemText
-                primary="Roofing"
-                primaryTypographyProps={{ color: "inherit" }}
-              />
-            </ListItem>
-            <ListItem
-              onClick={() => scrollToRef(sidingRef)}
-              className="listItem"
-              button
-            >
-              <ListItemIcon>
-                <i className="material-icons outline listItemIcon">
-                  view_headline
-                </i>
-              </ListItemIcon>
-              <ListItemText
-                primary="Siding"
-                primaryTypographyProps={{ color: "inherit" }}
-              />
-            </ListItem>
-            <ListItem
-              onClick={() => scrollToRef(windowsRef)}
-              className="listItem"
-              button
-            >
-              <ListItemIcon>
-                <i className="material-icons outline listItemIcon">web_asset</i>
-              </ListItemIcon>
-              <ListItemText
-                primary="Windows"
-                primaryTypographyProps={{ color: "inherit" }}
-              />
-            </ListItem>
+            {activeProjects.roofing ? (
+              <ListItem
+                onClick={() => scrollToRef(roofingRef)}
+                className="listItem"
+                button
+              >
+                <ListItemIcon>
+                  <i className="material-icons outline listItemIcon">home</i>
+                </ListItemIcon>
+                <ListItemText
+                  primary="Roofing"
+                  primaryTypographyProps={{ color: "inherit" }}
+                />
+              </ListItem>
+            ) : null}
+            {activeProjects.siding ? (
+              <ListItem
+                onClick={() => scrollToRef(sidingRef)}
+                className="listItem"
+                button
+              >
+                <ListItemIcon>
+                  <i className="material-icons outline listItemIcon">
+                    view_headline
+                  </i>
+                </ListItemIcon>
+                <ListItemText
+                  primary="Siding"
+                  primaryTypographyProps={{ color: "inherit" }}
+                />
+              </ListItem>
+            ) : null}
+            {activeProjects.windows ? (
+              <ListItem
+                onClick={() => scrollToRef(windowsRef)}
+                className="listItem"
+                button
+              >
+                <ListItemIcon>
+                  <i className="material-icons outline listItemIcon">
+                    web_asset
+                  </i>
+                </ListItemIcon>
+                <ListItemText
+                  primary="Windows"
+                  primaryTypographyProps={{ color: "inherit" }}
+                />
+              </ListItem>
+            ) : null}
             <ListItem className="listItem" button>
               <ListItemIcon>
                 <i className="material-icons outline listItemIcon">

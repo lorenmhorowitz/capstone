@@ -49,8 +49,9 @@ class Home extends Component {
           },
           json: true,
           body: {
-            key: this.props.signedIn,
-            kind: "jobs"
+            key: "username",
+            kind: "jobs",
+            namespace: "username"
           }
         },
         (error, response, body) => {
