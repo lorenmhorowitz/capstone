@@ -23,6 +23,7 @@
     "geocoder": "^0.2.3",
     "google-map-react": "^1.1.1",
     "parcel": "^1.10.3",
+    "po": "^4.5.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-geocode": "^0.1.2",

@@ -2,6 +2,7 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
+import ProductModal from "./ProductModal";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
@@ -42,6 +43,15 @@ const styles = {
     height: "150px",
     width: "150px"
   },
+  modal: {
+    background: "white",
+    outline: "none",
+    height: "75%",
+    margin: "auto",
+    marginTop: "5%",
+    padding: "10px",
+    width: "75%"
+  },
   title: {
     fontWeight: "bold",
     textAlign: "center"
@@ -53,44 +63,61 @@ class ProductCard extends Component {
     super(props);
     this.state = {
       quantity: 0,
-      price: 0
+      price: 0,
+      open: false
     };
   }
+
+  showModal = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
 
   render() {
     const { classes } = this.props;
     return (
-      <Card className={classes.card}>
-        <CardActionArea>
-          <CardContent>
-            <Typography className={classes.title}>
-              {this.props.productTitle}
-            </Typography>
-          </CardContent>
-          <CardMedia
-            className={classes.media}
-            component="img"
-            image={this.props.productImage}
-            title={this.props.productTitle}
-          />
-          <CardContent>
-            <Typography className={classes.brand}>
-              {this.props.brand}
-            </Typography>
-            <Typography className={classes.description}>
-              {this.props.description}
-            </Typography>
-            <div className={classes.cost}>
-              <Typography>
-                Cost: ${this.props.cost} Quantity: {this.props.quantity}
+      <div>
+        <Card className={classes.card}>
+          <CardActionArea onClick={this.showModal}>
+            <CardContent>
+              <Typography className={classes.title}>
+                {this.props.productTitle}
               </Typography>
+            </CardContent>
+            <CardMedia
+              className={classes.media}
+              component="img"
+              image={this.props.productImage}
+              title={this.props.productTitle}
+            />
+            <CardContent>
+              <Typography className={classes.brand}>
+                {this.props.brand}
+              </Typography>
+              <Typography className={classes.description}>
+                {this.props.description}
+              </Typography>
+              <div className={classes.cost}>
+                <Typography>
+                  Cost: ${this.props.cost} Quantity: {this.props.quantity}
+                </Typography>
+              </div>
+            </CardContent>
+            <div>
+              <p />
             </div>
-          </CardContent>
-          <div>
-            <p />
-          </div>
-        </CardActionArea>
-      </Card>
+          </CardActionArea>
+        </Card>
+        <ProductModal
+          open={this.state.open}
+          onClose={this.handleClose}
+          productImage={this.props.productImage}
+          productTitle={this.props.brand}
+        />
+      </div>
     );
   }
 }
