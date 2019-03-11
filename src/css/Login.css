@@ -5,13 +5,13 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  bottom: 0px;
-  left: 0px;
-  min-width: 800px;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
   position: fixed;
-  right: 0px;
-  text-align: center;
-  top: 0px;
+  min-width: 800px;
+  overflow-y: auto;
 }
 
 #loginSquare {
@@ -121,14 +121,5 @@
 
   #title {
     font-size: 3em;
-  }
-}
-
-@media screen and (max-height: 1245px) {
-  #scroll {
-    max-height: 945px;
-    min-width: 380px;
-    overflow-y: auto;
-    overflow-x: hidden;
   }
 }
