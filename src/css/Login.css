@@ -10,7 +10,6 @@
   right: 0%;
   left: 0%;
   position: fixed;
-  min-width: 800px;
   overflow-y: auto;
 }
 
@@ -21,7 +20,7 @@
   width: 35vw;
   margin-left: 10vw;
   margin-top: 12vw;
-  min-height: 480px;
+  min-height: 500px;
   min-width: 350px;
   position: relative;
   text-align: center;
@@ -36,6 +35,11 @@
   margin: 0%;
   height: 99%;
   justify-content: space-evenly;
+}
+
+.grid-item {
+  padding: 0;
+  text-align: center;
 }
 
 #title {
@@ -86,24 +90,42 @@
   font-size: 18px;
 }
 
-@media only screen and (min-width: 751px) and (max-width: 1150px) {
+@media only screen and (min-width: 701px) and (max-width: 1250px) {
   #title {
     font-size: 200%;
   }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 750px) {
-  .grid-container {
-    grid-template-columns: auto auto;
-    justify-content: start;
-  }
+@media only screen and (min-width: 501px) and (max-width: 740px) {
   .loginSquare {
-    width: 0%;
-    margin-left: -7.5%;
-    min-height: 40%;
+    margin-right: 0%;
+    margin-left: 0%;
+    align-content: center;
   }
 
   #title {
     font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+  .loginSquare {
+    margin-right: 0%;
+    margin-left: 0%;
+    align-content: center;
+  }
+
+  #title {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .loginSquare {
+    height: 70%;
   }
 }
