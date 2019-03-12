@@ -163,11 +163,9 @@ class Job extends Component {
           <div style={{ paddingTop: "2em" }} ref={this.roofingRef}>
             <Typography id="header2">Roofing Information</Typography>
             <Divider id="bar1" />
-            <div className="grid-container">
-              <Grid container spacing={16} alignContent="center">
-                {roofingProductCards}
-              </Grid>
-            </div>
+            <Grid container spacing={16} alignContent="center">
+              {roofingProductCards}
+            </Grid>
           </div>
         ) : null}
 
@@ -177,11 +175,9 @@ class Job extends Component {
           <div style={{ paddingTop: "2em" }} ref={this.sidingRef}>
             <Typography id="header">Siding Information</Typography>
             <Divider id="bar1" />
-            <div className="grid-container">
-              <Grid container spacing={16} alignContent="center">
-                {sidingProductCards}
-              </Grid>
-            </div>
+            <Grid container spacing={16} alignContent="center">
+              {sidingProductCards}
+            </Grid>
           </div>
         ) : null}
 
@@ -191,12 +187,9 @@ class Job extends Component {
           <div style={{ paddingTop: "2em" }} ref={this.windowsRef}>
             <Typography id="header">Windows Information</Typography>
             <Divider id="bar1" />
-            <div className="grid-container">
-              <Grid container spacing={16} alignContent="center">
-                {windowsProductCards}
-              </Grid>
-            </div>
-            <div />
+            <Grid container spacing={16} alignContent="center">
+              {windowsProductCards}
+            </Grid>
           </div>
         ) : null}
 
