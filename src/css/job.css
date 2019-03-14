@@ -88,6 +88,7 @@
 #picture {
   width: 35vw;
   min-width: 280px;
+  max-width: 550px;
   height: 20em;
 }
 

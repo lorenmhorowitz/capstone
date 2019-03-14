@@ -57,6 +57,8 @@
 
 .carousel {
   position: relative;
+  max-height: 320px;
+  max-width: 532px;
 }
 .carousel * {
   -webkit-box-sizing: border-box;
