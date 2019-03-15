@@ -86,6 +86,10 @@ class Login extends Component {
     );
   };
 
+  handleEnter = () => {
+    this.handleLogin();
+  };
+
   render() {
     if (this.state.hoverRedirect) {
       return <Redirect push to="/hover" />;
@@ -108,7 +112,11 @@ class Login extends Component {
               <span id="Stone">Stone</span>
             </div>
             <TextField label="email" handler={this.handleEmailChange} />
-            <TextField label="password" handler={this.handlePasswordChange} />
+            <TextField
+              label="password"
+              handler={this.handlePasswordChange}
+              onEnter={this.handleEnter}
+            />
             <Button id="Login" onClick={this.handleLogin}>
               Log In
             </Button>

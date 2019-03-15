@@ -4,16 +4,26 @@ import React, { Component } from "react";
 
 class TextField extends Component {
   render() {
-    const { label, handler } = this.props;
+    const { label, handler, onEnter } = this.props;
     return (
       <div>
-        <form className="textField">
+        <form
+          className="textField"
+          onSubmit={e => {
+            e.preventDefault();
+          }}
+        >
           <MuiTextField
             className="fieldStyle"
             label={label}
             name={label}
             type={label}
             onChange={handler}
+            onKeyPress={ev => {
+              if (ev.key == "Enter") {
+                onEnter();
+              }
+            }}
           />
         </form>
       </div>

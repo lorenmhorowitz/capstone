@@ -8,6 +8,7 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -21,11 +22,13 @@ ShallowWrapper {
     "props": Object {
       "children": <form
         className="textField"
+        onSubmit={[Function]}
       >
         <TextField
           className="fieldStyle"
           label="email"
           name="email"
+          onKeyPress={[Function]}
           required={false}
           select={false}
           type="email"
@@ -43,12 +46,14 @@ ShallowWrapper {
           className="fieldStyle"
           label="email"
           name="email"
+          onKeyPress={[Function]}
           required={false}
           select={false}
           type="email"
           variant="standard"
         />,
         "className": "textField",
+        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Object {
@@ -60,6 +65,7 @@ ShallowWrapper {
           "label": "email",
           "name": "email",
           "onChange": undefined,
+          "onKeyPress": [Function],
           "required": false,
           "select": false,
           "type": "email",
@@ -81,11 +87,13 @@ ShallowWrapper {
       "props": Object {
         "children": <form
           className="textField"
+          onSubmit={[Function]}
         >
           <TextField
             className="fieldStyle"
             label="email"
             name="email"
+            onKeyPress={[Function]}
             required={false}
             select={false}
             type="email"
@@ -103,12 +111,14 @@ ShallowWrapper {
             className="fieldStyle"
             label="email"
             name="email"
+            onKeyPress={[Function]}
             required={false}
             select={false}
             type="email"
             variant="standard"
           />,
           "className": "textField",
+          "onSubmit": [Function],
         },
         "ref": null,
         "rendered": Object {
@@ -120,6 +130,7 @@ ShallowWrapper {
             "label": "email",
             "name": "email",
             "onChange": undefined,
+            "onKeyPress": [Function],
             "required": false,
             "select": false,
             "type": "email",
@@ -138,11 +149,17 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
           },
-          "getDerivedStateFromProps": true,
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
           "getSnapshotBeforeUpdate": true,
           "setState": Object {
             "skipsComponentDidUpdateOnNullish": true,
@@ -151,5 +168,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;
