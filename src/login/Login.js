@@ -105,7 +105,6 @@ class Login extends Component {
       <div className="Img">
         <div className="grid-container">
           <div className="grid-item" />
-
           <div className="grid-item loginSquare">
             <div id="title">
               <span id="Corner">Corner</span>
