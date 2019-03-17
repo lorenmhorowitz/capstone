@@ -84,25 +84,25 @@ class ProductCard extends Component {
           <CardActionArea onClick={this.showModal}>
             <CardContent>
               <Typography className={classes.title}>
-                {this.props.productTitle}
+                {this.props.title}
               </Typography>
             </CardContent>
             <CardMedia
               className={classes.media}
               component="img"
-              image={this.props.productImage}
-              title={this.props.productTitle}
+              image={this.props.image}
+              title={this.props.title}
             />
             <CardContent>
               <Typography className={classes.brand}>
                 {this.props.brand}
               </Typography>
               <Typography className={classes.description}>
-                {this.props.description}
+                {this.props.name}
               </Typography>
               <div className={classes.cost}>
                 <Typography>
-                  Cost: ${this.props.cost} Quantity: {this.props.quantity}
+                  Cost: ${this.props.price} Quantity: {this.props.quantity}
                 </Typography>
               </div>
             </CardContent>
@@ -112,10 +112,16 @@ class ProductCard extends Component {
           </CardActionArea>
         </Card>
         <ProductModal
+          image={this.props.image}
+          itemID={this.props.itemID}
+          model={this.props.model}
+          name={this.props.name}
           open={this.state.open}
           onClose={this.handleClose}
-          productImage={this.props.productImage}
-          productTitle={this.props.brand}
+          price={this.props.price}
+          quantity={this.props.quantity}
+          title={this.props.brand}
+          weight={this.props.weight}
         />
       </div>
     );

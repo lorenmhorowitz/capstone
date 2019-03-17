@@ -83,13 +83,16 @@ class Job extends Component {
           if (currentProduct.selected) {
             roofingProductCards.push(
               <ProductCard
-                productTitle={this.toUpperCaseAndSplit(category)}
-                key={index++}
                 brand={currentProduct.brand}
-                productImage={currentProduct.image}
-                description={currentProduct.name}
-                cost={currentProduct.price}
+                image={currentProduct.image}
+                itemID={currentProduct.item_id}
+                key={index++}
+                model={currentProduct.model}
+                name={currentProduct.name}
+                price={currentProduct.price}
                 quantity={currentProduct.quantity}
+                title={this.toUpperCaseAndSplit(category)}
+                weight={currentProduct.weight}
               />
             );
           }
@@ -106,13 +109,15 @@ class Job extends Component {
           if (currentProduct.selected) {
             windowsProductCards.push(
               <ProductCard
-                productTitle={this.toUpperCaseAndSplit(category)}
-                key={index++}
                 brand={currentProduct.brand}
-                productImage={currentProduct.image}
-                description={currentProduct.name}
-                cost={currentProduct.price}
+                image={currentProduct.image}
+                key={index++}
+                model={currentProduct.model}
+                name={currentProduct.name}
+                price={currentProduct.price}
                 quantity={currentProduct.quantity}
+                title={this.toUpperCaseAndSplit(category)}
+                weight={currentProduct.weight}
               />
             );
           }
@@ -129,13 +134,15 @@ class Job extends Component {
           if (currentProduct.selected) {
             sidingProductCards.push(
               <ProductCard
-                productTitle={this.toUpperCaseAndSplit(category)}
-                key={index++}
                 brand={currentProduct.brand}
-                productImage={currentProduct.image}
-                description={currentProduct.name}
-                cost={currentProduct.price}
+                image={currentProduct.image}
+                key={index++}
+                model={currentProduct.model}
+                name={currentProduct.name}
+                price={currentProduct.price}
                 quantity={currentProduct.quantity}
+                title={this.toUpperCaseAndSplit(category)}
+                weight={currentProduct.weight}
               />
             );
           }
@@ -205,6 +212,7 @@ class Job extends Component {
 
     return (
       <div>
+        {console.log(this.state.jobDetails)}
         <AppBar />
         {!this.state.loading &&
         this.state.jobDetails.hasOwnProperty("location_line_1")
