@@ -43,18 +43,13 @@ function ProductInfo(props) {
 
   return (
     <div>
-      <Paper className={classes.container}>
-        <Typography className={classes.title}>{props.title}</Typography>
-        <Typography className={classes.name}>{props.name}</Typography>
-        <Typography className={classes.model}>Model: {props.model}</Typography>
-        <Typography className={classes.itemID}>
-          {console.log(props.itemID)}
-          Id: {props.itemID == undefined ? "N/A" : props.itemID}
-        </Typography>
-        <Typography className={classes.price}>
-          Weight: {props.weight}
-        </Typography>
-      </Paper>
+      <Typography className={classes.title}>{props.title}</Typography>
+      <Typography className={classes.name}>{props.name}</Typography>
+      <Typography className={classes.model}>Model: {props.model}</Typography>
+      <Typography className={classes.itemID}>
+        Id: {props.itemID == undefined ? "N/A" : props.itemID}
+      </Typography>
+      <Typography className={classes.price}>Weight: {props.weight}</Typography>
     </div>
   );
 }

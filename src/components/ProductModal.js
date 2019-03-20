@@ -1,5 +1,8 @@
 import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 import Modal from "@material-ui/core/Modal";
+import ProductBox from "./ProductBox";
+import ProductCard from "./ProductCard";
 import ProductInfo from "./ProductInfo";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
@@ -7,15 +10,9 @@ import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = {
-  container: {},
-  modal: {
-    background: "white",
-    outline: "none",
-    height: "75%",
-    margin: "auto",
-    marginTop: "5%",
-    padding: "10px",
-    width: "75%"
+  box: {
+    display: "inline-block",
+    float: "left"
   },
   image: {
     height: "90%",
@@ -28,6 +25,15 @@ const styles = {
     float: "left",
     height: "40%",
     width: "40%"
+  },
+  modal: {
+    background: "white",
+    outline: "none",
+    height: "75%",
+    margin: "auto",
+    marginTop: "5%",
+    padding: "10px",
+    width: "75%"
   },
   name: {
     fontSize: 20,
@@ -51,6 +57,15 @@ const styles = {
     fontWeight: "bold",
     marginTop: "2%",
     marginLeft: "18%"
+  },
+  otherProducts: {
+    clear: "both",
+    dislay: "grid",
+    gridTemplateColumns: "auto auto auto",
+    height: "20%",
+    paddingLeft: "20px",
+    paddingTop: "40px",
+    width: "20%"
   }
 };
 
@@ -61,6 +76,32 @@ class ProductModal extends Component {
 
   render() {
     const { classes } = this.props;
+
+    let otherProducts = this.props.otherProducts;
+    let index = 0;
+    let productList = [];
+    Object.keys(otherProducts).map(category => {
+      Object.keys(otherProducts[category]).map(product => {
+        if (
+          this.props.itemID !=
+          otherProducts[category][product].products[0].item_id
+        ) {
+          productList.push(
+            <div className={classes.box}>
+              <ProductBox
+                key={index++}
+                productImage={
+                  otherProducts[category][product].products[0].image
+                }
+                productTitle={
+                  otherProducts[category][product].products[0].brand
+                }
+              />
+            </div>
+          );
+        }
+      });
+    });
 
     return (
       <Modal open={this.props.open} onClose={this.props.onClose}>
@@ -79,6 +120,11 @@ class ProductModal extends Component {
                 weight={this.props.weight}
               />
             </div>
+          </div>
+          <div className={classes.otherProducts}>
+            <Grid container spacing={16} alignContent="center">
+              {productList}
+            </Grid>
           </div>
         </div>
       </Modal>

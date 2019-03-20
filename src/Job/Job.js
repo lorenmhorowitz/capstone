@@ -89,6 +89,7 @@ class Job extends Component {
                 key={index++}
                 model={currentProduct.model}
                 name={currentProduct.name}
+                otherProducts={jobDetails}
                 price={currentProduct.price}
                 quantity={currentProduct.quantity}
                 title={this.toUpperCaseAndSplit(category)}
@@ -114,6 +115,7 @@ class Job extends Component {
                 key={index++}
                 model={currentProduct.model}
                 name={currentProduct.name}
+                otherProducts={jobDetails}
                 price={currentProduct.price}
                 quantity={currentProduct.quantity}
                 title={this.toUpperCaseAndSplit(category)}
@@ -139,6 +141,7 @@ class Job extends Component {
                 key={index++}
                 model={currentProduct.model}
                 name={currentProduct.name}
+                otherProducts={jobDetails}
                 price={currentProduct.price}
                 quantity={currentProduct.quantity}
                 title={this.toUpperCaseAndSplit(category)}
@@ -212,7 +215,6 @@ class Job extends Component {
 
     return (
       <div>
-        {console.log(this.state.jobDetails)}
         <AppBar />
         {!this.state.loading &&
         this.state.jobDetails.hasOwnProperty("location_line_1")

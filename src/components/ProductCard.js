@@ -118,6 +118,7 @@ class ProductCard extends Component {
           name={this.props.name}
           open={this.state.open}
           onClose={this.handleClose}
+          otherProducts={this.props.otherProducts}
           price={this.props.price}
           quantity={this.props.quantity}
           title={this.props.brand}
