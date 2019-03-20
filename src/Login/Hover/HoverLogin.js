@@ -156,42 +156,55 @@ class HoverLogin extends Component {
           </div>
         </MuiThemeProvider>
         <div>
-          <Typography
-            style={{
-              marginTop: 150,
-              marginLeft: "auto",
-              marginRight: "auto",
-              display: "inline-block",
-              fontSize: 40
+          <form
+            onSubmit={e => {
+              e.preventDefault();
             }}
           >
-            Log In
-          </Typography>
-          <div className={this.props.container}>
-            <TextField
-              id="email-field"
-              style={{ marginTop: 60, width: 400 }}
-              margin="normal"
-              variant="outlined"
-              name="email"
-              label="email"
-              className={this.props.textField}
-              onChange={this.handleEmailChange}
-            />
-          </div>
-          <div className={this.props.container}>
-            <TextField
-              id="password-field"
-              style={{ marginTop: 10, width: 400 }}
-              margin="normal"
-              variant="outlined"
-              name="password"
-              label="password"
-              type="password"
-              className={this.props.textField}
-              onChange={this.handlePasswordChange}
-            />
-          </div>
+            <Typography
+              style={{
+                marginTop: 150,
+                marginLeft: "auto",
+                marginRight: "auto",
+                display: "inline-block",
+                fontSize: 40
+              }}
+            >
+              Log In
+            </Typography>
+            <div className={this.props.container}>
+              <TextField
+                id="email-field"
+                style={{ marginTop: 60, width: 400 }}
+                margin="normal"
+                variant="outlined"
+                name="email"
+                label="email"
+                className={this.props.textField}
+                onChange={this.handleEmailChange}
+              />
+            </div>
+            <div className={this.props.container}>
+              <TextField
+                id="password-field"
+                style={{ marginTop: 10, width: 400 }}
+                margin="normal"
+                variant="outlined"
+                name="password"
+                label="password"
+                type="password"
+                className={this.props.textField}
+                onChange={this.handlePasswordChange}
+                onKeyPress={ev => {
+                  console.log("onKeyPress");
+                  if (ev.key == "Enter") {
+                    console.log("handleHoverLogin");
+                    this.handleHoverLogin();
+                  }
+                }}
+              />
+            </div>
+          </form>
           {this.state.loginError ? errorMessage : null}
           <form>
             <Button
