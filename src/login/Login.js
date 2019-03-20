@@ -86,6 +86,10 @@ class Login extends Component {
     );
   };
 
+  handleEnter = () => {
+    this.handleLogin();
+  };
+
   render() {
     if (this.state.hoverRedirect) {
       return <Redirect push to="/hover" />;
@@ -98,21 +102,28 @@ class Login extends Component {
     const errorMessage = <p id="error">Unable to log in. Please try again.</p>;
 
     return (
-      <div className="Img" id="scroll">
-        <div id="loginSquare">
-          <div id="title">
-            <span id="Corner">Corner</span>
-            <span id="Stone">Stone</span>
+      <div className="Img">
+        <div className="grid-container">
+          <div className="grid-item" />
+          <div className="grid-item loginSquare">
+            <div id="title">
+              <span id="Corner">Corner</span>
+              <span id="Stone">Stone</span>
+            </div>
+            <TextField label="email" handler={this.handleEmailChange} />
+            <TextField
+              label="password"
+              handler={this.handlePasswordChange}
+              onEnter={this.handleEnter}
+            />
+            <Button id="Login" onClick={this.handleLogin}>
+              Log In
+            </Button>
+            <Button id="HoverLogin" onClick={this.handleHoverLogin}>
+              Login With Hover
+            </Button>
+            {this.state.loginError ? errorMessage : null}
           </div>
-          <TextField label="email" handler={this.handleEmailChange} />
-          <TextField label="password" handler={this.handlePasswordChange} />
-          <Button id="Login" onClick={this.handleLogin}>
-            Log In
-          </Button>
-          <Button id="HoverLogin" onClick={this.handleHoverLogin}>
-            Login With Hover
-          </Button>
-          {this.state.loginError ? errorMessage : null}
         </div>
         {this.state.loading ? <Loading /> : null}
       </div>
