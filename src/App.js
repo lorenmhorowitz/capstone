@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import Home from "./home/Home";
+import Home from "./Home/Home";
 import HoverLogin from "./Login/Hover/HoverLogin";
 import Job from "./Job/Job";
 import Login from "./login/Login";
