@@ -6,7 +6,7 @@ import { LOGIN } from "../constants/actionTypes";
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import request from "request";
-import TextField from "../components/TextField";
+import TextField from "@material-ui/core/TextField";
 
 const mapStateToProps = state => ({ ...state.auth });
 
@@ -86,10 +86,6 @@ class Login extends Component {
     );
   };
 
-  handleEnter = () => {
-    this.handleLogin();
-  };
-
   render() {
     if (this.state.hoverRedirect) {
       return <Redirect push to="/hover" />;
@@ -110,12 +106,44 @@ class Login extends Component {
               <span id="Corner">Corner</span>
               <span id="Stone">Stone</span>
             </div>
-            <TextField label="email" handler={this.handleEmailChange} />
-            <TextField
-              label="password"
-              handler={this.handlePasswordChange}
-              onEnter={this.handleEnter}
-            />
+            <form
+              className="textField"
+              onSubmit={e => {
+                e.preventDefault();
+              }}
+            >
+              <TextField
+                className="fieldStyle"
+                label="email"
+                name="email"
+                type="email"
+                onChange={this.handleEmailChange}
+                onKeyPress={ev => {
+                  if (ev.key === "Enter") {
+                    this.handleLogin();
+                  }
+                }}
+              />
+            </form>
+            <form
+              className="textField"
+              onSubmit={e => {
+                e.preventDefault();
+              }}
+            >
+              <TextField
+                className="fieldStyle"
+                label="password"
+                name="password"
+                type="password"
+                onChange={this.handlePasswordChange}
+                onKeyPress={ev => {
+                  if (ev.key === "Enter") {
+                    this.handleLogin();
+                  }
+                }}
+              />
+            </form>
             <Button id="Login" onClick={this.handleLogin}>
               Log In
             </Button>

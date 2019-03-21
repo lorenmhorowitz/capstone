@@ -24,10 +24,12 @@
   font-size: 32px;
   cursor: pointer;
 }
+
 .carousel .control-arrow:hover {
   opacity: 1;
   filter: alpha(opacity=100);
 }
+
 .carousel .control-arrow:before,
 .carousel.carousel-slider .control-arrow:before {
   margin: 0 5px;
@@ -36,21 +38,26 @@
   border-bottom: 8px solid transparent;
   content: "";
 }
+
 .carousel .control-disabled.control-arrow {
   opacity: 0;
   filter: alpha(opacity=0);
   cursor: inherit;
   display: none;
 }
+
 .carousel .control-prev.control-arrow {
   left: 0;
 }
+
 .carousel .control-prev.control-arrow:before {
   border-right: 8px solid rgb(255, 255, 255);
 }
+
 .carousel .control-next.control-arrow {
   right: 0;
 }
+
 .carousel .control-next.control-arrow:before {
   border-left: 8px solid #fff;
 }
@@ -60,19 +67,23 @@
   max-height: 320px;
   max-width: 532px;
 }
+
 .carousel * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .carousel img {
   width: 100%;
   display: inline-block;
   pointer-events: none;
 }
+
 .carousel .carousel {
   position: relative;
 }
+
 .carousel .control-arrow {
   outline: 0;
   border: 0;
@@ -81,10 +92,12 @@
   margin-top: -13px;
   font-size: 18px;
 }
+
 .carousel .thumbs-wrapper {
   margin: 20px;
   overflow: hidden;
 }
+
 .carousel .thumbs {
   -webkit-transition: all 0.15s ease-in;
   -moz-transition: all 0.15s ease-in;
@@ -100,6 +113,7 @@
   list-style: none;
   white-space: nowrap;
 }
+
 .carousel .thumb {
   -webkit-transition: border 0.15s ease-in;
   -moz-transition: border 0.15s ease-in;
@@ -114,19 +128,23 @@
   border: 3px solid rgb(255, 255, 255);
   padding: 2px;
 }
+
 .carousel .thumb.selected,
 .carousel .thumb:hover {
   border: 3px solid #333;
   padding: 2px;
 }
+
 .carousel .thumb img {
   vertical-align: top;
 }
+
 .carousel.carousel-slider {
   position: relative;
   margin: 0;
   overflow: hidden;
 }
+
 .carousel.carousel-slider .control-arrow {
   top: 0;
   color: #fff;
@@ -135,9 +153,11 @@
   margin-top: 0;
   padding: 5px;
 }
+
 .carousel.carousel-slider .control-arrow:hover {
   background: rgba(0, 0, 0, 0.2);
 }
+
 .carousel .slider-wrapper {
   overflow: hidden;
   margin: auto;
@@ -148,6 +168,7 @@
   -o-transition: height 0.15s ease-in;
   transition: height 0.15s ease-in;
 }
+
 .carousel .slider-wrapper.axis-horizontal .slider {
   -ms-box-orient: horizontal;
   display: -webkit-box;
@@ -157,10 +178,12 @@
   display: -webkit-flex;
   display: flex;
 }
+
 .carousel .slider-wrapper.axis-horizontal .slider .slide {
   flex-direction: column;
   flex-flow: column;
 }
+
 .carousel .slider-wrapper.axis-vertical {
   -ms-box-orient: horizontal;
   display: -webkit-box;
@@ -170,10 +193,12 @@
   display: -webkit-flex;
   display: flex;
 }
+
 .carousel .slider-wrapper.axis-vertical .slider {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
+
 .carousel .slider {
   margin: 0;
   padding: 0;
@@ -181,6 +206,7 @@
   list-style: none;
   width: 100%;
 }
+
 .carousel .slider.animated {
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -188,6 +214,7 @@
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
+
 .carousel .slide {
   min-width: 100%;
   margin: 0;
@@ -195,17 +222,20 @@
   text-align: center;
   background: rgb(0, 0, 0);
 }
+
 .carousel .slide img {
   width: 100%;
   vertical-align: top;
   border: 0;
 }
+
 .carousel .slide iframe {
   display: inline-block;
   width: calc(100% - 80px);
   margin: 0 40px 40px;
   border: 0;
 }
+
 .carousel .slide .legend {
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -230,6 +260,7 @@
   -o-transition: opacity 0.35s ease-in-out;
   transition: opacity 0.35s ease-in-out;
 }
+
 .carousel .control-dots {
   position: absolute;
   bottom: 0;
@@ -237,11 +268,7 @@
   text-align: center;
   width: 100%;
 }
-@media (min-width: 960px) {
-  .carousel .control-dots {
-    bottom: 0;
-  }
-}
+
 .carousel .control-dots .dot {
   -webkit-transition: opacity 0.25s ease-in;
   -moz-transition: opacity 0.25s ease-in;
@@ -259,11 +286,13 @@
   display: inline-block;
   margin: 0 5px;
 }
+
 .carousel .control-dots .dot.selected,
 .carousel .control-dots .dot:hover {
   opacity: 1;
   filter: alpha(opacity=100);
 }
+
 .carousel .carousel-status {
   position: absolute;
   top: 0;
@@ -273,6 +302,13 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
   color: rgb(255, 255, 255);
 }
+
 .carousel:hover .slide .legend {
   opacity: 1;
+}
+
+@media (min-width: 960px) {
+  .carousel .control-dots {
+    bottom: 0;
+  }
 }

@@ -56,7 +56,10 @@
     "react-test-renderer": "^16.5.2"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "array-callback-return": "off"
+    }
   },
   "jest": {
     "moduleNameMapper": {

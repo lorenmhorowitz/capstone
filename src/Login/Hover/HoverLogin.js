@@ -1,9 +1,10 @@
+import "../../css/hover.css";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import { connect } from "react-redux";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import createPalette from "@material-ui/core/styles/createPalette";
-import hoverLogo from "../../hoverLogo.png";
+import hoverLogo from "./hoverLogo.png";
 import Loading from "../../components/Loading";
 import { LOGIN } from "../../constants/actionTypes";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
@@ -13,7 +14,6 @@ import { Redirect } from "react-router-dom";
 import ToolBar from "@material-ui/core/Toolbar/Toolbar";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography/Typography";
-import "../../css/hover.css";
 
 const mapStateToProps = state => ({ ...state.auth });
 
@@ -197,7 +197,7 @@ class HoverLogin extends Component {
                 onChange={this.handlePasswordChange}
                 onKeyPress={ev => {
                   console.log("onKeyPress");
-                  if (ev.key == "Enter") {
+                  if (ev.key === "Enter") {
                     console.log("handleHoverLogin");
                     this.handleHoverLogin();
                   }
