@@ -1,12 +1,8 @@
-import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
 import Modal from "@material-ui/core/Modal";
 import ProductBox from "./ProductBox";
-import ProductCard from "./ProductCard";
 import ProductInfo from "./ProductInfo";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = {
@@ -117,7 +113,7 @@ class ProductModal extends Component {
     Object.keys(otherProducts).map(category => {
       Object.keys(otherProducts[category]).map(product => {
         if (
-          this.props.itemID !=
+          this.props.itemID !==
           otherProducts[category][product].products[0].item_id
         ) {
           productList.push(
