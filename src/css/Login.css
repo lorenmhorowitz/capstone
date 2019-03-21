@@ -1,5 +1,3 @@
-/*#26AB7A  -green hover color*/
-
 .Img {
   background-image: url("https://cdn.discordapp.com/attachments/489154865344282625/508368921666256936/Office.png");
   background-position: center;
@@ -113,6 +111,7 @@
     grid-template-columns: auto auto;
     justify-content: center;
   }
+
   .loginSquare {
     margin-right: 0%;
     margin-left: 0%;

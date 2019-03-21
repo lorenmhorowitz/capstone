@@ -192,7 +192,6 @@ class Job extends Component {
             </Grid>
           </div>
         ) : null}
-
         <div />
       </div>
     );

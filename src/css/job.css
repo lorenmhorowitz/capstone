@@ -9,6 +9,7 @@
   line-height: 0.75;
   letter-spacing: 0.00735em;
 }
+
 #bar1 {
   height: 1px;
   margin: 0;
@@ -16,6 +17,7 @@
   flex-shrink: 0;
   background-color: rgba(0, 0, 0, 0.12);
 }
+
 #bar2 {
   height: 1px;
   margin: 0;
@@ -24,11 +26,13 @@
   background-color: rgba(0, 0, 0, 0.12);
   margin-right: 30%;
 }
+
 #mainWindow {
   margin-top: 90px;
   margin-right: 5%;
   margin-left: 10%;
 }
+
 #grid1 {
   position: absolute;
   float: left;
@@ -37,6 +41,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
+
 #header {
   color: rgba(0, 0, 0, 0.87);
   font-size: 2.125rem;
@@ -47,6 +52,7 @@
   padding-bottom: 8px;
   letter-spacing: 0.00735em;
 }
+
 #title1 {
   color: rgba(0, 0, 0, 0.87);
   font-size: 1rem;
@@ -55,6 +61,7 @@
   line-height: 1.75;
   letter-spacing: 0.00938em;
 }
+
 #content {
   color: rgba(0, 0, 0, 0.87);
   font-size: 1.25rem;
@@ -63,29 +70,34 @@
   line-height: 1.3;
   letter-spacing: 0.0075em;
 }
+
 #picture {
   width: 35vw;
   min-width: 280px;
   max-width: 550px;
   height: 20em;
 }
+
 #map {
   width: 15em;
   height: 12em;
   margin-left: 2vw;
 }
+
 @media only screen and (min-width: 1001px) and (max-width: 1320px) {
   #picture {
     margin-left: 10%;
     height: 22vw;
     margin-right: 40px;
   }
+
   #map {
     width: 35vw;
     min-height: 159px;
     min-width: 280px;
     margin-left: 11%;
   }
+
   #bar2 {
     margin-right: 40%;
   }
@@ -97,6 +109,7 @@
     height: 13em;
     margin-right: 40px;
   }
+
   #map {
     width: 35vw;
     min-height: 159px;
@@ -104,10 +117,12 @@
     margin-left: 10%;
     margin-right: 40px;
   }
+
   #bar2 {
     margin-right: 40%;
   }
 }
+
 @media only screen and (min-width: 300px) and (max-width: 800px) {
   #grid1 {
     margin-top: 320px;
@@ -120,33 +135,41 @@
     height: 11em;
     margin-right: 40px;
   }
+
   #map {
     width: 280px;
     height: 8em;
     margin-left: -60px;
     margin-right: 40px;
   }
+
   #header {
     font-size: 1.7rem;
     margin-left: 40px;
   }
+
   #header2 {
     font-size: 1.7em;
     margin-top: 235px;
     margin-left: 40px;
   }
+
   #content {
     font-size: 1rem;
   }
+
   #bar1 {
     margin-left: 40px;
   }
+
   #bar2 {
     margin-right: 35%;
   }
+
   #title1 {
     font-size: 0.75rem;
   }
+
   #para {
     font-size: 1rem;
     margin-left: 40px;

@@ -15,6 +15,5 @@ export const addressFormatter = (
     if (res !== "") res += " ";
     res += location_postal_code;
   }
-
   return res;
 };

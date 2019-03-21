@@ -1,6 +1,7 @@
 #bar {
   position: fixed;
 }
+
 #grow {
   flex-grow: 1;
 }
@@ -10,6 +11,7 @@
   text-decoration: none;
   left: 20px;
 }
+
 a:-webkit-any-link {
   cursor: pointer;
   text-decoration: none;
@@ -27,6 +29,7 @@ a:-webkit-any-link {
   font-weight: bold;
   font-size: 33px;
 }
+
 #menuButton {
   position: absolute;
   right: 20px;
@@ -74,6 +77,7 @@ a:-webkit-any-link {
   #size {
     height: 12%;
   }
+
   .fieldStyle {
     margin-bottom: 5px;
     padding-bottom: 4px;
@@ -89,6 +93,7 @@ a:-webkit-any-link {
   #size {
     height: 12%;
   }
+
   .fieldStyle {
     margin-bottom: 5px;
     padding-bottom: 4px;
@@ -99,12 +104,15 @@ a:-webkit-any-link {
     right: 15px;
   }
 }
+
 ::before {
   border-bottom: none !important;
 }
+
 ::after {
   border-bottom: none !important;
 }
+
 label {
   color: #9b9b9b !important;
   border-bottom: none #ffffff !important;

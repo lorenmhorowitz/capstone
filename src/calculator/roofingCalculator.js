@@ -69,6 +69,7 @@ const getUnderlaymentQuantity = Measurements => {
     getWasteFactorAdjustedMeasurements(Measurements).squareFootage / 99
   );
 };
+
 // Underlayment Nails
 const getUnderlaymentNailsQuantity = Measurements => {
   // Assuming 2 nails per square foot
@@ -84,6 +85,7 @@ const getGuttersQuantity = Measurements => {
   // Sold per foot
   return getWasteFactorAdjustedMeasurements(Measurements).gutterLength;
 };
+
 // Rake
 const getRakesQuantity = Measurements => {
   // Industry standard of 10.5 feet
@@ -91,6 +93,7 @@ const getRakesQuantity = Measurements => {
     getWasteFactorAdjustedMeasurements(Measurements).rakeLength / 10.5
   );
 };
+
 // Flashing
 const getFlashingQuantity = Measurements => {
   // Industry standard of 50 feet
@@ -98,6 +101,7 @@ const getFlashingQuantity = Measurements => {
     getWasteFactorAdjustedMeasurements(Measurements).ridgeLength / 50
   );
 };
+
 // Step flashing
 const getStepFlashingQuantity = Measurements => {
   // Assume 7 inch with 2 inch overlap overlap, 12-7 = 5

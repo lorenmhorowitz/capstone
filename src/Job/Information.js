@@ -1,3 +1,4 @@
+import "../css/job.css";
 import { addressFormatter } from "./addressFormatter";
 import CardSlide from "../components/CardSlide";
 import Divider from "@material-ui/core/Divider";
@@ -6,7 +7,6 @@ import Grid from "@material-ui/core/Grid";
 import React, { Component, Fragment } from "react";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
-import "../css/job.css";
 
 const styles = {
   root: {
@@ -23,6 +23,7 @@ class Information extends Component {
       jobDetails.location_region,
       jobDetails.location_postal_code
     );
+
     const googleMapsAddress =
       formattedAddress !== ""
         ? `${jobDetails.location_line_1} ${formattedAddress}`
