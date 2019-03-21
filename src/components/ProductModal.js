@@ -11,8 +11,8 @@ import { withStyles } from "@material-ui/core/styles";
 
 const styles = {
   box: {
-    display: "inline-block",
-    float: "left"
+    height: "20%",
+    width: "20%"
   },
   image: {
     height: "90%",
@@ -60,12 +60,10 @@ const styles = {
   },
   otherProducts: {
     clear: "both",
-    dislay: "grid",
-    gridTemplateColumns: "auto auto auto",
-    height: "20%",
-    paddingLeft: "20px",
+    height: "100%",
+    paddingLeft: "10px",
     paddingTop: "40px",
-    width: "20%"
+    width: "100%"
   }
 };
 
@@ -82,22 +80,18 @@ class ProductModal extends Component {
     let productList = [];
     Object.keys(otherProducts).map(category => {
       Object.keys(otherProducts[category]).map(product => {
+        console.log(otherProducts[category][product].products[0].item_id);
         if (
           this.props.itemID !=
           otherProducts[category][product].products[0].item_id
         ) {
           productList.push(
-            <div className={classes.box}>
-              <ProductBox
-                key={index++}
-                productImage={
-                  otherProducts[category][product].products[0].image
-                }
-                productTitle={
-                  otherProducts[category][product].products[0].brand
-                }
-              />
-            </div>
+            <ProductBox
+              key={index++}
+              productImage={otherProducts[category][product].products[0].image}
+              productTitle={otherProducts[category][product].products[0].brand}
+              className={classes.box}
+            />
           );
         }
       });
@@ -121,11 +115,7 @@ class ProductModal extends Component {
               />
             </div>
           </div>
-          <div className={classes.otherProducts}>
-            <Grid container spacing={16} alignContent="center">
-              {productList}
-            </Grid>
-          </div>
+          <div className={classes.otherProducts}>{productList.slice(0, 5)}</div>
         </div>
       </Modal>
     );

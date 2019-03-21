@@ -28,7 +28,14 @@ class ProductBox extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
+      <div
+        style={{
+          display: "inline-block",
+          paddingRight: "8px",
+          height: "19%",
+          width: "19%"
+        }}
+      >
         <Card>
           <CardActionArea onClick={this.switchProduct}>
             <Typography className={classes.title}>
