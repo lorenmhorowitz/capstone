@@ -11,32 +11,6 @@
   overflow-y: auto;
 }
 
-.textField {
-  background-color: #ffffff;
-  background-position: center;
-  margin-top: 5%;
-  border-radius: 8px;
-  width: 75%;
-  height: 60px;
-  margin-left: 12%;
-  margin-right: 15%;
-  text-align: left;
-  text-indent: 20px;
-}
-
-.fieldStyle {
-  background-position: center;
-  border-radius: 8px;
-  height: 12%;
-  margin: 0;
-  margin-bottom: 5px;
-  padding-bottom: 4px;
-  position: relative;
-  right: 2vw;
-  text-indent: 5%;
-  width: 30vw;
-}
-
 .loginSquare {
   background-color: rgba(38, 38, 38, 0.8);
   border: 2px solid #f96302;
@@ -69,7 +43,7 @@
 #title {
   margin-top: 3%;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 4em;
 }
 
 #Corner {
@@ -88,7 +62,7 @@
   background-color: #898989;
   border-radius: 8px;
   color: #ffffff;
-  font-size: 0.7em;
+  font-size: 1.2em;
   height: 60px;
   margin-top: 5%;
   width: 75%;
@@ -98,7 +72,7 @@
   background-color: #26ab7a;
   border-radius: 8px;
   color: #ffffff;
-  font-size: 0.7em;
+  font-size: 1.2em;
   height: 60px;
   margin-top: 5%;
   width: 75%;
@@ -114,13 +88,7 @@
   font-size: 18px;
 }
 
-@media only screen and (min-width: 701px) and (max-width: 1250px) {
-  #title {
-    font-size: 200%;
-  }
-}
-
-@media only screen and (min-width: 501px) and (max-width: 740px) {
+@media only screen and (min-width: 501px) and (max-width: 1100px) {
   .loginSquare {
     margin-right: 0%;
     margin-left: 0%;
@@ -128,7 +96,7 @@
   }
 
   #title {
-    font-size: 2em;
+    font-size: 3.5em;
   }
 }
 
@@ -145,7 +113,7 @@
   }
 
   #title {
-    font-size: 2em;
+    font-size: 3em;
   }
 }
 

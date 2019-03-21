@@ -18,6 +18,32 @@ a:-webkit-any-link {
   text-decoration-style: none;
 }
 
+.textField {
+  background-color: #ffffff;
+  background-position: center;
+  margin-top: 5%;
+  border-radius: 8px;
+  width: 75%;
+  height: 60px;
+  margin-left: 12%;
+  margin-right: 15%;
+  text-align: left;
+  text-indent: 20px;
+}
+
+.fieldStyle {
+  background-position: center;
+  border-radius: 8px;
+  height: 12%;
+  margin: 0;
+  margin-bottom: 5px;
+  padding-bottom: 4px;
+  position: relative;
+  right: 2vw;
+  text-indent: 5%;
+  width: 30vw;
+}
+
 #StoneTitle {
   color: #f96302;
   font-weight: bold;
