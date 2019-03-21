@@ -12,7 +12,6 @@ const getNumberOfSquares = Measurements => {
 const getWasteFactorAdjustedMeasurements = Measurements => {
   const ridgeLength = Measurements.roof.ridges_hips.length;
   const gutterLength = Measurements.roof.gutters_eaves.length;
-  console.log(Measurements.gutterLength);
   const rakeLength = Measurements.roof.rakes.length;
   const squareFootage = Measurements.roof.pitch[0].area;
   const wasteFactor = Measurements.wasteFactor;

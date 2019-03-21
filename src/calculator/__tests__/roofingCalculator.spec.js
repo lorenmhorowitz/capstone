@@ -12,7 +12,7 @@ describe("Roofing Quantity Calculator", () => {
         length: 100
       },
       gutters_eaves: {
-        gutterLength: 120
+        length: 120
       },
       rakes: {
         length: 100
