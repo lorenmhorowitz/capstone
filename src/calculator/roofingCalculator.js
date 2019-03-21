@@ -113,7 +113,7 @@ const getRoofingProductQuantities = Measurements => {
     nails: getNailsQuantity(Measurements),
     ridgeCaps: getCapShinglesQuantity(Measurements),
     dripEdge: getRakesQuantity(Measurements) + getGuttersQuantity(Measurements),
-    underlayment: getUnderlaymentNailsQuantity(Measurements)
+    underlayment: getUnderlaymentQuantity(Measurements)
   };
 };
 
