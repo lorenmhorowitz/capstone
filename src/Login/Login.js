@@ -7,6 +7,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import request from "request";
 import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
 
 const mapStateToProps = state => ({ ...state.auth });
 
@@ -95,7 +96,9 @@ class Login extends Component {
       return <Redirect push to="/home" />;
     }
 
-    const errorMessage = <p id="error">Unable to log in. Please try again.</p>;
+    const errorMessage = (
+      <Typography id="error"> Unable to log in. Please try again.</Typography>
+    );
 
     return (
       <div className="Img">
