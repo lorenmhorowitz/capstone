@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 import { connect } from "react-redux";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import createPalette from "@material-ui/core/styles/createPalette";
-import hoverLogo from "../../hoverLogo.png";
+import hoverLogo from "./hoverLogo.png";
 import Loading from "../../components/Loading";
 import { LOGIN } from "../../constants/actionTypes";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
