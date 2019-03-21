@@ -22,7 +22,7 @@ const styles = {
 
 class ProductBox extends Component {
   switchProduct = () => {
-    console.log("Yo!");
+    this.props.onChange(this.props.product);
   };
 
   render() {
@@ -39,9 +39,9 @@ class ProductBox extends Component {
         <Card>
           <CardActionArea onClick={this.switchProduct}>
             <Typography className={classes.title}>
-              {this.props.productTitle}
+              {this.props.product.brand}
             </Typography>
-            <img className={classes.image} src={this.props.productImage} />
+            <img className={classes.image} src={this.props.product.image} />
           </CardActionArea>
         </Card>
       </div>

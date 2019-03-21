@@ -70,7 +70,43 @@ const styles = {
 class ProductModal extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      image: "",
+      itemID: "",
+      model: "",
+      name: "",
+      price: "",
+      title: "",
+      weight: ""
+    };
   }
+
+  componentWillMount() {
+    this.setState({
+      image: this.props.image,
+      itemID: this.props.itemID,
+      model: this.props.model,
+      name: this.props.name,
+      price: this.props.price,
+      title: this.props.title,
+      weight: this.props.weight
+    });
+  }
+
+  changeModal = obj => {
+    console.log("changing modal");
+    console.log(obj);
+    this.setState({
+      image: obj.image,
+      itemID: obj.itemID,
+      model: obj.model,
+      name: obj.name,
+      price: obj.price,
+      title: obj.brand,
+      weight: obj.weight
+    });
+  };
 
   render() {
     const { classes } = this.props;
@@ -80,7 +116,6 @@ class ProductModal extends Component {
     let productList = [];
     Object.keys(otherProducts).map(category => {
       Object.keys(otherProducts[category]).map(product => {
-        console.log(otherProducts[category][product].products[0].item_id);
         if (
           this.props.itemID !=
           otherProducts[category][product].products[0].item_id
@@ -88,8 +123,8 @@ class ProductModal extends Component {
           productList.push(
             <ProductBox
               key={index++}
-              productImage={otherProducts[category][product].products[0].image}
-              productTitle={otherProducts[category][product].products[0].brand}
+              onChange={this.changeModal}
+              product={otherProducts[category][product].products[0]}
               className={classes.box}
             />
           );
@@ -102,16 +137,16 @@ class ProductModal extends Component {
         <div className={classes.modal}>
           <div className={classes.container}>
             <div className={classes.imageContainer}>
-              <img className={classes.image} src={this.props.image} alt="" />
+              <img className={classes.image} src={this.state.image} alt="" />
             </div>
             <div className={classes.productInfo}>
               <ProductInfo
-                itemID={this.props.itemID}
-                model={this.props.model}
-                name={this.props.name}
-                price={this.props.price}
-                title={this.props.title}
-                weight={this.props.weight}
+                itemID={this.state.itemID}
+                model={this.state.model}
+                name={this.state.name}
+                price={this.state.price}
+                title={this.state.title}
+                weight={this.state.weight}
               />
             </div>
           </div>
