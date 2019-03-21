@@ -23,7 +23,6 @@ describe("Roofing Quantity Calculator", () => {
     },
     wasteFactor: 0
   };
-
   it("will calculate the quantity of squares properly with mock data", () => {
     let mockSquares = calculator.getNumberOfSquares(MockMeasurements);
     expect(mockSquares).toEqual(35);

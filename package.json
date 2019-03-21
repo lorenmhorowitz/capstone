@@ -22,9 +22,10 @@
     "dotenv": "^6.1.0",
     "geocoder": "^0.2.3",
     "google-map-react": "^1.1.1",
+    "material-ui": "^0.20.2",
     "parcel": "^1.10.3",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-geocode": "^0.1.2",
     "react-hot-loader": "^4.3.12",
     "react-redux": "^6.0.1",
@@ -55,7 +56,10 @@
     "react-test-renderer": "^16.5.2"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "array-callback-return": "off"
+    }
   },
   "jest": {
     "moduleNameMapper": {

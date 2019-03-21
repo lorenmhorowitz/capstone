@@ -24,7 +24,7 @@ const styles = {
     width: "250px",
     marginLeft: "10px",
     marginRight: "10px",
-    marginTop: "10px"
+    marginTop: "20px"
   },
   cost: {
     textAlign: "center",
