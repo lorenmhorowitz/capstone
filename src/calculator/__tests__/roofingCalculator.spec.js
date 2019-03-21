@@ -64,13 +64,13 @@ describe("Roofing Quantity Calculator", () => {
     let stepFlashing = calculator.getStepFlashingQuantity(MockMeasurements);
     expect(stepFlashing).toEqual(28);
   });
-  // it("will calculate the quantity of roofing quantities with mock data", () => {
-  //   MockMeasurements.wasteFactor = 0;
-  //   let quantities = calculator.getRoofingProductQuantities(MockMeasurements);
-  //   expect(quantities.shingles).toEqual();
-  //   expect(quantities.nails).toEqual();
-  //   expect(quantities.ridgeCaps).toEqual();
-  //   expect(quantities.dripEdge).toEqual();
-  //   expect(quantities.underlayment).toEqual();
-  // });
+  it("will calculate the quantity of roofing quantities with mock data", () => {
+    MockMeasurements.wasteFactor = 0;
+    let quantities = calculator.getRoofingProductQuantities(MockMeasurements);
+    expect(quantities.shingles).toEqual(3045);
+    expect(quantities.nails).toEqual(6);
+    expect(quantities.ridgeCaps).toEqual(198);
+    expect(quantities.dripEdge).toEqual(149);
+    expect(quantities.underlayment).toEqual(35);
+  });
 });
