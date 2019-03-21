@@ -69,6 +69,7 @@ class ProductModal extends Component {
 
     this.state = {
       image: "",
+      initProduct: {},
       itemID: "",
       model: "",
       name: "",
@@ -79,8 +80,19 @@ class ProductModal extends Component {
   }
 
   componentWillMount() {
+    let product = {
+      image: this.props.image,
+      itemID: this.props.itemID,
+      model: this.props.model,
+      name: this.props.name,
+      price: this.props.price,
+      title: this.props.title,
+      weight: this.props.weight
+    };
+
     this.setState({
       image: this.props.image,
+      initProduct: product,
       itemID: this.props.itemID,
       model: this.props.model,
       name: this.props.name,
@@ -102,6 +114,19 @@ class ProductModal extends Component {
       title: obj.brand,
       weight: obj.weight
     });
+  };
+
+  closeModal = () => {
+    this.setState({
+      image: this.state.initProduct.image,
+      itemID: this.state.initProduct.itemID,
+      model: this.state.initProduct.model,
+      name: this.state.initProduct.name,
+      price: this.state.initProduct.price,
+      title: this.state.initProduct.brand,
+      weight: this.state.initProduct.weight
+    });
+    this.props.onClose();
   };
 
   render() {
@@ -129,7 +154,7 @@ class ProductModal extends Component {
     });
 
     return (
-      <Modal open={this.props.open} onClose={this.props.onClose}>
+      <Modal open={this.props.open} onClose={this.closeModal}>
         <div className={classes.modal}>
           <div className={classes.container}>
             <div className={classes.imageContainer}>

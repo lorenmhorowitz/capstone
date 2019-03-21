@@ -72,7 +72,7 @@ class ProductCard extends Component {
     this.setState({ open: true });
   };
 
-  handleClose = () => {
+  handleClose = obj => {
     this.setState({ open: false });
   };
 
