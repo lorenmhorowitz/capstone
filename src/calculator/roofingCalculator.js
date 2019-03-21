@@ -10,11 +10,11 @@ const getNumberOfSquares = Measurements => {
 };
 
 const getWasteFactorAdjustedMeasurements = Measurements => {
+  const squareFootage = Measurements.roof.pitch[0].area;
   const ridgeLength = Measurements.roof.ridges_hips.length;
   const gutterLength = Measurements.roof.gutters_eaves.length;
   const rakeLength = Measurements.roof.rakes.length;
-  const squareFootage = Measurements.roof.pitch[0].area;
-  const wasteFactor = Measurements.wasteFactor;
+  const wasteFactor = 0.15;
   const stepFlashing = Measurements.roof.step_flashing.length;
   return {
     squareFootage: squareFootage + squareFootage * wasteFactor,
@@ -81,7 +81,9 @@ const getUnderlaymentNailsQuantity = Measurements => {
 const getGuttersQuantity = Measurements => {
   // Returning the length of the Gutter and Eave
   // Sold per foot
-  return getWasteFactorAdjustedMeasurements(Measurements).gutterLength;
+  return Math.ceil(
+    getWasteFactorAdjustedMeasurements(Measurements).gutterLength
+  );
 };
 // Rake
 const getRakesQuantity = Measurements => {
