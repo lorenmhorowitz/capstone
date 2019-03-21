@@ -27,7 +27,7 @@ class Home extends Component {
     loading: true
   };
 
-  handleJobRedirect = (data, event) => {
+  handleJobRedirect = data => {
     this.setState({
       jobRedirect: true,
       jobRedirectID: data

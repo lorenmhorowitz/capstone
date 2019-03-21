@@ -3,13 +3,14 @@
 exports[`GoogleMap Component renders without crashing when all data is passed 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <GoogleMap
+  Symbol(enzyme.__unrendered__): <Connect(GoogleMap)
     height="50vh"
     location="Las Vegas, NV"
     width="50vw"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -19,174 +20,72 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": <GoogleMap
-        bootstrapURLKeys={
-          Object {
-            "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
-          }
-        }
-        center={
-          Object {
-            "lat": 45.6272259,
-            "lng": -122.6727305,
-          }
-        }
-        debounced={true}
-        distanceToMouse={[Function]}
-        googleMapLoader={[Function]}
-        heatmap={Object {}}
-        heatmapLibrary={false}
-        hoverDistance={30}
-        layerTypes={Array []}
-        options={[Function]}
-        style={
-          Object {
-            "height": "100%",
-            "margin": 0,
-            "padding": 0,
-            "position": "relative",
-            "width": "100%",
-          }
-        }
-        yesIWantToUseGoogleMapApiInternals={false}
-        zoom={11}
-      />,
-      "style": Object {
-        "height": "50vh",
-        "width": "50vw",
-      },
+      "children": [Function],
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "bootstrapURLKeys": Object {
-          "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
+    "rendered": [Function],
+    "type": Object {
+      "$$typeof": Symbol(react.context),
+      "_calculateChangedBits": null,
+      "_context": Object {
+        "$$typeof": Symbol(react.context),
+        "Consumer": [Circular],
+        "Provider": Object {
+          "$$typeof": Symbol(react.provider),
+          "_context": [Circular],
         },
-        "center": Object {
-          "lat": 45.6272259,
-          "lng": -122.6727305,
-        },
-        "debounced": true,
-        "defaultCenter": undefined,
-        "defaultZoom": undefined,
-        "distanceToMouse": [Function],
-        "googleMapLoader": [Function],
-        "heatmap": Object {},
-        "heatmapLibrary": false,
-        "hoverDistance": 30,
-        "layerTypes": Array [],
-        "options": [Function],
-        "style": Object {
-          "height": "100%",
-          "margin": 0,
-          "padding": 0,
-          "position": "relative",
-          "width": "100%",
-        },
-        "yesIWantToUseGoogleMapApiInternals": false,
-        "zoom": 11,
+        "_calculateChangedBits": null,
+        "_currentRenderer": null,
+        "_currentRenderer2": null,
+        "_currentValue": null,
+        "_currentValue2": null,
+        "_threadCount": 0,
       },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
     },
-    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": <GoogleMap
-          bootstrapURLKeys={
-            Object {
-              "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
-            }
-          }
-          center={
-            Object {
-              "lat": 45.6272259,
-              "lng": -122.6727305,
-            }
-          }
-          debounced={true}
-          distanceToMouse={[Function]}
-          googleMapLoader={[Function]}
-          heatmap={Object {}}
-          heatmapLibrary={false}
-          hoverDistance={30}
-          layerTypes={Array []}
-          options={[Function]}
-          style={
-            Object {
-              "height": "100%",
-              "margin": 0,
-              "padding": 0,
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-          yesIWantToUseGoogleMapApiInternals={false}
-          zoom={11}
-        />,
-        "style": Object {
-          "height": "50vh",
-          "width": "50vw",
-        },
+        "children": [Function],
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "bootstrapURLKeys": Object {
-            "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
+      "rendered": [Function],
+      "type": Object {
+        "$$typeof": Symbol(react.context),
+        "_calculateChangedBits": null,
+        "_context": Object {
+          "$$typeof": Symbol(react.context),
+          "Consumer": [Circular],
+          "Provider": Object {
+            "$$typeof": Symbol(react.provider),
+            "_context": [Circular],
           },
-          "center": Object {
-            "lat": 45.6272259,
-            "lng": -122.6727305,
-          },
-          "debounced": true,
-          "defaultCenter": undefined,
-          "defaultZoom": undefined,
-          "distanceToMouse": [Function],
-          "googleMapLoader": [Function],
-          "heatmap": Object {},
-          "heatmapLibrary": false,
-          "hoverDistance": 30,
-          "layerTypes": Array [],
-          "options": [Function],
-          "style": Object {
-            "height": "100%",
-            "margin": 0,
-            "padding": 0,
-            "position": "relative",
-            "width": "100%",
-          },
-          "yesIWantToUseGoogleMapApiInternals": false,
-          "zoom": 11,
+          "_calculateChangedBits": null,
+          "_currentRenderer": null,
+          "_currentRenderer2": null,
+          "_currentValue": null,
+          "_currentValue2": null,
+          "_threadCount": 0,
         },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
       },
-      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -197,18 +96,20 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;
 
 exports[`GoogleMap Component renders without crashing when height is passed 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <GoogleMap
+  Symbol(enzyme.__unrendered__): <Connect(GoogleMap)
     height="50vh"
     location="Las Vegas, NV"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -218,174 +119,72 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": <GoogleMap
-        bootstrapURLKeys={
-          Object {
-            "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
-          }
-        }
-        center={
-          Object {
-            "lat": 45.6272259,
-            "lng": -122.6727305,
-          }
-        }
-        debounced={true}
-        distanceToMouse={[Function]}
-        googleMapLoader={[Function]}
-        heatmap={Object {}}
-        heatmapLibrary={false}
-        hoverDistance={30}
-        layerTypes={Array []}
-        options={[Function]}
-        style={
-          Object {
-            "height": "100%",
-            "margin": 0,
-            "padding": 0,
-            "position": "relative",
-            "width": "100%",
-          }
-        }
-        yesIWantToUseGoogleMapApiInternals={false}
-        zoom={11}
-      />,
-      "style": Object {
-        "height": "50vh",
-        "width": "30vmax",
-      },
+      "children": [Function],
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "bootstrapURLKeys": Object {
-          "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
+    "rendered": [Function],
+    "type": Object {
+      "$$typeof": Symbol(react.context),
+      "_calculateChangedBits": null,
+      "_context": Object {
+        "$$typeof": Symbol(react.context),
+        "Consumer": [Circular],
+        "Provider": Object {
+          "$$typeof": Symbol(react.provider),
+          "_context": [Circular],
         },
-        "center": Object {
-          "lat": 45.6272259,
-          "lng": -122.6727305,
-        },
-        "debounced": true,
-        "defaultCenter": undefined,
-        "defaultZoom": undefined,
-        "distanceToMouse": [Function],
-        "googleMapLoader": [Function],
-        "heatmap": Object {},
-        "heatmapLibrary": false,
-        "hoverDistance": 30,
-        "layerTypes": Array [],
-        "options": [Function],
-        "style": Object {
-          "height": "100%",
-          "margin": 0,
-          "padding": 0,
-          "position": "relative",
-          "width": "100%",
-        },
-        "yesIWantToUseGoogleMapApiInternals": false,
-        "zoom": 11,
+        "_calculateChangedBits": null,
+        "_currentRenderer": null,
+        "_currentRenderer2": null,
+        "_currentValue": null,
+        "_currentValue2": null,
+        "_threadCount": 0,
       },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
     },
-    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": <GoogleMap
-          bootstrapURLKeys={
-            Object {
-              "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
-            }
-          }
-          center={
-            Object {
-              "lat": 45.6272259,
-              "lng": -122.6727305,
-            }
-          }
-          debounced={true}
-          distanceToMouse={[Function]}
-          googleMapLoader={[Function]}
-          heatmap={Object {}}
-          heatmapLibrary={false}
-          hoverDistance={30}
-          layerTypes={Array []}
-          options={[Function]}
-          style={
-            Object {
-              "height": "100%",
-              "margin": 0,
-              "padding": 0,
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-          yesIWantToUseGoogleMapApiInternals={false}
-          zoom={11}
-        />,
-        "style": Object {
-          "height": "50vh",
-          "width": "30vmax",
-        },
+        "children": [Function],
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "bootstrapURLKeys": Object {
-            "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
+      "rendered": [Function],
+      "type": Object {
+        "$$typeof": Symbol(react.context),
+        "_calculateChangedBits": null,
+        "_context": Object {
+          "$$typeof": Symbol(react.context),
+          "Consumer": [Circular],
+          "Provider": Object {
+            "$$typeof": Symbol(react.provider),
+            "_context": [Circular],
           },
-          "center": Object {
-            "lat": 45.6272259,
-            "lng": -122.6727305,
-          },
-          "debounced": true,
-          "defaultCenter": undefined,
-          "defaultZoom": undefined,
-          "distanceToMouse": [Function],
-          "googleMapLoader": [Function],
-          "heatmap": Object {},
-          "heatmapLibrary": false,
-          "hoverDistance": 30,
-          "layerTypes": Array [],
-          "options": [Function],
-          "style": Object {
-            "height": "100%",
-            "margin": 0,
-            "padding": 0,
-            "position": "relative",
-            "width": "100%",
-          },
-          "yesIWantToUseGoogleMapApiInternals": false,
-          "zoom": 11,
+          "_calculateChangedBits": null,
+          "_currentRenderer": null,
+          "_currentRenderer2": null,
+          "_currentValue": null,
+          "_currentValue2": null,
+          "_threadCount": 0,
         },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
       },
-      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -396,15 +195,17 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;
 
 exports[`GoogleMap Component renders without crashing when location is not passed 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <GoogleMap />,
+  Symbol(enzyme.__unrendered__): <Connect(GoogleMap) />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -414,174 +215,72 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": <GoogleMap
-        bootstrapURLKeys={
-          Object {
-            "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
-          }
-        }
-        center={
-          Object {
-            "lat": 45.6272259,
-            "lng": -122.6727305,
-          }
-        }
-        debounced={true}
-        distanceToMouse={[Function]}
-        googleMapLoader={[Function]}
-        heatmap={Object {}}
-        heatmapLibrary={false}
-        hoverDistance={30}
-        layerTypes={Array []}
-        options={[Function]}
-        style={
-          Object {
-            "height": "100%",
-            "margin": 0,
-            "padding": 0,
-            "position": "relative",
-            "width": "100%",
-          }
-        }
-        yesIWantToUseGoogleMapApiInternals={false}
-        zoom={11}
-      />,
-      "style": Object {
-        "height": "20vmax",
-        "width": "30vmax",
-      },
+      "children": [Function],
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "bootstrapURLKeys": Object {
-          "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
+    "rendered": [Function],
+    "type": Object {
+      "$$typeof": Symbol(react.context),
+      "_calculateChangedBits": null,
+      "_context": Object {
+        "$$typeof": Symbol(react.context),
+        "Consumer": [Circular],
+        "Provider": Object {
+          "$$typeof": Symbol(react.provider),
+          "_context": [Circular],
         },
-        "center": Object {
-          "lat": 45.6272259,
-          "lng": -122.6727305,
-        },
-        "debounced": true,
-        "defaultCenter": undefined,
-        "defaultZoom": undefined,
-        "distanceToMouse": [Function],
-        "googleMapLoader": [Function],
-        "heatmap": Object {},
-        "heatmapLibrary": false,
-        "hoverDistance": 30,
-        "layerTypes": Array [],
-        "options": [Function],
-        "style": Object {
-          "height": "100%",
-          "margin": 0,
-          "padding": 0,
-          "position": "relative",
-          "width": "100%",
-        },
-        "yesIWantToUseGoogleMapApiInternals": false,
-        "zoom": 11,
+        "_calculateChangedBits": null,
+        "_currentRenderer": null,
+        "_currentRenderer2": null,
+        "_currentValue": null,
+        "_currentValue2": null,
+        "_threadCount": 0,
       },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
     },
-    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": <GoogleMap
-          bootstrapURLKeys={
-            Object {
-              "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
-            }
-          }
-          center={
-            Object {
-              "lat": 45.6272259,
-              "lng": -122.6727305,
-            }
-          }
-          debounced={true}
-          distanceToMouse={[Function]}
-          googleMapLoader={[Function]}
-          heatmap={Object {}}
-          heatmapLibrary={false}
-          hoverDistance={30}
-          layerTypes={Array []}
-          options={[Function]}
-          style={
-            Object {
-              "height": "100%",
-              "margin": 0,
-              "padding": 0,
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-          yesIWantToUseGoogleMapApiInternals={false}
-          zoom={11}
-        />,
-        "style": Object {
-          "height": "20vmax",
-          "width": "30vmax",
-        },
+        "children": [Function],
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "bootstrapURLKeys": Object {
-            "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
+      "rendered": [Function],
+      "type": Object {
+        "$$typeof": Symbol(react.context),
+        "_calculateChangedBits": null,
+        "_context": Object {
+          "$$typeof": Symbol(react.context),
+          "Consumer": [Circular],
+          "Provider": Object {
+            "$$typeof": Symbol(react.provider),
+            "_context": [Circular],
           },
-          "center": Object {
-            "lat": 45.6272259,
-            "lng": -122.6727305,
-          },
-          "debounced": true,
-          "defaultCenter": undefined,
-          "defaultZoom": undefined,
-          "distanceToMouse": [Function],
-          "googleMapLoader": [Function],
-          "heatmap": Object {},
-          "heatmapLibrary": false,
-          "hoverDistance": 30,
-          "layerTypes": Array [],
-          "options": [Function],
-          "style": Object {
-            "height": "100%",
-            "margin": 0,
-            "padding": 0,
-            "position": "relative",
-            "width": "100%",
-          },
-          "yesIWantToUseGoogleMapApiInternals": false,
-          "zoom": 11,
+          "_calculateChangedBits": null,
+          "_currentRenderer": null,
+          "_currentRenderer2": null,
+          "_currentValue": null,
+          "_currentValue2": null,
+          "_threadCount": 0,
         },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
       },
-      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -592,17 +291,19 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;
 
 exports[`GoogleMap Component renders without crashing when location is passed 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <GoogleMap
+  Symbol(enzyme.__unrendered__): <Connect(GoogleMap)
     location="Las Vegas, NV"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -612,174 +313,72 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": <GoogleMap
-        bootstrapURLKeys={
-          Object {
-            "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
-          }
-        }
-        center={
-          Object {
-            "lat": 45.6272259,
-            "lng": -122.6727305,
-          }
-        }
-        debounced={true}
-        distanceToMouse={[Function]}
-        googleMapLoader={[Function]}
-        heatmap={Object {}}
-        heatmapLibrary={false}
-        hoverDistance={30}
-        layerTypes={Array []}
-        options={[Function]}
-        style={
-          Object {
-            "height": "100%",
-            "margin": 0,
-            "padding": 0,
-            "position": "relative",
-            "width": "100%",
-          }
-        }
-        yesIWantToUseGoogleMapApiInternals={false}
-        zoom={11}
-      />,
-      "style": Object {
-        "height": "20vmax",
-        "width": "30vmax",
-      },
+      "children": [Function],
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "bootstrapURLKeys": Object {
-          "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
+    "rendered": [Function],
+    "type": Object {
+      "$$typeof": Symbol(react.context),
+      "_calculateChangedBits": null,
+      "_context": Object {
+        "$$typeof": Symbol(react.context),
+        "Consumer": [Circular],
+        "Provider": Object {
+          "$$typeof": Symbol(react.provider),
+          "_context": [Circular],
         },
-        "center": Object {
-          "lat": 45.6272259,
-          "lng": -122.6727305,
-        },
-        "debounced": true,
-        "defaultCenter": undefined,
-        "defaultZoom": undefined,
-        "distanceToMouse": [Function],
-        "googleMapLoader": [Function],
-        "heatmap": Object {},
-        "heatmapLibrary": false,
-        "hoverDistance": 30,
-        "layerTypes": Array [],
-        "options": [Function],
-        "style": Object {
-          "height": "100%",
-          "margin": 0,
-          "padding": 0,
-          "position": "relative",
-          "width": "100%",
-        },
-        "yesIWantToUseGoogleMapApiInternals": false,
-        "zoom": 11,
+        "_calculateChangedBits": null,
+        "_currentRenderer": null,
+        "_currentRenderer2": null,
+        "_currentValue": null,
+        "_currentValue2": null,
+        "_threadCount": 0,
       },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
     },
-    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": <GoogleMap
-          bootstrapURLKeys={
-            Object {
-              "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
-            }
-          }
-          center={
-            Object {
-              "lat": 45.6272259,
-              "lng": -122.6727305,
-            }
-          }
-          debounced={true}
-          distanceToMouse={[Function]}
-          googleMapLoader={[Function]}
-          heatmap={Object {}}
-          heatmapLibrary={false}
-          hoverDistance={30}
-          layerTypes={Array []}
-          options={[Function]}
-          style={
-            Object {
-              "height": "100%",
-              "margin": 0,
-              "padding": 0,
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-          yesIWantToUseGoogleMapApiInternals={false}
-          zoom={11}
-        />,
-        "style": Object {
-          "height": "20vmax",
-          "width": "30vmax",
-        },
+        "children": [Function],
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "bootstrapURLKeys": Object {
-            "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
+      "rendered": [Function],
+      "type": Object {
+        "$$typeof": Symbol(react.context),
+        "_calculateChangedBits": null,
+        "_context": Object {
+          "$$typeof": Symbol(react.context),
+          "Consumer": [Circular],
+          "Provider": Object {
+            "$$typeof": Symbol(react.provider),
+            "_context": [Circular],
           },
-          "center": Object {
-            "lat": 45.6272259,
-            "lng": -122.6727305,
-          },
-          "debounced": true,
-          "defaultCenter": undefined,
-          "defaultZoom": undefined,
-          "distanceToMouse": [Function],
-          "googleMapLoader": [Function],
-          "heatmap": Object {},
-          "heatmapLibrary": false,
-          "hoverDistance": 30,
-          "layerTypes": Array [],
-          "options": [Function],
-          "style": Object {
-            "height": "100%",
-            "margin": 0,
-            "padding": 0,
-            "position": "relative",
-            "width": "100%",
-          },
-          "yesIWantToUseGoogleMapApiInternals": false,
-          "zoom": 11,
+          "_calculateChangedBits": null,
+          "_currentRenderer": null,
+          "_currentRenderer2": null,
+          "_currentValue": null,
+          "_currentValue2": null,
+          "_threadCount": 0,
         },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
       },
-      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -790,18 +389,20 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;
 
 exports[`GoogleMap Component renders without crashing when width is passed 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <GoogleMap
+  Symbol(enzyme.__unrendered__): <Connect(GoogleMap)
     location="Las Vegas, NV"
     width="50vw"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -811,174 +412,72 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": <GoogleMap
-        bootstrapURLKeys={
-          Object {
-            "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
-          }
-        }
-        center={
-          Object {
-            "lat": 45.6272259,
-            "lng": -122.6727305,
-          }
-        }
-        debounced={true}
-        distanceToMouse={[Function]}
-        googleMapLoader={[Function]}
-        heatmap={Object {}}
-        heatmapLibrary={false}
-        hoverDistance={30}
-        layerTypes={Array []}
-        options={[Function]}
-        style={
-          Object {
-            "height": "100%",
-            "margin": 0,
-            "padding": 0,
-            "position": "relative",
-            "width": "100%",
-          }
-        }
-        yesIWantToUseGoogleMapApiInternals={false}
-        zoom={11}
-      />,
-      "style": Object {
-        "height": "20vmax",
-        "width": "50vw",
-      },
+      "children": [Function],
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "bootstrapURLKeys": Object {
-          "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
+    "rendered": [Function],
+    "type": Object {
+      "$$typeof": Symbol(react.context),
+      "_calculateChangedBits": null,
+      "_context": Object {
+        "$$typeof": Symbol(react.context),
+        "Consumer": [Circular],
+        "Provider": Object {
+          "$$typeof": Symbol(react.provider),
+          "_context": [Circular],
         },
-        "center": Object {
-          "lat": 45.6272259,
-          "lng": -122.6727305,
-        },
-        "debounced": true,
-        "defaultCenter": undefined,
-        "defaultZoom": undefined,
-        "distanceToMouse": [Function],
-        "googleMapLoader": [Function],
-        "heatmap": Object {},
-        "heatmapLibrary": false,
-        "hoverDistance": 30,
-        "layerTypes": Array [],
-        "options": [Function],
-        "style": Object {
-          "height": "100%",
-          "margin": 0,
-          "padding": 0,
-          "position": "relative",
-          "width": "100%",
-        },
-        "yesIWantToUseGoogleMapApiInternals": false,
-        "zoom": 11,
+        "_calculateChangedBits": null,
+        "_currentRenderer": null,
+        "_currentRenderer2": null,
+        "_currentValue": null,
+        "_currentValue2": null,
+        "_threadCount": 0,
       },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
     },
-    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": <GoogleMap
-          bootstrapURLKeys={
-            Object {
-              "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
-            }
-          }
-          center={
-            Object {
-              "lat": 45.6272259,
-              "lng": -122.6727305,
-            }
-          }
-          debounced={true}
-          distanceToMouse={[Function]}
-          googleMapLoader={[Function]}
-          heatmap={Object {}}
-          heatmapLibrary={false}
-          hoverDistance={30}
-          layerTypes={Array []}
-          options={[Function]}
-          style={
-            Object {
-              "height": "100%",
-              "margin": 0,
-              "padding": 0,
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-          yesIWantToUseGoogleMapApiInternals={false}
-          zoom={11}
-        />,
-        "style": Object {
-          "height": "20vmax",
-          "width": "50vw",
-        },
+        "children": [Function],
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "bootstrapURLKeys": Object {
-            "key": "AIzaSyCB1RaEoOoDKQ8oaJ4mZvBlCb0DKeV7qh8",
+      "rendered": [Function],
+      "type": Object {
+        "$$typeof": Symbol(react.context),
+        "_calculateChangedBits": null,
+        "_context": Object {
+          "$$typeof": Symbol(react.context),
+          "Consumer": [Circular],
+          "Provider": Object {
+            "$$typeof": Symbol(react.provider),
+            "_context": [Circular],
           },
-          "center": Object {
-            "lat": 45.6272259,
-            "lng": -122.6727305,
-          },
-          "debounced": true,
-          "defaultCenter": undefined,
-          "defaultZoom": undefined,
-          "distanceToMouse": [Function],
-          "googleMapLoader": [Function],
-          "heatmap": Object {},
-          "heatmapLibrary": false,
-          "hoverDistance": 30,
-          "layerTypes": Array [],
-          "options": [Function],
-          "style": Object {
-            "height": "100%",
-            "margin": 0,
-            "padding": 0,
-            "position": "relative",
-            "width": "100%",
-          },
-          "yesIWantToUseGoogleMapApiInternals": false,
-          "zoom": 11,
+          "_calculateChangedBits": null,
+          "_currentRenderer": null,
+          "_currentRenderer2": null,
+          "_currentValue": null,
+          "_currentValue2": null,
+          "_threadCount": 0,
         },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
       },
-      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -989,5 +488,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

@@ -3,9 +3,10 @@
 exports[`Job Component renders without crashing 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Job />,
+  Symbol(enzyme.__unrendered__): <Connect(Job) />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -15,182 +16,72 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": Array [
-        <WithStyles(AppBar) />,
-        null,
-        null,
-        <WithStyles(CircularIndeterminate) />,
-        <WithStyles(Sidebar)
-          id="sideBar"
-          infoRef={
-            Object {
-              "current": null,
-            }
-          }
-          roofingRef={
-            Object {
-              "current": null,
-            }
-          }
-          scrollToRef={[Function]}
-          sidingRef={
-            Object {
-              "current": null,
-            }
-          }
-          windowsRef={
-            Object {
-              "current": null,
-            }
-          }
-        />,
-      ],
+      "children": [Function],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      null,
-      null,
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "id": "sideBar",
-          "infoRef": Object {
-            "current": null,
-          },
-          "roofingRef": Object {
-            "current": null,
-          },
-          "scrollToRef": [Function],
-          "sidingRef": Object {
-            "current": null,
-          },
-          "windowsRef": Object {
-            "current": null,
-          },
+    "rendered": [Function],
+    "type": Object {
+      "$$typeof": Symbol(react.context),
+      "_calculateChangedBits": null,
+      "_context": Object {
+        "$$typeof": Symbol(react.context),
+        "Consumer": [Circular],
+        "Provider": Object {
+          "$$typeof": Symbol(react.provider),
+          "_context": [Circular],
         },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "_calculateChangedBits": null,
+        "_currentRenderer": null,
+        "_currentRenderer2": null,
+        "_currentValue": null,
+        "_currentValue2": null,
+        "_threadCount": 0,
       },
-    ],
-    "type": "div",
+    },
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": Array [
-          <WithStyles(AppBar) />,
-          null,
-          null,
-          <WithStyles(CircularIndeterminate) />,
-          <WithStyles(Sidebar)
-            id="sideBar"
-            infoRef={
-              Object {
-                "current": null,
-              }
-            }
-            roofingRef={
-              Object {
-                "current": null,
-              }
-            }
-            scrollToRef={[Function]}
-            sidingRef={
-              Object {
-                "current": null,
-              }
-            }
-            windowsRef={
-              Object {
-                "current": null,
-              }
-            }
-          />,
-        ],
+        "children": [Function],
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        null,
-        null,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "id": "sideBar",
-            "infoRef": Object {
-              "current": null,
-            },
-            "roofingRef": Object {
-              "current": null,
-            },
-            "scrollToRef": [Function],
-            "sidingRef": Object {
-              "current": null,
-            },
-            "windowsRef": Object {
-              "current": null,
-            },
+      "rendered": [Function],
+      "type": Object {
+        "$$typeof": Symbol(react.context),
+        "_calculateChangedBits": null,
+        "_context": Object {
+          "$$typeof": Symbol(react.context),
+          "Consumer": [Circular],
+          "Provider": Object {
+            "$$typeof": Symbol(react.provider),
+            "_context": [Circular],
           },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "_calculateChangedBits": null,
+          "_currentRenderer": null,
+          "_currentRenderer2": null,
+          "_currentValue": null,
+          "_currentValue2": null,
+          "_threadCount": 0,
         },
-      ],
-      "type": "div",
+      },
     },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -201,5 +92,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

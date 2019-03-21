@@ -67,7 +67,6 @@ class AppBar extends Component {
                 <span id="HomeTitle">Corner</span>
                 <span id="StoneTitle">Stone</span>
               </Link>
-
               <div id="menuButton">
                 <IconButton
                   aria-owns={open ? "Menu" : null}

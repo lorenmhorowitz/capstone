@@ -9,7 +9,6 @@ describe("Roofing Quantity Calculator", () => {
     wasteFactor: 0,
     stepFlashing: 10
   };
-
   it("will calculate the quantity of squares properly with mock data", () => {
     let mockSquares = calculator.getNumberOfSquares(MockMeasurements);
     expect(mockSquares).toEqual(30);
@@ -39,9 +38,6 @@ describe("Roofing Quantity Calculator", () => {
     expect(mockNails).toEqual(15600);
     MockMeasurements.wasteFactor = 0.1;
     mockNails = calculator.getNailsQuantity(MockMeasurements);
-    // console.log(calculator.getNumberOfSquares(MockMeasurements));
-    // console.log(1 + MockMeasurements.wasteFactor);
-    // console.log(MockMeasurements.squareFootage * MockMeasurements.wasteFactor);
     expect(mockNails).toEqual(17160);
   });
   it("will calculate the quantity of cap shingles with mock data", () => {

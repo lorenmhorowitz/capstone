@@ -6,7 +6,8 @@ import { LOGIN } from "../constants/actionTypes";
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import request from "request";
-import TextField from "../components/TextField";
+import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
 
 const mapStateToProps = state => ({ ...state.auth });
 
@@ -86,10 +87,6 @@ class Login extends Component {
     );
   };
 
-  handleEnter = () => {
-    this.handleLogin();
-  };
-
   render() {
     if (this.state.hoverRedirect) {
       return <Redirect push to="/hover" />;
@@ -99,7 +96,9 @@ class Login extends Component {
       return <Redirect push to="/home" />;
     }
 
-    const errorMessage = <p id="error">Unable to log in. Please try again.</p>;
+    const errorMessage = (
+      <Typography id="error"> Unable to log in. Please try again.</Typography>
+    );
 
     return (
       <div className="Img">
@@ -110,12 +109,44 @@ class Login extends Component {
               <span id="Corner">Corner</span>
               <span id="Stone">Stone</span>
             </div>
-            <TextField label="email" handler={this.handleEmailChange} />
-            <TextField
-              label="password"
-              handler={this.handlePasswordChange}
-              onEnter={this.handleEnter}
-            />
+            <form
+              className="textField"
+              onSubmit={e => {
+                e.preventDefault();
+              }}
+            >
+              <TextField
+                className="fieldStyle"
+                label="email"
+                name="email"
+                type="email"
+                onChange={this.handleEmailChange}
+                onKeyPress={ev => {
+                  if (ev.key === "Enter") {
+                    this.handleLogin();
+                  }
+                }}
+              />
+            </form>
+            <form
+              className="textField"
+              onSubmit={e => {
+                e.preventDefault();
+              }}
+            >
+              <TextField
+                className="fieldStyle"
+                label="password"
+                name="password"
+                type="password"
+                onChange={this.handlePasswordChange}
+                onKeyPress={ev => {
+                  if (ev.key === "Enter") {
+                    this.handleLogin();
+                  }
+                }}
+              />
+            </form>
             <Button id="Login" onClick={this.handleLogin}>
               Log In
             </Button>
