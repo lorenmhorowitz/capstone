@@ -2,12 +2,26 @@ import calculator from "../roofingCalculator";
 
 describe("Roofing Quantity Calculator", () => {
   let MockMeasurements = {
-    squareFootage: 3000,
-    ridgeLength: 100,
-    gutterLength: 120,
-    rakeLength: 100,
-    wasteFactor: 0,
-    stepFlashing: 10
+    roof: {
+      pitch: [
+        {
+          area: 3000
+        }
+      ],
+      ridges_hips: {
+        length: 100
+      },
+      gutters_eaves: {
+        gutterLength: 120
+      },
+      rakes: {
+        length: 100
+      },
+      step_flashing: {
+        length: 10
+      }
+    },
+    wasteFactor: 0
   };
 
   it("will calculate the quantity of squares properly with mock data", () => {
@@ -36,13 +50,13 @@ describe("Roofing Quantity Calculator", () => {
   it("will calculate the quantity of nails with mock data", () => {
     MockMeasurements.wasteFactor = 0;
     let mockNails = calculator.getNailsQuantity(MockMeasurements);
-    expect(mockNails).toEqual(15600);
+    expect(mockNails).toEqual(5);
     MockMeasurements.wasteFactor = 0.1;
     mockNails = calculator.getNailsQuantity(MockMeasurements);
     // console.log(calculator.getNumberOfSquares(MockMeasurements));
     // console.log(1 + MockMeasurements.wasteFactor);
     // console.log(MockMeasurements.squareFootage * MockMeasurements.wasteFactor);
-    expect(mockNails).toEqual(17160);
+    expect(mockNails).toEqual(6);
   });
   it("will calculate the quantity of cap shingles with mock data", () => {
     MockMeasurements.wasteFactor = 0;

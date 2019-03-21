@@ -10,20 +10,19 @@ const getNumberOfSquares = Measurements => {
 };
 
 const getWasteFactorAdjustedMeasurements = Measurements => {
-  const {
-    squareFootage,
-    ridgeLength,
-    gutterLength,
-    rakeLength,
-    wasteFactor,
-    stepFlashing
-  } = Measurements;
+  const ridgeLength = Measurements.roof.ridges_hips.length;
+  const gutterLength = Measurements.roof.gutters_eaves.length;
+  console.log(Measurements.gutterLength);
+  const rakeLength = Measurements.roof.rakes.length;
+  const squareFootage = Measurements.roof.pitch[0].area;
+  const wasteFactor = Measurements.wasteFactor;
+  const stepFlashing = Measurements.roof.step_flashing.length;
   return {
     squareFootage: squareFootage + squareFootage * wasteFactor,
     ridgeLength: ridgeLength + ridgeLength * wasteFactor,
     gutterLength: gutterLength * (1 + wasteFactor),
     rakeLength: rakeLength * (1 + wasteFactor),
-    wasteFactor: 0,
+    wasteFactor: wasteFactor,
     length: stepFlashing + stepFlashing * wasteFactor
   };
 };
@@ -41,9 +40,10 @@ const getShinglesQuantity = Measurements => {
 };
 
 const getNailsQuantity = Measurements => {
-  return (
-    getShinglesNailsQuantity(Measurements) +
-    getUnderlaymentNailsQuantity(Measurements)
+  return Math.ceil(
+    (getShinglesNailsQuantity(Measurements) +
+      getUnderlaymentNailsQuantity(Measurements)) /
+      3150
   );
 };
 
@@ -106,6 +106,16 @@ const getStepFlashingQuantity = Measurements => {
   );
 };
 
+const getRoofingProductQuantities = Measurements => {
+  return {
+    shingles: getShinglesQuantity(Measurements),
+    nails: getNailsQuantity(Measurements),
+    ridgeCaps: getCapShinglesQuantity(Measurements),
+    dripEdge: getRakesQuantity(Measurements) + getGuttersQuantity(Measurements),
+    underlayment: getUnderlaymentNailsQuantity(Measurements)
+  };
+};
+
 export default {
   getBundleQuantity,
   getCapShinglesQuantity,
@@ -114,6 +124,7 @@ export default {
   getNailsQuantity,
   getNumberOfSquares,
   getRakesQuantity,
+  getRoofingProductQuantities,
   getShinglesQuantity,
   getStepFlashingQuantity,
   getUnderlaymentQuantity,
