@@ -121,7 +121,7 @@ class ProductCard extends Component {
           otherProducts={this.props.otherProducts}
           price={this.props.price}
           quantity={this.props.quantity}
-          title={this.props.brand}
+          brand={this.props.brand}
           weight={this.props.weight}
         />
       </div>

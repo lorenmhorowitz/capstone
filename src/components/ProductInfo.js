@@ -43,7 +43,7 @@ function ProductInfo(props) {
 
   return (
     <div>
-      <Typography className={classes.title}>{props.title}</Typography>
+      <Typography className={classes.title}>{props.brand}</Typography>
       <Typography className={classes.name}>{props.name}</Typography>
       <Typography className={classes.model}>Model: {props.model}</Typography>
       <Typography className={classes.itemID}>

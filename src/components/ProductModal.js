@@ -48,7 +48,7 @@ const styles = {
     marginTop: "30px",
     width: "50%"
   },
-  title: {
+  brand: {
     fontSize: 22,
     fontWeight: "bold",
     marginTop: "2%",
@@ -74,7 +74,7 @@ class ProductModal extends Component {
       model: "",
       name: "",
       price: "",
-      title: "",
+      brand: "",
       weight: ""
     };
   }
@@ -86,7 +86,7 @@ class ProductModal extends Component {
       model: this.props.model,
       name: this.props.name,
       price: this.props.price,
-      title: this.props.title,
+      brand: this.props.brand,
       weight: this.props.weight
     };
 
@@ -97,21 +97,19 @@ class ProductModal extends Component {
       model: this.props.model,
       name: this.props.name,
       price: this.props.price,
-      title: this.props.title,
+      brand: this.props.brand,
       weight: this.props.weight
     });
   }
 
   changeModal = obj => {
-    console.log("changing modal");
-    console.log(obj);
     this.setState({
       image: obj.image,
       itemID: obj.itemID,
       model: obj.model,
       name: obj.name,
       price: obj.price,
-      title: obj.brand,
+      brand: obj.brand,
       weight: obj.weight
     });
   };
@@ -123,7 +121,7 @@ class ProductModal extends Component {
       model: this.state.initProduct.model,
       name: this.state.initProduct.name,
       price: this.state.initProduct.price,
-      title: this.state.initProduct.brand,
+      brand: this.state.initProduct.brand,
       weight: this.state.initProduct.weight
     });
     this.props.onClose();
@@ -166,7 +164,7 @@ class ProductModal extends Component {
                 model={this.state.model}
                 name={this.state.name}
                 price={this.state.price}
-                title={this.state.title}
+                brand={this.state.brand}
                 weight={this.state.weight}
               />
             </div>
