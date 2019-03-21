@@ -2,7 +2,7 @@ import React from "react";
 import GoogleMap from "../GoogleMap";
 import { shallow } from "enzyme";
 
-describe.skip("GoogleMap Component", () => {
+describe("GoogleMap Component", () => {
   it("renders without crashing when location is not passed", () => {
     let wrapper = shallow(<GoogleMap />);
     expect(wrapper).toMatchSnapshot();
