@@ -1,3 +1,4 @@
+import "../../css/hover.css";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import { connect } from "react-redux";
@@ -13,7 +14,6 @@ import { Redirect } from "react-router-dom";
 import ToolBar from "@material-ui/core/Toolbar/Toolbar";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography/Typography";
-import "../../css/hover.css";
 
 const mapStateToProps = state => ({ ...state.auth });
 
