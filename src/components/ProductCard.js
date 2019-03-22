@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography/Typography";
+import calculator from "../utils/calculator/calculator";
 
 const styles = {
   button: {
@@ -82,7 +83,11 @@ class ProductCard extends Component {
             </Typography>
             <div className={classes.cost}>
               <Typography>
-                Cost: ${this.props.cost} Quantity: {this.props.quantity}
+                Cost: ${this.props.cost}/ea Quantity: {this.props.quantity}
+              </Typography>
+              <Typography>
+                Subtotal: $
+                {calculator.getSubtotal(this.props.cost, this.props.quantity)}
               </Typography>
             </div>
           </CardContent>

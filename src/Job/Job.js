@@ -11,7 +11,7 @@ import ProductCard from "../components/ProductCard";
 import request from "request";
 import SideBar from "../components/SideBar";
 import Typography from "@material-ui/core/Typography";
-import calculator from "../calculator/calculator";
+import calculator from "../utils/calculator/calculator";
 
 const mapStateToProps = state => {
   return {
