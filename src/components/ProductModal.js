@@ -81,47 +81,50 @@ class ProductModal extends Component {
 
   componentWillMount() {
     let product = {
+      brand: this.props.brand,
       image: this.props.image,
       itemID: this.props.itemID,
       model: this.props.model,
       name: this.props.name,
       price: this.props.price,
-      brand: this.props.brand,
+      quantity: this.props.quantity,
       weight: this.props.weight
     };
 
     this.setState({
+      brand: this.props.brand,
       image: this.props.image,
       initProduct: product,
       itemID: this.props.itemID,
       model: this.props.model,
       name: this.props.name,
       price: this.props.price,
-      brand: this.props.brand,
+      quantity: this.props.quantity,
       weight: this.props.weight
     });
   }
 
   changeModal = obj => {
     this.setState({
+      brand: obj.brand,
       image: obj.image,
-      itemID: obj.itemID,
+      itemID: obj.item_id,
       model: obj.model,
       name: obj.name,
       price: obj.price,
-      brand: obj.brand,
       weight: obj.weight
     });
   };
 
   closeModal = () => {
     this.setState({
+      brand: this.state.initProduct.brand,
       image: this.state.initProduct.image,
-      itemID: this.state.initProduct.itemID,
+      itemID: this.state.initProduct.item_id,
       model: this.state.initProduct.model,
       name: this.state.initProduct.name,
       price: this.state.initProduct.price,
-      brand: this.state.initProduct.brand,
+      quantity: this.state.quantity,
       weight: this.state.initProduct.weight
     });
     this.props.onClose();
@@ -160,11 +163,12 @@ class ProductModal extends Component {
             </div>
             <div className={classes.productInfo}>
               <ProductInfo
+                brand={this.state.brand}
                 itemID={this.state.itemID}
                 model={this.state.model}
                 name={this.state.name}
                 price={this.state.price}
-                brand={this.state.brand}
+                quantity={this.state.quantity}
                 weight={this.state.weight}
               />
             </div>

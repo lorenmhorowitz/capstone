@@ -27,7 +27,7 @@ class Home extends Component {
     loading: true
   };
 
-  handleJobRedirect = (data, event) => {
+  handleJobRedirect = data => {
     this.setState({
       jobRedirect: true,
       jobRedirectID: data
@@ -72,7 +72,7 @@ class Home extends Component {
         <AppBar />
         {this.state.loading ? <Loading /> : null}
         <div className="gridContainer">
-          <Grid container justify="center" spacing={16}>
+          <Grid container spacing={16} alignContent="stretch">
             {this.state.dataArr.map(data => (
               <JobCard
                 key={data.id}
