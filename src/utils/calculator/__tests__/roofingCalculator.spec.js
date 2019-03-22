@@ -66,7 +66,7 @@ describe("Roofing Quantity Calculator", () => {
   it("will calculate the quantity of roofing quantities with mock data", () => {
     MockMeasurements.wasteFactor = 0;
     let quantities = calculator.getRoofingProductQuantities(MockMeasurements);
-    expect(quantities.shingles).toEqual(3045);
+    expect(quantities.shingles).toEqual(105);
     expect(quantities.nails).toEqual(6);
     expect(quantities.ridgeCaps).toEqual(198);
     expect(quantities.dripEdge).toEqual(149);
