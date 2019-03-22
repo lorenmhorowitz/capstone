@@ -113,7 +113,7 @@ const getStepFlashingQuantity = Measurements => {
 
 const getRoofingProductQuantities = Measurements => {
   return {
-    shingles: getShinglesQuantity(Measurements),
+    shingles: getBundleQuantity(Measurements),
     nails: getNailsQuantity(Measurements),
     ridgeCaps: getCapShinglesQuantity(Measurements),
     dripEdge: getRakesQuantity(Measurements) + getGuttersQuantity(Measurements),
