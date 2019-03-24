@@ -11,6 +11,7 @@ import ProductCard from "../components/ProductCard";
 import request from "request";
 import SideBar from "../components/SideBar";
 import Typography from "@material-ui/core/Typography";
+import calculator from "../utils/calculator/calculator";
 
 const mapStateToProps = state => {
   return {
@@ -75,6 +76,12 @@ class Job extends Component {
   render() {
     let index = 0;
     let roofingProductCards = [];
+    let roofingQuantities;
+    if (this.state.jobDetails.hasOwnProperty("measurements")) {
+      roofingQuantities = calculator.getRoofingProductQuantities(
+        this.state.jobDetails.measurements
+      );
+    }
     if (!this.state.loading) {
       const jobDetails = this.state.jobDetails.products.roofing;
       Object.keys(jobDetails).map(category => {
@@ -89,7 +96,7 @@ class Job extends Component {
                 productImage={currentProduct.image}
                 description={currentProduct.name}
                 cost={currentProduct.price}
-                quantity={currentProduct.quantity}
+                quantity={roofingQuantities[category]}
               />
             );
           }

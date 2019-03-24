@@ -10,20 +10,18 @@ const getNumberOfSquares = Measurements => {
 };
 
 const getWasteFactorAdjustedMeasurements = Measurements => {
-  const {
-    squareFootage,
-    ridgeLength,
-    gutterLength,
-    rakeLength,
-    wasteFactor,
-    stepFlashing
-  } = Measurements;
+  const squareFootage = Measurements.roof.pitch[0].area;
+  const ridgeLength = Measurements.roof.ridges_hips.length;
+  const gutterLength = Measurements.roof.gutters_eaves.length;
+  const rakeLength = Measurements.roof.rakes.length;
+  const wasteFactor = 0.15;
+  const stepFlashing = Measurements.roof.step_flashing.length;
   return {
     squareFootage: squareFootage + squareFootage * wasteFactor,
     ridgeLength: ridgeLength + ridgeLength * wasteFactor,
     gutterLength: gutterLength * (1 + wasteFactor),
     rakeLength: rakeLength * (1 + wasteFactor),
-    wasteFactor: 0,
+    wasteFactor: wasteFactor,
     length: stepFlashing + stepFlashing * wasteFactor
   };
 };
@@ -41,9 +39,10 @@ const getShinglesQuantity = Measurements => {
 };
 
 const getNailsQuantity = Measurements => {
-  return (
-    getShinglesNailsQuantity(Measurements) +
-    getUnderlaymentNailsQuantity(Measurements)
+  return Math.ceil(
+    (getShinglesNailsQuantity(Measurements) +
+      getUnderlaymentNailsQuantity(Measurements)) /
+      3150
   );
 };
 
@@ -83,7 +82,9 @@ const getUnderlaymentNailsQuantity = Measurements => {
 const getGuttersQuantity = Measurements => {
   // Returning the length of the Gutter and Eave
   // Sold per foot
-  return getWasteFactorAdjustedMeasurements(Measurements).gutterLength;
+  return Math.ceil(
+    getWasteFactorAdjustedMeasurements(Measurements).gutterLength
+  );
 };
 
 // Rake
@@ -110,6 +111,16 @@ const getStepFlashingQuantity = Measurements => {
   );
 };
 
+const getRoofingProductQuantities = Measurements => {
+  return {
+    shingles: getBundleQuantity(Measurements),
+    nails: getNailsQuantity(Measurements),
+    ridgeCaps: getCapShinglesQuantity(Measurements),
+    dripEdge: getRakesQuantity(Measurements) + getGuttersQuantity(Measurements),
+    underlayment: getUnderlaymentQuantity(Measurements)
+  };
+};
+
 export default {
   getBundleQuantity,
   getCapShinglesQuantity,
@@ -118,6 +129,7 @@ export default {
   getNailsQuantity,
   getNumberOfSquares,
   getRakesQuantity,
+  getRoofingProductQuantities,
   getShinglesQuantity,
   getStepFlashingQuantity,
   getUnderlaymentQuantity,
