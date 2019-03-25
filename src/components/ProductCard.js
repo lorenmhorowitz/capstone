@@ -7,6 +7,8 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography/Typography";
+import calculator from "../utils/calculator/calculator";
+import formatter from "../utils/formatter";
 
 const styles = {
   button: {
@@ -72,45 +74,55 @@ class ProductCard extends Component {
     this.setState({ open: true });
   };
 
-  handleClose = obj => {
+  handleClose = () => {
     this.setState({ open: false });
   };
 
   render() {
     const { classes } = this.props;
     return (
-      <div>
-        <Card className={classes.card}>
-          <CardActionArea onClick={this.showModal}>
-            <CardContent>
-              <Typography className={classes.title}>
-                {this.props.title}
+      <Card className={classes.card}>
+        <CardActionArea onClick={this.showModal}>
+          <CardContent>
+            <Typography className={classes.title}>
+              {this.props.productTitle}
+            </Typography>
+          </CardContent>
+          <CardMedia
+            className={classes.media}
+            component="img"
+            image={this.props.image}
+            title={this.props.title}
+          />
+          <CardContent>
+            <Typography className={classes.brand}>
+              {this.props.brand}
+            </Typography>
+            <Typography className={classes.description}>
+              {this.props.name}
+            </Typography>
+            <div className={classes.cost}>
+              <Typography>Quantity: {this.props.quantity}</Typography>{" "}
+              <Typography>
+                Cost: ${formatter.format(this.props.price)} each
               </Typography>
-            </CardContent>
-            <CardMedia
-              className={classes.media}
-              component="img"
-              image={this.props.image}
-              title={this.props.title}
-            />
-            <CardContent>
-              <Typography className={classes.brand}>
-                {this.props.brand}
-              </Typography>
-              <Typography className={classes.description}>
-                {this.props.name}
+              <Typography>
+                Subtotal: $
+                {formatter.format(
+                  calculator.getSubtotal(this.props.price, this.props.quantity)
+                )}
               </Typography>
               <div className={classes.cost}>
                 <Typography>
                   Cost: ${this.props.price} Quantity: {this.props.quantity}
                 </Typography>
               </div>
-            </CardContent>
-            <div>
-              <p />
             </div>
-          </CardActionArea>
-        </Card>
+          </CardContent>
+          <div>
+            <p />
+          </div>
+        </CardActionArea>
         <ProductModal
           image={this.props.image}
           itemID={this.props.itemID}
@@ -124,7 +136,7 @@ class ProductCard extends Component {
           brand={this.props.brand}
           weight={this.props.weight}
         />
-      </div>
+      </Card>
     );
   }
 }

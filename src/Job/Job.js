@@ -11,7 +11,7 @@ import ProductCard from "../components/ProductCard";
 import request from "request";
 import SideBar from "../components/SideBar";
 import Typography from "@material-ui/core/Typography";
-import calculator from "../calculator/calculator";
+import calculator from "../utils/calculator/calculator";
 
 const mapStateToProps = state => {
   return {
@@ -98,9 +98,9 @@ class Job extends Component {
                 name={currentProduct.name}
                 otherProducts={jobDetails}
                 price={currentProduct.price}
-                quantity={currentProduct.quantity}
                 title={this.toUpperCaseAndSplit(category)}
                 weight={currentProduct.weight}
+                quantity={roofingQuantities[category]}
               />
             );
           }

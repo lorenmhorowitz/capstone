@@ -80,6 +80,8 @@ class ProductModal extends Component {
   }
 
   componentWillMount() {
+    console.log("rendering modal");
+
     let product = {
       brand: this.props.brand,
       image: this.props.image,
