@@ -10,20 +10,18 @@ const getNumberOfSquares = Measurements => {
 };
 
 const getWasteFactorAdjustedMeasurements = Measurements => {
-  const {
-    squareFootage,
-    ridgeLength,
-    gutterLength,
-    rakeLength,
-    wasteFactor,
-    stepFlashing
-  } = Measurements;
+  const squareFootage = Measurements.roof.pitch[0].area;
+  const ridgeLength = Measurements.roof.ridges_hips.length;
+  const gutterLength = Measurements.roof.gutters_eaves.length;
+  const rakeLength = Measurements.roof.rakes.length;
+  const wasteFactor = 0.15;
+  const stepFlashing = Measurements.roof.step_flashing.length;
   return {
     squareFootage: squareFootage + squareFootage * wasteFactor,
     ridgeLength: ridgeLength + ridgeLength * wasteFactor,
     gutterLength: gutterLength * (1 + wasteFactor),
     rakeLength: rakeLength * (1 + wasteFactor),
-    wasteFactor: 0,
+    wasteFactor: wasteFactor,
     length: stepFlashing + stepFlashing * wasteFactor
   };
 };
@@ -41,9 +39,10 @@ const getShinglesQuantity = Measurements => {
 };
 
 const getNailsQuantity = Measurements => {
-  return (
-    getShinglesNailsQuantity(Measurements) +
-    getUnderlaymentNailsQuantity(Measurements)
+  return Math.ceil(
+    (getShinglesNailsQuantity(Measurements) +
+      getUnderlaymentNailsQuantity(Measurements)) /
+      3150
   );
 };
 
@@ -69,6 +68,7 @@ const getUnderlaymentQuantity = Measurements => {
     getWasteFactorAdjustedMeasurements(Measurements).squareFootage / 99
   );
 };
+
 // Underlayment Nails
 const getUnderlaymentNailsQuantity = Measurements => {
   // Assuming 2 nails per square foot
@@ -82,8 +82,11 @@ const getUnderlaymentNailsQuantity = Measurements => {
 const getGuttersQuantity = Measurements => {
   // Returning the length of the Gutter and Eave
   // Sold per foot
-  return getWasteFactorAdjustedMeasurements(Measurements).gutterLength;
+  return Math.ceil(
+    getWasteFactorAdjustedMeasurements(Measurements).gutterLength
+  );
 };
+
 // Rake
 const getRakesQuantity = Measurements => {
   // Industry standard of 10.5 feet
@@ -91,6 +94,7 @@ const getRakesQuantity = Measurements => {
     getWasteFactorAdjustedMeasurements(Measurements).rakeLength / 10.5
   );
 };
+
 // Flashing
 const getFlashingQuantity = Measurements => {
   // Industry standard of 50 feet
@@ -98,12 +102,23 @@ const getFlashingQuantity = Measurements => {
     getWasteFactorAdjustedMeasurements(Measurements).ridgeLength / 50
   );
 };
+
 // Step flashing
 const getStepFlashingQuantity = Measurements => {
   // Assume 7 inch with 2 inch overlap overlap, 12-7 = 5
   return Math.ceil(
     (getWasteFactorAdjustedMeasurements(Measurements).length * 12) / 5
   );
+};
+
+const getRoofingProductQuantities = Measurements => {
+  return {
+    shingles: getBundleQuantity(Measurements),
+    nails: getNailsQuantity(Measurements),
+    ridgeCaps: getCapShinglesQuantity(Measurements),
+    dripEdge: getRakesQuantity(Measurements) + getGuttersQuantity(Measurements),
+    underlayment: getUnderlaymentQuantity(Measurements)
+  };
 };
 
 export default {
@@ -114,6 +129,7 @@ export default {
   getNailsQuantity,
   getNumberOfSquares,
   getRakesQuantity,
+  getRoofingProductQuantities,
   getShinglesQuantity,
   getStepFlashingQuantity,
   getUnderlaymentQuantity,

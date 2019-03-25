@@ -6,7 +6,8 @@ import { LOGIN } from "../constants/actionTypes";
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import request from "request";
-import TextField from "../components/TextField";
+import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
 
 const mapStateToProps = state => ({ ...state.auth });
 
@@ -95,24 +96,65 @@ class Login extends Component {
       return <Redirect push to="/home" />;
     }
 
-    const errorMessage = <p id="error">Unable to log in. Please try again.</p>;
+    const errorMessage = (
+      <Typography id="error"> Unable to log in. Please try again.</Typography>
+    );
 
     return (
-      <div className="Img" id="scroll">
-        <div id="loginSquare">
-          <div id="title">
-            <span id="Corner">Corner</span>
-            <span id="Stone">Stone</span>
+      <div className="Img">
+        <div className="grid-container">
+          <div className="grid-item" />
+          <div className="grid-item loginSquare">
+            <div id="title">
+              <span id="Corner">Corner</span>
+              <span id="Stone">Stone</span>
+            </div>
+            <form
+              className="textField"
+              onSubmit={e => {
+                e.preventDefault();
+              }}
+            >
+              <TextField
+                className="fieldStyle"
+                label="email"
+                name="email"
+                type="email"
+                onChange={this.handleEmailChange}
+                onKeyPress={ev => {
+                  if (ev.key === "Enter") {
+                    this.handleLogin();
+                  }
+                }}
+              />
+            </form>
+            <form
+              className="textField"
+              onSubmit={e => {
+                e.preventDefault();
+              }}
+            >
+              <TextField
+                className="fieldStyle"
+                label="password"
+                name="password"
+                type="password"
+                onChange={this.handlePasswordChange}
+                onKeyPress={ev => {
+                  if (ev.key === "Enter") {
+                    this.handleLogin();
+                  }
+                }}
+              />
+            </form>
+            <Button id="Login" onClick={this.handleLogin}>
+              Log In
+            </Button>
+            <Button id="HoverLogin" onClick={this.handleHoverLogin}>
+              Login With Hover
+            </Button>
+            {this.state.loginError ? errorMessage : null}
           </div>
-          <TextField label="email" handler={this.handleEmailChange} />
-          <TextField label="password" handler={this.handlePasswordChange} />
-          <Button id="Login" onClick={this.handleLogin}>
-            Log In
-          </Button>
-          <Button id="HoverLogin" onClick={this.handleHoverLogin}>
-            Login With Hover
-          </Button>
-          {this.state.loginError ? errorMessage : null}
         </div>
         {this.state.loading ? <Loading /> : null}
       </div>

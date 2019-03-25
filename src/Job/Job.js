@@ -11,6 +11,7 @@ import ProductCard from "../components/ProductCard";
 import request from "request";
 import SideBar from "../components/SideBar";
 import Typography from "@material-ui/core/Typography";
+import calculator from "../utils/calculator/calculator";
 
 const mapStateToProps = state => {
   return {
@@ -75,6 +76,12 @@ class Job extends Component {
   render() {
     let index = 0;
     let roofingProductCards = [];
+    let roofingQuantities;
+    if (this.state.jobDetails.hasOwnProperty("measurements")) {
+      roofingQuantities = calculator.getRoofingProductQuantities(
+        this.state.jobDetails.measurements
+      );
+    }
     if (!this.state.loading) {
       const jobDetails = this.state.jobDetails.products.roofing;
       Object.keys(jobDetails).map(category => {
@@ -89,7 +96,7 @@ class Job extends Component {
                 productImage={currentProduct.image}
                 description={currentProduct.name}
                 cost={currentProduct.price}
-                quantity={currentProduct.quantity}
+                quantity={roofingQuantities[category]}
               />
             );
           }
@@ -163,11 +170,9 @@ class Job extends Component {
           <div style={{ paddingTop: "2em" }} ref={this.roofingRef}>
             <Typography id="header2">Roofing Information</Typography>
             <Divider id="bar1" />
-            <div className="grid-container">
-              <Grid container spacing={16} alignContent="center">
-                {roofingProductCards}
-              </Grid>
-            </div>
+            <Grid container spacing={16} alignContent="center">
+              {roofingProductCards}
+            </Grid>
           </div>
         ) : null}
 
@@ -177,11 +182,9 @@ class Job extends Component {
           <div style={{ paddingTop: "2em" }} ref={this.sidingRef}>
             <Typography id="header">Siding Information</Typography>
             <Divider id="bar1" />
-            <div className="grid-container">
-              <Grid container spacing={16} alignContent="center">
-                {sidingProductCards}
-              </Grid>
-            </div>
+            <Grid container spacing={16} alignContent="center">
+              {sidingProductCards}
+            </Grid>
           </div>
         ) : null}
 
@@ -191,15 +194,11 @@ class Job extends Component {
           <div style={{ paddingTop: "2em" }} ref={this.windowsRef}>
             <Typography id="header">Windows Information</Typography>
             <Divider id="bar1" />
-            <div className="grid-container">
-              <Grid container spacing={16} alignContent="center">
-                {windowsProductCards}
-              </Grid>
-            </div>
-            <div />
+            <Grid container spacing={16} alignContent="center">
+              {windowsProductCards}
+            </Grid>
           </div>
         ) : null}
-
         <div />
       </div>
     );

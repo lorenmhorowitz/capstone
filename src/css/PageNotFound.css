@@ -1,0 +1,37 @@
+.Img {
+  background-image: url("https://cdn.discordapp.com/attachments/489154865344282625/508368921666256936/Office.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  position: fixed;
+  overflow-y: auto;
+}
+
+.loginSquare {
+  background-color: rgba(38, 38, 38, 0.8);
+  border: 2px solid #f96302;
+  height: 50%;
+  width: 35vw;
+  min-height: 500px;
+  min-width: 350px;
+  margin: auto;
+  margin-top: 15vh;
+  text-align: center;
+}
+
+#pageNotFound {
+  color: white;
+  margin-top: 15%;
+  text-align: center;
+}
+
+#returnToLogin {
+  background-color: gray;
+  color: white;
+  margin-top: 5%;
+  text-align: center;
+}

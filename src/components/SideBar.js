@@ -1,3 +1,4 @@
+import "../css/SideBar.css";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
@@ -6,7 +7,6 @@ import { withStyles } from "@material-ui/core/styles";
 import { List, ListItem, ListItemText, ListItemIcon } from "@material-ui/core";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import "../css/SideBar.css";
 
 const styles = {
   drawerPaperOverrides: {
