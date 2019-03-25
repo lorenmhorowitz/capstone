@@ -88,6 +88,7 @@ class ProductInfo extends Component {
   }
 
   componentWillMount() {
+    console.log("mounting new modal");
     this.setState({
       currentQuantity: this.props.quantity
     });
@@ -100,7 +101,6 @@ class ProductInfo extends Component {
   };
 
   addQuantity = () => {
-    console.log("adding");
     this.setState({ currentQuantity: this.state.currentQuantity + 1 });
   };
 
@@ -130,7 +130,7 @@ class ProductInfo extends Component {
             -
           </Button>
           <Typography align="center" className={classes.quantityField}>
-            {this.state.currentQuantity}
+            {this.props.quantity}
           </Typography>
           <Button
             variant="outlined"

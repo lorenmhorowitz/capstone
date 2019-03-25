@@ -98,6 +98,7 @@ class Job extends Component {
                 name={currentProduct.name}
                 otherProducts={jobDetails}
                 price={currentProduct.price}
+                roofingQuantity={roofingQuantities}
                 title={this.toUpperCaseAndSplit(category)}
                 weight={currentProduct.weight}
                 quantity={roofingQuantities[category]}

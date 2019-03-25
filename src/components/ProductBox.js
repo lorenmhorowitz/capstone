@@ -22,7 +22,7 @@ const styles = {
 
 class ProductBox extends Component {
   switchProduct = () => {
-    this.props.onChange(this.props.product);
+    this.props.onChange(this.props.product, this.props.quantity);
   };
 
   render() {

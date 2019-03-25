@@ -124,6 +124,7 @@ class ProductCard extends Component {
           </div>
         </CardActionArea>
         <ProductModal
+          brand={this.props.brand}
           image={this.props.image}
           itemID={this.props.itemID}
           model={this.props.model}
@@ -133,7 +134,7 @@ class ProductCard extends Component {
           otherProducts={this.props.otherProducts}
           price={this.props.price}
           quantity={this.props.quantity}
-          brand={this.props.brand}
+          roofingQuantity={this.props.roofingQuantity}
           weight={this.props.weight}
         />
       </Card>

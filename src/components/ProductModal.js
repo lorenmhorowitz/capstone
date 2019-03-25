@@ -1,3 +1,4 @@
+import calculator from "../utils/calculator/calculator";
 import Modal from "@material-ui/core/Modal";
 import ProductBox from "./ProductBox";
 import ProductInfo from "./ProductInfo";
@@ -68,20 +69,19 @@ class ProductModal extends Component {
     super(props);
 
     this.state = {
+      brand: "",
       image: "",
       initProduct: {},
       itemID: "",
       model: "",
       name: "",
       price: "",
-      brand: "",
+      quantity: "",
       weight: ""
     };
   }
 
   componentWillMount() {
-    console.log("rendering modal");
-
     let product = {
       brand: this.props.brand,
       image: this.props.image,
@@ -106,7 +106,9 @@ class ProductModal extends Component {
     });
   }
 
-  changeModal = obj => {
+  changeModal = (obj, quantity) => {
+    console.log("changing quantity", obj.quantity);
+
     this.setState({
       brand: obj.brand,
       image: obj.image,
@@ -114,6 +116,7 @@ class ProductModal extends Component {
       model: obj.model,
       name: obj.name,
       price: obj.price,
+      quantity: quantity,
       weight: obj.weight
     });
   };
@@ -133,27 +136,44 @@ class ProductModal extends Component {
   };
 
   render() {
+    console.log("roofing quantity: ", this.props.roofingQuantity);
+
     const { classes } = this.props;
 
     let otherProducts = this.props.otherProducts;
     let index = 0;
     let productList = [];
+    let foundProductModel = false;
+    let modelList = [];
+
     Object.keys(otherProducts).map(category => {
       Object.keys(otherProducts[category]).map(product => {
+        productList.push(
+          <ProductBox
+            key={index++}
+            onChange={this.changeModal}
+            product={otherProducts[category][product].products[0]}
+            quantity={this.props.roofingQuantity[category]}
+            className={classes.box}
+          />
+        );
+
         if (
-          this.props.itemID !==
-          otherProducts[category][product].products[0].item_id
+          this.props.model ===
+          otherProducts[category][product].products[0].model
         ) {
-          productList.push(
-            <ProductBox
-              key={index++}
-              onChange={this.changeModal}
-              product={otherProducts[category][product].products[0]}
-              className={classes.box}
-            />
-          );
+          foundProductModel = true;
         }
       });
+
+      if (foundProductModel === true) {
+        modelList = productList;
+        foundProductModel = false;
+        productList = [];
+        return;
+      } else {
+        productList = [];
+      }
     });
 
     return (
@@ -175,7 +195,7 @@ class ProductModal extends Component {
               />
             </div>
           </div>
-          <div className={classes.otherProducts}>{productList.slice(0, 5)}</div>
+          <div className={classes.otherProducts}>{modelList.slice(0, 5)}</div>
         </div>
       </Modal>
     );
