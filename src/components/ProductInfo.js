@@ -24,13 +24,13 @@ const styles = {
     minWidth: "40px"
   },
   model: {
-    fontSize: 20,
+    fontSize: 18,
     marginLeft: "10px",
     marginRight: "10px",
-    marginTop: "20px"
+    marginTop: "10px"
   },
   name: {
-    fontSize: 20,
+    fontSize: 18,
     marginLeft: "10px",
     marginRight: "10px"
   },
@@ -46,10 +46,10 @@ const styles = {
     minWidth: "40px"
   },
   price: {
-    fontSize: 20,
+    fontSize: 18,
     marginLeft: "10px",
     marginRight: "10px",
-    marginTop: "6px"
+    marginTop: "15px"
   },
   quantityContainer: {
     display: "flex",
@@ -65,14 +65,27 @@ const styles = {
     width: "30px"
   },
   quantityTitle: {
-    fontSize: 24,
+    fontSize: 21,
     marginLeft: "10px",
-    marginTop: "30px"
+    marginTop: "20px"
+  },
+  subtotal: {
+    fontSize: 18,
+    marginLeft: "10px",
+    marginRight: "10px",
+    marginTop: "10px"
   },
   title: {
     fontSize: 26,
     fontWeight: "bold",
+    marginTop: "-20px",
     textAlign: "center"
+  },
+  weight: {
+    fontSize: 18,
+    marginLeft: "10px",
+    marginRight: "10px",
+    marginTop: "6px"
   }
 };
 
@@ -81,7 +94,8 @@ class ProductInfo extends Component {
     super(props);
 
     this.state = {
-      currentQuantity: this.props.quantity
+      currentQuantity: this.props.quantity,
+      subtotal: this.props.price * this.props.quantity
     };
   }
 
@@ -92,13 +106,20 @@ class ProductInfo extends Component {
   }
 
   decreaseQuantity = () => {
-    if (this.state.currentQuantity !== 0) {
-      this.props.decreaseQuantity();
+    if (this.props.quantity === 0) {
+      return;
     }
+    this.props.decreaseQuantity();
+    this.setState({
+      subtotal: this.props.price * this.props.quantity - this.props.price
+    });
   };
 
   addQuantity = () => {
     this.props.addQuantity();
+    this.setState({
+      subtotal: this.props.price * this.props.quantity + this.props.price
+    });
   };
 
   render() {
@@ -114,7 +135,7 @@ class ProductInfo extends Component {
         <Typography className={classes.itemID}>
           Id: {this.props.itemID === undefined ? "N/A" : this.props.itemID}
         </Typography>
-        <Typography className={classes.price}>
+        <Typography className={classes.weight}>
           Weight: {this.props.weight}
         </Typography>
         <Typography className={classes.quantityTitle}> Quantity</Typography>
@@ -137,6 +158,12 @@ class ProductInfo extends Component {
             +
           </Button>
         </div>
+        <Typography className={classes.price}>
+          Price per unit: ${this.props.price}
+        </Typography>
+        <Typography className={classes.subtotal}>
+          Subtotal: ${this.state.subtotal.toFixed(2)}
+        </Typography>
       </div>
     );
   }
