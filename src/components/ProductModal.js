@@ -76,6 +76,7 @@ class ProductModal extends Component {
       name: this.props.name,
       price: this.props.price,
       quantity: this.props.quantity,
+      subtotal: this.props.price * this.props.quantity,
       weight: this.props.weight
     };
 
@@ -89,12 +90,16 @@ class ProductModal extends Component {
       name: this.props.name,
       price: this.props.price,
       quantity: this.props.quantity,
+      subtotal: this.props.price * this.props.quantity,
       weight: this.props.weight
     };
   }
 
   addQuantity = () => {
-    this.setState({ currentQuantity: this.state.currentQuantity + 1 });
+    this.setState({
+      currentQuantity: this.state.currentQuantity + 1,
+      subtotal: (this.state.currentQuantity + 1) * this.state.price
+    });
   };
 
   changeModal = (obj, quantity) => {
@@ -107,6 +112,7 @@ class ProductModal extends Component {
       name: obj.name,
       price: obj.price,
       quantity: quantity,
+      subtotal: quantity * obj.price,
       weight: obj.weight
     });
   };
@@ -126,7 +132,10 @@ class ProductModal extends Component {
   };
 
   decreaseQuantity = () => {
-    this.setState({ currentQuantity: this.state.currentQuantity - 1 });
+    this.setState({
+      currentQuantity: this.state.currentQuantity - 1,
+      subtotal: (this.state.currentQuantity - 1) * this.state.price
+    });
   };
 
   render() {
@@ -191,6 +200,7 @@ class ProductModal extends Component {
                 name={this.state.name}
                 price={this.state.price}
                 quantity={this.state.currentQuantity}
+                subtotal={this.state.subtotal}
                 weight={this.state.weight}
               />
             </div>
