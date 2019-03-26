@@ -1,7 +1,5 @@
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import React, { Component } from "react";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
@@ -41,7 +39,11 @@ class ProductBox extends Component {
             <Typography className={classes.title}>
               {this.props.product.brand}
             </Typography>
-            <img className={classes.image} src={this.props.product.image} />
+            <img
+              className={classes.image}
+              src={this.props.product.image}
+              alt=""
+            />
           </CardActionArea>
         </Card>
       </div>
