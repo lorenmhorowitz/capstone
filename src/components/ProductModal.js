@@ -1,4 +1,3 @@
-import calculator from "../utils/calculator/calculator";
 import Modal from "@material-ui/core/Modal";
 import ProductBox from "./ProductBox";
 import ProductInfo from "./ProductInfo";
@@ -68,22 +67,9 @@ class ProductModal extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      brand: "",
-      image: "",
-      initProduct: {},
-      itemID: "",
-      model: "",
-      name: "",
-      price: "",
-      quantity: "",
-      weight: ""
-    };
-  }
-
-  componentWillMount() {
     let product = {
       brand: this.props.brand,
+      currentQuantity: this.props.quantity,
       image: this.props.image,
       itemID: this.props.itemID,
       model: this.props.model,
@@ -93,8 +79,9 @@ class ProductModal extends Component {
       weight: this.props.weight
     };
 
-    this.setState({
+    this.state = {
       brand: this.props.brand,
+      currentQuantity: this.props.quantity,
       image: this.props.image,
       initProduct: product,
       itemID: this.props.itemID,
@@ -103,12 +90,17 @@ class ProductModal extends Component {
       price: this.props.price,
       quantity: this.props.quantity,
       weight: this.props.weight
-    });
+    };
   }
+
+  addQuantity = () => {
+    this.setState({ currentQuantity: this.state.currentQuantity + 1 });
+  };
 
   changeModal = (obj, quantity) => {
     this.setState({
       brand: obj.brand,
+      currentQuantity: quantity,
       image: obj.image,
       itemID: obj.item_id,
       model: obj.model,
@@ -133,6 +125,10 @@ class ProductModal extends Component {
     this.props.onClose();
   };
 
+  decreaseQuantity = () => {
+    this.setState({ currentQuantity: this.state.currentQuantity - 1 });
+  };
+
   render() {
     const { classes } = this.props;
 
@@ -145,7 +141,7 @@ class ProductModal extends Component {
 
     Object.keys(otherProducts).map(category => {
       Object.keys(otherProducts[category]).map(product => {
-        if (this.props.roofingQuantity == undefined) {
+        if (this.props.roofingQuantity === undefined) {
           quantity = this.props.quantity;
         } else {
           quantity = this.props.roofingQuantity[category];
@@ -187,12 +183,14 @@ class ProductModal extends Component {
             </div>
             <div className={classes.productInfo}>
               <ProductInfo
+                addQuantity={this.addQuantity}
                 brand={this.state.brand}
+                decreaseQuantity={this.decreaseQuantity}
                 itemID={this.state.itemID}
                 model={this.state.model}
                 name={this.state.name}
                 price={this.state.price}
-                quantity={this.state.quantity}
+                quantity={this.state.currentQuantity}
                 weight={this.state.weight}
               />
             </div>

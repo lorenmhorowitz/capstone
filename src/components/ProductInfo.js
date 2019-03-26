@@ -1,6 +1,4 @@
 import Button from "@material-ui/core/Button";
-import Paper from "@material-ui/core/Paper";
-import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
@@ -88,7 +86,6 @@ class ProductInfo extends Component {
   }
 
   componentWillMount() {
-    console.log("mounting new modal");
     this.setState({
       currentQuantity: this.props.quantity
     });
@@ -96,12 +93,12 @@ class ProductInfo extends Component {
 
   decreaseQuantity = () => {
     if (this.state.currentQuantity !== 0) {
-      this.setState({ currentQuantity: this.state.currentQuantity - 1 });
+      this.props.decreaseQuantity();
     }
   };
 
   addQuantity = () => {
-    this.setState({ currentQuantity: this.state.currentQuantity + 1 });
+    this.props.addQuantity();
   };
 
   render() {
@@ -115,7 +112,7 @@ class ProductInfo extends Component {
           Model: {this.props.model}
         </Typography>
         <Typography className={classes.itemID}>
-          Id: {this.props.itemID == undefined ? "N/A" : this.props.itemID}
+          Id: {this.props.itemID === undefined ? "N/A" : this.props.itemID}
         </Typography>
         <Typography className={classes.price}>
           Weight: {this.props.weight}
@@ -130,7 +127,7 @@ class ProductInfo extends Component {
             -
           </Button>
           <Typography align="center" className={classes.quantityField}>
-            {this.state.currentQuantity}
+            {this.props.quantity}
           </Typography>
           <Button
             variant="outlined"
