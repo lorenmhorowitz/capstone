@@ -5,6 +5,12 @@ import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = {
+  container: {
+    display: "inline-block",
+    paddingRight: "8px",
+    height: "19%",
+    width: "19%"
+  },
   image: {
     display: "block",
     height: "40%",
@@ -26,14 +32,7 @@ class ProductBox extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div
-        style={{
-          display: "inline-block",
-          paddingRight: "8px",
-          height: "19%",
-          width: "19%"
-        }}
-      >
+      <div className={classes.container}>
         <Card>
           <CardActionArea onClick={this.switchProduct}>
             <Typography className={classes.title}>

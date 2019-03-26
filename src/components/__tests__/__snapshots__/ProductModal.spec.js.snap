@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product modal Product modal test successful 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WithStyles(ProductModal)
+    brand="Owens Corning"
+    image="https://images.homedepot-static.com/productImages/271746c1-8a65-4cd8-86d7-bdd4e80e9f5e/svn/onyx-black-owens-corning-roof-shingles-786353-64_1000.jpg"
+    model="786353"
+    name="Oakridge Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)"
+    onClose={[Function]}
+    open="false"
+    price={27}
+    quantity={3}
+    roofingQuantity={
+      Object {
+        "dripEdge": 150,
+        "nails": 6,
+        "ridgeCaps": 119,
+        "shingles": 108,
+        "underlayment": 37,
+      }
+    }
+    weight={13.5}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "brand": "Owens Corning",
+      "classes": Object {
+        "box": "ProductModal-box-1",
+        "brand": "ProductModal-brand-8",
+        "image": "ProductModal-image-2",
+        "imageContainer": "ProductModal-imageContainer-3",
+        "modal": "ProductModal-modal-4",
+        "name": "ProductModal-name-5",
+        "otherProducts": "ProductModal-otherProducts-9",
+        "price": "ProductModal-price-6",
+        "productInfo": "ProductModal-productInfo-7",
+      },
+      "image": "https://images.homedepot-static.com/productImages/271746c1-8a65-4cd8-86d7-bdd4e80e9f5e/svn/onyx-black-owens-corning-roof-shingles-786353-64_1000.jpg",
+      "itemID": undefined,
+      "model": "786353",
+      "name": "Oakridge Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
+      "onClose": [Function],
+      "open": "false",
+      "otherProducts": undefined,
+      "price": 27,
+      "quantity": 3,
+      "roofingQuantity": Object {
+        "dripEdge": 150,
+        "nails": 6,
+        "ridgeCaps": 119,
+        "shingles": 108,
+        "underlayment": 37,
+      },
+      "weight": 13.5,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "brand": "Owens Corning",
+        "classes": Object {
+          "box": "ProductModal-box-1",
+          "brand": "ProductModal-brand-8",
+          "image": "ProductModal-image-2",
+          "imageContainer": "ProductModal-imageContainer-3",
+          "modal": "ProductModal-modal-4",
+          "name": "ProductModal-name-5",
+          "otherProducts": "ProductModal-otherProducts-9",
+          "price": "ProductModal-price-6",
+          "productInfo": "ProductModal-productInfo-7",
+        },
+        "image": "https://images.homedepot-static.com/productImages/271746c1-8a65-4cd8-86d7-bdd4e80e9f5e/svn/onyx-black-owens-corning-roof-shingles-786353-64_1000.jpg",
+        "itemID": undefined,
+        "model": "786353",
+        "name": "Oakridge Algae Resistant Onyx Black Laminate Architectural Shingles (32.8 sq. ft. per Bundle)",
+        "onClose": [Function],
+        "open": "false",
+        "otherProducts": undefined,
+        "price": 27,
+        "quantity": 3,
+        "roofingQuantity": Object {
+          "dripEdge": 150,
+          "nails": 6,
+          "ridgeCaps": 119,
+          "shingles": 108,
+          "underlayment": 37,
+        },
+        "weight": 13.5,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
