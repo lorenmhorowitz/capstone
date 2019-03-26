@@ -107,8 +107,6 @@ class ProductModal extends Component {
   }
 
   changeModal = (obj, quantity) => {
-    console.log("changing quantity", obj.quantity);
-
     this.setState({
       brand: obj.brand,
       image: obj.image,
@@ -136,8 +134,6 @@ class ProductModal extends Component {
   };
 
   render() {
-    console.log("roofing quantity: ", this.props.roofingQuantity);
-
     const { classes } = this.props;
 
     let otherProducts = this.props.otherProducts;
@@ -145,15 +141,21 @@ class ProductModal extends Component {
     let productList = [];
     let foundProductModel = false;
     let modelList = [];
+    let quantity;
 
     Object.keys(otherProducts).map(category => {
       Object.keys(otherProducts[category]).map(product => {
+        if (this.props.roofingQuantity == undefined) {
+          quantity = this.props.quantity;
+        } else {
+          quantity = this.props.roofingQuantity[category];
+        }
         productList.push(
           <ProductBox
             key={index++}
             onChange={this.changeModal}
             product={otherProducts[category][product].products[0]}
-            quantity={this.props.roofingQuantity[category]}
+            quantity={quantity}
             className={classes.box}
           />
         );

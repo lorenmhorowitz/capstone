@@ -83,7 +83,7 @@ class ProductInfo extends Component {
     super(props);
 
     this.state = {
-      currentQuantity: 0
+      currentQuantity: this.props.quantity
     };
   }
 
@@ -130,7 +130,7 @@ class ProductInfo extends Component {
             -
           </Button>
           <Typography align="center" className={classes.quantityField}>
-            {this.props.quantity}
+            {this.state.currentQuantity}
           </Typography>
           <Button
             variant="outlined"
