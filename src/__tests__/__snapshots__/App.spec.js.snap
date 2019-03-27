@@ -32,6 +32,11 @@ ShallowWrapper {
         <Route
           component={[Function]}
           exact={true}
+          path="/createaccount"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
           path="/home"
         />
         <Route
@@ -66,6 +71,11 @@ ShallowWrapper {
             component={[Function]}
             exact={true}
             path="/login"
+          />,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/createaccount"
           />,
           <Route
             component={[Function]}
@@ -110,6 +120,19 @@ ShallowWrapper {
             "component": [Function],
             "exact": true,
             "path": "/login",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/createaccount",
           },
           "ref": null,
           "rendered": null,
@@ -190,6 +213,11 @@ ShallowWrapper {
           <Route
             component={[Function]}
             exact={true}
+            path="/createaccount"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
             path="/home"
           />
           <Route
@@ -224,6 +252,11 @@ ShallowWrapper {
               component={[Function]}
               exact={true}
               path="/login"
+            />,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/createaccount"
             />,
             <Route
               component={[Function]}
@@ -268,6 +301,19 @@ ShallowWrapper {
               "component": [Function],
               "exact": true,
               "path": "/login",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/createaccount",
             },
             "ref": null,
             "rendered": null,
