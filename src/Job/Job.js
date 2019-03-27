@@ -120,6 +120,7 @@ class Job extends Component {
               <ProductCard
                 brand={currentProduct.brand}
                 image={currentProduct.image}
+                itemID={currentProduct.item_id}
                 key={index++}
                 model={currentProduct.model}
                 name={currentProduct.name}
@@ -146,6 +147,7 @@ class Job extends Component {
               <ProductCard
                 brand={currentProduct.brand}
                 image={currentProduct.image}
+                itemID={currentProduct.item_id}
                 key={index++}
                 model={currentProduct.model}
                 name={currentProduct.name}

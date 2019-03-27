@@ -123,20 +123,22 @@ class ProductCard extends Component {
             <p />
           </div>
         </CardActionArea>
-        <ProductModal
-          brand={this.props.brand}
-          image={this.props.image}
-          itemID={this.props.itemID}
-          model={this.props.model}
-          name={this.props.name}
-          open={this.state.open}
-          onClose={this.handleClose}
-          otherProducts={this.props.otherProducts}
-          price={this.props.price}
-          quantity={this.props.quantity}
-          roofingQuantity={this.props.roofingQuantity}
-          weight={this.props.weight}
-        />
+        <div>
+          <ProductModal
+            brand={this.props.brand}
+            image={this.props.image}
+            itemID={this.props.itemID}
+            model={this.props.model}
+            name={this.props.name}
+            open={this.state.open}
+            onClose={this.handleClose}
+            otherProducts={this.props.otherProducts}
+            price={this.props.price}
+            quantity={this.props.quantity}
+            roofingQuantity={this.props.roofingQuantity}
+            weight={this.props.weight}
+          />
+        </div>
       </Card>
     );
   }

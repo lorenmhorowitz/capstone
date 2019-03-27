@@ -4,11 +4,18 @@ import ProductInfo from "./ProductInfo";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
+import "../css/Modal.css";
 
 const styles = {
   box: {
     height: "20%",
     width: "20%"
+  },
+  brand: {
+    fontSize: 22,
+    fontWeight: "bold",
+    marginTop: "2%",
+    marginLeft: "18%"
   },
   image: {
     height: "90%",
@@ -45,18 +52,13 @@ const styles = {
     float: "left",
     height: "100%",
     marginLeft: "30px",
-    marginTop: "30px",
-    width: "50%"
-  },
-  brand: {
-    fontSize: 22,
-    fontWeight: "bold",
     marginTop: "2%",
-    marginLeft: "18%"
+    width: "50%"
   },
   otherProducts: {
     clear: "both",
     height: "100%",
+    overflow: "hidden",
     paddingLeft: "10px",
     paddingTop: "40px",
     width: "100%"
@@ -148,10 +150,13 @@ class ProductModal extends Component {
     let modelList = [];
     let quantity;
 
+    console.log(otherProducts);
+
     Object.keys(otherProducts).map(category => {
       Object.keys(otherProducts[category]).map(product => {
         if (this.props.roofingQuantity === undefined) {
           quantity = this.props.quantity;
+          console.log("Could not find product id");
         } else {
           quantity = this.props.roofingQuantity[category];
         }

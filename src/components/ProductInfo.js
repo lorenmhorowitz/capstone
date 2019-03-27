@@ -4,9 +4,6 @@ import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = {
-  container: {
-    height: "90%"
-  },
   itemID: {
     fontSize: 20,
     marginLeft: "10px",
@@ -62,7 +59,7 @@ const styles = {
     fontWeight: "bold",
     height: "30px",
     paddingLeft: "10px",
-    width: "30px"
+    width: "10%"
   },
   quantityTitle: {
     fontSize: 21,
