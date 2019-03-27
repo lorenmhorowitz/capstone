@@ -123,7 +123,7 @@ class ProductModal extends Component {
     this.setState({
       brand: this.state.initProduct.brand,
       image: this.state.initProduct.image,
-      itemID: this.state.initProduct.item_id,
+      itemID: this.state.initProduct.itemID,
       model: this.state.initProduct.model,
       name: this.state.initProduct.name,
       price: this.state.initProduct.price,
@@ -150,13 +150,10 @@ class ProductModal extends Component {
     let modelList = [];
     let quantity;
 
-    console.log(otherProducts);
-
     Object.keys(otherProducts).map(category => {
       Object.keys(otherProducts[category]).map(product => {
         if (this.props.roofingQuantity === undefined) {
           quantity = this.props.quantity;
-          console.log("Could not find product id");
         } else {
           quantity = this.props.roofingQuantity[category];
         }

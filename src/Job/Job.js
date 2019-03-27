@@ -84,6 +84,7 @@ class Job extends Component {
     }
     if (!this.state.loading) {
       const jobDetails = this.state.jobDetails.products.roofing;
+
       Object.keys(jobDetails).map(category => {
         Object.keys(jobDetails[category]).map(product => {
           let currentProduct = jobDetails[category][product].products[0];

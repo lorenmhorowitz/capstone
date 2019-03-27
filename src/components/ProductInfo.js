@@ -156,7 +156,7 @@ class ProductInfo extends Component {
           </Button>
         </div>
         <Typography className={classes.price}>
-          Price per unit: ${this.props.price}
+          Price per unit: ${this.props.price.toFixed(2)}
         </Typography>
         <Typography className={classes.subtotal}>
           Subtotal: ${this.props.subtotal.toFixed(2)}
