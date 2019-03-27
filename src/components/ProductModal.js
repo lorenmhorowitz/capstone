@@ -157,15 +157,21 @@ class ProductModal extends Component {
         } else {
           quantity = this.props.roofingQuantity[category];
         }
-        productList.push(
-          <ProductBox
-            key={index++}
-            onChange={this.changeModal}
-            product={otherProducts[category][product].products[0]}
-            quantity={quantity}
-            className={classes.box}
-          />
-        );
+
+        if (
+          this.state.itemID !==
+          otherProducts[category][product].products[0].item_id
+        ) {
+          productList.push(
+            <ProductBox
+              key={index++}
+              onChange={this.changeModal}
+              product={otherProducts[category][product].products[0]}
+              quantity={quantity}
+              className={classes.box}
+            />
+          );
+        }
 
         if (
           this.props.model ===
@@ -187,7 +193,7 @@ class ProductModal extends Component {
 
     return (
       <Modal open={this.props.open} onClose={this.closeModal}>
-        <div className={classes.modal}>
+        <div id="modal" className={classes.modal}>
           <div className={classes.container}>
             <div className={classes.imageContainer}>
               <img className={classes.image} src={this.state.image} alt="" />
