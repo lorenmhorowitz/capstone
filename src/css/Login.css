@@ -14,11 +14,9 @@
 .loginSquare {
   background-color: rgba(38, 38, 38, 0.8);
   border: 2px solid #f96302;
-  height: 50%;
   width: 35vw;
   margin-left: 10vw;
   margin-top: 12vw;
-  min-height: 500px;
   min-width: 350px;
   position: relative;
   text-align: center;
@@ -31,7 +29,6 @@
   grid-gap: 0%;
   padding: 0%;
   margin: 0%;
-  height: 99%;
   justify-content: space-evenly;
 }
 
@@ -58,13 +55,24 @@
   font-weight: bolder;
 }
 
-#Login {
+#ButtonWithoutBottomMargin {
   background-color: #898989;
   border-radius: 8px;
   color: #ffffff;
   font-size: 1.2em;
   height: 60px;
   margin-top: 5%;
+  width: 75%;
+}
+
+#ButtonWithBottomMargin {
+  background-color: #898989;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.2em;
+  height: 60px;
+  margin-top: 5%;
+  margin-bottom: 5%;
   width: 75%;
 }
 
@@ -75,6 +83,7 @@
   font-size: 1.2em;
   height: 60px;
   margin-top: 5%;
+  margin-bottom: 5%;
   width: 75%;
 }
 

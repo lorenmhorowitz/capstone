@@ -1,13 +1,13 @@
+import calculator from "../utils/calculator/calculator";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
+import formatter from "../utils/formatter";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography/Typography";
-import calculator from "../utils/calculator/calculator";
-import formatter from "../utils/formatter";
 
 const styles = {
   button: {
@@ -85,11 +85,11 @@ class ProductCard extends Component {
             <div className={classes.cost}>
               <Typography>Quantity: {this.props.quantity}</Typography>{" "}
               <Typography>
-                Cost: ${formatter.format(this.props.cost)} each
+                Cost: ${formatter.money(this.props.cost)} each
               </Typography>
               <Typography>
                 Subtotal: $
-                {formatter.format(
+                {formatter.money(
                   calculator.getSubtotal(this.props.cost, this.props.quantity)
                 )}
               </Typography>

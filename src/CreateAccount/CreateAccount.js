@@ -1,6 +1,10 @@
 import "../css/Login.css";
 import Button from "@material-ui/core/Button";
 import { connect } from "react-redux";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
 import Loading from "../components/Loading";
 import { LOGIN } from "../constants/actionTypes";
 import React, { Component } from "react";
@@ -15,18 +19,18 @@ const mapDispatchToProps = dispatch => ({
   onLogin: username => dispatch({ type: LOGIN, payload: username })
 });
 
-const LOGIN_ACCOUNT_API =
-  "https://us-central1-hdqc-capstone.cloudfunctions.net/login";
+const CREATE_ACCOUNT_API =
+  "https://us-central1-hdqc-capstone.cloudfunctions.net/createAccount";
 
-class Login extends Component {
+class CreateAccount extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      createAccountRedirect: false,
+      dialogueOpen: false,
       homeRedirect: false,
-      hoverRedirect: false,
       loading: false,
-      loginError: false,
+      loginRedirect: false,
+      createAccountError: false,
       password: "",
       username: ""
     };
@@ -36,25 +40,25 @@ class Login extends Component {
     this.setState({ username: data.target.value });
   };
 
+  handleHomeRedirect = () => {
+    this.setState({ homeRedirect: true });
+  };
+
+  handleLoginRedirect = () => {
+    this.setState({ loginRedirect: true });
+  };
+
   handlePasswordChange = data => {
     this.setState({ password: data.target.value });
   };
 
-  handleHoverLogin = () => {
-    this.setState({ hoverRedirect: true });
-  };
-
   handleCreateAccount = () => {
-    this.setState({ createAccountRedirect: true });
-  };
-
-  handleLogin = () => {
     this.setState({
       loading: true
     });
     request.post(
       {
-        url: LOGIN_ACCOUNT_API,
+        url: CREATE_ACCOUNT_API,
         headers: {
           "Content-Type": "application/json"
         },
@@ -79,13 +83,13 @@ class Login extends Component {
           this.props.onLogin(this.state.username);
           this.setState({
             loading: false,
-            loginError: false,
-            homeRedirect: true
+            createAccountError: false,
+            dialogueOpen: true
           });
         } else {
           this.setState({
             loading: false,
-            loginError: true
+            createAccountError: true
           });
         }
       }.bind(this)
@@ -93,24 +97,44 @@ class Login extends Component {
   };
 
   render() {
-    if (this.state.createAccountRedirect) {
-      return <Redirect push to="/createaccount" />;
-    }
-
-    if (this.state.hoverRedirect) {
-      return <Redirect push to="/hover" />;
-    }
-
     if (this.state.homeRedirect) {
       return <Redirect push to="/home" />;
     }
 
+    if (this.state.loginRedirect) {
+      return <Redirect push to="/login" />;
+    }
+
     const errorMessage = (
-      <Typography id="error"> Unable to log in. Please try again.</Typography>
+      <Typography id="error">
+        {" "}
+        Unable to create account. Please try again.
+      </Typography>
+    );
+
+    const dialogue = (
+      <Dialog
+        open={this.state.dialogueOpen}
+        onClose={this.handleHomeRedirect}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Your account was created successfully.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={this.handleHomeRedirect} autoFocus>
+            Continue
+          </Button>
+        </DialogActions>
+      </Dialog>
     );
 
     return (
       <div className="Img">
+        {this.state.dialogueOpen ? dialogue : null}
         <div className="grid-container">
           <div className="grid-item" />
           <div className="grid-item loginSquare">
@@ -132,7 +156,7 @@ class Login extends Component {
                 onChange={this.handleEmailChange}
                 onKeyPress={ev => {
                   if (ev.key === "Enter") {
-                    this.handleLogin();
+                    this.handleCreateAccount();
                   }
                 }}
               />
@@ -151,24 +175,24 @@ class Login extends Component {
                 onChange={this.handlePasswordChange}
                 onKeyPress={ev => {
                   if (ev.key === "Enter") {
-                    this.handleLogin();
+                    this.handleCreateAccount();
                   }
                 }}
               />
             </form>
-            <Button id="ButtonWithoutBottomMargin" onClick={this.handleLogin}>
-              Log In
-            </Button>
             <Button
               id="ButtonWithoutBottomMargin"
               onClick={this.handleCreateAccount}
             >
               Create Account
             </Button>
-            <Button id="HoverLogin" onClick={this.handleHoverLogin}>
-              Login With Hover
+            <Button
+              id="ButtonWithBottomMargin"
+              onClick={this.handleLoginRedirect}
+            >
+              Return to Login
             </Button>
-            {this.state.loginError ? errorMessage : null}
+            {this.state.createAccountError ? errorMessage : null}
           </div>
         </div>
         {this.state.loading ? <Loading /> : null}
@@ -180,4 +204,4 @@ class Login extends Component {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Login);
+)(CreateAccount);
