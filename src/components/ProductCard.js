@@ -4,6 +4,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import formatter from "../utils/formatter";
+import ProductModal from "./ProductModal";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
@@ -44,6 +45,15 @@ const styles = {
     height: "150px",
     width: "150px"
   },
+  modal: {
+    background: "white",
+    outline: "none",
+    height: "75%",
+    margin: "auto",
+    marginTop: "5%",
+    padding: "10px",
+    width: "75%"
+  },
   title: {
     fontWeight: "bold",
     textAlign: "center"
@@ -55,15 +65,24 @@ class ProductCard extends Component {
     super(props);
     this.state = {
       quantity: 0,
-      price: 0
+      price: 0,
+      open: false
     };
   }
 
+  showModal = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
   render() {
-    const { classes } = this.props;
+    const { price, classes } = this.props;
     return (
       <Card className={classes.card}>
-        <CardActionArea>
+        <CardActionArea onClick={this.showModal}>
           <CardContent>
             <Typography className={classes.title}>
               {this.props.productTitle}
@@ -72,33 +91,54 @@ class ProductCard extends Component {
           <CardMedia
             className={classes.media}
             component="img"
-            image={this.props.productImage}
-            title={this.props.productTitle}
+            image={this.props.image}
+            title={this.props.title}
           />
           <CardContent>
             <Typography className={classes.brand}>
               {this.props.brand}
             </Typography>
             <Typography className={classes.description}>
-              {this.props.description}
+              {this.props.name}
             </Typography>
             <div className={classes.cost}>
               <Typography>Quantity: {this.props.quantity}</Typography>{" "}
               <Typography>
-                Cost: ${formatter.money(this.props.cost)} each
+                Cost: ${formatter.money(this.props.price)} each
               </Typography>
               <Typography>
                 Subtotal: $
                 {formatter.money(
-                  calculator.getSubtotal(this.props.cost, this.props.quantity)
+                  calculator.getSubtotal(this.props.price, this.props.quantity)
                 )}
               </Typography>
+              <div className={classes.price}>
+                <Typography>
+                  Cost: ${this.props.price} Quantity: {this.props.quantity}
+                </Typography>
+              </div>
             </div>
           </CardContent>
           <div>
             <p />
           </div>
         </CardActionArea>
+        <div>
+          <ProductModal
+            brand={this.props.brand}
+            image={this.props.image}
+            itemID={this.props.itemID}
+            model={this.props.model}
+            name={this.props.name}
+            open={this.state.open}
+            onClose={this.handleClose}
+            otherProducts={this.props.otherProducts}
+            price={this.props.price}
+            quantity={this.props.quantity}
+            roofingQuantity={this.props.roofingQuantity}
+            weight={this.props.weight}
+          />
+        </div>
       </Card>
     );
   }
