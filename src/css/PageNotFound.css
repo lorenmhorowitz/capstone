@@ -11,18 +11,6 @@
   overflow-y: auto;
 }
 
-.loginSquare {
-  background-color: rgba(38, 38, 38, 0.8);
-  border: 2px solid #f96302;
-  height: 50%;
-  width: 35vw;
-  min-height: 500px;
-  min-width: 350px;
-  margin: auto;
-  margin-top: 15vh;
-  text-align: center;
-}
-
 #pageNotFound {
   color: white;
   margin-top: 15%;

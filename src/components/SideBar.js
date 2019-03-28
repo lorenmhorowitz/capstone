@@ -128,7 +128,7 @@ class Sidebar extends Component {
                 </i>
               </ListItemIcon>
               <ListItemText
-                primary="Shop"
+                primary={`Order`}
                 primaryTypographyProps={{ color: "inherit" }}
               />
             </ListItem>
