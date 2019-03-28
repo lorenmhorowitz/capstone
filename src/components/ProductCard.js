@@ -79,7 +79,7 @@ class ProductCard extends Component {
   };
 
   render() {
-    const { price, classes } = this.props;
+    const { classes } = this.props;
     return (
       <Card className={classes.card}>
         <CardActionArea onClick={this.showModal}>

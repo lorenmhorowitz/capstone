@@ -1,7 +1,12 @@
 import "../css/job.css";
 import AppBar from "../components/AppBar";
+import Button from "@material-ui/core/Button";
 import calculator from "../utils/calculator/calculator";
 import { connect } from "react-redux";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
 import Divider from "@material-ui/core/Divider";
 import formatter from "../utils/formatter";
 import { Grid } from "@material-ui/core";
@@ -33,6 +38,8 @@ class Job extends Component {
     this.sidingRef = React.createRef();
     this.windowsRef = React.createRef();
     this.state = {
+      dialogueOpen: false,
+      homeRedirect: false,
       jobDetails: {},
       loading: true,
       subtotals: {
@@ -57,14 +64,25 @@ class Job extends Component {
           }
         },
         (error, response, body) => {
-          this.setState({
-            jobDetails: { ...body[0] },
-            loading: false
-          });
+          if (body[0]) {
+            this.setState({
+              jobDetails: { ...body[0] },
+              loading: false
+            });
+          } else {
+            this.setState({
+              dialogueOpen: true,
+              loading: false
+            });
+          }
         }
       );
     }
   }
+
+  handleHomeRedirect = () => {
+    this.setState({ homeRedirect: true });
+  };
 
   toUpperCaseAndSplit = value => {
     return value.replace(/([A-Z])/g, " $1").replace(/^./, function(str) {
@@ -89,9 +107,11 @@ class Job extends Component {
         this.state.jobDetails.measurements
       );
     }
-    if (!this.state.loading) {
+    if (
+      !this.state.loading &&
+      this.state.jobDetails.hasOwnProperty("measurements")
+    ) {
       const jobDetails = this.state.jobDetails.products.roofing;
-
       Object.keys(jobDetails).map(category => {
         Object.keys(jobDetails[category]).map(product => {
           let currentProduct = jobDetails[category][product].products[0];
@@ -123,7 +143,10 @@ class Job extends Component {
 
     let windowsProductCards = [];
     let windowsSubtotal = 0.0;
-    if (!this.state.loading) {
+    if (
+      !this.state.loading &&
+      this.state.jobDetails.hasOwnProperty("measurements")
+    ) {
       const jobDetails = this.state.jobDetails.products.windows;
       Object.keys(jobDetails).map(category => {
         Object.keys(jobDetails[category]).map(product => {
@@ -143,9 +166,10 @@ class Job extends Component {
                 name={currentProduct.name}
                 otherProducts={jobDetails}
                 price={currentProduct.price}
-                quantity={currentProduct.quantity}
+                roofingQuantity={roofingQuantities}
                 title={this.toUpperCaseAndSplit(category)}
                 weight={currentProduct.weight}
+                quantity={roofingQuantities[category]}
               />
             );
           }
@@ -155,7 +179,10 @@ class Job extends Component {
 
     let sidingProductCards = [];
     let sidingSubtotal = 0.0;
-    if (!this.state.loading) {
+    if (
+      !this.state.loading &&
+      this.state.jobDetails.hasOwnProperty("measurements")
+    ) {
       const jobDetails = this.state.jobDetails.products.siding;
       Object.keys(jobDetails).map(category => {
         Object.keys(jobDetails[category]).map(product => {
@@ -175,9 +202,10 @@ class Job extends Component {
                 name={currentProduct.name}
                 otherProducts={jobDetails}
                 price={currentProduct.price}
-                quantity={currentProduct.quantity}
+                roofingQuantity={roofingQuantities}
                 title={this.toUpperCaseAndSplit(category)}
                 weight={currentProduct.weight}
+                quantity={roofingQuantities[category]}
               />
             );
           }
@@ -272,6 +300,30 @@ class Job extends Component {
       </div>
     );
 
+    const dialogue = (
+      <Dialog
+        open={this.state.dialogueOpen}
+        onClose={this.handleHomeRedirect}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Unable to load job {window.location.pathname.replace("/job/", "")}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={this.handleHomeRedirect} autoFocus>
+            Return Home
+          </Button>
+        </DialogActions>
+      </Dialog>
+    );
+
+    if (this.state.homeRedirect) {
+      return <Redirect push to="/home" />;
+    }
+
     return (
       <div>
         <AppBar />
@@ -279,14 +331,7 @@ class Job extends Component {
         this.state.jobDetails.hasOwnProperty("location_line_1")
           ? loaded
           : null}
-        {!this.state.loading &&
-        !this.state.jobDetails.hasOwnProperty("location_line_1") ? (
-          <div id="mainWindow">
-            <Typography id="title1">
-              Unable to load job {window.location.pathname.replace("/job/", "")}
-            </Typography>
-          </div>
-        ) : null}
+        {this.state.dialogueOpen ? dialogue : null}
         {this.state.loading ? <Loading /> : null}
         <SideBar
           activeProjects={
