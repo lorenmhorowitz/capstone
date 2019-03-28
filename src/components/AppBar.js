@@ -1,7 +1,8 @@
 import AppBars from "@material-ui/core/AppBar";
+import { connect } from "react-redux";
 import { createMuiTheme, IconButton } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import styles from "../css/Component.css";
+import { LOGIN } from "../constants/actionTypes";
 import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -9,6 +10,7 @@ import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import styles from "../css/Component.css";
 import Toolbar from "@material-ui/core/Toolbar";
 import { withStyles } from "@material-ui/core/styles";
 
@@ -29,6 +31,12 @@ const muiTheme = createMuiTheme({
   }
 });
 
+const mapStateToProps = state => ({ ...state.auth });
+
+const mapDispatchToProps = dispatch => ({
+  onLogout: () => dispatch({ type: LOGIN, payload: null })
+});
+
 class AppBar extends Component {
   constructor(props) {
     super(props);
@@ -47,6 +55,7 @@ class AppBar extends Component {
   };
 
   handleLogout = () => {
+    this.props.onLogout();
     this.setState({ redirectLogin: true });
   };
 
@@ -105,4 +114,7 @@ AppBar.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(AppBar);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withStyles(styles)(AppBar));

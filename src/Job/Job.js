@@ -1,17 +1,18 @@
 import "../css/job.css";
 import AppBar from "../components/AppBar";
+import calculator from "../utils/calculator/calculator";
 import { connect } from "react-redux";
 import Divider from "@material-ui/core/Divider";
+import formatter from "../utils/formatter";
 import { Grid } from "@material-ui/core";
 import Information from "./Information";
 import Loading from "../components/Loading";
+import ProductCard from "../components/ProductCard";
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import ProductCard from "../components/ProductCard";
 import request from "request";
 import SideBar from "../components/SideBar";
 import Typography from "@material-ui/core/Typography";
-import calculator from "../utils/calculator/calculator";
 
 const mapStateToProps = state => {
   return {
@@ -33,7 +34,12 @@ class Job extends Component {
     this.windowsRef = React.createRef();
     this.state = {
       jobDetails: {},
-      loading: true
+      loading: true,
+      subtotals: {
+        roofing: 0.0,
+        siding: 0.0,
+        windows: 0.0
+      }
     };
 
     if (this.props.signedIn) {
@@ -77,6 +83,7 @@ class Job extends Component {
     let index = 0;
     let roofingProductCards = [];
     let roofingQuantities;
+    let roofingSubtotal = 0.0;
     if (this.state.jobDetails.hasOwnProperty("measurements")) {
       roofingQuantities = calculator.getRoofingProductQuantities(
         this.state.jobDetails.measurements
@@ -88,6 +95,10 @@ class Job extends Component {
         Object.keys(jobDetails[category]).map(product => {
           let currentProduct = jobDetails[category][product].products[0];
           if (currentProduct.selected) {
+            roofingSubtotal += calculator.getSubtotal(
+              currentProduct.price,
+              roofingQuantities[category]
+            );
             roofingProductCards.push(
               <ProductCard
                 productTitle={this.toUpperCaseAndSplit(category)}
@@ -105,12 +116,17 @@ class Job extends Component {
     }
 
     let windowsProductCards = [];
+    let windowsSubtotal = 0.0;
     if (!this.state.loading) {
       const jobDetails = this.state.jobDetails.products.windows;
       Object.keys(jobDetails).map(category => {
         Object.keys(jobDetails[category]).map(product => {
           let currentProduct = jobDetails[category][product].products[0];
           if (currentProduct.selected) {
+            windowsSubtotal += calculator.getSubtotal(
+              currentProduct.price,
+              currentProduct.quantity
+            );
             windowsProductCards.push(
               <ProductCard
                 productTitle={this.toUpperCaseAndSplit(category)}
@@ -128,12 +144,17 @@ class Job extends Component {
     }
 
     let sidingProductCards = [];
+    let sidingSubtotal = 0.0;
     if (!this.state.loading) {
       const jobDetails = this.state.jobDetails.products.siding;
       Object.keys(jobDetails).map(category => {
         Object.keys(jobDetails[category]).map(product => {
           let currentProduct = jobDetails[category][product].products[0];
           if (currentProduct.selected) {
+            sidingSubtotal += calculator.getSubtotal(
+              currentProduct.price,
+              currentProduct.quantity
+            );
             sidingProductCards.push(
               <ProductCard
                 productTitle={this.toUpperCaseAndSplit(category)}
@@ -158,17 +179,33 @@ class Job extends Component {
     const loaded = (
       <div id="mainWindow">
         {/* JOB INFORMATION SECTION */}
-        <div ref={this.infoRef}>
+        <div style={{ marginBottom: "7em" }} ref={this.infoRef}>
           <Typography id="header">Job Information</Typography>
+          <Divider id="bar1" />
+          <Information
+            jobDetails={this.state.jobDetails}
+            subtotals={{
+              roofingSubtotal: roofingSubtotal,
+              sidingSubtotal: sidingSubtotal,
+              windowsSubtotal: windowsSubtotal
+            }}
+          />
         </div>
-        <Divider id="bar1" />
-        <Information jobDetails={this.state.jobDetails} />
 
         {/* ROOFING INFORMATION SECTION */}
         {this.state.jobDetails.hasOwnProperty("active_projects") &&
         this.state.jobDetails.active_projects.roofing ? (
-          <div style={{ paddingTop: "2em" }} ref={this.roofingRef}>
-            <Typography id="header2">Roofing Information</Typography>
+          <div ref={this.roofingRef}>
+            <Grid id="projectDisplayBar" container wrap="nowrap">
+              <Grid container justify="flex-start">
+                <Typography id="header2">Roofing Information</Typography>
+              </Grid>
+              <Grid container justify="flex-end" alignContent="flex-end">
+                <Typography id="header3">
+                  Roofing Subtotal: ${formatter.money(roofingSubtotal)}
+                </Typography>
+              </Grid>
+            </Grid>
             <Divider id="bar1" />
             <Grid container spacing={16} alignContent="center">
               {roofingProductCards}
@@ -180,7 +217,16 @@ class Job extends Component {
         {this.state.jobDetails.hasOwnProperty("active_projects") &&
         this.state.jobDetails.active_projects.siding ? (
           <div style={{ paddingTop: "2em" }} ref={this.sidingRef}>
-            <Typography id="header">Siding Information</Typography>
+            <Grid container wrap="nowrap">
+              <Grid container justify="flex-start">
+                <Typography id="header2">Siding Information</Typography>
+              </Grid>
+              <Grid container justify="flex-end" alignContent="flex-end">
+                <Typography id="header3">
+                  Siding Subtotal: ${formatter.money(sidingSubtotal)}
+                </Typography>
+              </Grid>
+            </Grid>
             <Divider id="bar1" />
             <Grid container spacing={16} alignContent="center">
               {sidingProductCards}
@@ -192,7 +238,16 @@ class Job extends Component {
         {this.state.jobDetails.hasOwnProperty("active_projects") &&
         this.state.jobDetails.active_projects.windows ? (
           <div style={{ paddingTop: "2em" }} ref={this.windowsRef}>
-            <Typography id="header">Windows Information</Typography>
+            <Grid container wrap="nowrap">
+              <Grid container justify="flex-start">
+                <Typography id="header2">Windows Information</Typography>
+              </Grid>
+              <Grid container justify="flex-end" alignContent="flex-end">
+                <Typography id="header3">
+                  Windows Subtotal: ${formatter.money(windowsSubtotal)}
+                </Typography>
+              </Grid>
+            </Grid>
             <Divider id="bar1" />
             <Grid container spacing={16} alignContent="center">
               {windowsProductCards}
