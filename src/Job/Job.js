@@ -169,7 +169,7 @@ class Job extends Component {
                 roofingQuantity={roofingQuantities}
                 title={this.toUpperCaseAndSplit(category)}
                 weight={currentProduct.weight}
-                quantity={roofingQuantities[category]}
+                quantity={currentProduct.quantity}
               />
             );
           }
@@ -205,7 +205,7 @@ class Job extends Component {
                 roofingQuantity={roofingQuantities}
                 title={this.toUpperCaseAndSplit(category)}
                 weight={currentProduct.weight}
-                quantity={roofingQuantities[category]}
+                quantity={currentProduct.quantity}
               />
             );
           }
