@@ -1,3 +1,4 @@
+import Button from "@material-ui/core/Button";
 import Modal from "@material-ui/core/Modal";
 import ProductBox from "./ProductBox";
 import ProductInfo from "./ProductInfo";
@@ -130,7 +131,8 @@ class ProductModal extends Component {
       quantity: this.state.quantity,
       weight: this.state.initProduct.weight
     });
-    this.props.onClose();
+
+    this.props.showWarningModal();
   };
 
   decreaseQuantity = () => {
@@ -212,6 +214,7 @@ class ProductModal extends Component {
                 weight={this.state.weight}
               />
             </div>
+            <Button onClick={this.props.onSave}>Save</Button>
           </div>
           <div className={classes.otherProducts}>{modelList.slice(0, 5)}</div>
         </div>

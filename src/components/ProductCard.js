@@ -7,8 +7,9 @@ import formatter from "../utils/formatter";
 import ProductModal from "./ProductModal";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography/Typography";
+import WarningModal from "./WarningModal";
+import { withStyles } from "@material-ui/core/styles";
 
 const styles = {
   button: {
@@ -65,6 +66,7 @@ class ProductCard extends Component {
     super(props);
     this.state = {
       quantity: 0,
+      presentWarningModal: false,
       price: 0,
       open: false
     };
@@ -74,8 +76,20 @@ class ProductCard extends Component {
     this.setState({ open: true });
   };
 
-  handleClose = () => {
+  showWarningModal = () => {
+    this.setState({ presentWarningModal: true });
+  };
+
+  onSave = () => {
     this.setState({ open: false });
+  };
+
+  onCancel = () => {
+    this.setState({ open: false });
+  };
+
+  closeWarningLabel = () => {
+    this.setState({ presentWarningModal: false });
   };
 
   render() {
@@ -131,12 +145,20 @@ class ProductCard extends Component {
             model={this.props.model}
             name={this.props.name}
             open={this.state.open}
-            onClose={this.handleClose}
+            onSave={this.onSave}
+            onCancel={this.onCancel}
             otherProducts={this.props.otherProducts}
             price={this.props.price}
             quantity={this.props.quantity}
             roofingQuantity={this.props.roofingQuantity}
+            showWarningModal={this.showWarningModal}
             weight={this.props.weight}
+          />
+        </div>
+        <div>
+          <WarningModal
+            open={this.state.presentWarningModal}
+            onClose={this.closeWarningLabel}
           />
         </div>
       </Card>
