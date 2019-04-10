@@ -81,10 +81,14 @@ class ProductCard extends Component {
   };
 
   onSave = () => {
-    this.setState({ open: false });
+    this.setState({ open: false, presentWarningModal: false });
   };
 
   onCancel = () => {
+    this.setState({ open: false, presentWarningModal: false });
+  };
+
+  onClose = () => {
     this.setState({ open: false });
   };
 
@@ -147,6 +151,7 @@ class ProductCard extends Component {
             open={this.state.open}
             onSave={this.onSave}
             onCancel={this.onCancel}
+            onClose={this.onClose}
             otherProducts={this.props.otherProducts}
             price={this.props.price}
             quantity={this.props.quantity}
@@ -158,7 +163,9 @@ class ProductCard extends Component {
         <div>
           <WarningModal
             open={this.state.presentWarningModal}
+            onCancel={this.onCancel}
             onClose={this.closeWarningLabel}
+            onSave={this.onSave}
           />
         </div>
       </Card>

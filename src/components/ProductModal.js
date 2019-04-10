@@ -86,6 +86,7 @@ class ProductModal extends Component {
     this.state = {
       brand: this.props.brand,
       currentQuantity: this.props.quantity,
+      editedQuantity: false,
       image: this.props.image,
       initProduct: product,
       itemID: this.props.itemID,
@@ -101,6 +102,7 @@ class ProductModal extends Component {
   addQuantity = () => {
     this.setState({
       currentQuantity: this.state.currentQuantity + 1,
+      editedQuantity: true,
       subtotal: (this.state.currentQuantity + 1) * this.state.price
     });
   };
@@ -131,13 +133,17 @@ class ProductModal extends Component {
       quantity: this.state.quantity,
       weight: this.state.initProduct.weight
     });
-
-    this.props.showWarningModal();
+    if (this.state.editedQuantity === true) {
+      this.props.showWarningModal();
+    } else {
+      this.props.onClose();
+    }
   };
 
   decreaseQuantity = () => {
     this.setState({
       currentQuantity: this.state.currentQuantity - 1,
+      editedQuantity: true,
       subtotal: (this.state.currentQuantity - 1) * this.state.price
     });
   };
@@ -214,7 +220,6 @@ class ProductModal extends Component {
                 weight={this.state.weight}
               />
             </div>
-            <Button onClick={this.props.onSave}>Save</Button>
           </div>
           <div className={classes.otherProducts}>{modelList.slice(0, 5)}</div>
         </div>
