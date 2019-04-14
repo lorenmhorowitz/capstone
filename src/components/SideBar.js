@@ -7,6 +7,7 @@ import { withStyles } from "@material-ui/core/styles";
 import { List, ListItem, ListItemText, ListItemIcon } from "@material-ui/core";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 const styles = {
   drawerPaperOverrides: {
@@ -24,6 +25,10 @@ class Sidebar extends Component {
     this.setState({ open: !this.state.open });
   };
 
+  handleSidebarClose = () => {
+    this.setState({ open: false });
+  };
+
   render() {
     const {
       classes,
@@ -38,102 +43,104 @@ class Sidebar extends Component {
 
     return (
       <div className="root">
-        <Drawer
-          variant="permanent"
-          anchor="left"
-          open={open}
-          classes={{
-            paper: classNames(
-              "drawerPaper",
-              classes.drawerPaperOverrides,
-              !open && "drawerPaperClose"
-            )
-          }}
-        >
-          <List>
-            <ListItem
-              className="listItem"
-              id="listItemFirst"
-              onClick={this.handleSidebarToggle}
-              button
-            >
-              {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-            </ListItem>
-            <ListItem
-              onClick={() => scrollToRef(infoRef)}
-              className="listItem"
-              button
-            >
-              <ListItemIcon>
-                <i className="material-icons outline listItemIcon">info</i>
-              </ListItemIcon>
-              <ListItemText
-                primary="Information"
-                primaryTypographyProps={{ color: "inherit" }}
-              />
-            </ListItem>
-            {activeProjects.roofing ? (
+        <ClickAwayListener onClickAway={this.handleSidebarClose}>
+          <Drawer
+            variant="permanent"
+            anchor="left"
+            open={open}
+            classes={{
+              paper: classNames(
+                "drawerPaper",
+                classes.drawerPaperOverrides,
+                !open && "drawerPaperClose"
+              )
+            }}
+          >
+            <List>
               <ListItem
-                onClick={() => scrollToRef(roofingRef)}
+                className="listItem"
+                id="listItemFirst"
+                onClick={this.handleSidebarToggle}
+                button
+              >
+                {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+              </ListItem>
+              <ListItem
+                onClick={() => scrollToRef(infoRef)}
                 className="listItem"
                 button
               >
                 <ListItemIcon>
-                  <i className="material-icons outline listItemIcon">home</i>
+                  <i className="material-icons outline listItemIcon">info</i>
                 </ListItemIcon>
                 <ListItemText
-                  primary="Roofing"
+                  primary="Information"
                   primaryTypographyProps={{ color: "inherit" }}
                 />
               </ListItem>
-            ) : null}
-            {activeProjects.siding ? (
-              <ListItem
-                onClick={() => scrollToRef(sidingRef)}
-                className="listItem"
-                button
-              >
+              {activeProjects.roofing ? (
+                <ListItem
+                  onClick={() => scrollToRef(roofingRef)}
+                  className="listItem"
+                  button
+                >
+                  <ListItemIcon>
+                    <i className="material-icons outline listItemIcon">home</i>
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Roofing"
+                    primaryTypographyProps={{ color: "inherit" }}
+                  />
+                </ListItem>
+              ) : null}
+              {activeProjects.siding ? (
+                <ListItem
+                  onClick={() => scrollToRef(sidingRef)}
+                  className="listItem"
+                  button
+                >
+                  <ListItemIcon>
+                    <i className="material-icons outline listItemIcon">
+                      view_headline
+                    </i>
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Siding"
+                    primaryTypographyProps={{ color: "inherit" }}
+                  />
+                </ListItem>
+              ) : null}
+              {activeProjects.windows ? (
+                <ListItem
+                  onClick={() => scrollToRef(windowsRef)}
+                  className="listItem"
+                  button
+                >
+                  <ListItemIcon>
+                    <i className="material-icons outline listItemIcon">
+                      web_asset
+                    </i>
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Windows"
+                    primaryTypographyProps={{ color: "inherit" }}
+                  />
+                </ListItem>
+              ) : null}
+              <ListItem className="listItem" button>
                 <ListItemIcon>
                   <i className="material-icons outline listItemIcon">
-                    view_headline
+                    shopping_cart
                   </i>
                 </ListItemIcon>
                 <ListItemText
-                  primary="Siding"
+                  primary={`Order`}
                   primaryTypographyProps={{ color: "inherit" }}
                 />
               </ListItem>
-            ) : null}
-            {activeProjects.windows ? (
-              <ListItem
-                onClick={() => scrollToRef(windowsRef)}
-                className="listItem"
-                button
-              >
-                <ListItemIcon>
-                  <i className="material-icons outline listItemIcon">
-                    web_asset
-                  </i>
-                </ListItemIcon>
-                <ListItemText
-                  primary="Windows"
-                  primaryTypographyProps={{ color: "inherit" }}
-                />
-              </ListItem>
-            ) : null}
-            <ListItem className="listItem" button>
-              <ListItemIcon>
-                <i className="material-icons outline listItemIcon">
-                  shopping_cart
-                </i>
-              </ListItemIcon>
-              <ListItemText
-                primary={`Order`}
-                primaryTypographyProps={{ color: "inherit" }}
-              />
-            </ListItem>
-          </List>
-        </Drawer>
+            </List>
+          </Drawer>
+        </ClickAwayListener>
       </div>
     );
   }
