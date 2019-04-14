@@ -4,6 +4,7 @@ import Divider from "@material-ui/core/Divider";
 import formatter from "../utils/formatter";
 import GoogleMap from "../components/GoogleMap";
 import Grid from "@material-ui/core/Grid";
+import Modal from "@material-ui/core/Modal";
 import React, { Component, Fragment } from "react";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
@@ -15,6 +16,24 @@ const styles = {
 };
 
 class Information extends Component {
+  state = {
+    enlargedIndex: 0,
+    enlargeOpen: false
+  };
+
+  enlargeHandler = imageNumber => {
+    this.setState({
+      enlargeOpen: true,
+      enlargedIndex: imageNumber
+    });
+  };
+
+  handleClose = () => {
+    this.setState({
+      enlargeOpen: false
+    });
+  };
+
   render() {
     const { classes, jobDetails, subtotals } = this.props;
 
@@ -99,7 +118,6 @@ class Information extends Component {
       </div>
     );
 
-    console.log(jobDetails);
     return (
       <div className={classes.root}>
         <Fragment>
@@ -129,7 +147,20 @@ class Information extends Component {
               <Grid container>
                 <Grid item>
                   <div id="picture">
-                    <CardSlide images={jobDetails.images} width={"80%"} />
+                    <CardSlide
+                      images={jobDetails.images}
+                      width={"80%"}
+                      enlarge={this.enlargeHandler}
+                    />
+                    <Modal
+                      open={this.state.enlargeOpen}
+                      onClose={this.handleClose}
+                    >
+                      <img
+                        src={jobDetails.images[this.state.enlargedIndex]}
+                        className="modalPic"
+                      />
+                    </Modal>
                   </div>
                 </Grid>
                 <Grid item>

@@ -18,6 +18,10 @@ a:-webkit-any-link {
   text-decoration-style: none;
 }
 
+::before {
+  border-bottom: none !important;
+}
+
 .textField {
   background-color: #ffffff;
   background-position: center;
@@ -29,6 +33,8 @@ a:-webkit-any-link {
   margin-right: 15%;
   text-align: left;
   text-indent: 20px;
+  border-bottom: none;
+  text-decoration-line: none;
 }
 
 .fieldStyle {
@@ -60,6 +66,10 @@ a:-webkit-any-link {
   position: absolute;
   right: 20px;
   color: #ffffff;
+}
+
+::after {
+  border-bottom: none !important;
 }
 
 @media only screen and (min-width: 1221px) {
@@ -103,14 +113,6 @@ a:-webkit-any-link {
     width: 250px;
     right: 15px;
   }
-}
-
-::before {
-  border-bottom: none !important;
-}
-
-::after {
-  border-bottom: none !important;
 }
 
 label {
