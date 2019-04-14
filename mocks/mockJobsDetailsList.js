@@ -77,7 +77,7 @@ const mockJobsDetailsList = {
       active_projects: {
         roofing: true,
         siding: false,
-        windows: false
+        windows: true
       },
       measurements: {
         roof: {
@@ -133,7 +133,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655916,
-                  selected: false,
+                  selected: true,
                   model: "786353",
                   brand: "Owens Corning",
                   name:
@@ -158,7 +158,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655965,
-                  selected: false,
+                  selected: true,
                   model: "TD01",
                   brand: "Owens Corning",
                   name:
@@ -183,7 +183,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205658438,
-                  selected: false,
+                  selected: true,
                   model: "HL20",
                   brand: "Owens Corning",
                   name:
@@ -210,7 +210,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205035868,
-                  selected: false,
+                  selected: true,
                   model: "0973",
                   brand: "GAF",
                   name:
@@ -237,7 +237,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 308506676,
-                  selected: false,
+                  selected: true,
                   model: "S510ARN5",
                   brand: "Simpson Strong-Tie",
                   name:
@@ -262,7 +262,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 300573201,
-                  selected: false,
+                  selected: true,
                   model: "5259",
                   brand: "Ondura",
                   name: "3.3 ft. x 12-1/2 in. Tan Ridge Cap Asphalt Roof Panel",
@@ -288,7 +288,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 202093168,
-                  selected: false,
+                  selected: true,
                   model: "RE15WH",
                   brand: "Construction Metals",
                   name:
@@ -317,7 +317,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 305218602,
-                  selected: false,
+                  selected: true,
                   model: "US09-16-LG-S",
                   brand: "NewTechWood",
                   name:
@@ -342,7 +342,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 301837334,
-                  selected: false,
+                  selected: true,
                   model: "PC4004H",
                   brand: "Ply Gem",
                   name:
@@ -367,7 +367,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 100055901,
-                  selected: false,
+                  selected: true,
                   model: "27874",
                   brand: "LP SmartSide",
                   name: "SmartSide 48 in. x 96 in. Strand Panel Siding",
@@ -393,7 +393,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 308506676,
-                  selected: false,
+                  selected: true,
                   model: "S510ARN5",
                   brand: "Simpson Strong-Tie",
                   name:
@@ -420,7 +420,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 300702260,
-                  selected: false,
+                  selected: true,
                   model: "THDJW177200528",
                   brand: "JELD-WEN",
                   name:
@@ -443,7 +443,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 7203157489,
-                  selected: false,
+                  selected: true,
                   model: "70 SLIDER BUCK",
                   brand: "American Craftsman",
                   name:
@@ -466,7 +466,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 204814543,
-                  selected: false,
+                  selected: true,
                   model: "2438786",
                   brand: "American Craftsman",
                   name:
@@ -491,7 +491,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 204814577,
-                  selected: false,
+                  selected: true,
                   model: "2846786",
                   brand: "American Craftsman",
                   name:
@@ -516,7 +516,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 206613149,
-                  selected: false,
+                  selected: true,
                   model: "BSKIT51660",
                   brand: "Screen Tight",
                   name: "5/16 in. x 60 in. Brown Window Screen Frame Kit",
@@ -550,10 +550,9 @@ const mockJobsDetailsList = {
       location_country: null,
       id: 611,
       images: [
-        "https://photos.zillowstatic.com/p_h/ISuomyqrbqxj350000000000.jpg",
-        "https://photos.zillowstatic.com/p_f/IS66w6xtonnuc70000000000.jpg",
-        "https://photos.zillowstatic.com/p_f/ISecmx6y0oe2u60000000000.jpg",
-        "https://photos.zillowstatic.com/p_f/ISecyif0tvvrc70000000000.jpg"
+        "https://photos.zillowstatic.com/cc_ft_1536/ISqpc0lq6ie0lu0000000000.webp",
+        "https://photos.zillowstatic.com/cc_ft_1536/ISm6jxqheo0udw0000000000.webp",
+        "https://photos.zillowstatic.com/cc_ft_1536/ISucl99oiw8rdw0000000000.webp"
       ],
       property_type: "single_family_residential",
       updated_at: "2018-11-13T14:51:12.428Z",
@@ -561,9 +560,9 @@ const mockJobsDetailsList = {
       created_at: "2018-08-17T14:51:12.428Z",
       job_status: "active",
       active_projects: {
-        roofing: true,
-        siding: false,
-        windows: false
+        roofing: false,
+        siding: true,
+        windows: true
       },
       measurements: {
         roof: {
@@ -619,7 +618,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655916,
-                  selected: false,
+                  selected: true,
                   model: "786353",
                   brand: "Owens Corning",
                   name:
@@ -644,7 +643,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655965,
-                  selected: false,
+                  selected: true,
                   model: "TD01",
                   brand: "Owens Corning",
                   name:
@@ -669,7 +668,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205658438,
-                  selected: false,
+                  selected: true,
                   model: "HL20",
                   brand: "Owens Corning",
                   name:
@@ -696,7 +695,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205035868,
-                  selected: false,
+                  selected: true,
                   model: "0973",
                   brand: "GAF",
                   name:
@@ -723,7 +722,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 308506676,
-                  selected: false,
+                  selected: true,
                   model: "S510ARN5",
                   brand: "Simpson Strong-Tie",
                   name:
@@ -748,7 +747,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 300573201,
-                  selected: false,
+                  selected: true,
                   model: "5259",
                   brand: "Ondura",
                   name: "3.3 ft. x 12-1/2 in. Tan Ridge Cap Asphalt Roof Panel",
@@ -774,7 +773,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 202093168,
-                  selected: false,
+                  selected: true,
                   model: "RE15WH",
                   brand: "Construction Metals",
                   name:
@@ -803,7 +802,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 305218602,
-                  selected: false,
+                  selected: true,
                   model: "US09-16-LG-S",
                   brand: "NewTechWood",
                   name:
@@ -828,7 +827,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 301837334,
-                  selected: false,
+                  selected: true,
                   model: "PC4004H",
                   brand: "Ply Gem",
                   name:
@@ -853,7 +852,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 100055901,
-                  selected: false,
+                  selected: true,
                   model: "27874",
                   brand: "LP SmartSide",
                   name: "SmartSide 48 in. x 96 in. Strand Panel Siding",
@@ -879,7 +878,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 308506676,
-                  selected: false,
+                  selected: true,
                   model: "S510ARN5",
                   brand: "Simpson Strong-Tie",
                   name:
@@ -906,7 +905,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 300702260,
-                  selected: false,
+                  selected: true,
                   model: "THDJW177200528",
                   brand: "JELD-WEN",
                   name:
@@ -929,7 +928,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 7203157489,
-                  selected: false,
+                  selected: true,
                   model: "70 SLIDER BUCK",
                   brand: "American Craftsman",
                   name:
@@ -952,7 +951,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 204814543,
-                  selected: false,
+                  selected: true,
                   model: "2438786",
                   brand: "American Craftsman",
                   name:
@@ -977,7 +976,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 204814577,
-                  selected: false,
+                  selected: true,
                   model: "2846786",
                   brand: "American Craftsman",
                   name:
@@ -1002,7 +1001,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 206613149,
-                  selected: false,
+                  selected: true,
                   model: "BSKIT51660",
                   brand: "Screen Tight",
                   name: "5/16 in. x 60 in. Brown Window Screen Frame Kit",
@@ -1036,9 +1035,9 @@ const mockJobsDetailsList = {
       location_country: null,
       id: 612,
       images: [
-        "https://photos.zillowstatic.com/p_h/ISugw878qyhr3a1000000000.jpg",
-        "https://photos.zillowstatic.com/p_f/ISeoz7t8fo6e081000000000.jpg",
-        "https://photos.zillowstatic.com/p_f/ISe446fx9qimma1000000000.jpg"
+        "https://photos.zillowstatic.com/cc_ft_1536/ISmut96e44xrxm1000000000.webp",
+        "hhttps://photos.zillowstatic.com/cc_ft_1536/ISy39htmeu0bom1000000000.webp",
+        "https://photos.zillowstatic.com/cc_ft_1536/ISa1jgpg05a8pm1000000000.webp"
       ],
       property_type: "single_family_residential",
       updated_at: "2018-11-13T14:56:12.428Z",
@@ -1047,7 +1046,7 @@ const mockJobsDetailsList = {
       job_status: "active",
       active_projects: {
         roofing: true,
-        siding: false,
+        siding: true,
         windows: false
       },
       measurements: {
@@ -1104,7 +1103,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655916,
-                  selected: false,
+                  selected: true,
                   model: "786353",
                   brand: "Owens Corning",
                   name:
@@ -1129,7 +1128,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655965,
-                  selected: false,
+                  selected: true,
                   model: "TD01",
                   brand: "Owens Corning",
                   name:
@@ -1154,7 +1153,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205658438,
-                  selected: false,
+                  selected: true,
                   model: "HL20",
                   brand: "Owens Corning",
                   name:
@@ -1181,7 +1180,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205035868,
-                  selected: false,
+                  selected: true,
                   model: "0973",
                   brand: "GAF",
                   name:
@@ -1208,7 +1207,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 308506676,
-                  selected: false,
+                  selected: true,
                   model: "S510ARN5",
                   brand: "Simpson Strong-Tie",
                   name:
@@ -1233,7 +1232,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 300573201,
-                  selected: false,
+                  selected: true,
                   model: "5259",
                   brand: "Ondura",
                   name: "3.3 ft. x 12-1/2 in. Tan Ridge Cap Asphalt Roof Panel",
@@ -1259,7 +1258,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 202093168,
-                  selected: false,
+                  selected: true,
                   model: "RE15WH",
                   brand: "Construction Metals",
                   name:
@@ -1288,7 +1287,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 305218602,
-                  selected: false,
+                  selected: true,
                   model: "US09-16-LG-S",
                   brand: "NewTechWood",
                   name:
@@ -1313,7 +1312,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 301837334,
-                  selected: false,
+                  selected: true,
                   model: "PC4004H",
                   brand: "Ply Gem",
                   name:
@@ -1338,7 +1337,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 100055901,
-                  selected: false,
+                  selected: true,
                   model: "27874",
                   brand: "LP SmartSide",
                   name: "SmartSide 48 in. x 96 in. Strand Panel Siding",
@@ -1364,7 +1363,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 308506676,
-                  selected: false,
+                  selected: true,
                   model: "S510ARN5",
                   brand: "Simpson Strong-Tie",
                   name:
@@ -1391,7 +1390,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 300702260,
-                  selected: false,
+                  selected: true,
                   model: "THDJW177200528",
                   brand: "JELD-WEN",
                   name:
@@ -1414,7 +1413,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 7203157489,
-                  selected: false,
+                  selected: true,
                   model: "70 SLIDER BUCK",
                   brand: "American Craftsman",
                   name:
@@ -1437,7 +1436,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 204814543,
-                  selected: false,
+                  selected: true,
                   model: "2438786",
                   brand: "American Craftsman",
                   name:
@@ -1462,7 +1461,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 204814577,
-                  selected: false,
+                  selected: true,
                   model: "2846786",
                   brand: "American Craftsman",
                   name:
@@ -1487,7 +1486,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 206613149,
-                  selected: false,
+                  selected: true,
                   model: "BSKIT51660",
                   brand: "Screen Tight",
                   name: "5/16 in. x 60 in. Brown Window Screen Frame Kit",
@@ -1534,7 +1533,7 @@ const mockJobsDetailsList = {
       active_projects: {
         roofing: true,
         siding: false,
-        windows: false
+        windows: true
       },
       measurements: {
         roof: {
@@ -1590,7 +1589,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655916,
-                  selected: false,
+                  selected: true,
                   model: "786353",
                   brand: "Owens Corning",
                   name:
@@ -1615,7 +1614,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655965,
-                  selected: false,
+                  selected: true,
                   model: "TD01",
                   brand: "Owens Corning",
                   name:
@@ -1640,7 +1639,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205658438,
-                  selected: false,
+                  selected: true,
                   model: "HL20",
                   brand: "Owens Corning",
                   name:
@@ -1667,7 +1666,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205035868,
-                  selected: false,
+                  selected: true,
                   model: "0973",
                   brand: "GAF",
                   name:
@@ -1694,7 +1693,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 308506676,
-                  selected: false,
+                  selected: true,
                   model: "S510ARN5",
                   brand: "Simpson Strong-Tie",
                   name:
@@ -1719,7 +1718,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 300573201,
-                  selected: false,
+                  selected: true,
                   model: "5259",
                   brand: "Ondura",
                   name: "3.3 ft. x 12-1/2 in. Tan Ridge Cap Asphalt Roof Panel",
@@ -1745,7 +1744,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 202093168,
-                  selected: false,
+                  selected: true,
                   model: "RE15WH",
                   brand: "Construction Metals",
                   name:
@@ -1774,7 +1773,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 305218602,
-                  selected: false,
+                  selected: true,
                   model: "US09-16-LG-S",
                   brand: "NewTechWood",
                   name:
@@ -1799,7 +1798,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 301837334,
-                  selected: false,
+                  selected: true,
                   model: "PC4004H",
                   brand: "Ply Gem",
                   name:
@@ -1824,7 +1823,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 100055901,
-                  selected: false,
+                  selected: true,
                   model: "27874",
                   brand: "LP SmartSide",
                   name: "SmartSide 48 in. x 96 in. Strand Panel Siding",
@@ -1850,7 +1849,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 308506676,
-                  selected: false,
+                  selected: true,
                   model: "S510ARN5",
                   brand: "Simpson Strong-Tie",
                   name:
@@ -1877,7 +1876,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 300702260,
-                  selected: false,
+                  selected: true,
                   model: "THDJW177200528",
                   brand: "JELD-WEN",
                   name:
@@ -1900,7 +1899,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 7203157489,
-                  selected: false,
+                  selected: true,
                   model: "70 SLIDER BUCK",
                   brand: "American Craftsman",
                   name:
@@ -1923,7 +1922,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 204814543,
-                  selected: false,
+                  selected: true,
                   model: "2438786",
                   brand: "American Craftsman",
                   name:
@@ -1948,7 +1947,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 204814577,
-                  selected: false,
+                  selected: true,
                   model: "2846786",
                   brand: "American Craftsman",
                   name:
@@ -1973,7 +1972,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 206613149,
-                  selected: false,
+                  selected: true,
                   model: "BSKIT51660",
                   brand: "Screen Tight",
                   name: "5/16 in. x 60 in. Brown Window Screen Frame Kit",
@@ -2019,8 +2018,8 @@ const mockJobsDetailsList = {
       job_status: "active",
       active_projects: {
         roofing: true,
-        siding: false,
-        windows: false
+        siding: true,
+        windows: true
       },
       measurements: {
         roof: {
@@ -2076,7 +2075,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655916,
-                  selected: false,
+                  selected: true,
                   model: "786353",
                   brand: "Owens Corning",
                   name:
@@ -2101,7 +2100,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205655965,
-                  selected: false,
+                  selected: true,
                   model: "TD01",
                   brand: "Owens Corning",
                   name:
@@ -2126,7 +2125,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205658438,
-                  selected: false,
+                  selected: true,
                   model: "HL20",
                   brand: "Owens Corning",
                   name:
@@ -2153,7 +2152,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 205035868,
-                  selected: false,
+                  selected: true,
                   model: "0973",
                   brand: "GAF",
                   name:
@@ -2180,7 +2179,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 308506676,
-                  selected: false,
+                  selected: true,
                   model: "S510ARN5",
                   brand: "Simpson Strong-Tie",
                   name:
@@ -2205,7 +2204,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 300573201,
-                  selected: false,
+                  selected: true,
                   model: "5259",
                   brand: "Ondura",
                   name: "3.3 ft. x 12-1/2 in. Tan Ridge Cap Asphalt Roof Panel",
@@ -2231,7 +2230,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 202093168,
-                  selected: false,
+                  selected: true,
                   model: "RE15WH",
                   brand: "Construction Metals",
                   name:
@@ -2260,7 +2259,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 305218602,
-                  selected: false,
+                  selected: true,
                   model: "US09-16-LG-S",
                   brand: "NewTechWood",
                   name:
@@ -2285,7 +2284,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 301837334,
-                  selected: false,
+                  selected: true,
                   model: "PC4004H",
                   brand: "Ply Gem",
                   name:
@@ -2310,7 +2309,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 100055901,
-                  selected: false,
+                  selected: true,
                   model: "27874",
                   brand: "LP SmartSide",
                   name: "SmartSide 48 in. x 96 in. Strand Panel Siding",
@@ -2336,7 +2335,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 308506676,
-                  selected: false,
+                  selected: true,
                   model: "S510ARN5",
                   brand: "Simpson Strong-Tie",
                   name:
@@ -2363,7 +2362,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 300702260,
-                  selected: false,
+                  selected: true,
                   model: "THDJW177200528",
                   brand: "JELD-WEN",
                   name:
@@ -2386,7 +2385,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 7203157489,
-                  selected: false,
+                  selected: true,
                   model: "70 SLIDER BUCK",
                   brand: "American Craftsman",
                   name:
@@ -2409,7 +2408,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 204814543,
-                  selected: false,
+                  selected: true,
                   model: "2438786",
                   brand: "American Craftsman",
                   name:
@@ -2434,7 +2433,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 204814577,
-                  selected: false,
+                  selected: true,
                   model: "2846786",
                   brand: "American Craftsman",
                   name:
@@ -2459,7 +2458,7 @@ const mockJobsDetailsList = {
               products: [
                 {
                   item_id: 206613149,
-                  selected: false,
+                  selected: true,
                   model: "BSKIT51660",
                   brand: "Screen Tight",
                   name: "5/16 in. x 60 in. Brown Window Screen Frame Kit",
