@@ -106,6 +106,7 @@ button::before {
   min-width: 280px;
   max-width: 550px;
   height: 20em;
+  cursor: pointer;
 }
 
 #map {
