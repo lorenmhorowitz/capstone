@@ -7,6 +7,7 @@ import { withStyles } from "@material-ui/core/styles";
 import { List, ListItem, ListItemText, ListItemIcon } from "@material-ui/core";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import { Redirect } from "react-router-dom";
 
 const styles = {
   drawerPaperOverrides: {
@@ -17,11 +18,18 @@ const styles = {
 
 class Sidebar extends Component {
   state = {
+    checkoutRedirect: false,
     open: false
   };
 
   handleSidebarToggle = () => {
     this.setState({ open: !this.state.open });
+  };
+
+  handleCheckout = () => {
+    this.setState({
+      checkoutRedirect: true
+    });
   };
 
   render() {
@@ -35,6 +43,10 @@ class Sidebar extends Component {
       scrollToRef
     } = this.props;
     const { open } = this.state;
+
+    if (this.state.checkoutRedirect) {
+      return <Redirect push to={`${window.location.pathname}/checkout`} />;
+    }
 
     return (
       <div className="root">
@@ -121,7 +133,11 @@ class Sidebar extends Component {
                 />
               </ListItem>
             ) : null}
-            <ListItem className="listItem" button>
+            <ListItem
+              onClick={() => this.handleCheckout()}
+              className="listItem"
+              button
+            >
               <ListItemIcon>
                 <i className="material-icons outline listItemIcon">
                   shopping_cart

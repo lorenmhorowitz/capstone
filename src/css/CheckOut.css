@@ -6,3 +6,13 @@
   position: relative;
   text-align: center;
 }
+
+#CheckoutButton {
+  background-color: #898989;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.2em;
+  height: 60px;
+  margin-top: 1%;
+  width: 50%;
+}

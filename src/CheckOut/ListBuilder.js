@@ -1,4 +1,5 @@
 import { withStyles } from "@material-ui/core/styles";
+import formatter from "../utils/formatter";
 import Paper from "@material-ui/core/Paper";
 import PropTypes from "prop-types";
 import Table from "@material-ui/core/Table";
@@ -25,10 +26,6 @@ function createData(quantity, description, unitPrice, lineTotal) {
   return { id, quantity, description, unitPrice, lineTotal };
 }
 
-function ccyFormat(num) {
-  return `${num.toFixed(2)}`;
-}
-
 class ListBuilder extends Component {
   render() {
     const { classes } = this.props;
@@ -45,6 +42,9 @@ class ListBuilder extends Component {
       );
     });
 
+    let subtotal = 0;
+    let taxRate = 8.4;
+
     return (
       <div>
         <Paper className={classes.root}>
@@ -58,29 +58,42 @@ class ListBuilder extends Component {
               </TableRow>
             </TableHead>
             <TableBody>
-              {productListRows.map(row => (
-                <TableRow key={row.id}>
-                  <TableCell component="th" scope="row">
-                    {row.description}
-                  </TableCell>
-                  <TableCell align="right">{row.quantity}</TableCell>
-                  <TableCell align="right">{row.unitPrice}</TableCell>
-                  <TableCell align="right">{row.lineTotal}</TableCell>
-                </TableRow>
-              ))}
+              {productListRows.map(row => {
+                subtotal += row.lineTotal;
+                return (
+                  <TableRow key={row.id}>
+                    <TableCell component="th" scope="row">
+                      {row.description}
+                    </TableCell>
+                    <TableCell align="right">{row.quantity}</TableCell>
+                    <TableCell align="right">{`$${formatter.money(
+                      row.unitPrice
+                    )}`}</TableCell>
+                    <TableCell align="right">{`$${formatter.money(
+                      row.lineTotal
+                    )}`}</TableCell>
+                  </TableRow>
+                );
+              })}
               <TableRow>
                 <TableCell rowSpan={3} />
                 <TableCell colSpan={2}>Subtotal</TableCell>
-                <TableCell align="right">{ccyFormat(200.21)}</TableCell>
+                <TableCell align="right">{`$${formatter.money(
+                  subtotal
+                )}`}</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell>Tax</TableCell>
-                <TableCell align="right">{`${(8).toFixed(0)} %`}</TableCell>
-                <TableCell align="right">{ccyFormat(10.99)}</TableCell>
+                <TableCell align="right">{`${taxRate.toFixed(2)} %`}</TableCell>
+                <TableCell align="right">{`$${formatter.money(
+                  subtotal * (taxRate / 100)
+                )}`}</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell colSpan={2}>Total</TableCell>
-                <TableCell align="right">{ccyFormat(200.43)}</TableCell>
+                <TableCell align="right">{`$${formatter.money(
+                  subtotal * (1 + taxRate / 100)
+                )}`}</TableCell>
               </TableRow>
             </TableBody>
           </Table>
