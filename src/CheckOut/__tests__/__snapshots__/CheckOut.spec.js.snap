@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Check Out  component renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CheckOut />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Connect(WithStyles(AppBar)) />,
+        <div
+          className="productList"
+        >
+          <WithStyles(ListBuilder)
+            products={
+              Array [
+                Object {
+                  "description": "Product A",
+                  "lineTotal": 16,
+                  "quantity": 4,
+                  "unitPrice": 4,
+                },
+                Object {
+                  "description": "Product B",
+                  "lineTotal": 35,
+                  "quantity": 5,
+                  "unitPrice": 7,
+                },
+              ]
+            }
+          />
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <WithStyles(ListBuilder)
+            products={
+              Array [
+                Object {
+                  "description": "Product A",
+                  "lineTotal": 16,
+                  "quantity": 4,
+                  "unitPrice": 4,
+                },
+                Object {
+                  "description": "Product B",
+                  "lineTotal": 35,
+                  "quantity": 5,
+                  "unitPrice": 7,
+                },
+              ]
+            }
+          />,
+          "className": "productList",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "products": Array [
+              Object {
+                "description": "Product A",
+                "lineTotal": 16,
+                "quantity": 4,
+                "unitPrice": 4,
+              },
+              Object {
+                "description": "Product B",
+                "lineTotal": 35,
+                "quantity": 5,
+                "unitPrice": 7,
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Connect(WithStyles(AppBar)) />,
+          <div
+            className="productList"
+          >
+            <WithStyles(ListBuilder)
+              products={
+                Array [
+                  Object {
+                    "description": "Product A",
+                    "lineTotal": 16,
+                    "quantity": 4,
+                    "unitPrice": 4,
+                  },
+                  Object {
+                    "description": "Product B",
+                    "lineTotal": 35,
+                    "quantity": 5,
+                    "unitPrice": 7,
+                  },
+                ]
+              }
+            />
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <WithStyles(ListBuilder)
+              products={
+                Array [
+                  Object {
+                    "description": "Product A",
+                    "lineTotal": 16,
+                    "quantity": 4,
+                    "unitPrice": 4,
+                  },
+                  Object {
+                    "description": "Product B",
+                    "lineTotal": 35,
+                    "quantity": 5,
+                    "unitPrice": 7,
+                  },
+                ]
+              }
+            />,
+            "className": "productList",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "products": Array [
+                Object {
+                  "description": "Product A",
+                  "lineTotal": 16,
+                  "quantity": 4,
+                  "unitPrice": 4,
+                },
+                Object {
+                  "description": "Product B",
+                  "lineTotal": 35,
+                  "quantity": 5,
+                  "unitPrice": 7,
+                },
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
