@@ -98,8 +98,7 @@ class Information extends Component {
         ) : null}
       </div>
     );
-
-    console.log(jobDetails);
+    //
     return (
       <div className={classes.root}>
         <Fragment>

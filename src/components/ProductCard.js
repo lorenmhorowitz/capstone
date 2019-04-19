@@ -7,6 +7,7 @@ import formatter from "../utils/formatter";
 import ProductModal from "./ProductModal";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import request from "request";
 import Typography from "@material-ui/core/Typography/Typography";
 import WarningModal from "./WarningModal";
 import { withStyles } from "@material-ui/core/styles";
@@ -65,7 +66,7 @@ class ProductCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      quantity: 0,
+      quantity: this.props.quantity,
       presentWarningModal: false,
       price: 0,
       open: false
@@ -82,6 +83,7 @@ class ProductCard extends Component {
 
   onSave = () => {
     this.setState({ open: false, presentWarningModal: false });
+    this.props.updateJob(this.state.quantity, this.props.itemID);
   };
 
   onCancel = () => {
@@ -94,6 +96,10 @@ class ProductCard extends Component {
 
   closeWarningLabel = () => {
     this.setState({ presentWarningModal: false });
+  };
+
+  updateQuantity = quantity => {
+    this.setState({ quantity: quantity });
   };
 
   render() {
@@ -120,7 +126,7 @@ class ProductCard extends Component {
               {this.props.name}
             </Typography>
             <div className={classes.cost}>
-              <Typography>Quantity: {this.props.quantity}</Typography>{" "}
+              <Typography>Quantity: {this.state.quantity}</Typography>{" "}
               <Typography>
                 Cost: ${formatter.money(this.props.price)} each
               </Typography>
@@ -157,6 +163,7 @@ class ProductCard extends Component {
             quantity={this.props.quantity}
             roofingQuantity={this.props.roofingQuantity}
             showWarningModal={this.showWarningModal}
+            updateQuantity={this.updateQuantity}
             weight={this.props.weight}
           />
         </div>
