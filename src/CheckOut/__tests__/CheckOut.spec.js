@@ -1,10 +1,10 @@
 import React from "react";
-import Checkout from "../Checkout";
+import CheckOut from "../CheckOut";
 import { shallow } from "enzyme";
 
 describe("The Check Out ", () => {
   it("component renders correctly", () => {
-    let wrapper = shallow(<Checkout />);
+    let wrapper = shallow(<CheckOut />);
     expect(wrapper).toMatchSnapshot();
   });
 });

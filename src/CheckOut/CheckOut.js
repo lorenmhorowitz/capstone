@@ -1,4 +1,4 @@
-import "../css/Checkout.css";
+import "../css/CheckOut.css";
 import Button from "@material-ui/core/Button";
 import { connect } from "react-redux";
 import Dialog from "@material-ui/core/Dialog";
@@ -24,7 +24,7 @@ const mapDispatchToProps = dispatch => ({});
 
 const JOBURL = "https://us-central1-hdqc-capstone.cloudfunctions.net/getJob";
 
-class Checkout extends Component {
+class CheckOut extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -141,4 +141,4 @@ class Checkout extends Component {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Checkout);
+)(CheckOut);

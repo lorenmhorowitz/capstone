@@ -2,7 +2,7 @@ import "./css/App.css";
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import Checkout from "./Checkout/Checkout";
+import CheckOut from "./CheckOut/CheckOut";
 import CreateAccount from "./CreateAccount/CreateAccount";
 import Home from "./Home/Home";
 import HoverLogin from "./Login/Hover/HoverLogin";
@@ -19,7 +19,7 @@ class App extends Component {
           <Route exact path="/login" component={Login} />
           <Route exact path="/createaccount" component={CreateAccount} />
           <Route exact path="/home" component={Home} />
-          <Route path="/job/:id/checkout" component={Checkout} />
+          <Route path="/job/:id/checkout" component={CheckOut} />
           <Route path="/job/:id" component={Job} />
           <Redirect exact from="/" to="/login" />
           <Route component={PageNotFound} />
