@@ -1,0 +1,18 @@
+.productList {
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  position: relative;
+  text-align: center;
+}
+
+#CheckoutButton {
+  background-color: #898989;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.2em;
+  height: 60px;
+  margin-top: 1%;
+  width: 50%;
+}
