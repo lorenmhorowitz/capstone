@@ -159,7 +159,7 @@ class Information extends Component {
                       <img
                         src={jobDetails.images[this.state.enlargedIndex]}
                         className="modalPic"
-                        alt="Home Image"
+                        alt="Home"
                       />
                     </Modal>
                   </div>
