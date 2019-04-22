@@ -127,6 +127,12 @@ class CheckOut extends Component {
             <ListBuilder products={products} />
             <Button
               id="CheckoutButton"
+              onClick={() => this.handleHomeRedirect()}
+            >
+              Cancel
+            </Button>
+            <Button
+              id="CheckoutButton"
               onClick={() => this.handleSubmitOrder()}
             >
               Submit Order
