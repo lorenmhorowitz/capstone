@@ -41,6 +41,10 @@ ShallowWrapper {
         />
         <Route
           component={[Function]}
+          path="/job/:id/checkout"
+        />
+        <Route
+          component={[Function]}
           path="/job/:id"
         />
         <Redirect
@@ -81,6 +85,10 @@ ShallowWrapper {
             component={[Function]}
             exact={true}
             path="/home"
+          />,
+          <Route
+            component={[Function]}
+            path="/job/:id/checkout"
           />,
           <Route
             component={[Function]}
@@ -157,6 +165,18 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
+            "path": "/job/:id/checkout",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
             "path": "/job/:id",
           },
           "ref": null,
@@ -222,6 +242,10 @@ ShallowWrapper {
           />
           <Route
             component={[Function]}
+            path="/job/:id/checkout"
+          />
+          <Route
+            component={[Function]}
             path="/job/:id"
           />
           <Redirect
@@ -262,6 +286,10 @@ ShallowWrapper {
               component={[Function]}
               exact={true}
               path="/home"
+            />,
+            <Route
+              component={[Function]}
+              path="/job/:id/checkout"
             />,
             <Route
               component={[Function]}
@@ -327,6 +355,18 @@ ShallowWrapper {
               "component": [Function],
               "exact": true,
               "path": "/home",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "path": "/job/:id/checkout",
             },
             "ref": null,
             "rendered": null,
