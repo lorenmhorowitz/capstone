@@ -1,6 +1,6 @@
 import React from "react";
 
-const windowsImage = (
+const roofingImage = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
@@ -26,10 +26,12 @@ const windowsImage = (
     >
       <path d="M0,192v-192h192v192z" fill="none" />
       <g fill="#ffffff">
-        <path d="M19.2,15.36c-2.112,0 -3.84,1.728 -3.84,3.84v72.96h76.8v-76.8zM99.84,15.36v76.8h76.8v-72.96c0,-2.112 -1.728,-3.84 -3.84,-3.84zM15.36,99.84v72.96c0,2.112 1.728,3.84 3.84,3.84h72.96v-76.8zM99.84,99.84v76.8h72.96c2.112,0 3.84,-1.728 3.84,-3.84v-72.96z" />
+        <g id="surface1">
+          <path d="M96,51.69231l-96,63.46154v25.84615l96,-63.46154l96,63.46154v-25.84615zM155.07692,51.69231v27.23077l22.15385,14.76923v-42z" />
+        </g>
       </g>
     </g>
   </svg>
 );
 
-export default windowsImage;
+export default roofingImage;
