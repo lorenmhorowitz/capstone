@@ -1035,9 +1035,10 @@ const mockJobsDetailsList = {
       location_country: null,
       id: 612,
       images: [
-        "https://photos.zillowstatic.com/cc_ft_1536/ISmut96e44xrxm1000000000.webp",
-        "hhttps://photos.zillowstatic.com/cc_ft_1536/ISy39htmeu0bom1000000000.webp",
-        "https://photos.zillowstatic.com/cc_ft_1536/ISa1jgpg05a8pm1000000000.webp"
+        "https://odis.homeaway.com/odis/listing/f00598a5-a556-4d55-8587-1f53a7cee3ad.c10.jpg",
+        "https://odis.homeaway.com/odis/listing/3f31cf04-c6d0-4576-99cb-d1f7c623ebf3.c10.jpg",
+        "https://odis.homeaway.com/odis/listing/dbbdda3d-ed58-4158-9f21-4d7bd3668eae.c10.jpg",
+        "https://odis.homeaway.com/odis/listing/66f468e6-c02c-422b-906e-b40e247ba95c.c10.jpg"
       ],
       property_type: "single_family_residential",
       updated_at: "2018-11-13T14:56:12.428Z",
