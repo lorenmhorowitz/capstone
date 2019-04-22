@@ -29,7 +29,11 @@ class CardSlide extends Component {
 
   render() {
     return (
-      <Carousel infiniteLoop={true} showThumbs={false}>
+      <Carousel
+        onClickItem={i => this.props.enlarge(i)}
+        infiniteLoop={true}
+        showThumbs={false}
+      >
         {this.state.slides}
       </Carousel>
     );

@@ -7,6 +7,7 @@ import { withStyles } from "@material-ui/core/styles";
 import { List, ListItem, ListItemText, ListItemIcon } from "@material-ui/core";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import { Redirect } from "react-router-dom";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import windowsImage from "../img/windowsimg";
 import roofingImage from "../img/roofingimg";
@@ -20,11 +21,18 @@ const styles = {
 
 class Sidebar extends Component {
   state = {
+    checkoutRedirect: false,
     open: false
   };
 
   handleSidebarToggle = () => {
     this.setState({ open: !this.state.open });
+  };
+
+  handleCheckout = () => {
+    this.setState({
+      checkoutRedirect: true
+    });
   };
 
   handleSidebarClose = () => {
@@ -42,6 +50,10 @@ class Sidebar extends Component {
       scrollToRef
     } = this.props;
     const { open } = this.state;
+
+    if (this.state.checkoutRedirect) {
+      return <Redirect push to={`${window.location.pathname}/checkout`} />;
+    }
 
     return (
       <div className="root">
@@ -73,7 +85,7 @@ class Sidebar extends Component {
                 button
               >
                 <ListItemIcon>
-                  <i className="material-icons outline listItemIcon">info</i>{" "}
+                  <i className="material-icons outline listItemIcon">info</i>
                 </ListItemIcon>
                 <ListItemText
                   primary="Information"
@@ -126,14 +138,18 @@ class Sidebar extends Component {
                   />
                 </ListItem>
               ) : null}
-              <ListItem className="listItem" button>
+              <ListItem
+                onClick={() => this.handleCheckout()}
+                className="listItem"
+                button
+              >
                 <ListItemIcon>
                   <i className="material-icons outline listItemIcon">
                     shopping_cart
                   </i>
                 </ListItemIcon>
                 <ListItemText
-                  primary={`Order`}
+                  primary={`Check Out`}
                   primaryTypographyProps={{ color: "inherit" }}
                 />
               </ListItem>
