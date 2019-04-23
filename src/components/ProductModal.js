@@ -1,3 +1,4 @@
+import Button from "@material-ui/core/Button";
 import Modal from "@material-ui/core/Modal";
 import ProductBox from "./ProductBox";
 import ProductInfo from "./ProductInfo";
@@ -32,7 +33,6 @@ const styles = {
   modal: {
     background: "white",
     outline: "none",
-    height: "75%",
     margin: "auto",
     marginTop: "5%",
     padding: "10px",
@@ -84,7 +84,8 @@ class ProductModal extends Component {
 
     this.state = {
       brand: this.props.brand,
-      currentQuantity: this.props.quantity,
+      currentQuantity: this.props.defaultQuantity,
+      editedQuantity: false,
       image: this.props.image,
       initProduct: product,
       itemID: this.props.itemID,
@@ -100,8 +101,11 @@ class ProductModal extends Component {
   addQuantity = () => {
     this.setState({
       currentQuantity: this.state.currentQuantity + 1,
+      editedQuantity: true,
       subtotal: (this.state.currentQuantity + 1) * this.state.price
     });
+
+    this.props.updateQuantity(this.state.currentQuantity + 1);
   };
 
   changeModal = (obj, quantity) => {
@@ -130,14 +134,29 @@ class ProductModal extends Component {
       quantity: this.state.quantity,
       weight: this.state.initProduct.weight
     });
-    this.props.onClose();
+
+    if (this.state.editedQuantity === true) {
+      this.props.showWarningModal();
+      this.setState({ editedQuantity: false });
+      this.props.updateQuantity(this.state.currentQuantity);
+    } else {
+      this.props.onClose();
+    }
   };
 
   decreaseQuantity = () => {
     this.setState({
       currentQuantity: this.state.currentQuantity - 1,
+      editedQuantity: true,
       subtotal: (this.state.currentQuantity - 1) * this.state.price
     });
+
+    this.props.updateQuantity(this.state.currentQuantity - 1);
+  };
+
+  clickSave = () => {
+    this.props.updateQuantity(this.currentQuantity);
+    this.props.onSave();
   };
 
   render() {
@@ -152,10 +171,13 @@ class ProductModal extends Component {
 
     Object.keys(otherProducts).map(category => {
       Object.keys(otherProducts[category]).map(product => {
-        if (this.props.roofingQuantity === undefined) {
+        if (
+          this.props.roofingQuantity === undefined ||
+          this.props.roofingQuantity[product] === undefined
+        ) {
           quantity = this.props.quantity;
         } else {
-          quantity = this.props.roofingQuantity[category];
+          quantity = this.props.roofingQuantity[product];
         }
 
         if (
@@ -192,7 +214,11 @@ class ProductModal extends Component {
     });
 
     return (
-      <Modal open={this.props.open} onClose={this.closeModal}>
+      <Modal
+        open={this.props.open}
+        onClose={this.closeModal}
+        style={{ overflowY: "auto" }}
+      >
         <div id="modal" className={classes.modal}>
           <div className={classes.container}>
             <div className={classes.imageContainer}>
@@ -214,6 +240,14 @@ class ProductModal extends Component {
             </div>
           </div>
           <div className={classes.otherProducts}>{modelList.slice(0, 5)}</div>
+          <div className="buttonGroup">
+            <Button id="button" onClick={this.props.onCancel}>
+              Cancel
+            </Button>
+            <Button id="button" onClick={this.props.onSave}>
+              Save
+            </Button>
+          </div>
         </div>
       </Modal>
     );

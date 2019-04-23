@@ -1,4 +1,5 @@
 import Button from "@material-ui/core/Button";
+import formatter from "../utils/formatter";
 import React, { Component } from "react";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
@@ -156,10 +157,10 @@ class ProductInfo extends Component {
           </Button>
         </div>
         <Typography className={classes.price}>
-          Price per unit: ${this.props.price.toFixed(2)}
+          Price per unit: ${formatter.money(this.props.price)}
         </Typography>
         <Typography className={classes.subtotal}>
-          Subtotal: ${this.props.subtotal.toFixed(2)}
+          Subtotal: ${formatter.money(this.props.subtotal)}
         </Typography>
       </div>
     );

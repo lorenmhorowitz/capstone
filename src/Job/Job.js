@@ -17,7 +17,11 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import request from "request";
 import SideBar from "../components/SideBar";
+import { store } from "../store";
 import Typography from "@material-ui/core/Typography";
+
+const updateJobURL =
+  "https://us-central1-hdqc-capstone.cloudfunctions.net/updateJob ";
 
 const mapStateToProps = state => {
   return {
@@ -90,6 +94,53 @@ class Job extends Component {
     });
   };
 
+  updateJob = (quantity, id) => {
+    if (quantity === undefined || isNaN(quantity) || quantity < 0) {
+      return;
+    }
+
+    let username = store.getState().auth.signedIn;
+    let jobID = window.location.pathname.replace("/job/", "");
+
+    let job = this.state.jobDetails;
+
+    // Find the product id that had its quantity changed
+    Object.keys(job["products"]).map(category => {
+      Object.keys(job["products"][category]).map(product => {
+        Object.keys(job["products"][category][product]).map(index => {
+          if (
+            job["products"][category][product][index].products[0].item_id === id
+          ) {
+            job["products"][category][product][
+              index
+            ].products[0].quantity = quantity;
+          }
+        });
+      });
+    });
+
+    this.setState({ jobDetails: job });
+
+    request.post(
+      {
+        url: updateJobURL,
+        headers: {
+          "Content-Type": "application/json"
+        },
+        json: true,
+        body: {
+          key: username,
+          kind: "JobDetails",
+          id: jobID,
+          jobDetails: job
+        }
+      },
+      (error, response, body) => {
+        console.log(body);
+      }
+    );
+  };
+
   scrollToRef = ref => {
     window.scrollTo({
       top: ref.current.offsetTop - topOffset,
@@ -120,6 +171,7 @@ class Job extends Component {
               currentProduct.price,
               roofingQuantities[category]
             );
+
             roofingProductCards.push(
               <ProductCard
                 brand={currentProduct.brand}
@@ -132,8 +184,9 @@ class Job extends Component {
                 price={currentProduct.price}
                 roofingQuantity={roofingQuantities}
                 title={this.toUpperCaseAndSplit(category)}
+                quantity={jobDetails[category][product].products[0].quantity}
+                updateJob={this.updateJob}
                 weight={currentProduct.weight}
-                quantity={roofingQuantities[category]}
               />
             );
           }
@@ -168,8 +221,9 @@ class Job extends Component {
                 price={currentProduct.price}
                 roofingQuantity={roofingQuantities}
                 title={this.toUpperCaseAndSplit(category)}
-                weight={currentProduct.weight}
                 quantity={currentProduct.quantity}
+                updateJob={this.updateJob}
+                weight={currentProduct.weight}
               />
             );
           }
@@ -204,8 +258,9 @@ class Job extends Component {
                 price={currentProduct.price}
                 roofingQuantity={roofingQuantities}
                 title={this.toUpperCaseAndSplit(category)}
-                weight={currentProduct.weight}
                 quantity={currentProduct.quantity}
+                updateJob={this.updateJob}
+                weight={currentProduct.weight}
               />
             );
           }
