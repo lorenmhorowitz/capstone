@@ -104,6 +104,8 @@ class ProductModal extends Component {
       editedQuantity: true,
       subtotal: (this.state.currentQuantity + 1) * this.state.price
     });
+
+    this.props.updateQuantity(this.state.currentQuantity + 1);
   };
 
   changeModal = (obj, quantity) => {
@@ -148,6 +150,13 @@ class ProductModal extends Component {
       editedQuantity: true,
       subtotal: (this.state.currentQuantity - 1) * this.state.price
     });
+
+    this.props.updateQuantity(this.state.currentQuantity - 1);
+  };
+
+  clickSave = () => {
+    this.props.updateQuantity(this.currentQuantity);
+    this.props.onSave();
   };
 
   render() {
