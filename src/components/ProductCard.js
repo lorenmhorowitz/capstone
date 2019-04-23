@@ -7,7 +7,6 @@ import formatter from "../utils/formatter";
 import ProductModal from "./ProductModal";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import request from "request";
 import Typography from "@material-ui/core/Typography/Typography";
 import WarningModal from "./WarningModal";
 import { withStyles } from "@material-ui/core/styles";
@@ -65,11 +64,14 @@ const styles = {
 class ProductCard extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      quantity: this.props.quantity,
+      defaultQuantity: this.props.quantity,
+      modal: {},
       presentWarningModal: false,
       price: 0,
-      open: false
+      open: false,
+      quantity: this.props.quantity
     };
   }
 
@@ -82,12 +84,20 @@ class ProductCard extends Component {
   };
 
   onSave = () => {
-    this.setState({ open: false, presentWarningModal: false });
+    this.setState({
+      defaultQuantity: this.state.quantity,
+      open: false,
+      presentWarningModal: false
+    });
     this.props.updateJob(this.state.quantity, this.props.itemID);
   };
 
   onCancel = () => {
-    this.setState({ open: false, presentWarningModal: false });
+    this.setState({
+      open: false,
+      presentWarningModal: false,
+      quantity: this.state.defaultQuantity
+    });
   };
 
   onClose = () => {
@@ -99,7 +109,9 @@ class ProductCard extends Component {
   };
 
   updateQuantity = quantity => {
-    this.setState({ quantity: quantity });
+    this.setState({
+      quantity: quantity
+    });
   };
 
   render() {
@@ -136,11 +148,6 @@ class ProductCard extends Component {
                   calculator.getSubtotal(this.props.price, this.props.quantity)
                 )}
               </Typography>
-              <div className={classes.price}>
-                <Typography>
-                  Cost: ${this.props.price} Quantity: {this.props.quantity}
-                </Typography>
-              </div>
             </div>
           </CardContent>
           <div>
@@ -150,6 +157,7 @@ class ProductCard extends Component {
         <div>
           <ProductModal
             brand={this.props.brand}
+            defaultQuantity={this.state.defaultQuantity}
             image={this.props.image}
             itemID={this.props.itemID}
             model={this.props.model}
@@ -160,8 +168,9 @@ class ProductCard extends Component {
             onClose={this.onClose}
             otherProducts={this.props.otherProducts}
             price={this.props.price}
-            quantity={this.props.quantity}
+            quantity={this.state.quantity}
             roofingQuantity={this.props.roofingQuantity}
+            sendDefaultQuantity={this.sendDefaultQuantity}
             showWarningModal={this.showWarningModal}
             updateQuantity={this.updateQuantity}
             weight={this.props.weight}

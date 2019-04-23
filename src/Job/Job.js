@@ -95,6 +95,10 @@ class Job extends Component {
   };
 
   updateJob = (quantity, id) => {
+    if (quantity === undefined || isNaN(quantity) || quantity < 0) {
+      return;
+    }
+
     let username = store.getState().auth.signedIn;
     let jobID = window.location.pathname.replace("/job/", "");
 
@@ -167,6 +171,11 @@ class Job extends Component {
               currentProduct.price,
               roofingQuantities[category]
             );
+
+            console.log(
+              "jobDetails: ",
+              jobDetails[category][product].products[0].quantity
+            );
             roofingProductCards.push(
               <ProductCard
                 brand={currentProduct.brand}
@@ -179,7 +188,7 @@ class Job extends Component {
                 price={currentProduct.price}
                 roofingQuantity={roofingQuantities}
                 title={this.toUpperCaseAndSplit(category)}
-                quantity={roofingQuantities[category]}
+                quantity={jobDetails[category][product].products[0].quantity}
                 updateJob={this.updateJob}
                 weight={currentProduct.weight}
               />

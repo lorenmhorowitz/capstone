@@ -1,6 +1,5 @@
 import Button from "@material-ui/core/Button";
 import Modal from "@material-ui/core/Modal";
-import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography/Typography";
@@ -32,10 +31,6 @@ const styles = {
 };
 
 class WarningModal extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { classes } = this.props;
 

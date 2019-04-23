@@ -33,7 +33,6 @@ const styles = {
   modal: {
     background: "white",
     outline: "none",
-    height: "75%",
     margin: "auto",
     marginTop: "5%",
     padding: "10px",
@@ -85,7 +84,7 @@ class ProductModal extends Component {
 
     this.state = {
       brand: this.props.brand,
-      currentQuantity: this.props.quantity,
+      currentQuantity: this.props.defaultQuantity,
       editedQuantity: false,
       image: this.props.image,
       initProduct: product,
@@ -105,8 +104,6 @@ class ProductModal extends Component {
       editedQuantity: true,
       subtotal: (this.state.currentQuantity + 1) * this.state.price
     });
-
-    this.props.updateQuantity(this.state.currentQuantity + 1);
   };
 
   changeModal = (obj, quantity) => {
@@ -135,9 +132,11 @@ class ProductModal extends Component {
       quantity: this.state.quantity,
       weight: this.state.initProduct.weight
     });
+
     if (this.state.editedQuantity === true) {
       this.props.showWarningModal();
       this.setState({ editedQuantity: false });
+      this.props.updateQuantity(this.state.currentQuantity);
     } else {
       this.props.onClose();
     }
@@ -149,8 +148,6 @@ class ProductModal extends Component {
       editedQuantity: true,
       subtotal: (this.state.currentQuantity - 1) * this.state.price
     });
-
-    this.props.updateQuantity(this.state.currentQuantity - 1);
   };
 
   render() {
@@ -227,6 +224,14 @@ class ProductModal extends Component {
             </div>
           </div>
           <div className={classes.otherProducts}>{modelList.slice(0, 5)}</div>
+          <div className="buttonGroup">
+            <Button id="button" onClick={this.props.onCancel}>
+              Cancel
+            </Button>
+            <Button id="button" onClick={this.props.onSave}>
+              Save
+            </Button>
+          </div>
         </div>
       </Modal>
     );

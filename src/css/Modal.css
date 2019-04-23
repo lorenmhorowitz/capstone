@@ -1,3 +1,22 @@
+.buttonGroup {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  position: relative;
+  text-align: center;
+}
+
+#button {
+  background-color: grey;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1em;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 15%;
+}
+
 @media only screen and (min-width: 70%) {
   modal {
     background-color: black;
