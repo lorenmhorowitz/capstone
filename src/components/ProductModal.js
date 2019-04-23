@@ -214,7 +214,11 @@ class ProductModal extends Component {
     });
 
     return (
-      <Modal open={this.props.open} onClose={this.closeModal}>
+      <Modal
+        open={this.props.open}
+        onClose={this.closeModal}
+        style={{ overflowY: "auto" }}
+      >
         <div id="modal" className={classes.modal}>
           <div className={classes.container}>
             <div className={classes.imageContainer}>
