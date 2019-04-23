@@ -172,10 +172,6 @@ class Job extends Component {
               roofingQuantities[category]
             );
 
-            console.log(
-              "jobDetails: ",
-              jobDetails[category][product].products[0].quantity
-            );
             roofingProductCards.push(
               <ProductCard
                 brand={currentProduct.brand}
