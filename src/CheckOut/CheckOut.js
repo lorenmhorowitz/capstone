@@ -32,6 +32,7 @@ class CheckOut extends Component {
       dialogueOpen: false,
       homeRedirect: false,
       jobDetails: {},
+      jobRedirect: false,
       loading: true
     };
 
@@ -75,6 +76,12 @@ class CheckOut extends Component {
     this.setState({ homeRedirect: true });
   };
 
+  handleJobRedirect = () => {
+    this.setState({
+      jobRedirect: true
+    });
+  };
+
   handleSubmitOrder = () => {
     this.setState({
       buttonEnabled: false,
@@ -89,6 +96,11 @@ class CheckOut extends Component {
 
     if (this.state.homeRedirect) {
       return <Redirect push to="/home" />;
+    }
+
+    if (this.state.jobRedirect) {
+      const jobReturn = window.location.pathname.replace("/checkout", "");
+      return <Redirect push to={jobReturn} />;
     }
 
     const dialogue = (
@@ -127,7 +139,7 @@ class CheckOut extends Component {
             <ListBuilder products={products} />
             <Button
               id="CheckoutButton"
-              onClick={() => this.handleHomeRedirect()}
+              onClick={() => this.handleJobRedirect()}
             >
               Cancel
             </Button>
