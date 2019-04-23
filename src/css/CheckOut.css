@@ -12,7 +12,10 @@
   border-radius: 8px;
   color: #ffffff;
   font-size: 1.2em;
-  height: 60px;
+  height: 80px;
   margin-top: 1%;
-  width: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
+  min-width: 20%;
+  width: 30%;
 }
