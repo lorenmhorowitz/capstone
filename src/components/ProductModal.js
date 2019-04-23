@@ -171,10 +171,13 @@ class ProductModal extends Component {
 
     Object.keys(otherProducts).map(category => {
       Object.keys(otherProducts[category]).map(product => {
-        if (this.props.roofingQuantity === undefined) {
+        if (
+          this.props.roofingQuantity === undefined ||
+          this.props.roofingQuantity[product] === undefined
+        ) {
           quantity = this.props.quantity;
         } else {
-          quantity = this.props.roofingQuantity[category];
+          quantity = this.props.roofingQuantity[product];
         }
 
         if (
